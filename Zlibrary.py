@@ -7,6 +7,10 @@ For more information, see:
 https://github.com/bipinkrish/Zlibrary-API/
 """
 
+"""
+This was modified by Tin Tran to scrape the Z-Library website for book information.
+"""
+
 import requests
 import re
 import html

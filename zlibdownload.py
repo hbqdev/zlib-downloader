@@ -180,13 +180,17 @@ def download_books_by_category(config):
                 print("  Not found in Couchbase. Proceeding...")
 
             if should_download:
-                # --- Download limit check (remains the same) --- 
-                if downloads_left <= 0:
-                    print("  Download limit reached for today. Cannot download further.")
-                    break # Stop processing more books for download today
+                # --- Download limit check (REMOVED strict check here) --- 
+                # We will now attempt the download and break only if it fails, 
+                # assuming failure means the limit was hit or another API error occurred.
+                # The initial check before the loop handles cases where the API reports 0 upfront.
+                # if downloads_left <= 0: 
+                #     print("  Download limit reached for today. Cannot download further.")
+                #     break # Stop processing more books for download today
 
                 try:
-                    print(f"  Attempting download... ({downloads_left} left)")
+                    # <<< Still log the expected count based on initial fetch and local decrement >>>
+                    print(f"  Attempting download... ({downloads_left} left based on initial check)")
                     # Pass ID/Hash read from file
                     download_result = z.downloadBook({"id": book_id, "hash": book_hash})
 
@@ -216,7 +220,10 @@ def download_books_by_category(config):
                         # Delay (remains the same)
                         time.sleep(2)
                     else:
+                        # <<< If download failed, assume limit hit or API error, and break >>>
                         print(f"  Download failed for book ID {book_id} (API returned None or error).")
+                        print("  Assuming download limit reached or Z-Library API error. Stopping download attempts for this run.")
+                        break # Exit the download loop for this run
 
                 except Exception as e:
                     import traceback
