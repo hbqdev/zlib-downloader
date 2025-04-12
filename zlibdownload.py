@@ -27,8 +27,10 @@ def save_config(config_data, config_path="config.json"):
 
 def download_books_by_category(config):
     """
-    Downloads books from a specific Z-Library category based on config
-    
+    Downloads books from a specific Z-Library category based on config,
+    potentially skipping the scrape step if to_download.txt exists and
+    force_scrape is false.
+
     Parameters:
     - config: A dictionary containing the configuration loaded from JSON
     """
@@ -43,6 +45,7 @@ def download_books_by_category(config):
     filters = config.get("filters", {}) # Default empty filters
     domain = config.get("domain", "z-library.sk") # Get domain, default if missing
     should_download = config.get("download_books", True) # Get download flag, default to True
+    force_scrape = config.get("force_scrape", False) # Get force_scrape flag, default to False
     download_filename = "to_download.txt"
 
     # Validate essential config parameters
@@ -73,22 +76,34 @@ def download_books_by_category(config):
         print(f"Successfully logged in. Downloads remaining today: {downloads_left}")
         if downloads_left < 1:
             print("No downloads remaining for today. Cannot download.")
-            return
+            # Allow script to continue to list books even if downloads are zero
     else:
         print("Download flag is false. Will list books only.")
         downloads_left = 0 # Not relevant if not downloading
 
-    # Use the new scraping-based search method
-    print(f"Step 1: Scraping category page to get book titles/authors...")
-    
-    # Pass the whole config to the search function
-    scrape_results = z.search_scrape(config)
-    
-    # --- Exit if scrape failed or produced no output file ---
-    if not scrape_results or not scrape_results.get('success'):
-        print("Scraping/File generation failed. Exiting.")
-        return
-    
+    # --- Decide whether to scrape ---
+    perform_scrape = False
+    if force_scrape:
+        print("Config set to force scrape. Scraping will occur.")
+        perform_scrape = True
+    elif not os.path.exists(download_filename):
+        print(f"'{download_filename}' not found. Scraping is required.")
+        perform_scrape = True
+    else:
+        print(f"'{download_filename}' found and force_scrape is false. Skipping scrape.")
+        
+    if perform_scrape:
+        print(f"Step 1: Scraping category page to get book titles/authors...")
+        
+        # Pass the whole config to the search function
+        scrape_results = z.search_scrape(config)
+        
+        # --- Exit if scrape failed or produced no output file ---
+        if not scrape_results or not scrape_results.get('success'):
+            print("Scraping/File generation failed. Exiting.")
+            return
+        print(f"Scraping completed. Results saved to '{download_filename}'.")
+
     # --- Processing Results --- 
     # --- Read data from to_download.txt --- 
     books_to_process = []
@@ -108,7 +123,7 @@ def download_books_by_category(config):
                 else:
                     print(f"Warning: Skipping malformed line in {download_filename}: {line.strip()}")
     except FileNotFoundError:
-        print(f"Error: {download_filename} not found. Was scraping successful?")
+        print(f"Error: {download_filename} not found. Scraping might have failed or was skipped.")
         return
     except IOError as e:
         print(f"Error reading {download_filename}: {e}")
@@ -118,13 +133,13 @@ def download_books_by_category(config):
         print(f"No valid book data found in {download_filename}.")
         return
 
-    # Limit is applied by how many lines are in the file (controlled by search_scrape)
     count = len(books_to_process)
 
     print(f"Read data for {count} books from {download_filename}. Processing...")
     
     # Download or list each book
     processed_count = 0
+    downloads_attempted_today = 0
     for i, book_data in enumerate(books_to_process): # Iterate through data read from file
         book_id = book_data.get("id")
         book_hash = book_data.get("hash")
@@ -136,8 +151,6 @@ def download_books_by_category(config):
 
         # Print info read from file
         print(f"({i+1}/{count}) Processing: ID={book_id}, Hash={book_hash}, Title='{title}', Authors='{authors}'")
-
-        # No need for API search fallback anymore
 
         if should_download:
             # --- Check download flag from file --- 
@@ -153,32 +166,46 @@ def download_books_by_category(config):
 
             try:
                 print(f"  Attempting download...")
-                # Pass the dict with ID/Hash found via API to downloadBook
                 # Pass ID/Hash read from file
-                filename, content = z.downloadBook({"id": book_id, "hash": book_hash}) 
+                download_result = z.downloadBook({"id": book_id, "hash": book_hash}) 
 
-                # Clean filename to remove invalid characters
-                clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
+                if download_result: # Check if download was successful
+                    filename, content = download_result
 
-                # Save the book to the output directory
-                filepath = os.path.join(output_dir, clean_filename)
-                with open(filepath, "wb") as f:
-                    f.write(content)
+                    # Clean filename to remove invalid characters
+                    clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
 
-                print(f"  Downloaded: {filepath}")
-                processed_count += 1
-                downloads_left -= 1 # Decrement remaining downloads for today
+                    # Save the book to the output directory
+                    filepath = os.path.join(output_dir, clean_filename)
+                    with open(filepath, "wb") as f:
+                        f.write(content)
 
-                # Be nice to the server - add delay between downloads
-                time.sleep(2)
+                    print(f"  Downloaded: {filepath}")
+                    processed_count += 1
+                    downloads_left -= 1 # Decrement remaining downloads for today
+                    downloads_attempted_today += 1
+
+                    # Be nice to the server - add delay between downloads
+                    time.sleep(2)
+                else:
+                    print(f"  Download failed for book ID {book_id} (API returned None or error).")
+
             except Exception as e:
+                import traceback
                 print(f"  Error downloading book ID {book_id}: {e}")
+                print(traceback.format_exc()) # Print traceback for debugging
         else:
             # Just listing, no download action
+            print("  Listing only (download_books is false).")
             processed_count += 1 # Count as processed (listed)
     
-    final_action_verb = "attempted download for" if should_download else "listed"
-    print(f"Processing complete! {final_action_verb.capitalize()} {processed_count} items based on scraping.")
+    final_action_verb = "processed"
+    if should_download:
+        final_action_verb = f"attempted downloads for {downloads_attempted_today}"
+
+    print(f"\nProcessing complete! {final_action_verb.capitalize()} {processed_count} items based on data in {download_filename}.")
+    if should_download:
+        print(f"Downloads remaining today after this run: {downloads_left}")
 
     # No longer saving config as start_page is removed
 
