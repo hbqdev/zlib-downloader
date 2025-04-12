@@ -2,6 +2,7 @@ from Zlibrary import Zlibrary
 import os
 import time
 import json
+import cbconnect # <<< Import the new Couchbase module
 
 def load_config(config_path="config.json"):
     """Loads configuration from a JSON file."""
@@ -28,12 +29,28 @@ def save_config(config_data, config_path="config.json"):
 def download_books_by_category(config):
     """
     Downloads books from a specific Z-Library category based on config,
-    potentially skipping the scrape step if to_download.txt exists and
+    checks Couchbase to avoid redownloading, and marks downloads in Couchbase.
+    Potentially skips the scrape step if to_download.txt exists and
     force_scrape is false.
 
     Parameters:
     - config: A dictionary containing the configuration loaded from JSON
     """
+    # --- Establish Couchbase Connection --- 
+    print("Initializing Couchbase connection...")
+    cluster, collection = cbconnect.connect_db() # <<< Connect to Couchbase
+    if not cluster or not collection:
+        print("Fatal Error: Could not connect to Couchbase. Please check settings and environment variables.")
+        return # <<< Exit if DB connection fails
+    
+    # Ensure DB connection is closed on exit
+    db_closed = False
+    def cleanup_db():
+        nonlocal db_closed
+        if not db_closed:
+            cbconnect.close_db(cluster)
+            db_closed = True
+
     # Extract parameters from config
     email = config.get("email")
     password = config.get("password")
@@ -104,101 +121,118 @@ def download_books_by_category(config):
             return
         print(f"Scraping completed. Results saved to '{download_filename}'.")
 
-    # --- Processing Results --- 
     # --- Read data from to_download.txt --- 
     books_to_process = []
     try:
         with open(download_filename, "r", encoding="utf-8") as f:
             for line in f:
                 parts = line.strip().split('|')
-                # Expecting 5 parts: ID|HASH|TITLE|AUTHOR|DOWNLOAD_FLAG
-                if len(parts) == 5:
+                # <<< Expecting 4 parts now: ID|HASH|TITLE|AUTHOR >>>
+                if len(parts) == 4:
                     books_to_process.append({
                         "id": parts[0],
                         "hash": parts[1],
                         "title": parts[2],
-                        "authors": parts[3],
-                        "downloaded_flag": parts[4] # Read the flag
+                        "authors": parts[3]
+                        # <<< Removed downloaded_flag >>>
                     })
                 else:
-                    print(f"Warning: Skipping malformed line in {download_filename}: {line.strip()}")
+                    print(f"Warning: Skipping malformed line in {download_filename} (expected 4 parts): {line.strip()}")
     except FileNotFoundError:
         print(f"Error: {download_filename} not found. Scraping might have failed or was skipped.")
+        cleanup_db() # <<< Close DB before exit
         return
     except IOError as e:
         print(f"Error reading {download_filename}: {e}")
+        cleanup_db() # <<< Close DB before exit
         return
 
     if not books_to_process:
         print(f"No valid book data found in {download_filename}.")
+        cleanup_db() # <<< Close DB before exit
         return
 
     count = len(books_to_process)
 
-    print(f"Read data for {count} books from {download_filename}. Processing...")
+    print(f"Read data for {count} books from {download_filename}. Processing... Checks will be done against Couchbase.")
     
-    # Download or list each book
+    # --- Download/List Loop --- 
     processed_count = 0
     downloads_attempted_today = 0
-    for i, book_data in enumerate(books_to_process): # Iterate through data read from file
-        book_id = book_data.get("id")
-        book_hash = book_data.get("hash")
-        title = book_data.get("title", "Unknown Title")
-        authors = book_data.get("authors", "Unknown Author")
+    try:
+        for i, book_data in enumerate(books_to_process): # Iterate through data read from file
+            book_id = book_data.get("id")
+            book_hash = book_data.get("hash")
+            title = book_data.get("title", "Unknown Title")
+            authors = book_data.get("authors", "Unknown Author")
 
-        # Get download status from the flag read from the file
-        is_already_downloaded = book_data.get("downloaded_flag") == "1"
+            # Print info read from file
+            print(f"({i+1}/{count}) Processing: ID={book_id}, Hash={book_hash}, Title='{title}', Authors='{authors}'")
 
-        # Print info read from file
-        print(f"({i+1}/{count}) Processing: ID={book_id}, Hash={book_hash}, Title='{title}', Authors='{authors}'")
-
-        if should_download:
-            # --- Check download flag from file --- 
-            if is_already_downloaded:
-                print("  Already marked as downloaded in file. Skipping.")
+            # --- Check Couchbase instead of file flag --- 
+            print("  Checking Couchbase...")
+            is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
+            if is_already_downloaded_in_db:
+                print("  Already marked as downloaded in Couchbase. Skipping.")
                 processed_count += 1 # Still count as processed
-                continue # Move to the next book in the loop
+                continue # Move to the next book
+            else:
+                print("  Not found in Couchbase. Proceeding...")
 
-            # Check download limit *before* attempting download
-            if downloads_left <= 0:
-                print("  Download limit reached for today. Cannot download further.")
-                break # Stop processing more books for download today
+            if should_download:
+                # --- Download limit check (remains the same) --- 
+                if downloads_left <= 0:
+                    print("  Download limit reached for today. Cannot download further.")
+                    break # Stop processing more books for download today
 
-            try:
-                print(f"  Attempting download...")
-                # Pass ID/Hash read from file
-                download_result = z.downloadBook({"id": book_id, "hash": book_hash}) 
+                try:
+                    print(f"  Attempting download... ({downloads_left} left)")
+                    # Pass ID/Hash read from file
+                    download_result = z.downloadBook({"id": book_id, "hash": book_hash})
 
-                if download_result: # Check if download was successful
-                    filename, content = download_result
+                    if download_result: # Check if download was successful
+                        filename, content = download_result
 
-                    # Clean filename to remove invalid characters
-                    clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
+                        # Clean filename (remains the same)
+                        clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
 
-                    # Save the book to the output directory
-                    filepath = os.path.join(output_dir, clean_filename)
-                    with open(filepath, "wb") as f:
-                        f.write(content)
+                        # Save the book (remains the same)
+                        filepath = os.path.join(output_dir, clean_filename)
+                        with open(filepath, "wb") as f:
+                            f.write(content)
+                        print(f"  Downloaded: {filepath}")
 
-                    print(f"  Downloaded: {filepath}")
-                    processed_count += 1
-                    downloads_left -= 1 # Decrement remaining downloads for today
-                    downloads_attempted_today += 1
+                        # --- Mark as downloaded in Couchbase --- 
+                        print(f"  Marking book ID {book_id} as downloaded in Couchbase...")
+                        mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
+                        if not mark_success:
+                            print(f"  Warning: Failed to mark book {book_id} as downloaded in Couchbase.")
+                        # --- --- 
 
-                    # Be nice to the server - add delay between downloads
-                    time.sleep(2)
-                else:
-                    print(f"  Download failed for book ID {book_id} (API returned None or error).")
+                        processed_count += 1
+                        downloads_left -= 1 # Decrement remaining downloads for today
+                        downloads_attempted_today += 1
 
-            except Exception as e:
-                import traceback
-                print(f"  Error downloading book ID {book_id}: {e}")
-                print(traceback.format_exc()) # Print traceback for debugging
-        else:
-            # Just listing, no download action
-            print("  Listing only (download_books is false).")
-            processed_count += 1 # Count as processed (listed)
+                        # Delay (remains the same)
+                        time.sleep(2)
+                    else:
+                        print(f"  Download failed for book ID {book_id} (API returned None or error).")
+
+                except Exception as e:
+                    import traceback
+                    print(f"  Error downloading book ID {book_id}: {e}")
+                    print(traceback.format_exc()) # Print traceback for debugging
+            else:
+                # Just listing (remains the same)
+                print("  Listing only (download_books is false).")
+                processed_count += 1 # Count as processed (listed)
     
+    finally:
+        # --- Ensure DB connection is closed --- 
+        cleanup_db()
+        print("DB cleanup performed.")
+
+    # --- Final Summary (remains the same) --- 
     final_action_verb = "processed"
     if should_download:
         final_action_verb = f"attempted downloads for {downloads_attempted_today}"

@@ -437,6 +437,7 @@ class Zlibrary:
         """Searches for books by scraping a specific URL or constructing one from config.
            Prioritizes 'scrape_url' in config if present.
            Uses Regex to extract ID, Hash, Title, Author from raw HTML.
+           Saves results to to_download.txt without checking download history.
         """
         if not self.isLoggedIn():
             print("Not logged in")
@@ -454,7 +455,7 @@ class Zlibrary:
             if not target_url.startswith("http"):
                 target_url = f"https://{self.__domain}{target_url}"
 
-        # --- Step 1: Fetch the HTML --- 
+        # --- Step 1: Fetch the HTML ---
         try:
             response = requests.get(
                 target_url,
@@ -471,135 +472,33 @@ class Zlibrary:
 
         html_content = response.text
 
-        # --- Step 2: Extract only <z-bookcard> blocks and save --- 
+        # --- Step 2: Extract only <z-bookcard> blocks and save ---
         print("Extracting book card blocks from HTML...")
         card_pattern = re.compile(r'<z-bookcard.*?/z-bookcard>', re.DOTALL | re.IGNORECASE)
         card_matches = card_pattern.findall(html_content)
         filtered_html_content = "\n".join(card_matches) # Join blocks with newline
 
+        # --- Save the filtered HTML for debugging/inspection (Optional but helpful) ---
         output_filename = "raw_html_output.txt"
         try:
             with open(output_filename, "w", encoding="utf-8") as f:
                 f.write(filtered_html_content)
             print(f"Successfully saved {len(card_matches)} book card blocks to {output_filename}")
         except IOError as e:
-            print(f"Error saving HTML to file {output_filename}: {e}")
-            # Decide if you want to continue without saving or return an error
+            print(f"Warning: Error saving filtered HTML to file {output_filename}: {e}")
+            # Continue even if saving fails, as parsing uses the variable directly
 
-        # --- Step 3: Read HTML back from the file --- 
-        content_from_file = ""
-        try:
-            with open(output_filename, "r", encoding="utf-8") as f: # Ensure file is closed before history fetch
-                content_from_file = f.read()
-        except IOError as e:
-            print(f"Error reading HTML from file {output_filename}: {e}")
-            return {"success": False, "error": f"Failed to read HTML from file: {e}", "books": []}
-
-        # --- Fetch Download History --- 
-        downloaded_ids = set()
-        raw_history_responses = [] # <<< ADDED list to store raw response strings
-        print("Fetching user download history...")
-        current_page = 1
-        page_limit = 200 # Fetch 200 items per page (adjust if needed)
-
-        # Check config flag to decide whether to fetch full history or just recent
-        fetch_full = config.get("fetch_full_history", False) # Default to False if not present
-
-        if fetch_full:
-            print("Configured to fetch FULL download history (page by page)...")
-            while True:
-                print(f"  Fetching history page {current_page}...")
-                history_response = self.getUserDownloaded(limit=page_limit, page=current_page)
-                raw_history_responses.append(str(history_response)) # Store raw response as string
-
-                if (history_response and history_response.get('success') and 
-                    history_response.get('history') and len(history_response['history']) > 0):
-                    
-                    page_ids_found = 0
-                    for item in history_response['history']:
-                        if item.get('book_id'):
-                            book_id_str = str(item['book_id']) # Store as string
-                            if book_id_str not in downloaded_ids: # Only add if not already present
-                                downloaded_ids.add(book_id_str) 
-                                page_ids_found += 1
-                    print(f"    Added {page_ids_found} new unique IDs from page {current_page}. Total unique IDs so far: {len(downloaded_ids)}")
-
-                    # Check if we received fewer items than the limit, indicating the last page
-                    if len(history_response['history']) < page_limit:
-                        print("  Reached the last page of history.")
-                        break # Exit loop if last page reached
-                    
-                    current_page += 1 # Go to the next page
-                else:
-                    if not history_response or not history_response.get('success'):
-                        print(f"  API request failed for history page {current_page}.")
-                    elif not history_response.get('history') or len(history_response['history']) == 0:
-                        print(f"  No more history found on page {current_page} or beyond.")
-                    break # Exit loop
-        else: # Fetch only limited recent history
-            print("Configured to fetch only RECENT download history (limit 500)...")
-            recent_history_limit = 500
-            history_response = self.getUserDownloaded(limit=recent_history_limit)
-            # We don't save this single raw response to the file
-            if (history_response and history_response.get('success') and 
-                history_response.get('history') and len(history_response['history']) > 0):
-                
-                ids_found = 0
-                for item in history_response['history']:
-                    if item.get('book_id'):
-                        book_id_str = str(item['book_id']) # Store as string
-                        if book_id_str not in downloaded_ids: # Only add if not already present
-                             downloaded_ids.add(book_id_str) 
-                             ids_found += 1
-                print(f"  Found {ids_found} unique IDs in recent {recent_history_limit} history items.")
-            else:
-                print("  Warning: Could not fetch or parse recent download history.")
-
-        if not downloaded_ids:
-             print("Warning: Could not fetch any download history. Cannot mark downloaded status.")
-        else:
-             print(f"Finished fetching history. Total unique downloaded IDs found: {len(downloaded_ids)}")
-
-        # --- Save Raw History Responses (only if full history was fetched) --- 
-        if fetch_full and raw_history_responses:
-            raw_history_filename = "raw_api_history.txt"
-            try:
-                with open(raw_history_filename, "w", encoding="utf-8") as f_raw:
-                    for response_str in raw_history_responses:
-                        f_raw.write(response_str + "\n") # Write each response string on a new line
-                print(f"Successfully saved raw API history responses ({len(raw_history_responses)} pages) to {raw_history_filename}")
-            except IOError as e:
-                print(f"Error saving raw API history to file {raw_history_filename}: {e}")
-        elif fetch_full:
-             print("No raw history responses collected to save.")
-
-        # --- Step 4 & 5: Parse file content with Regex and Construct List ---
+        # --- Step 3: Parse file content with Regex and Construct List ---
         books_data = []
- 
-        # --- Simple Regex Per Field, within each book card block --- 
- 
-        # Outer pattern for ID/Hash and inner content
-        # Using [^>]*? to handle multi-line attributes better
-        outer_pattern = re.compile(r'''
-            <z-bookcard\s+.*?                       # Start tag and attributes
-            [^>]*?                                # Any characters except > (non-greedy) for attributes
-            id=\"(\d+)\".*?                       # Capture ID (group 1)
-            [^>]*?                                # Any characters except > (non-greedy)
-            href=\"(/book/\d+/([a-z0-9]+)/.*?)\".*? # Capture href (group 2) and hash (group 3)
-            [^>]*?                                # Any characters except > (non-greedy) until end of opening tag
-            >                                     # End of opening tag
-            (.*?)                                 # Capture all inner content (group 4)
-            </z-bookcard>                         # End tag
-            ''', re.DOTALL | re.IGNORECASE)
 
-        # Secondary patterns to search *within* the captured inner content (group 4)
+        # Regex patterns (same as before)
         title_inner_pattern = re.compile(r'<div\s+slot=\"title\">(.*?)</div>', re.IGNORECASE)
         author_inner_pattern = re.compile(r'<div\s+slot=\"author\">(.*?)</div>', re.IGNORECASE)
- 
-        print(f"Attempting updated regex extraction from {output_filename}...")
-        
+
+        print(f"Attempting regex extraction from scraped HTML...")
+
         matches_found = 0
-        for card_match in card_pattern.finditer(content_from_file):
+        for card_match in card_pattern.finditer(filtered_html_content): # Iterate directly on filtered content
             card_text = card_match.group(0) # Get the full text of the block
 
             # Reset for each card
@@ -628,23 +527,18 @@ class Zlibrary:
                 # Basic validation
                 if book_id and book_hash:
                     matches_found += 1 # Count successful extractions
-                    
-                    # --- Check Download Status --- 
-                    is_downloaded = str(book_id) in downloaded_ids
-                    download_status_flag = "1" if is_downloaded else "0"
-                    
-                    # This print can be removed later for cleaner output
+
                     # Use extracted title/author or placeholders if extraction failed
                     title_print = title if title else "Title Not Found"
                     authors_print = authors if authors else "Author Not Found"
-                    print(f"  Regex Extracted: ID={book_id}, Hash={book_hash}, Title='{title_print}', Authors='{authors_print}', Downloaded={is_downloaded}")
-                    # Append data to be written to file
+                    # print(f"  Regex Extracted: ID={book_id}, Hash={book_hash}, Title='{title_print}', Authors='{authors_print}'") # Verbose logging
+
+                    # Append data to be written to file (without download flag)
                     books_data.append({
                         "id": book_id,
                         "hash": book_hash,
                         "title": title_print, # Use extracted or placeholder
                         "authors": authors_print, # Use extracted or placeholder
-                        "downloaded": download_status_flag
                     })
                 else:
                     # Print details only if it looked like a card but failed ID/Hash
@@ -656,23 +550,23 @@ class Zlibrary:
 
         print(f"Regex successfully extracted info for {matches_found} books.")
         if not books_data:
-             print("Warning: Regex did not successfully extract any valid book data (ID/Hash/Title/Author) from the saved HTML file.")
+             print("Warning: Regex did not successfully extract any valid book data (ID/Hash/Title/Author) from the scraped HTML.")
              # Return success=False if nothing useful extracted
              return {"success": False, "books": []}
 
-        # Apply limit if specified 
+        # Apply limit if specified
         limit = config.get("limit") # Get limit from config
         if limit is not None and len(books_data) > limit:
+            print(f"Applying limit: Using first {limit} of {len(books_data)} extracted books.")
             books_data = books_data[:limit]
 
-        # --- Step 6: Save extracted data to to_download.txt --- 
+        # --- Step 4: Save extracted data to to_download.txt ---
         download_filename = "to_download.txt"
         try:
             with open(download_filename, "w", encoding="utf-8") as f:
                 for book in books_data:
-                    # Simple pipe-separated format, handle potential pipes in data if necessary
-                    # New format: ID|HASH|TITLE|AUTHOR|DOWNLOAD_FLAG
-                    line = f"{book['id']}|{book['hash']}|{book['title'].replace('|', ' ')}|{book['authors'].replace('|', ' ')}|{book['downloaded']}\n"
+                    # Simple pipe-separated format: ID|HASH|TITLE|AUTHOR
+                    line = f"{book['id']}|{book['hash']}|{book['title'].replace('|', ' ')}|{book['authors'].replace('|', ' ')}\n"
                     f.write(line) # Write the line including the newline character
             print(f"Successfully saved data for {len(books_data)} books to {download_filename}")
             return {"success": True} # Indicate success, data is in the file

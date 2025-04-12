@@ -459,6 +459,29 @@
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
+                                        id="21125404"
+                    isbn="9781624650536"
+                    termshash="3f99ca2d0bb1e994d0a3f4bf7079342f"
+                    href="/book/21125404/67d915/framed-ink-2.html"
+                    download="/dl/21125404/078a8a"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2020"
+                    extension="pdf"
+                    filesize="240.89 MB"
+                    rating="5.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/eef44933ed1aaf77035fc8ad947a9d304a5614aad0d6c47628b06439a85973dd.jpg" />
+                    <div slot="title">Framed Ink 2</div>
+                    <div slot="author">Marcos Mateu-Mestre</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
                                         id="21087295"
                     isbn="9791197005121"
                     termshash=""
@@ -505,24 +528,24 @@
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="21125404"
-                    isbn="9781624650536"
-                    termshash="3f99ca2d0bb1e994d0a3f4bf7079342f"
-                    href="/book/21125404/67d915/framed-ink-2.html"
-                    download="/dl/21125404/078a8a"
+                                        id="579308"
+                    isbn="9784889960464"
+                    termshash=""
+                    href="/book/579308/32f685/how-to-draw-manga-vol-4-dressing-your-characters-in-casual-wear.html"
+                    download="/dl/579308/a75e09"
                     deleted=""
-                    publisher=""
+                    publisher="Graphic-Sha"
                     language="english"
-                    year="2020"
+                    year="2001"
                     extension="pdf"
-                    filesize="240.89 MB"
+                    filesize="28.25 MB"
                     rating="5.0"
-                    quality="4.0"
+                    quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/eef44933ed1aaf77035fc8ad947a9d304a5614aad0d6c47628b06439a85973dd.jpg" />
-                    <div slot="title">Framed Ink 2</div>
-                    <div slot="author">Marcos Mateu-Mestre</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8ef1f34d052fc2c69ebffc2b7039449b2949f28bb0c0f8c87ea8f8c04b64c268.jpg" />
+                    <div slot="title">How to Draw Manga - Vol. 4 - Dressing Your Characters in Casual Wear</div>
+                    <div slot="author">Manga</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
@@ -546,29 +569,6 @@
                     <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1ed26029b75ba2d6572c276e1c790e44a40f6283849cf1a5dbeebc4d991241e7.jpg" />
                     <div slot="title">Draw 50 Famous Cartoons: The Step-by-Step Way to Draw Your Favorite Classic Cartoon Characters</div>
                     <div slot="author">Lee J. Ames</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="579308"
-                    isbn="9784889960464"
-                    termshash=""
-                    href="/book/579308/32f685/how-to-draw-manga-vol-4-dressing-your-characters-in-casual-wear.html"
-                    download="/dl/579308/a75e09"
-                    deleted=""
-                    publisher="Graphic-Sha"
-                    language="english"
-                    year="2001"
-                    extension="pdf"
-                    filesize="28.25 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8ef1f34d052fc2c69ebffc2b7039449b2949f28bb0c0f8c87ea8f8c04b64c268.jpg" />
-                    <div slot="title">How to Draw Manga - Vol. 4 - Dressing Your Characters in Casual Wear</div>
-                    <div slot="author">Manga</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
@@ -689,6 +689,29 @@
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
+                                        id="737860"
+                    isbn="9780823023943"
+                    termshash=""
+                    href="/book/737860/a73d06/how-to-draw-greatlooking-comic-book-women.html"
+                    download="/dl/737860/e1fc8e"
+                    deleted=""
+                    publisher="Watson-Guptill"
+                    language="english"
+                    year="2000"
+                    extension="pdf"
+                    filesize="47.04 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/04cef1e106976544b56eaa8469ae0faa142cf26107a794aa8233f81335fa146c.jpg" />
+                    <div slot="title">How to Draw Great-Looking Comic Book Women</div>
+                    <div slot="author">Christopher Hart</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
                                         id="2835410"
                     isbn="9784766119145"
                     termshash=""
@@ -707,6 +730,29 @@
                     <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9f3de00bcf2acb5228c0188bd4a8d482391f93a175b81e7b87d868bc16b92271.jpg" />
                     <div slot="title">How to Draw Manga - Sketching-Style Vol.4 - All about Perspective</div>
                     <div slot="author">Hikaru Hayashi</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25092155"
+                    isbn="9781681989976"
+                    termshash=""
+                    href="/book/25092155/fddb19/morpho-anatomy-for-artists-mammals-elements-of-comparative-morphology.html"
+                    download="/dl/25092155/8b52aa"
+                    deleted=""
+                    publisher="Morpho: Anatomy for Artists"
+                    language="english"
+                    year="2023"
+                    extension="pdf"
+                    filesize="11.08 MB"
+                    rating="5.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e1c4934ce2b0ed06abdcaa72f20e20f185708ff9a8af05da94f38da94e3f976a.jpg" />
+                    <div slot="title">Morpho Anatomy for Artists: Mammals: Elements of Comparative Morphology</div>
+                    <div slot="author">Michel Lauricella</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
@@ -753,29 +799,6 @@
                     <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5b1b09675863fec027502220db13d1569db8ddbef2b96cae88193d72bdbbbb90.jpg" />
                     <div slot="title">The Design of Everyday Things</div>
                     <div slot="author">Don Norman</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25092155"
-                    isbn="9781681989976"
-                    termshash=""
-                    href="/book/25092155/fddb19/morpho-anatomy-for-artists-mammals-elements-of-comparative-morphology.html"
-                    download="/dl/25092155/8b52aa"
-                    deleted=""
-                    publisher="Morpho: Anatomy for Artists"
-                    language="english"
-                    year="2023"
-                    extension="pdf"
-                    filesize="11.08 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e1c4934ce2b0ed06abdcaa72f20e20f185708ff9a8af05da94f38da94e3f976a.jpg" />
-                    <div slot="title">Morpho Anatomy for Artists: Mammals: Elements of Comparative Morphology</div>
-                    <div slot="author">Michel Lauricella</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
@@ -850,29 +873,6 @@
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3336859"
-                    isbn="9781440337611"
-                    termshash="4bae3f7456c2ffe161e348645b00589f"
-                    href="/book/3336859/5b0796/the-absolute-beginners-big-book-of-drawing-and-painting.html"
-                    download="/dl/3336859/e152d6"
-                    deleted=""
-                    publisher="Penguin"
-                    language="english"
-                    year="2014"
-                    extension="pdf"
-                    filesize="73.20 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3b13ebc34b975d6a6d3822f4e704e304998562926bd3b396b50269f72507c4e1.jpg" />
-                    <div slot="title">The Absolute Beginner's Big Book of Drawing and Painting</div>
-                    <div slot="author">Mark Willenbrink; Mary Willenbrink</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
                                         id="17124771"
                     isbn=""
                     termshash="3cb3ee371997a5721d797a3c19ebb7f4"
@@ -891,6 +891,29 @@
                     <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ff3008ac888a8f12f7cbbaf2e4d26285efacaed44d6ceeb2deb507a872185cfb.jpg" />
                     <div slot="title">The Science of Self-Learning</div>
                     <div slot="author">Peter Hollins</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3336859"
+                    isbn="9781440337611"
+                    termshash="4bae3f7456c2ffe161e348645b00589f"
+                    href="/book/3336859/5b0796/the-absolute-beginners-big-book-of-drawing-and-painting.html"
+                    download="/dl/3336859/e152d6"
+                    deleted=""
+                    publisher="Penguin"
+                    language="english"
+                    year="2014"
+                    extension="pdf"
+                    filesize="73.20 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3b13ebc34b975d6a6d3822f4e704e304998562926bd3b396b50269f72507c4e1.jpg" />
+                    <div slot="title">The Absolute Beginner's Big Book of Drawing and Painting</div>
+                    <div slot="author">Mark Willenbrink; Mary Willenbrink</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
@@ -1121,29 +1144,6 @@
                     <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/89e9fb224ff6de6ba53bcf0b6e20576ebe9691b087a3be5856a22284b9c40484.jpg" />
                     <div slot="title">How to Draw Manga - Sketching-Style Vol.1 - Sketching to Plan</div>
                     <div slot="author">Manga University; Hikaru Hayashi; Takehiko Matsumoto; Kazuaki Morita</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2835408"
-                    isbn="9784766117370"
-                    termshash=""
-                    href="/book/2835408/c41a1d/how-to-draw-manga-sketchingstyle-vol2-logical-proportions.html"
-                    download="/dl/2835408/d514d7"
-                    deleted=""
-                    publisher="Graphic-sha"
-                    language="english"
-                    year="2007"
-                    extension="pdf"
-                    filesize="69.55 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5e632a0418c98e5346742cd9c518bc4f6433cbaa892e63c5261dbbfd1247a1b3.jpg" />
-                    <div slot="title">How to Draw Manga - Sketching-Style Vol.2 - Logical Proportions</div>
-                    <div slot="author">Hayashi; Hikaru</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
