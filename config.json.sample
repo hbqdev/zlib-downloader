@@ -1,0 +1,25 @@
+{
+  "email": "your_zlibrary_email@example.com",
+  "password": "your_zlibrary_password",
+  "domain": "z-library.sk",
+  "category_id": 54,
+  "category_slug": "Study--Teaching",
+  "category": "Arts - Study & Teaching",
+  "scrape_url": "https://z-library.sk/category/54/Study--Teaching/s/?languages%5B0%5D=english&order=popular&page=1",
+  "limit": null,
+  "download_books": true,
+  "output_dir": "/path/to/your/download/directory",
+  "fetch_full_history": false,
+  "force_scrape": true,
+  "filters": {
+    "exactMatching": false,
+    "yearFrom": null,
+    "yearTo": null,
+    "languages": [
+      "english"
+    ],
+    "extensions": [],
+    "contentType": null,
+    "sortOrder": "Most Popular"
+  }
+} 
