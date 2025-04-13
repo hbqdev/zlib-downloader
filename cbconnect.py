@@ -137,15 +137,10 @@ def close_db(cluster):
 # Example usage (for testing connection)
 if __name__ == "__main__":
     # This part only runs when executing cbconnect.py directly
-    print("Testing Couchbase connection...")
-    # Load config from a dummy dict or a test config file if needed
-    test_config = {
-        "couchbase_host": COUCHBASE_HOST,
-        "couchbase_username": COUCHBASE_USERNAME,
-        "couchbase_password": COUCHBASE_PASSWORD,
-        "couchbase_bucket": COUCHBASE_BUCKET
-    }
-    cluster, collection = connect_db(test_config)
+    print("Testing Couchbase connection (using .env variables)...")
+    
+    # connect_db() now reads directly from environment variables loaded by load_dotenv()
+    cluster, collection = connect_db()
 
     if cluster and collection:
         print("Testing check_if_downloaded (example book ID '12345'):")
