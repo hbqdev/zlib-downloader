@@ -436,34 +436,36 @@ class Zlibrary:
 
     def search_scrape(
         self,
-        config: dict # Pass the whole config dictionary
+        category_id: int, 
+        category_slug: str, 
+        page: int
      ) -> dict:
-        """Searches for books by scraping a specific URL or constructing one from config.
-           Prioritizes 'scrape_url' in config if present.
-           Uses Regex to extract ID, Hash, Title, Author from raw HTML.
-           Saves results to to_download.txt without checking download history.
+        """Scrapes a specific category page on Z-Library.
+
+        Args:
+            category_id: The numerical ID of the category.
+            category_slug: The text slug of the category.
+            page: The page number to scrape.
+
+        Returns:
+            A dictionary containing:
+            - 'success': True if the scrape and file write succeeded, False otherwise.
+            - 'books_found': The number of book cards extracted from the page.
+            - 'error': An error message if success is False.
         """
         if not self.isLoggedIn():
             print("Not logged in")
-            return {"success": False, "error": "Not logged in", "books": []}
+            return {"success": False, "books_found": 0, "error": "Not logged in"}
 
-        target_url = config.get("scrape_url")
-        params = None # Params are usually part of scrape_url
+        # --- Construct URL Dynamically --- 
+        # Assuming english and popular sort order for now
+        target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
+        print(f"Scraping URL: {target_url}")
 
-        if not target_url:
-            print("Error: scrape_url must be provided in config for search_scrape method.")
-            return {"success": False, "error": "scrape_url not provided", "books": []}
-        else:
-            print(f"Scraping specific URL from config: {target_url}")
-            # Ensure the URL uses the configured domain if it's relative (optional)
-            if not target_url.startswith("http"):
-                target_url = f"https://{self.__domain}{target_url}"
-
-        # --- Step 1: Fetch the HTML ---
+        # --- Step 1: Fetch the HTML --- 
         try:
             response = requests.get(
                 target_url,
-                params=params, # Usually None when using specific scrape_url
                 cookies=self.__cookies,
                 headers=self.__headers,
                 timeout=30
@@ -472,7 +474,7 @@ class Zlibrary:
 
         except requests.exceptions.RequestException as e:
             print(f"Error during request to {target_url}: {e}")
-            return {"success": False, "error": str(e), "books": []}
+            return {"success": False, "books_found": 0, "error": str(e)}
 
         html_content = response.text
 
@@ -553,18 +555,25 @@ class Zlibrary:
                 print(f"Error processing card block: {e}\n{traceback.format_exc()} - Card start: {card_text[:100]}...")
 
         print(f"Regex successfully extracted info for {matches_found} books.")
-        if not books_data:
-             print("Warning: Regex did not successfully extract any valid book data (ID/Hash/Title/Author) from the scraped HTML.")
-             # Return success=False if nothing useful extracted
-             return {"success": False, "books": []}
+        
+        # <<< Update logic based on matches_found >>>
+        if not books_data and matches_found == 0:
+             # It's possible the page is valid but has no books (e.g., last page)
+             print("Regex did not extract any book data from the scraped HTML. This might be the last page or an empty page.")
+             # Return success=True, but books_found=0 to signal the end of pagination
+             return {"success": True, "books_found": 0}
+        elif not books_data and matches_found > 0:
+             # This case indicates a potential regex/parsing error if cards were found but no data extracted
+             print("Warning: Regex found card blocks but failed to extract valid book data (ID/Hash/Title/Author).")
+             # Consider this a partial failure for safety?
+             return {"success": False, "books_found": matches_found, "error": "Regex failed to extract details from cards"}
+        # Apply limit if specified - REMOVING this, limit is per-page now handled by pagination loop
+        # limit = config.get("limit") # Get limit from config
+        # if limit is not None and len(books_data) > limit:
+        #     print(f"Applying limit: Using first {limit} of {len(books_data)} extracted books.")
+        #     books_data = books_data[:limit]
 
-        # Apply limit if specified
-        limit = config.get("limit") # Get limit from config
-        if limit is not None and len(books_data) > limit:
-            print(f"Applying limit: Using first {limit} of {len(books_data)} extracted books.")
-            books_data = books_data[:limit]
-
-        # --- Step 4: Save extracted data to to_download.txt ---
+        # --- Step 4: Save extracted data to to_download.txt --- 
         download_filename = "to_download.txt"
         try:
             with open(download_filename, "w", encoding="utf-8") as f:
@@ -573,7 +582,9 @@ class Zlibrary:
                     line = f"{book['id']}|{book['hash']}|{book['title'].replace('|', ' ')}|{book['authors'].replace('|', ' ')}\n"
                     f.write(line) # Write the line including the newline character
             print(f"Successfully saved data for {len(books_data)} books to {download_filename}")
-            return {"success": True} # Indicate success, data is in the file
+            # <<< Update return dict >>>
+            return {"success": True, "books_found": len(books_data)}
         except IOError as e:
             print(f"Error saving data to file {download_filename}: {e}")
-            return {"success": False, "error": f"Failed to save download data: {e}"}
+            # <<< Update return dict >>>
+            return {"success": False, "books_found": 0, "error": f"Failed to save download data: {e}"}
