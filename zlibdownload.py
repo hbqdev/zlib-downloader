@@ -35,6 +35,71 @@ def save_json(data, file_path):
         print(f"An unexpected error occurred saving to '{file_path}': {e}")
         return False
 
+# <<< New function to fetch and save full download history >>>
+def fetch_and_save_user_history(z_instance):
+    """Fetches all pages of user download history and saves raw responses."""
+    print("\n--- Fetching Full User Download History (as requested) ---")
+    raw_history_responses = []
+    current_page = 1
+    page_limit = 200 # Items per API call page
+    total_ids_found = 0
+
+    while True:
+        print(f"  Fetching history page {current_page} (limit {page_limit})...")
+        try:
+            history_response = z_instance.getUserDownloaded(limit=page_limit, page=current_page)
+            
+            if not history_response:
+                print(f"  API request failed or returned None for history page {current_page}. Stopping history fetch.")
+                break
+            
+            # Store raw response as string regardless of content for archival
+            raw_history_responses.append(json.dumps(history_response, indent=2)) # Store formatted JSON string
+
+            if history_response.get('success') and history_response.get('history'):
+                num_items_on_page = len(history_response['history'])
+                total_ids_found += num_items_on_page # Count items on page
+                print(f"    Found {num_items_on_page} items on page {current_page}. Total items so far: {total_ids_found}")
+                
+                # Check if we received fewer items than the limit, indicating the last page
+                if num_items_on_page < page_limit:
+                    print("  Reached the last page of history.")
+                    break # Exit loop if last page reached
+                
+                current_page += 1 # Go to the next page
+                time.sleep(0.5) # Small delay between history API calls
+            else:
+                # Handle cases where success is false or history key is missing/empty
+                if not history_response.get('success'):
+                    print(f"  API reported failure for history page {current_page}. Response: {history_response.get('error', 'N/A')}")
+                elif not history_response.get('history'):
+                     print(f"  API response for page {current_page} missing 'history' key or it's empty.")
+                print("  Stopping history fetch.")
+                break # Exit loop
+                
+        except Exception as e:
+            import traceback
+            print(f"  An error occurred during history fetch for page {current_page}: {e}")
+            print(traceback.format_exc())
+            print("  Stopping history fetch due to error.")
+            break
+
+    # --- Save Raw History Responses --- 
+    if raw_history_responses:
+        raw_history_filename = "raw_api_history.txt"
+        print(f"\n  Saving {len(raw_history_responses)} raw API history page responses to {raw_history_filename}...")
+        try:
+            with open(raw_history_filename, "w", encoding="utf-8") as f_raw:
+                # Write each JSON response string separated by a newline for readability
+                separator = "\n\n---\n\n" 
+                f_raw.write(separator.join(raw_history_responses)) 
+            print(f"  Successfully saved raw API history responses.")
+        except IOError as e:
+            print(f"  Error saving raw API history to file {raw_history_filename}: {e}")
+    else:
+         print("\n  No raw history responses collected to save.")
+    print("--- Finished Fetching Full User Download History ---")
+
 def run_download_process(config_file="config.json", categories_file="categories.json"):
     """
     Main process: Loads config & categories, iterates through enabled categories
@@ -59,6 +124,8 @@ def run_download_process(config_file="config.json", categories_file="categories.
     output_dir = config.get("output_dir")
     # force_scrape = config.get("force_scrape", False) # 'force_scrape' is implicitly handled by running the script
     download_filename = "to_download.txt" # File used temporarily for each page scrape
+    # <<< Get the fetch_full_history flag >>>
+    fetch_full = config.get("fetch_full_history", False)
 
     if not email or not password:
         print("Error: 'email' and 'password' must be specified in config.")
@@ -103,6 +170,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
             print("Proceeding, but download count messages might be inaccurate.")
     else:
         print("Logged in. Download flag is false, will list/check books only.")
+
+    # <<< Call history fetch function if flag is set >>>
+    if fetch_full:
+        fetch_and_save_user_history(z) # Pass the initialized Zlibrary instance
+    # <<< End of history fetch call >>>
 
     # --- Main Loop: Categories -> Pages -> Books --- 
     total_books_processed_all_categories = 0
