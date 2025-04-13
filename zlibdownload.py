@@ -4,6 +4,7 @@ import time
 import json
 import cbconnect
 import sys # <<< Added for sys.exit
+from datetime import datetime # <<< Added for timestamp
 
 def load_json(file_path):
     """Loads data from a JSON file."""
@@ -176,9 +177,28 @@ def run_download_process(config_file="config.json", categories_file="categories.
         fetch_and_save_user_history(z) # Pass the initialized Zlibrary instance
     # <<< End of history fetch call >>>
 
-    # --- Main Loop: Categories -> Pages -> Books --- 
+    # --- Main Loop Variables --- 
     total_books_processed_all_categories = 0
     total_downloads_attempted_this_run = 0
+    initial_download_count_for_summary = downloads_left_today # Store initial count for summary
+    
+    # <<< Initialize Dry Run Report File (if applicable) >>>
+    report_file_handle = None
+    dry_run_report_filename = None
+    dry_run_book_count = 0
+    if not should_download:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        dry_run_report_filename = f"dry_run_report_{timestamp}.txt"
+        try:
+            # Open in append mode 'a'
+            report_file_handle = open(dry_run_report_filename, 'a', encoding='utf-8')
+            report_file_handle.write(f"[DRY RUN] Dry run started at {timestamp}. No downloads or state updates will occur.\n")
+            report_file_handle.write("Scraped Book Details (ID|Hash|Title|Author):\n")
+            report_file_handle.write("---\n")
+            print(f"[DRY RUN] Report file created: {dry_run_report_filename}")
+        except IOError as e:
+            print(f"[DRY RUN] Error creating report file '{dry_run_report_filename}': {e}. Reporting disabled.")
+            report_file_handle = None # Ensure handle is None if creation failed
 
     try:
         # --- Outer Loop: Categories --- 
@@ -207,26 +227,26 @@ def run_download_process(config_file="config.json", categories_file="categories.
 
             # --- Inner Loop: Pagination --- 
             for current_page in range(start_page, end_page + 1):
-                if limit_hit_for_this_category:
+                if limit_hit_for_this_category and should_download: # Only stop if downloads active & limit hit
                     print(f"  Download limit previously hit, skipping further pages for category: {cat_name}")
                     break # Stop processing pages for this category
 
                 print(f"\n-- Scraping Page {current_page}/{end_page} for Category: {cat_name} --")
                 
-                # Delete previous page's temp file if it exists
-                if os.path.exists(download_filename):
+                # Delete previous page's temp file if it exists and downloads are enabled
+                if should_download and os.path.exists(download_filename):
                     try: os.remove(download_filename)
                     except OSError as e: print(f"Warning: Could not remove old {download_filename}: {e}")
 
-                scrape_result = z.search_scrape(cat_id, cat_slug, current_page)
+                scrape_result = z.search_scrape(cat_id, cat_slug, current_page, enable_file_output=should_download)
                 books_found_on_page = scrape_result.get("books_found", 0)
 
                 if not scrape_result.get("success", False):
                     print(f"  Error scraping page {current_page} for {cat_name}: {scrape_result.get('error', 'Unknown error')}")
                     print(f"  Stopping processing for category '{cat_name}' due to scrape error. Will retry from page {current_page} next run.")
-                    break
+                    break # Break inner loop on error, state not updated
                 
-                last_successfully_scraped_page = current_page
+                last_successfully_scraped_page = current_page # Update on successful scrape
 
                 if books_found_on_page == 0:
                     print(f"  No books found on page {current_page}. Assuming end of category {cat_name}.")
@@ -236,112 +256,78 @@ def run_download_process(config_file="config.json", categories_file="categories.
                 
                 # --- Process Books from the Scraped Page --- 
                 books_to_process_page = []
-                try:
-                    with open(download_filename, "r", encoding="utf-8") as f:
-                        for line in f:
-                            parts = line.strip().split('|')
-                            if len(parts) == 4:
-                                books_to_process_page.append({
-                                    "id": parts[0],
-                                    "hash": parts[1],
-                                    "title": parts[2],
-                                    "authors": parts[3]
-                                })
-                            else:
-                                print(f"  Warning: Skipping malformed line in {download_filename}: {line.strip()}")
-                except FileNotFoundError:
-                    print(f"  Error: {download_filename} not found after successful scrape reported for page {current_page}? Skipping download processing.")
-                    continue
-                except IOError as e:
-                    print(f"  Error reading {download_filename} for page {current_page}: {e}. Skipping download processing.")
-                    continue
-                
-                if not books_to_process_page:
-                    print(f"  No valid book data loaded from {download_filename} for page {current_page} despite scrape success? Skipping.")
-                    continue
-
-                # --- Download Loop for this Page --- 
-                page_book_count = len(books_to_process_page)
-                for idx, book_data in enumerate(books_to_process_page):
-                    book_id = book_data.get("id")
-                    book_hash = book_data.get("hash")
-                    title = book_data.get("title", "Unknown Title")
-                    authors = book_data.get("authors", "Unknown Author")
-
-                    print(f"    ({idx+1}/{page_book_count}) Processing Book ID: {book_id} ('{title[:50]}...')")
-
-                    # Check Couchbase
-                    is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
-                    if is_already_downloaded_in_db:
-                        print("      Already in Couchbase. Skipping.")
-                        books_processed_this_category += 1
-                        continue
-                    
-                    # Check if download should be attempted
-                    if not should_download:
-                        print("      Listing only (download_books is false). Marked as processed.")
-                        books_processed_this_category += 1
-                        continue
-                    
-                    # Check if limit was hit earlier in this run
-                    if limit_hit_for_this_category:
-                         print("      Download limit previously hit in this run. Skipping download.")
-                         continue
-
-                    # Attempt Download
-                    print(f"      Attempting download... ({downloads_left_today} left reported initially)")
+                if should_download: # Read from file only if downloads enabled (it was written)
                     try:
-                        download_result = z.downloadBook({"id": book_id, "hash": book_hash})
-
-                        if download_result:
-                            filename, content = download_result
-                            clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
-                            
-                            # Create output directory if it doesn't exist (check each time for safety)
-                            if not os.path.exists(output_dir):
-                                try: os.makedirs(output_dir) 
-                                except OSError as e: 
-                                     print(f"      Error creating output directory '{output_dir}': {e}. Cannot save file.")
-                                     continue # Skip saving/marking this book
-                                     
-                            filepath = os.path.join(output_dir, clean_filename)
-                            
-                            try:
-                                with open(filepath, "wb") as f:
-                                    f.write(content)
-                                print(f"      Downloaded: {filepath}")
-                                
-                                # Mark in Couchbase
-                                print(f"      Marking book ID {book_id} as downloaded in Couchbase...")
-                                mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
-                                if not mark_success:
-                                    print(f"      Warning: Failed to mark book {book_id} in Couchbase.")
-                                
-                                books_processed_this_category += 1
-                                total_downloads_attempted_this_run += 1
-                                downloads_left_today -= 1 # Decrement local counter for logging info
-
-                                time.sleep(2) # Delay after successful download
-                                
-                            except IOError as e:
-                                print(f"      Error saving file '{filepath}': {e}")
-                                # Decide if you want to attempt marking in CB anyway?
-                                # For now, we don't count as processed if save fails.
-
-                        else:
-                            # Download failed - Assume limit hit or API error
-                            print(f"      Download failed for book ID {book_id} (API returned None or error).")
-                            print("      Assuming download limit reached or Z-Library API error. Stopping further download attempts for this run.")
-                            limit_hit_for_this_category = True # Set flag to stop further downloads
-                            # Don't break inner page loop, just stop downloads
-
-                    except Exception as e:
-                        import traceback
-                        print(f"      Unexpected error downloading book ID {book_id}: {e}")
-                        print(traceback.format_exc())
-                        # Potentially set limit_hit_for_this_category = True here too?
+                        with open(download_filename, "r", encoding="utf-8") as f:
+                            for line in f:
+                                parts = line.strip().split('|')
+                                if len(parts) == 4:
+                                    books_to_process_page.append({
+                                        "id": parts[0],
+                                        "hash": parts[1],
+                                        "title": parts[2],
+                                        "authors": parts[3]
+                                    })
+                                else:
+                                    print(f"  Warning: Skipping malformed line in {download_filename}: {line.strip()}")
+                    except FileNotFoundError:
+                        print(f"  Error: {download_filename} not found after successful scrape reported for page {current_page}? Skipping download processing.")
+                        continue # To next page
+                    except IOError as e:
+                        print(f"  Error reading {download_filename} for page {current_page}: {e}. Skipping download processing.")
+                        continue # To next page
+                # In dry run, we'll handle data later
                 
-                # --- End of Download Loop for Page --- 
+                if should_download and not books_to_process_page:
+                    print(f"  No valid book data loaded from {download_filename} for page {current_page} despite scrape success? Skipping.")
+                    continue # To next page
+
+                # <<< Collect data for dry run report >>>
+                if not should_download and scrape_result.get("success"): # Only collect if scrape ok
+                    page_books_data = scrape_result.get("books_data", [])
+                    if page_books_data:
+                        # <<< Write incrementally to report file >>>
+                        if report_file_handle:
+                            page_books_written = 0
+                            try:
+                                for book in page_books_data:
+                                    # <<< Also print book details to console in dry run >>>
+                                    book_id = book.get('id','N/A')
+                                    book_hash = book.get('hash','N/A')
+                                    title = book.get('title','N/A')
+                                    authors = book.get('authors','N/A')
+                                    print(f"    [DRY RUN] Found: ID={book_id}, Hash={book_hash}, Title='{title[:60]}...', Authors='{authors[:50]}...'")
+                                    
+                                    # Write to file
+                                    line = f"{book_id}|{book_hash}|{title.replace('|',' ')}|{authors.replace('|',' ')}\n"
+                                    report_file_handle.write(line)
+                                    page_books_written += 1
+                                dry_run_book_count += page_books_written # Update total count
+                                # Message now redundant as details are printed above
+                                # print(f"    [DRY RUN] Wrote {page_books_written} book details to report.") 
+                            except IOError as e:
+                                print(f"    [DRY RUN] Error writing to report file: {e}. Further reporting disabled.")
+                                report_file_handle.close() # Close on error
+                                report_file_handle = None 
+                        else:
+                             print(f"    [DRY RUN] Report file handle not available, cannot write details.")
+                            
+                        # No longer extend in-memory list: dry_run_results.extend(page_books_data)
+                        books_processed_this_category += len(page_books_data) # Still count books found
+                else: # Dry Run logic 
+                    # <<< Dry run logic using scrape_result['books_data'] >>>
+                    page_books_data = scrape_result.get("books_data", [])
+                    if page_books_data:
+                        dry_run_book_count += len(page_books_data) # Count books found
+                        books_processed_this_category += len(page_books_data) # Count books found
+                    else:
+                         if books_found_on_page > 0:
+                              # Log if scrape said books found but data is missing
+                              print(f"    [DRY RUN] Scrape reported {books_found_on_page} books found, but no data received for report.")
+                         else: # books_found_on_page was 0
+                              print(f"    [DRY RUN] Processed 0 books found on page {current_page}.")
+                    
+                # --- End of Download/Check/DryRun Logic for Page --- 
                 print(f"  Finished processing books for page {current_page}.")
                 if books_found_on_page > 0: time.sleep(1) # Delay between page scrapes if books were found
             
@@ -349,8 +335,12 @@ def run_download_process(config_file="config.json", categories_file="categories.
             print(f"=== Finished category: {cat_name}. Processed {books_processed_this_category} new books/listings in this category. ===")
             total_books_processed_all_categories += books_processed_this_category
             
-            category["start_page_next_run"] = last_successfully_scraped_page + 1
-            print(f"    Next run for '{cat_name}' will start at page {category['start_page_next_run']}")
+            # <<< Only update the start page for the next run IF downloads are enabled >>>
+            if should_download:
+                category["start_page_next_run"] = last_successfully_scraped_page + 1
+                print(f"    Next run for '{cat_name}' will start at page {category['start_page_next_run']} (State updated)")
+            else:
+                print(f"    [DRY RUN] State for '{cat_name}' not updated.")
         
         # --- End of Category Loop --- 
 
@@ -363,15 +353,33 @@ def run_download_process(config_file="config.json", categories_file="categories.
     finally:
         # --- Final Cleanup & Summary --- 
         cleanup_db()
-        if categories: # Only save if loading was successful
+        # <<< Only save the updated category data back IF downloads are enabled >>>
+        if should_download and categories: 
+            print("\nSaving updated category start pages...")
             save_json(categories, categories_file)
+        elif not should_download:
+            print("\n[DRY RUN] Skipping save of category start pages.")
             
+            # <<< Finalize and close Dry Run Report >>>
+            if report_file_handle:
+                try:
+                    report_file_handle.write("---\n")
+                    report_file_handle.write(f"Total books listed: {dry_run_book_count}\n")
+                    report_file_handle.close()
+                    print(f"\n[DRY RUN] Finished writing report file: {dry_run_report_filename}")
+                except IOError as e:
+                     print(f"\n[DRY RUN] Error finalizing report file: {e}")
+            elif dry_run_report_filename: # File creation failed but name exists
+                 print(f"\n[DRY RUN] Report file '{dry_run_report_filename}' could not be written to.")
+            else: # File creation wasn't even attempted
+                 print("\n[DRY RUN] No book details collected as report file setup failed.")
+
         print("\n--- Run Summary ---")
         print(f"Total new books/listings processed across all categories: {total_books_processed_all_categories}")
         if should_download:
              print(f"Total download attempts made in this run: {total_downloads_attempted_this_run}")
              # Note: Final downloads_left_today is just informational based on initial check
-             print(f"Initial downloads reported left by API: {config.get('initial_downloads_left', 'N/A')}, Local counter ended at: {downloads_left_today}") 
+             print(f"Initial downloads reported left by API: {initial_download_count_for_summary}, Local counter ended at: {downloads_left_today}") 
         print("--- End of Run ---")
 
 # --- Main Execution --- 

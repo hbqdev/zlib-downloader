@@ -1,1149 +1,1149 @@
 <z-bookcard
-                                        id="2866208"
-                    isbn="9780241332818"
-                    termshash="bd649a5eed9ab5900d7bc920ddfe5809"
-                    href="/book/2866208/c1b8c5/great-paintings-the-worlds-masterpieces-explored-and-explained.html"
-                    download="/dl/2866208/ec8887"
-                    deleted=""
-                    publisher="DK Publishing"
-                    language="english"
-                    year="2011"
-                    extension="pdf"
-                    filesize="80.94 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5a5ddd1dc7d88409a0bd81a392dc76e8c7e3ba3d10ec06481e7ce19e6dcd9b5b.jpg" />
-                    <div slot="title">Great Paintings: The World's Masterpieces Explored and Explained</div>
-                    <div slot="author"> Karen Hosack Janes</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="691778"
-                    isbn="9780756619374"
-                    termshash="022ac67c8e429976ca25a2440cd5fb75"
-                    href="/book/691778/ec85b6/watercolor-workshop.html"
-                    download="/dl/691778/6764d5"
-                    deleted=""
-                    publisher="Dk Pub"
-                    language="english"
-                    year="2006"
-                    extension="pdf"
-                    filesize="64.13 MB"
-                    rating="4.5"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/49f98eba5d046f4f27650879082446b2b2a5c16b9380772263f74839d12e8046.jpg" />
-                    <div slot="title">Watercolor Workshop</div>
-                    <div slot="author">Glynis Barnes-Mellish</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3510389"
-                    isbn="9780740797712"
+                                        id="15983940"
+                    isbn=""
                     termshash=""
-                    href="/book/3510389/839500/color-and-light-a-guide-for-the-realist-painter.html"
-                    download="/dl/3510389/1c84c1"
+                    href="/book/15983940/dd3541/music-theory-berklee-college-of-music.html"
+                    download="/dl/15983940/f97e63"
                     deleted=""
-                    publisher="Andrews McMeel Publishing"
+                    publisher="Berklee College of Music"
                     language="english"
-                    year="2010"
+                    year="1987"
                     extension="pdf"
-                    filesize="484.42 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7deda05b411ae72b45782e2f46dcff673118323a132766e28115e371545e4ecf.jpg" />
-                    <div slot="title">Color and Light: A Guide for the Realist Painter</div>
-                    <div slot="author">James Gurney</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2777312"
-                    isbn=""
-                    termshash="16368eac3bcc9e1787ee28294d0ba1e0"
-                    href="/book/2777312/0aaba7/delphi-complete-works-of-michelangelo.html"
-                    download="/dl/2777312/8cdd61"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="43.65 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/02db552b590ae0385a528b81ff0f537e37daa70918fb6a591271b4026790cf3c.jpg" />
-                    <div slot="title">Delphi Complete Works of Michelangelo</div>
-                    <div slot="author">Michelangelo di Lodovico Buonarroti Simoni</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410652"
-                    isbn="9781908909923"
-                    termshash="556f1844236f50c940ab9ddc7a05df4a"
-                    href="/book/3410652/fa8103/delphi-collected-works-of-claude-monet-illustrated.html"
-                    download="/dl/3410652/a5ad4a"
-                    deleted=""
-                    publisher="Classics"
-                    language="english"
-                    year="2012"
-                    extension="epub"
-                    filesize="31.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/054e35da7186eca4f986d27fb17e5f5c25ea2212590d2b21ebd533c93fcd8f6f.jpg" />
-                    <div slot="title">Delphi Collected Works of Claude Monet (Illustrated)</div>
-                    <div slot="author">Claude Monet; Peter Russel</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3390580"
-                    isbn="9780740785504"
-                    termshash="d950036c81257a6739a44e31706d5dea"
-                    href="/book/3390580/8e28a9/imaginative-realism-how-to-paint-what-doesnt-exist.html"
-                    download="/dl/3390580/f13f30"
-                    deleted=""
-                    publisher="Andrews McMeel Publishing"
-                    language="english"
-                    year="2009"
-                    extension="pdf"
-                    filesize="103.48 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3d6bc3b0339863af7ff0ee5c357b5c3a089fb349e6f40324bfcd55e1b3c2b8d3.jpg" />
-                    <div slot="title">Imaginative Realism: How to Paint What Doesn’t Exist</div>
-                    <div slot="author">James Gurney</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="756722"
-                    isbn="9780756628574"
-                    termshash="ed64171fa0b5861d3c1842c74178ab0b"
-                    href="/book/756722/7d70e5/watercolor-workshop-ii.html"
-                    download="/dl/756722/7c8e69"
-                    deleted=""
-                    publisher="Dk Pub"
-                    language="english"
-                    year="2007"
-                    extension="pdf"
-                    filesize="54.34 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/832f943c21f9c54fc4ae5f8fca865b722a09dc02b14282e8f8dc6405edbcd471.jpg" />
-                    <div slot="title">Watercolor Workshop II</div>
-                    <div slot="author">Glynis Barnes-Mellish</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3409947"
-                    isbn="9781786565105"
-                    termshash="ca59671d27812055d0c5262e84e4440d"
-                    href="/book/3409947/b21f7d/delphi-complete-works-of-hieronymus-bosch-illustrated.html"
-                    download="/dl/3409947/8a56d9"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2017"
-                    extension="epub"
-                    filesize="14.70 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c01ed1083fbaa119d3dc134bccab10f079e39aca255600228837930bff42b35d.jpg" />
-                    <div slot="title">Delphi Complete Works of Hieronymus Bosch (Illustrated)</div>
-                    <div slot="author">Hieronymus Bosch; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410644"
-                    isbn="9781910630570"
-                    termshash="d6cbc1b161f9a3c1b9ab9c64c3cb3336"
-                    href="/book/3410644/c1eae3/delphi-complete-works-of-gustav-klimt-illustrated.html"
-                    download="/dl/3410644/1c00b9"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="20.73 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3ed629ac8fb1a44b0af67a7de0045d06ca52298da04dc989e32f37b0997f718f.jpg" />
-                    <div slot="title">Delphi Complete Works of Gustav Klimt (Illustrated)</div>
-                    <div slot="author">Gustav Klimt; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410642"
-                    isbn=""
-                    termshash="8998dc2242beac8e8969f7aa35f051fc"
-                    href="/book/3410642/2c2d58/delphi-complete-works-of-johannes-vermeer-illustrated.html"
-                    download="/dl/3410642/40dbe1"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2012"
-                    extension="epub"
-                    filesize="9.25 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/44560448455c62d4743fc99da6ded022f9f03924d324d9a1c48a4b0158a2c72f.jpg" />
-                    <div slot="title">Delphi Complete Works of Johannes Vermeer (Illustrated)</div>
-                    <div slot="author">Johannes Vermeer</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411119"
-                    isbn=""
-                    termshash="aca291284238e1e1bc7dd1d220339653"
-                    href="/book/3411119/47533f/delphi-complete-works-of-john-singer-sargent-illustrated.html"
-                    download="/dl/3411119/15d939"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="54.35 MB"
-                    rating="5.0"
+                    filesize="8.51 MB"
+                    rating="0.0"
                     quality="1.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8cbabf6153c6394522af7d0a12875bde7eb6beff60562a3ccbff5badfe48b8b3.jpg" />
-                    <div slot="title">Delphi Complete Works of John Singer Sargent (Illustrated)</div>
-                    <div slot="author">John Singer Sargent</div>
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">Music Theory Berklee College of Music</div>
+                    <div slot="author">Barrie Nettles</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3047825"
-                    isbn=""
-                    termshash="5a55049b4c5d105add5c5009de94daa8"
-                    href="/book/3047825/da2408/delphi-complete-works-of-michelangelo-merisi-da-caravaggio.html"
-                    download="/dl/3047825/762ee4"
+                                        id="24304166"
+                    isbn="9780593086490"
+                    termshash="8519853ff12b09a038c18b1a9ade0e4f"
+                    href="/book/24304166/c90d3b/art-is-life-icons-and-iconoclasts-visionaries-and-vigilantes-and-flashes-of-hope-in-the-night.html"
+                    download="/dl/24304166/99fde6"
                     deleted=""
-                    publisher="Delphi Classics"
+                    publisher="Penguin"
                     language="english"
-                    year="2014"
+                    year="2022"
                     extension="epub"
-                    filesize="73.56 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8bbffe11cb07089c960cd95cdcbc6181ac69528b5435b934e540442ed8ec78d3.jpg" />
-                    <div slot="title">Delphi Complete Works of Michelangelo Merisi da Caravaggio</div>
-                    <div slot="author">Michelangelo Merisi Da Caravaggio</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410784"
-                    isbn=""
-                    termshash="44a3d59b0fee84e805cd7d152e33d881"
-                    href="/book/3410784/954d6e/delphi-complete-works-of-rembrandt-van-rijn.html"
-                    download="/dl/3410784/31cac4"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="37.21 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/50932f517213f9ce49396e4144d67072a0e3648a7bd8eb7cba6c3fad6de751de.jpg" />
-                    <div slot="title">Delphi Complete Works of Rembrandt van Rijn</div>
-                    <div slot="author">Rembrandt van Rijn</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3689939"
-                    isbn="9781633221079"
-                    termshash="1f5605a3b1958fd093b1e3b95122b259"
-                    href="/book/3689939/5b5a9b/beginning-watercolor.html"
-                    download="/dl/3689939/d05b41"
-                    deleted=""
-                    publisher="Walter Foster Publishing"
-                    language="english"
-                    year="2016"
-                    extension="pdf"
-                    filesize="27.03 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a3d5f8c131a6592e160465b5b81c42b68de93c739c208290342768adff9348e3.jpg" />
-                    <div slot="title">Beginning Watercolor</div>
-                    <div slot="author">Maury Aaseng</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410674"
-                    isbn=""
-                    termshash="ae8cf3a6f8bab8892c056a6894a31f01"
-                    href="/book/3410674/fb90aa/delphi-complete-works-of-raphael-illustrated.html"
-                    download="/dl/3410674/8c6ee2"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="21.75 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3f50f466fa1974c245186bb5c6e18236a0cceb3f6a042fff68f0a49e2c3f89f4.jpg" />
-                    <div slot="title">Delphi Complete Works of Raphael (Illustrated)</div>
-                    <div slot="author">Raffaello Sanzio</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410651"
-                    isbn=""
-                    termshash="f5249684d8a865c709efa3d33b855162"
-                    href="/book/3410651/77ad67/delphi-complete-paintings-of-francisco-de-goya-illustrated.html"
-                    download="/dl/3410651/be9a08"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="31.94 MB"
-                    rating="5.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a8b2696afb6dc3363a63ed31a05e4789a7b5c14c7d80d319f6a5ddfac39ae331.jpg" />
-                    <div slot="title">Delphi Complete Paintings of Francisco de Goya (Illustrated)</div>
-                    <div slot="author">Francisco de Goya; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3047651"
-                    isbn=""
-                    termshash="ec99a879183d87ee54b7d30dfec90281"
-                    href="/book/3047651/9f958a/delphi-complete-works-of-pierreauguste-renoir.html"
-                    download="/dl/3047651/3b2a1e"
-                    deleted=""
-                    publisher="Delphi Classic"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="54.05 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ea4a988f189e8e155dc567bf044261c8b9658a1bd932e1efe597ae3d86fb1c2d.jpg" />
-                    <div slot="title">Delphi. Complete Works of Pierre-Auguste Renoir</div>
-                    <div slot="author">Pierre-Auguste Renoir</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410672"
-                    isbn=""
-                    termshash="6d729724874eba5e6751e57d46469b34"
-                    href="/book/3410672/cffb07/delphi-complete-works-of-sandro-botticelli-illustrated.html"
-                    download="/dl/3410672/892ed8"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="17.13 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/03d4a250216fef3be56622f65bcaf17431b6bcc4834e7a3c34f14f309f1a30c6.jpg" />
-                    <div slot="title">Delphi Complete Works of Sandro Botticelli (Illustrated)</div>
-                    <div slot="author">Sandro Botticelli</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11491095"
-                    isbn=""
-                    termshash="ce33debf29cca8b553a19a263960ab76"
-                    href="/book/11491095/007a51/how-to-draw-backgrounds.html"
-                    download="/dl/11491095/8a1278"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="33.78 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/18eb1303e5a6ed6f5c94059dc4129e04748add5cd4cfe0c4b0bd57345bd0d570.png" />
-                    <div slot="title">How to Draw Backgrounds</div>
-                    <div slot="author">Mitch Leeuwe</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2326501"
-                    isbn="9781843305217"
-                    termshash="cf9adfba3e830a5868b67a19edffa5b6"
-                    href="/book/2326501/80e9d7/watercolor-painting-a-complete-guide-to-techniques-and-materials.html"
-                    download="/dl/2326501/c8951b"
-                    deleted=""
-                    publisher="New Holland"
-                    language="english"
-                    year="2003"
-                    extension="pdf"
-                    filesize="46.65 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/55bd86ba742daf47eaec5b8caa1ebc1cf1f84fe76538d320f7f37ee7328df7cf.jpg" />
-                    <div slot="title">Watercolor Painting: A Complete Guide to Techniques and Materials</div>
-                    <div slot="author">Jean-Louis Morelle</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5577158"
-                    isbn="9781909414143"
-                    termshash="67a0013bc348578824a7279c5b055384"
-                    href="/book/5577158/29b41f/beginners-guide-to-digital-painting-in-photoshop-characters.html"
-                    download="/dl/5577158/bfca84"
-                    deleted=""
-                    publisher="3DTotal Publishing"
-                    language="english"
-                    year="2015"
-                    extension="pdf"
-                    filesize="74.16 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/252fe9697d7ea43663740ddc81885feb84a4f762daeab9eee3a451243c44fd3c.jpg" />
-                    <div slot="title">Beginner's Guide to Digital Painting in Photoshop: Characters</div>
-                    <div slot="author">3dtotal Publishing</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410659"
-                    isbn=""
-                    termshash="38f1ff489fa904d04c8aaaf097f2523b"
-                    href="/book/3410659/bff14b/delphi-complete-works-of-edgar-degas-illustrated.html"
-                    download="/dl/3410659/aa0d70"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="41.88 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/53122c30899c9f97718800147b797fb10127d893a20a65a128543bb9e8cb5c73.jpg" />
-                    <div slot="title">Delphi Complete Works of Edgar Degas (Illustrated)</div>
-                    <div slot="author">Edgar Degas; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2842466"
-                    isbn=""
-                    termshash="97c17acf58bfe09b3ed342ed0fe518da"
-                    href="/book/2842466/46942e/delphi-complete-paintings-of-eugene-delacroix.html"
-                    download="/dl/2842466/a131b4"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="12.33 MB"
-                    rating="5.0"
-                    quality="3.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/edfc53272051af97a7f1f0faffa8261316538d25b5404ea8f73e7f31f4be5854.jpg" />
-                    <div slot="title">Delphi Complete Paintings of Eugene Delacroix</div>
-                    <div slot="author">Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411077"
-                    isbn="9781786565075"
-                    termshash="6c16400d45dc4440b09dd40ce809488d"
-                    href="/book/3411077/176467/delphi-complete-paintings-of-edvard-munch-illustrated.html"
-                    download="/dl/3411077/167937"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2017"
-                    extension="epub"
-                    filesize="109.20 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/e49b4051213cec4510c1e0fc0f46802f090237263116504ba0eb674ab9b61c1b.jpg" />
-                    <div slot="title">Delphi Complete Paintings of Edvard Munch (Illustrated)</div>
-                    <div slot="author">Edvard Munch; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410653"
-                    isbn="9781786564993"
-                    termshash="a6658e08198fa498482bf3ef51a7654d"
-                    href="/book/3410653/f7958c/delphi-complete-works-of-%C3%89douard-manet-illustrated.html"
-                    download="/dl/3410653/982439"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="24.75 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a11fb162d46e1328ebaf60618baa9ea7390b88531fc4bc545898bcbdc6e7c6ad.jpg" />
-                    <div slot="title">Delphi Complete Works of Édouard Manet (Illustrated)</div>
-                    <div slot="author">Édouard Manet; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2938595"
-                    isbn="9781440344077"
-                    termshash="c34c799deb83643ea5e4a50932e2a8e6"
-                    href="/book/2938595/fdffd6/watercolor-365-daily-tips-tricks-and-techniques.html"
-                    download="/dl/2938595/3e7e39"
-                    deleted=""
-                    publisher="North Light Books"
-                    language="english"
-                    year="2017"
-                    extension="pdf"
-                    filesize="23.44 MB"
-                    rating="5.0"
-                    quality="3.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/31610ca4dde70182701e2f8641e63a781b391e21837e743891caaf12e70751e2.jpg" />
-                    <div slot="title">Watercolor 365. Daily Tips, Tricks and Techniques</div>
-                    <div slot="author">Leslie Redhead</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410783"
-                    isbn="B00YB1AJIW"
-                    termshash="d7fba1ca737cef95b43ebe09d768d5cf"
-                    href="/book/3410783/40c037/delphi-complete-works-of-peter-paul-rubens.html"
-                    download="/dl/3410783/feb6ed"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="31.08 MB"
+                    filesize="5.59 MB"
                     rating="3.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9e413daf60f55937f69bd4285a62c6d494c4186d03bdb7f1f7902dac9b5fe02c.jpg" />
-                    <div slot="title">Delphi Complete Works of Peter Paul Rubens</div>
-                    <div slot="author">Peter Paul Rubens</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/beb7e27e2abe3f5073e3ab171a2a95e23eeb53c8fc82554ef956d068dec0b217.jpg" />
+                    <div slot="title">Art Is Life : Icons and Iconoclasts, Visionaries and Vigilantes, and Flashes of Hope in the Night</div>
+                    <div slot="author">Jerry Saltz</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="458925"
-                    isbn="9780007163892"
-                    termshash="a25c017f25a36debff78d1492b1c0621"
-                    href="/book/458925/fc6786/david-bellamys-watercolour-landscape-course.html"
-                    download="/dl/458925/558b47"
+                                        id="25100002"
+                    isbn="9780760375761"
+                    termshash="2840d0fd5a08ee7c3870ca8c3e51f780"
+                    href="/book/25100002/22db94/draw-like-an-artist-100-cartoon-animals.html"
+                    download="/dl/25100002/090463"
                     deleted=""
-                    publisher="HarperCollins UK"
+                    publisher="Quarry Books"
                     language="english"
-                    year="2004"
+                    year="2022"
+                    extension="epub"
+                    filesize="16.31 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1be84c48af383de23e7121c79cb3af27633a8262c017e63efc93296e0330f00d.jpg" />
+                    <div slot="title">Draw Like an Artist: 100 Cartoon Animals</div>
+                    <div slot="author">Keilidh Bradley</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28243204"
+                    isbn="B0CP8VMW8C"
+                    termshash="f6f5bddc3d5df36e938192ff0f3d9aa7"
+                    href="/book/28243204/99b05c/mindful-design-a-survival-guide-for-responsible-product-designers.html"
+                    download="/dl/28243204/6b9aa4"
+                    deleted=""
+                    publisher="Apress"
+                    language="english"
+                    year="2024"
                     extension="pdf"
-                    filesize="26.52 MB"
-                    rating="4.0"
+                    filesize="10.30 MB"
+                    rating="0.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/171e1286fc435ec33dde26a262abb4caa1814512a67b9b1c98904f19a44b5d7e.jpg" />
-                    <div slot="title">David Bellamy's Watercolour Landscape Course</div>
-                    <div slot="author">David Bellamy</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c5957b5e0774de16c5c8734cddbee7276f98f2f9472b374b99d5459f3bbd4789.jpg" />
+                    <div slot="title">Mindful Design: A Survival Guide for Responsible Product Designers</div>
+                    <div slot="author">Scott Riley</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5420707"
-                    isbn="9780300014730"
-                    termshash="23a7ae15e7f31ade65fabaaae9ddd21c"
-                    href="/book/5420707/eda8a1/interaction-of-color.html"
-                    download="/dl/5420707/ee7050"
-                    deleted=""
-                    publisher="Yale University Press"
-                    language="english"
-                    year="1971"
-                    extension="pdf"
-                    filesize="8.24 MB"
-                    rating="5.0"
-                    quality="3.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/490a39c4e37a5cd8f2e7740e37fda8c6c70b55425800bed9ee9d0a3ad69f8568.jpg" />
-                    <div slot="title">Interaction of Color..</div>
-                    <div slot="author">Josef Albers</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="987412"
-                    isbn="9780789432896"
-                    termshash="07f9b527167f7986e999363939c25dea"
-                    href="/book/987412/3ce9f4/an-introduction-to-oil-painting.html"
-                    download="/dl/987412/552ef5"
-                    deleted=""
-                    publisher="Houghton Mifflin"
-                    language="english"
-                    year="1993"
-                    extension="pdf"
-                    filesize="59.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/82d56e7774d51e040e50ec19f1d5a3b5ab4f9f3560c818eed39a59084ee9bbe3.jpg" />
-                    <div slot="title">An Introduction to Oil Painting</div>
-                    <div slot="author">Ray Smith</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411085"
+                                        id="13892874"
                     isbn=""
-                    termshash="aa9cda9f9d166310b544bc2d23f83658"
-                    href="/book/3411085/7ade34/delphi-complete-paintings-of-paul-c%C3%A9zanne-illustrated.html"
-                    download="/dl/3411085/6f8c3d"
+                    termshash="7d3ba9e8126a39ca7031ff33ac7984a8"
+                    href="/book/13892874/b2a83b/art-and-culture-notes.html"
+                    download="/dl/13892874/5d5050"
                     deleted=""
-                    publisher="Delphi Classics"
+                    publisher="NITIN SANGWAN"
                     language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="46.91 MB"
-                    rating="5.0"
-                    quality="3.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b675911a4940c98921d04ab88a7bf2821ff673427da01ee9548f4b2dd5642808.jpg" />
-                    <div slot="title">Delphi Complete Paintings of Paul Cézanne (Illustrated)</div>
-                    <div slot="author">Paul Cézanne</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3315329"
-                    isbn=""
-                    termshash="5f16ecd556aad23b842be69e159e19c5"
-                    href="/book/3315329/df8505/delphi-collected-works-of-wassily-kandinsky.html"
-                    download="/dl/3315329/b260e0"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="60.64 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/e92866b3e77227f2c27aa529e2821764d502bb3fd5e12254448597fdd0a27fce.jpg" />
-                    <div slot="title">Delphi Collected Works of Wassily Kandinsky</div>
-                    <div slot="author">Wassily Kandinsky</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3689957"
-                    isbn="9781633223561"
-                    termshash="56715cbbe6ef84f09c6264716bd07b9e"
-                    href="/book/3689957/714064/modern-watercolor.html"
-                    download="/dl/3689957/9e6a0c"
-                    deleted=""
-                    publisher="Walter Foster Publishing"
-                    language="english"
-                    year="2017"
+                    year="0"
                     extension="pdf"
-                    filesize="36.15 MB"
-                    rating="5.0"
-                    quality="5.0"
+                    filesize="23.70 MB"
+                    rating="0.0"
+                    quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/04fda36260391548365acc69932038a66a01e2940684bf5c70baabd4aae3d05e.jpg" />
-                    <div slot="title">Modern Watercolor</div>
-                    <div slot="author">Kristin Van Leuven</div>
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">ART AND CULTURE NOTES</div>
+                    <div slot="author">Nitin Sangwan</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3048432"
-                    isbn=""
-                    termshash="1bae8f78acb933b248056aa49ce5f52f"
-                    href="/book/3048432/4da53c/delphi-complete-works-of-titian.html"
-                    download="/dl/3048432/126b30"
+                                        id="27682149"
+                    isbn="9798374577181"
+                    termshash="1797a819500d5ea4dc2ae17f6547dc54"
+                    href="/book/27682149/fdedd4/the-intelligent-readers-guide-to-reading-how-to-read-a-book-the-right-way-for-stronger-comprehensi.html"
+                    download="/dl/27682149/bf397b"
                     deleted=""
-                    publisher="Delphi Classic"
+                    publisher="Independently published"
                     language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="59.96 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fb43bd6acb9dcb0fd98fa155a566ea604950f6a78abaf1df9f3de7048ef2c62c.jpg" />
-                    <div slot="title">Delphi. Complete works of Titian</div>
-                    <div slot="author">Tiziano Vecelli</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411079"
-                    isbn="9781786565020"
-                    termshash="6f772aed9a91fd35775ba194599c2fa7"
-                    href="/book/3411079/8f8649/delphi-complete-works-of-paul-gauguin-illustrated.html"
-                    download="/dl/3411079/094235"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="52.27 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3c14a52f42c580537a76bc317dcbef61f7f9f4000a5529e0d983360d9b5fd710.jpg" />
-                    <div slot="title">Delphi Complete Works of Paul Gauguin (Illustrated)</div>
-                    <div slot="author">Paul Gauguin; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2581101"
-                    isbn=""
-                    termshash=""
-                    href="/book/2581101/a7ca61/balthus-19082001-the-king-of-cats.html"
-                    download="/dl/2581101/428541"
-                    deleted=""
-                    publisher="Taschen"
-                    language="english"
-                    year="2003"
+                    year="2023"
                     extension="pdf"
-                    filesize="62.24 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4eac22c559097a88a2eeded43ee5d3458715528e987c125c9f05ac9e42d050c2.jpg" />
-                    <div slot="title">Balthus, 1908-2001: The King of Cats</div>
-                    <div slot="author">Gilles Neret</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411116"
-                    isbn="9781786565006"
-                    termshash="3042ae2e077d4380bb18e5d9d4661016"
-                    href="/book/3411116/245e3b/delphi-complete-paintings-of-caspar-david-friedrich-illustrated.html"
-                    download="/dl/3411116/c9ad7c"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="13.90 MB"
-                    rating="5.0"
+                    filesize="4.10 MB"
+                    rating="0.0"
                     quality="4.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/76f9a1bf2f9204a578763cd0f50448a512b229feacc43e66250e8e2a069655c7.jpg" />
-                    <div slot="title">Delphi Complete Paintings of Caspar David Friedrich (Illustrated)</div>
-                    <div slot="author">Caspar David Friedrich; Peter Russell</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d57d5845f9ffb70689d6ba58aaae3259e4c4c69d1f7eeb0bce35d1625c1c216a.jpg" />
+                    <div slot="title">The Intelligent Reader’s Guide To Reading: How To Read A Book The Right Way For Stronger Comprehension And Better Recall (Self-Learning Mastery)</div>
+                    <div slot="author">Thinknetic</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2533020"
-                    isbn="9781780427393"
-                    termshash="dc8eb16c9bfffc1bd6fcabfa8eefa562"
-                    href="/book/2533020/e07037/vincent-van-gogh.html"
-                    download="/dl/2533020/f2a471"
+                                        id="18631880"
+                    isbn=""
+                    termshash="fb0c4613c769d26724034a93ad48b78b"
+                    href="/book/18631880/c61e63/onlyias-udaan-art-and-culture-for-prelims-2021.html"
+                    download="/dl/18631880/619022"
                     deleted=""
-                    publisher="Parkstone Press International"
+                    publisher="OnlyIAS"
                     language="english"
-                    year="2011"
+                    year="2021"
                     extension="pdf"
-                    filesize="81.66 MB"
-                    rating="5.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/41a025bda2d43dabf483dc8f36bd201b57e06548b9eec099e8b175795bcb18ee.jpg" />
-                    <div slot="title">Vincent van Gogh</div>
-                    <div slot="author">Victoria Charles</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411095"
-                    isbn="9781786565136"
-                    termshash="9382d51f49f6ff2d62860422ae0cdaa4"
-                    href="/book/3411095/580fa9/delphi-complete-paintings-of-camille-pissarro-illustrated.html"
-                    download="/dl/3411095/1564d7"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2017"
-                    extension="epub"
-                    filesize="78.09 MB"
-                    rating="5.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3843aa76746370f28f141cdc912ee28d84d1cd18a5576f0cf9966104c3e9cc02.jpg" />
-                    <div slot="title">Delphi Complete Paintings of Camille Pissarro (Illustrated)</div>
-                    <div slot="author">Camille Pissarro; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5340769"
-                    isbn="9780764132605"
-                    termshash="26a280fa6256c6d3f4b2797a7d790071"
-                    href="/book/5340769/36ad9c/drawing-and-painting-fantasy-landscapes-and-cityscapes.html"
-                    download="/dl/5340769/91409f"
-                    deleted=""
-                    publisher="B.E.S. Publishing"
-                    language="english"
-                    year="2006"
-                    extension="rar"
-                    filesize="61.08 MB"
+                    filesize="13.33 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/29d5c1a032d32dace1a73b845ec06ba90fb500835fab95e7cb51c8f489d0c945.jpg" />
-                    <div slot="title">Drawing and Painting Fantasy Landscapes and Cityscapes</div>
-                    <div slot="author">Rob Alexander</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7e56bdfab46b1ba6e17469c950958d450f7a98282d6561fc6b29330b812491d9.jpg" />
+                    <div slot="title">OnlyIAS - Udaan - Art and Culture: For Prelims 2021</div>
+                    <div slot="author">OnlyIAS</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3410641"
-                    isbn="9781786565129"
-                    termshash="1ec44872202728b1c6d9ce438a655109"
-                    href="/book/3410641/7de196/delphi-complete-works-of-el-greco-illustrated.html"
-                    download="/dl/3410641/11e8f6"
+                                        id="13367861"
+                    isbn=""
+                    termshash=""
+                    href="/book/13367861/b37a14/sketch-book-for-the-artist-an-innovative-practical-approach-to-drawing-the-world-around-you.html"
+                    download="/dl/13367861/2ea69a"
                     deleted=""
-                    publisher="Delphi Classics"
+                    publisher="DK Publishing"
                     language="english"
-                    year="2017"
+                    year="2005"
                     extension="epub"
-                    filesize="24.27 MB"
+                    filesize="16.84 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a18318a67a3c70e13df29edc263c6f737a3c453af8f135f2bae50d168e04df61.jpg" />
+                    <div slot="title">Sketch Book for the Artist: An Innovative, Practical Approach to Drawing the World Around You</div>
+                    <div slot="author">Sarah Simblet [Simblet; Sarah]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="27346920"
+                    isbn="9789356065901"
+                    termshash="96febd917d771b3e40236fe6033b5531"
+                    href="/book/27346920/426490/nta-ugc-paper-1-teaching-and-research.html"
+                    download="/dl/27346920/4fe3c3"
+                    deleted=""
+                    publisher="Pearson"
+                    language="english"
+                    year="2021"
+                    extension="pdf"
+                    filesize="36.68 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2c9a8dadd40565db150e5c4e3649f9df7f9295762e0a5fe7b6f171d8a4602b8d.png" />
+                    <div slot="title">Nta Ugc Paper 1, Teaching And Research</div>
+                    <div slot="author">K.V.S Madaan</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28161599"
+                    isbn="9781423107231"
+                    termshash=""
+                    href="/book/28161599/352014/walt-disney-animation-studios-the-archive-series-1-story.html"
+                    download="/dl/28161599/e75ebf"
+                    deleted=""
+                    publisher="Disney Editions"
+                    language="english"
+                    year="2008"
+                    extension="pdf"
+                    filesize="77.89 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d71b95ff5aa98b68d951a4eae15ed82897803d12b8af4824cfcd5ddb12368ad5.jpg" />
+                    <div slot="title">Walt Disney Animation Studios The Archive Series #1: Story</div>
+                    <div slot="author">Walt Disney Animation Research Library</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28313062"
+                    isbn="9781423117162"
+                    termshash=""
+                    href="/book/28313062/097926/walt-disney-animation-studios-the-archive-series-animation.html"
+                    download="/dl/28313062/814b77"
+                    deleted=""
+                    publisher="Disney Editions"
+                    language="english"
+                    year="2009"
+                    extension="pdf"
+                    filesize="31.27 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b34230553fb457486a1e5669ffe53597be3e1b7d4bc9b8488594204e4df44120.jpg" />
+                    <div slot="title">Walt Disney Animation Studios The Archive Series: Animation</div>
+                    <div slot="author">Walt Disney Animation Research Library</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2472947"
+                    isbn="9780195126617"
+                    termshash="4ea7274c78a0891652f79144ee446713"
+                    href="/book/2472947/11876a/the-compleat-conductor.html"
+                    download="/dl/2472947/67a832"
+                    deleted=""
+                    publisher="Oxford University Press"
+                    language="english"
+                    year="1998"
+                    extension="pdf"
+                    filesize="13.20 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3141d1979c35512273b7c94e603478023935db653ddd52c08ad4c56477af93a1.jpg" />
+                    <div slot="title">The Compleat Conductor</div>
+                    <div slot="author">Gunther Schuller</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17072463"
+                    isbn="9780203730249"
+                    termshash=""
+                    href="/book/17072463/da7d33/%E6%97%A5%E6%9C%AC%E8%AA%9E-now-nihongo-now-level-1-volume-1-activity-book.html"
+                    download="/dl/17072463/fb81c3"
+                    deleted=""
+                    publisher="Routledge"
+                    language="english"
+                    year="2020"
+                    extension="pdf"
+                    filesize="6.99 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f24a3db83adac22bfdfd8c8d127572526fcd741f728ed38e07be657190f5029b.jpg" />
+                    <div slot="title">日本語 NOW! NihonGO NOW! Level 1 Volume 1 Activity Book</div>
+                    <div slot="author">Mari Noda; Patricia J. Wetzel; Ginger Marcus; Stephen D. Luft; Shinsuke Tsuchiya; Masayuki Itomitsu </div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="6016350"
+                    isbn=""
+                    termshash=""
+                    href="/book/6016350/9c21ba/music-theory-in-one-lesson-discover-how-easy-music-theory-can-be.html"
+                    download="/dl/6016350/d74817"
+                    deleted=""
+                    publisher="Ross Trottier"
+                    language="english"
+                    year="2015"
+                    extension="azw3"
+                    filesize="8.43 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/2ed58179408ba74e9f0c3102eb82713f97a5f14bb386cf11cb2acc8f6fd4ad1d.jpg" />
+                    <div slot="title">Music Theory in One Lesson: Discover How Easy Music Theory Can Be!</div>
+                    <div slot="author">Ross Trottier</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28313461"
+                    isbn="9781423134206"
+                    termshash=""
+                    href="/book/28313461/1363fb/walt-disney-animation-studios-the-archive-series-design.html"
+                    download="/dl/28313461/08df1c"
+                    deleted=""
+                    publisher="Disney Editions"
+                    language="english"
+                    year="2010"
+                    extension="pdf"
+                    filesize="36.34 MB"
+                    rating="0.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/88337596232b4b18d70904e1683d7da9ecb5194fc4dc8a233ce87fd97e32a54a.jpg" />
+                    <div slot="title">Walt Disney Animation Studios The Archive Series: Design</div>
+                    <div slot="author">Walt Disney Animation Research Library</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28167776"
+                    isbn="9781440571558"
+                    termshash="79e8995d8c569b43febcc67cd90e7d77"
+                    href="/book/28167776/b0cdfe/art-101-from-vincent-van-gogh-to-andy-warhol-key-people-ideas-and-moments-in-the-history-of-art.html"
+                    download="/dl/28167776/9ea1e9"
+                    deleted=""
+                    publisher="Adams Media"
+                    language="english"
+                    year="2024"
+                    extension="epub"
+                    filesize="2.33 MB"
+                    rating="2.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5ad838a1ce02ddb2e043aaf631e8e036e3b0c2561d17e59eb4acd6f06ad07d98.jpg" />
+                    <div slot="title">Art 101: From Vincent van Gogh to Andy Warhol, Key People, Ideas, and Moments in the History of Art (Adams 101)</div>
+                    <div slot="author">Grzymkowski; Eric</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21363712"
+                    isbn="9780486140322"
+                    termshash="69bf5d197e0429f1c16bb71d178f5c81"
+                    href="/book/21363712/a320a7/celtic-stencil-designs-dover-pictorial-archive.html"
+                    download="/dl/21363712/247738"
+                    deleted=""
+                    publisher="Courier Corporation"
+                    language="english"
+                    year="1990"
+                    extension="epub"
+                    filesize="14.95 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a7a6a9f42e0470a83fe2aa8f0aa24fdd1c28bcf22196095ab3c965684bdc25e3.jpg" />
-                    <div slot="title">Delphi Complete Works of El Greco (Illustrated)</div>
-                    <div slot="author">El Greco; Peter Russell</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/417fccb00c9129dd3d9a161aa3399ed79d838297d511b2dffaf5a00e8fd32d11.jpg" />
+                    <div slot="title">Celtic Stencil Designs (Dover Pictorial Archive)</div>
+                    <div slot="author">Co Spinhoven</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3705100"
-                    isbn="9781908909596"
-                    termshash="af20e1ac3a32b4712a556595a77e21d2"
-                    href="/book/3705100/cacec2/delphi-complete-works-of-vincent-van-gogh.html"
-                    download="/dl/3705100/fa803b"
+                                        id="5459247"
+                    isbn=""
+                    termshash="a08db5d123f52c9ec7b88ad0e38663a3"
+                    href="/book/5459247/06a654/the-intelligent-eye-learning-to-think-by-looking-at-art.html"
+                    download="/dl/5459247/4ada1b"
                     deleted=""
-                    publisher="Delphi Classics"
+                    publisher="J. Paul Getty Museum"
                     language="english"
-                    year="2012"
+                    year="1994"
+                    extension="pdf"
+                    filesize="2.52 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/278515b193e872b2cf48b4b7e59d0896206a10574cbf05de0442b7cbeea40c64.jpg" />
+                    <div slot="title">The Intelligent Eye ; Learning to Think by Looking at Art</div>
+                    <div slot="author">David Perkins</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21856637"
+                    isbn="9784805315644"
+                    termshash="242747abc0030713ead1d9dd95c44a8f"
+                    href="/book/21856637/5047d1/drawing-action-scenes-and-characters-the-ultimate-bible-for-beginning-artists.html"
+                    download="/dl/21856637/e38a0f"
+                    deleted=""
+                    publisher="Tuttle Publishing"
+                    language="english"
+                    year="2020"
+                    extension="pdf"
+                    filesize="23.40 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/2b54218a55902ed0e20a37e67e7531b01a40f5f2727ecdd1204bd6cb6131119d.jpg" />
+                    <div slot="title">Drawing Action Scenes and Characters: The Ultimate Bible for Beginning Artists</div>
+                    <div slot="author">Shikata Shiyomi [シカタシヨミ]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18257852"
+                    isbn=""
+                    termshash="a4a036a1f60a481d58458c6d9aff87c0"
+                    href="/book/18257852/880210/how-to-be-a-great-student.html"
+                    download="/dl/18257852/3e1b74"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2021"
                     extension="epub"
-                    filesize="37.05 MB"
+                    filesize="269 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/32292ecdb2e42b6dfec719c97bef71fac3b4c95a9eb769cad8660025a199a67f.jpg" />
+                    <div slot="title">How to Be a Great Student</div>
+                    <div slot="author">Kimberly Hatch Harrison</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="22352812"
+                    isbn="9781892597809"
+                    termshash="00ec8958574dd6f3f9205d9d5dec9064"
+                    href="/book/22352812/3c7df8/terry-moores-how-to-draw-expanded-edition.html"
+                    download="/dl/22352812/5752ed"
+                    deleted=""
+                    publisher="Abstract Studio"
+                    language="english"
+                    year="2021"
+                    extension="pdf"
+                    filesize="28.86 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a339fc08212425d8e9bf3169db21e88970737fff77ea4147ab5321a6589825b1.jpg" />
+                    <div slot="title">Terry Moore's How to Draw : Expanded Edition</div>
+                    <div slot="author">Terry Moore</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3336814"
+                    isbn="9781616892975"
+                    termshash="320b517da1958223b51aabee28f54f3a"
+                    href="/book/3336814/74db4b/local-color.html"
+                    download="/dl/3336814/5ab107"
+                    deleted=""
+                    publisher="Princeton Architectural Press"
+                    language="english"
+                    year="2015"
+                    extension="pdf"
+                    filesize="20.94 MB"
                     rating="5.0"
                     quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c3c9093449cc73946f4ff012eb662e3eed3104004dface1b7c0eede89c314a6c.jpg" />
-                    <div slot="title">Delphi Complete Works of Vincent van Gogh</div>
-                    <div slot="author">Vincent van Gogh</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/e0d208eac0dd184adc6c4f198715f31cb21bce4329820a36d99a1b99d367f4c5.jpg" />
+                    <div slot="title">Local Color</div>
+                    <div slot="author">Mimi Robinson</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3701440"
-                    isbn="9781589239692"
-                    termshash="3bccd37ef0fa4dfe36e6b4412cbae115"
-                    href="/book/3701440/21ac26/creative-watercolor.html"
-                    download="/dl/3701440/0fb128"
-                    deleted=""
-                    publisher="Quarry Books"
-                    language="english"
-                    year="2018"
-                    extension="epub"
-                    filesize="24.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/de4fb17dd58b469fb5f0b79530cb021432c052dc4eca8ac0a2835b3da9f2d81b.jpg" />
-                    <div slot="title">Creative Watercolor</div>
-                    <div slot="author">Ana Victoria Calderon</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3410786"
+                                        id="25704304"
                     isbn=""
-                    termshash="569b2012741f681832f8903e5d02edfe"
-                    href="/book/3410786/5e86ca/complete-works-of-diego-vel%C3%A1zquez.html"
-                    download="/dl/3410786/a074e3"
+                    termshash=""
+                    href="/book/25704304/70955e/the-verbal-to-visual-notebook.html"
+                    download="/dl/25704304/109b06"
                     deleted=""
-                    publisher="Delphi Classics"
+                    publisher="Verbal To Visual"
                     language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="14.90 MB"
-                    rating="5.0"
-                    quality="4.0"
+                    year="2020"
+                    extension="pdf"
+                    filesize="21.17 MB"
+                    rating="0.0"
+                    quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ef5cd6b7653045dd4ca50c192f243348fbe7edba226b88b831c79fdf312057c0.jpg" />
-                    <div slot="title">Complete Works of Diego Velázquez</div>
-                    <div slot="author">Peter Russell</div>
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">The Verbal To Visual Notebook </div>
+                    <div slot="author">Doug Neill; Verbal To Visual</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3411113"
-                    isbn="9781786565037"
-                    termshash="7cf7c47a21db82ac5913bb5b46c9b93d"
-                    href="/book/3411113/7cdac0/delphi-complete-works-of-pieter-bruegel-the-elder-illustrated.html"
-                    download="/dl/3411113/6aaba6"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="15.03 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/916de7200c620ce0a28b4b364938170e8c43010a8f5fdf37eb819a9de5764f08.jpg" />
-                    <div slot="title">Delphi Complete Works of Pieter Bruegel the Elder (Illustrated)</div>
-                    <div slot="author">Pieter Bruegel the Elder; Peter Russell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3330097"
-                    isbn="9781500796211"
-                    termshash="2592de55f6a09eaf9a28f7e683cf2b2a"
-                    href="/book/3330097/7e8226/drawing-for-beginners-the-ultimate-crash-course-to-learning-the-basics-of-how-to-draw-in-no-tim.html"
-                    download="/dl/3330097/5bf649"
-                    deleted=""
-                    publisher="[publisher not identified]"
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="1.40 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8cffe4a8a7f332a7c45131afd03d987cacc71ebf9f80f08d4077bf39bfcc4e0f.jpg" />
-                    <div slot="title">Drawing - For Beginners! - The Ultimate Crash Course to Learning the Basics of How to Draw In No Time</div>
-                    <div slot="author">Taggart; Amy</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3411083"
+                                        id="24033579"
                     isbn=""
-                    termshash="7aef21897b193f46fde39da558162e8b"
-                    href="/book/3411083/b65206/delphi-complete-works-of-giotto-illustrated.html"
-                    download="/dl/3411083/78fd71"
+                    termshash="6d12d9b2cb5aabb05dfe6df653557b8a"
+                    href="/book/24033579/d84b4d/colour-theory-understanding-and-working-with-colour.html"
+                    download="/dl/24033579/3f8a73"
                     deleted=""
-                    publisher="Delphi Classics"
+                    publisher="RMIT University Library"
                     language="english"
-                    year="2016"
+                    year="2023"
                     extension="epub"
-                    filesize="25.00 MB"
+                    filesize="33.46 MB"
                     rating="5.0"
-                    quality="4.0"
+                    quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/dc0bfeda4b27a357f7199e2bcb7ef54f7c2e9417caa54c27f0f7486c7c199333.jpg" />
-                    <div slot="title">Delphi Complete Works of Giotto (Illustrated)</div>
-                    <div slot="author">Giotto di Bondone; Peter Russell</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/941655847cdc57e9d49f5d60f8c49fe48b272ec200176b983af8ceb0c9448289.png" />
+                    <div slot="title">Colour Theory: Understanding and Working with Colour</div>
+                    <div slot="author">Lisa Cianci</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3697968"
-                    isbn="9781419734328"
-                    termshash="d6e4dede5f89b0df48563360296f225d"
-                    href="/book/3697968/16ba34/watercolor-botanicals.html"
-                    download="/dl/3697968/3b0201"
+                                        id="25643847"
+                    isbn="9780008421960"
+                    termshash="36d279e0d0429cb3c7bc999738059784"
+                    href="/book/25643847/3785f1/ex-libris-100-books-to-read-and-reread.html"
+                    download="/dl/25643847/8a76b0"
                     deleted=""
-                    publisher="Abrams"
+                    publisher="Clarkson Potter/Publishers, Penguin Random House"
+                    language="english"
+                    year="2020"
+                    extension="epub"
+                    filesize="60.20 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/886d4e53659b2691068bae8a245bac431e904209ee1b869295be8fa835c915c7.jpg" />
+                    <div slot="title">Ex Libris: 100+ Books to Read and Reread</div>
+                    <div slot="author">Michiko Kakutani; Dana Tanamachi (illustration)</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23774327"
+                    isbn="9781645676997"
+                    termshash="919dc55a677be60e077ad87b17890593"
+                    href="/book/23774327/2667bd/ink-and-wash-florals-stunning-botanical-projects-in-watercolor-ink.html"
+                    download="/dl/23774327/685f6d"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2022"
+                    extension="epub"
+                    filesize="127.18 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/6b499a1c69698da6a04cc9f3f0207a956cc164914f586e59815e51f2f048f40b.jpg" />
+                    <div slot="title">Ink and Wash Florals : Stunning Botanical Projects in Watercolor &amp; Ink</div>
+                    <div slot="author">Camilla Damsbo Brix</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23662849"
+                    isbn="9781907974649"
+                    termshash="e050ca677b719f677aafde6326d4316b"
+                    href="/book/23662849/0b2194/do-pause-you-are-not-a-to-do-list.html"
+                    download="/dl/23662849/901078"
+                    deleted=""
+                    publisher="The Do Book Co."
                     language="english"
                     year="2019"
                     extension="epub"
-                    filesize="38.73 MB"
-                    rating="3.0"
+                    filesize="7.04 MB"
+                    rating="0.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/bb25ebf8f1903fc977d359467f1a5ca9e99f9d54709d84944151ed9babcc3a07.jpg" />
-                    <div slot="title">Watercolor Botanicals</div>
-                    <div slot="author">Nikki Strange</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0f2eeb8db410988e56486daa878f243942d85a0bca9e6c8656493c083824eeb5.jpg" />
+                    <div slot="title">Do ⁄ Pause : You Are Not a to Do list</div>
+                    <div slot="author">Robert Poynton</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="938721"
-                    isbn="9780823041923"
+                                        id="29287788"
+                    isbn="9781536914863"
                     termshash=""
-                    href="/book/938721/00a11a/portrait-painting-in-watercolor.html"
-                    download="/dl/938721/870afa"
+                    href="/book/29287788/071f62/poses-for-artists-original-character-workbook-volume-1.html"
+                    download="/dl/29287788/b4eae9"
                     deleted=""
-                    publisher="Watson-Guptill"
+                    publisher="Createspace Independent Publishing Platform"
                     language="english"
-                    year="1973"
+                    year="2016"
                     extension="pdf"
-                    filesize="50.07 MB"
+                    filesize="2.65 MB"
+                    rating="0.0"
+                    quality="3.5"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2d6f9e996bf18685b9eb1524d879d5cb61dfd86dd9760d992161259dd68f55c7.jpg" />
+                    <div slot="title">Poses For Artists: Original Character Workbook Volume 1</div>
+                    <div slot="author">Justin R. Martin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5221066"
+                    isbn="9780486826721"
+                    termshash="abd4fee37098d3d4d32a52ab444b6dcf"
+                    href="/book/5221066/e0282a/art-studio-secrets-more-than-300-tools-and-techniques-to-inspire-creativity.html"
+                    download="/dl/5221066/68f754"
+                    deleted=""
+                    publisher="Dover Publications"
+                    language="english"
+                    year="19"
+                    extension="epub"
+                    filesize="22.73 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9dedcaaebcb2e136e80774844803e26d21fee8728b699db3b66699230a9cce2d.jpg" />
+                    <div slot="title">Art Studio Secrets: More Than 300 Tools and Techniques to Inspire Creativity</div>
+                    <div slot="author">Marjorie Sarnat</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17188452"
+                    isbn="9781524761981"
+                    termshash="b1f704cb8fd0dcc9fba9f1cf94ce776b"
+                    href="/book/17188452/e40b81/101-things-i-learned-in-fashion-school.html"
+                    download="/dl/17188452/6a39d0"
+                    deleted=""
+                    publisher="Crown"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="10.14 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/28fc2aab715da72453c63ee23b3421f5c9787f63c71a0297b4e5e9e6227efbb8.jpg" />
+                    <div slot="title">101 Things I Learned® in Fashion School</div>
+                    <div slot="author">Alfredo Cabrera; Matthew Frederick</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17992491"
+                    isbn="9788190089098"
+                    termshash="aeb91b51236053a8d164a3d3a5a2444a"
+                    href="/book/17992491/1b0098/figure-study-made-easy.html"
+                    download="/dl/17992491/f0ff55"
+                    deleted=""
+                    publisher="Grace Prakashan"
+                    language="english"
+                    year="2005"
+                    extension="pdf"
+                    filesize="10.34 MB"
+                    rating="0.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/046340e81b514176ccdac2a9ba0a4b0405bb4fbcf7e9583dafabaafb63f111f1.jpg" />
+                    <div slot="title">Figure Study Made Easy</div>
+                    <div slot="author">Aditya Chari</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="19217879"
+                    isbn=""
+                    termshash="e1261740f8be1087c77e8f98d9cb81fe"
+                    href="/book/19217879/9c64d2/1000-paintings-of-genius.html"
+                    download="/dl/19217879/010e8f"
+                    deleted=""
+                    publisher="Parkstone International"
+                    language="english"
+                    year="0"
+                    extension="pdf"
+                    filesize="66.87 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/426844b06d24728257f939a8b24340bfc614df093b677c63fe751e3ed89f0da7.jpg" />
+                    <div slot="title">1000 Paintings of Genius</div>
+                    <div slot="author">Victoria Charles; Joseph Manca; Megan McShane; Donald Wigal</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17194757"
+                    isbn="B01MRRSC44"
+                    termshash="34f1568ff6897c076d1f40cc38bdc6ec"
+                    href="/book/17194757/bc28e3/math-magic-amazing-tricks-with-numbers-arithmetic-geometry.html"
+                    download="/dl/17194757/3463ff"
+                    deleted=""
+                    publisher="Answers 2000 Limited"
+                    language="english"
+                    year="2016"
+                    extension="pdf"
+                    filesize="2.19 MB"
+                    rating="0.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9c739eed6d339ce8e2cacfa504848bdf970a7597cf3d9af55e0b43ee458b52cf.jpg" />
+                    <div slot="title">Math Magic: Amazing Tricks With Numbers, Arithmetic &amp; Geometry!</div>
+                    <div slot="author">Sunil Tanna</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29968414"
+                    isbn="9780990341109"
+                    termshash="8e2622f5e71daa1c265ce11e12485e63"
+                    href="/book/29968414/a4af3c/anatomy-for-sculptors-understanding-the-human-figure.html"
+                    download="/dl/29968414/fb6168"
+                    deleted=""
+                    publisher="Exonicus LLC; 1st edition (2014-01-01)"
+                    language="english"
+                    year="2014"
+                    extension="pdf"
+                    filesize="20.54 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3a3b6b60f1f2e12cd0b419646a37441d7045280e31b88b2ff2c8a2434488576d.jpg" />
-                    <div slot="title">Portrait Painting in Watercolor</div>
-                    <div slot="author">Charles Reid</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d1ef27da90571df92c110f3f0d5c94aba6ed6c22970a1238fee8590707c6316e.jpg" />
+                    <div slot="title">Anatomy for Sculptors Understanding the Human Figure</div>
+                    <div slot="author">Uldis Zarins; Sandis Kondrats</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2289220"
-                    isbn="9780870994326"
-                    termshash="e569e269a899799be96bcb4b4303d31e"
-                    href="/book/2289220/8dca42/the-metropolitan-museum-of-art-the-renaissance-in-italy-and-spain.html"
-                    download="/dl/2289220/2c3610"
+                                        id="27382592"
+                    isbn="9783031423253"
+                    termshash="d2b6fe3549bb8e38a6e26ac5d01421df"
+                    href="/book/27382592/abe116/neuroaesthetics-a-methodsbased-introduction.html"
+                    download="/dl/27382592/fe86eb"
                     deleted=""
-                    publisher="The Metropolitan Museum of Art"
+                    publisher="Palgrave Macmillan"
                     language="english"
-                    year="1987"
+                    year="2024"
                     extension="pdf"
-                    filesize="50.35 MB"
-                    rating="4.0"
-                    quality="4.0"
+                    filesize="3.72 MB"
+                    rating="0.0"
+                    quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/f3099d3a060ce81dbd2c5ba4f070e793e3d8588a3f59f87c87b05ccb96ce8054.jpg" />
-                    <div slot="title">The Metropolitan Museum of Art: The Renaissance in Italy and Spain</div>
-                    <div slot="author">John T. Spike</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/30f388a903ec8f281860e99a13b33de111a7562b92992306f3edcc8f664b1a9a.jpg" />
+                    <div slot="title">Neuroaesthetics: A Methods-Based Introduction</div>
+                    <div slot="author">Tudor Balinisteanu; Kerry Priest</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21713928"
+                    isbn=""
+                    termshash="b381c707be03186b2e681e4776bf668a"
+                    href="/book/21713928/bc4a00/how-to-draw-cars-fast-and-easy.html"
+                    download="/dl/21713928/b4c479"
+                    deleted=""
+                    publisher="How-To-Draw-Cars"
+                    language="english"
+                    year="2010"
+                    extension="pdf"
+                    filesize="8.60 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3aee956fee79d6aa22a0b4a6f68d160ea9ca7f4d73e55c036a00700a9020d85a.jpg" />
+                    <div slot="title">How To Draw Cars Fast and Easy</div>
+                    <div slot="author">Tim Rugendyke with Andy Cheung</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21396615"
+                    isbn="9780760370674"
+                    termshash="eba6fcab019ae3e7e3936d0601c3005a"
+                    href="/book/21396615/2004fa/drawing-is-for-everyone.html"
+                    download="/dl/21396615/198d1a"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="16.70 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5d7cff1d2c4464651c34f1164a5566b93365720e33e2bb5469f4431dea450912.jpg" />
+                    <div slot="title">Drawing Is for Everyone</div>
+                    <div slot="author">Kateri Ewing</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29214850"
+                    isbn="9780615272818"
+                    termshash="d33c058c531b69e8f774db937ab4dd2e"
+                    href="/book/29214850/2a42fb/figure-drawing-design-and-invention.html"
+                    download="/dl/29214850/8ef475"
+                    deleted=""
+                    publisher="Michael Hampton"
+                    language="english"
+                    year="2013"
+                    extension="pdf"
+                    filesize="139.00 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a0d8b7f7f94c67b3951a504c5f2114fc7b7f293452f5314aba116bfdf53be7ba.jpg" />
+                    <div slot="title">Figure Drawing: Design and Invention</div>
+                    <div slot="author">Hampton; Michael</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="986500"
+                    isbn="9780415998413"
+                    termshash="886c1a9bcee95febc6e189d99c82fc19"
+                    href="/book/986500/2a7289/becoming-a-choral-music-teacher.html"
+                    download="/dl/986500/9097d0"
+                    deleted=""
+                    publisher="Independely Published"
+                    language="english"
+                    year="2010"
+                    extension="pdf"
+                    filesize="2.85 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/2858a316ee699072c1f77ba951c40a2d94b559ad0f2a6a3356b87edbf4706d5a.jpg" />
+                    <div slot="title">Becoming a Choral Music Teacher.</div>
+                    <div slot="author">Patrice D. Madura</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21880042"
+                    isbn="9780760372210"
+                    termshash="4a8941a80ee44285495758dea579cac9"
+                    href="/book/21880042/84dd01/draw-manga-style-a-beginners-stepbystep-guide-for-drawing-anime-and-manga-62-lessons-basics.html"
+                    download="/dl/21880042/4b7472"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="11.19 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b40d2e5e0205cc2ac71ecb17ac6bbce3f60ae0824774df1042793ca3164f5b4b.jpg" />
+                    <div slot="title">Draw Manga Style: A Beginner’s Step-by-Step Guide for Drawing Anime and Manga - 62 Lessons: Basics, Characters, Special Effects</div>
+                    <div slot="author">Scott Harris</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28135695"
+                    isbn="9780197509067"
+                    termshash="505c9565982773fe5ef5489608ec0476"
+                    href="/book/28135695/bf7431/the-geography-of-taste-thinking-art.html"
+                    download="/dl/28135695/cb7c7e"
+                    deleted=""
+                    publisher="Oxford University Press"
+                    language="english"
+                    year="2024"
+                    extension="pdf"
+                    filesize="6.87 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/506c28d0b739992ef724be80ff53a440c4d1a9035cdbb9b539e406f3544a75f1.jpg" />
+                    <div slot="title">The Geography of Taste (Thinking Art)</div>
+                    <div slot="author">Dominic McIver Lopes; Samantha Matherne; Mohan Matthen; Bence Nanay</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23528403"
+                    isbn="9781311087836"
+                    termshash="10c6f874f61c5e2f383a4879131ff1dc"
+                    href="/book/23528403/2f0c7e/drawing-drawing-with-charcoal-for-beginnersstep-by-step-guide-to-drawing-landscapesportraitsa.html"
+                    download="/dl/23528403/918361"
+                    deleted=""
+                    publisher="Mendon Cottage Books"
+                    language="english"
+                    year="2016"
+                    extension="epub"
+                    filesize="7.99 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/2dec74dd1816f20d3c3faa4c02278a5cf3403aeb23f8f9b394762e675aec4b17.jpg" />
+                    <div slot="title">Drawing: Drawing with Charcoal For Beginners--Step By Step Guide to Drawing Landscapes--Portraits--Animals</div>
+                    <div slot="author">John Davidson</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11942911"
+                    isbn="3895884807"
+                    termshash="a80919fba8cd71e91ddc0b31425dafca"
+                    href="/book/11942911/eb464a/visual-communication-images-with-messages-9th-edition.html"
+                    download="/dl/11942911/dc1f33"
+                    deleted=""
+                    publisher="Lex Publishing"
+                    language="english"
+                    year="2021"
+                    extension="azw3"
+                    filesize="35.13 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4689e9564e8f7a349f95fc805c4e7d5b142e5f3c1ea8c171d8a1f5d44d0a8d31.jpg" />
+                    <div slot="title">Visual Communication - Images with Messages 9th Edition</div>
+                    <div slot="author">Paul Martin Lester</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23391575"
+                    isbn=""
+                    termshash="c5fdcdc25643be75221f3fb960530776"
+                    href="/book/23391575/da3e7f/how-to-play-piano-a-guide-for-beginners-in-playing-piano-piano-music-piano-lessons-piano-scales.html"
+                    download="/dl/23391575/80546b"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="epub"
+                    filesize="3.99 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c0f71248fffc146df38a3ee847ac4b314a873a4a50a0725fb6943ddbf059b405.jpg" />
+                    <div slot="title">HOW TO PLAY PIANO: A GUIDE FOR BEGINNERS IN PLAYING PIANO, PIANO MUSIC, PIANO LESSONS, PIANO SCALES, AND PIANO THEORY</div>
+                    <div slot="author">Ken  Richards</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17356019"
+                    isbn="9781107018150"
+                    termshash="a3d41499b2381d7f374606d512b4650b"
+                    href="/book/17356019/22c8c1/the-cambridge-companion-to-cormac-mccarthy.html"
+                    download="/dl/17356019/30e487"
+                    deleted=""
+                    publisher="Cambridge University Press"
+                    language="english"
+                    year="2013"
+                    extension="pdf"
+                    filesize="1.23 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ec252b34e54dc4fffb699a1248699af0e0b13151f080a15fbbbbcbd1602f0758.jpg" />
+                    <div slot="title">The Cambridge Companion to Cormac McCarthy</div>
+                    <div slot="author">Steven Frye (editor)</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21807844"
+                    isbn="9781446353110"
+                    termshash="587cb84c9b00d2c271357d726be73fa4"
+                    href="/book/21807844/393976/learn-to-draw-in-a-weekend.html"
+                    download="/dl/21807844/cd1979"
+                    deleted=""
+                    publisher="F+W Media, Inc."
+                    language="english"
+                    year="2006"
+                    extension="epub"
+                    filesize="6.52 MB"
+                    rating="3.0"
+                    quality="4.5"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0d2dfcd45dfc5c3cb6f6c57b9a7a30632125f2c9961cefc866acd6bf4d312143.jpg" />
+                    <div slot="title">Learn to Draw in a Weekend</div>
+                    <div slot="author">Richard Taylor</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3320232"
+                    isbn="9781440339851"
+                    termshash="bf5b2ea2a819fb1c9a8e6cc09ea88386"
+                    href="/book/3320232/13089f/no-excuses-watercolor-painting-techniques-for-sketching-and-journaling.html"
+                    download="/dl/3320232/1c7301"
+                    deleted=""
+                    publisher="F W Media;North Light Books, an imprint of F W, a Content eCommerce Company"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="15.59 MB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8826322aa59943a1695992b11d50572b4b09ab8e2753c864fa3f3f97d3badff0.jpg" />
+                    <div slot="title">No excuses watercolor : painting techniques for sketching and journaling</div>
+                    <div slot="author">Gina Rossi Armfield</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26797743"
+                    isbn="9780190932220"
+                    termshash="2a44abbad2c343fecc4a752feed0cd27"
+                    href="/book/26797743/3f9699/the-oxford-handbook-of-luxury-business-oxford-handbooks.html"
+                    download="/dl/26797743/0ed350"
+                    deleted=""
+                    publisher="Oxford University Press"
+                    language="english"
+                    year="2022"
+                    extension="epub"
+                    filesize="12.25 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/dae9e7bdfa7ac52a666324997b86dbf35296b0b21eb31c2a75e92087f4cfd507.jpg" />
+                    <div slot="title">The Oxford Handbook of Luxury Business (Oxford Handbooks)</div>
+                    <div slot="author">Pierre-Yves Donzé; Véronique Pouillard; Joanne Roberts</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3356417"
+                    isbn=""
+                    termshash="c6baff4057f085bbf32637ff88fc0a77"
+                    href="/book/3356417/57811c/creative-time-and-space-making-room-for-making-art.html"
+                    download="/dl/3356417/59bd78"
+                    deleted=""
+                    publisher="North Light Books"
+                    language="english"
+                    year="2010"
+                    extension="pdf"
+                    filesize="14.90 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/dbdc3d9b205c798f6dcc0002caf80f2d71f107539d86de34b15211f94d8a0d24.jpg" />
+                    <div slot="title">Creative Time and Space Making Room for Making Art</div>
+                    <div slot="author">Rice Freeman-Zachery; Tonia Davenport</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24454489"
+                    isbn="9781849943307"
+                    termshash="e08fdbcbbf90bdcec20e8cd54f2f2c2a"
+                    href="/book/24454489/668f75/sunlight-and-shadows-in-watercolour-painting-light-from-interiors-to-landscapes.html"
+                    download="/dl/24454489/3d2fab"
+                    deleted=""
+                    publisher="Pavilion Books"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="40.64 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/cc7f758a455a833c0ae3a42a6422872027e4d13bba0b3714b2dfaa15866abf3a.jpg" />
+                    <div slot="title">Sunlight and Shadows in Watercolour: painting light from interiors to landscapes</div>
+                    <div slot="author">Lucy Willis</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>

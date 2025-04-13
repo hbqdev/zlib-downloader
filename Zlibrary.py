@@ -438,7 +438,8 @@ class Zlibrary:
         self,
         category_id: int, 
         category_slug: str, 
-        page: int
+        page: int,
+        enable_file_output: bool = True
      ) -> dict:
         """Scrapes a specific category page on Z-Library.
 
@@ -446,16 +447,19 @@ class Zlibrary:
             category_id: The numerical ID of the category.
             category_slug: The text slug of the category.
             page: The page number to scrape.
+            enable_file_output: If True, writes to raw_html_output.txt and to_download.txt.
 
         Returns:
             A dictionary containing:
             - 'success': True if the scrape and file write succeeded, False otherwise.
             - 'books_found': The number of book cards extracted from the page.
+            - 'books_data': A list of dictionaries containing extracted book details 
+                            (id, hash, title, authors) if successful.
             - 'error': An error message if success is False.
         """
         if not self.isLoggedIn():
             print("Not logged in")
-            return {"success": False, "books_found": 0, "error": "Not logged in"}
+            return {"success": False, "books_found": 0, "error": "Not logged in", "books_data": []}
 
         # --- Construct URL Dynamically --- 
         # Assuming english and popular sort order for now
@@ -474,7 +478,7 @@ class Zlibrary:
 
         except requests.exceptions.RequestException as e:
             print(f"Error during request to {target_url}: {e}")
-            return {"success": False, "books_found": 0, "error": str(e)}
+            return {"success": False, "books_found": 0, "error": str(e), "books_data": []}
 
         html_content = response.text
 
@@ -486,13 +490,15 @@ class Zlibrary:
 
         # --- Save the filtered HTML for debugging/inspection (Optional but helpful) ---
         output_filename = "raw_html_output.txt"
-        try:
-            with open(output_filename, "w", encoding="utf-8") as f:
-                f.write(filtered_html_content)
-            print(f"Successfully saved {len(card_matches)} book card blocks to {output_filename}")
-        except IOError as e:
-            print(f"Warning: Error saving filtered HTML to file {output_filename}: {e}")
-            # Continue even if saving fails, as parsing uses the variable directly
+        if enable_file_output:
+            try:
+                with open(output_filename, "w", encoding="utf-8") as f:
+                    f.write(filtered_html_content)
+                print(f"Successfully saved {len(card_matches)} book card blocks to {output_filename}")
+            except IOError as e:
+                print(f"Warning: Error saving filtered HTML to file {output_filename}: {e}")
+        else:
+            print(f"Skipping write to {output_filename} (dry run).")
 
         # --- Step 3: Parse file content with Regex and Construct List ---
         books_data = []
@@ -556,35 +562,33 @@ class Zlibrary:
 
         print(f"Regex successfully extracted info for {matches_found} books.")
         
-        # <<< Update logic based on matches_found >>>
+        # Determine success based on extraction, books_found is the count
+        extraction_successful = True # Assume success unless specific error below
         if not books_data and matches_found == 0:
-             # It's possible the page is valid but has no books (e.g., last page)
-             print("Regex did not extract any book data from the scraped HTML. This might be the last page or an empty page.")
-             # Return success=True, but books_found=0 to signal the end of pagination
-             return {"success": True, "books_found": 0}
+             print("Regex did not extract any book data. This might be the last page or an empty page.")
+             # This is considered a successful scrape of an empty page
+             pass # Proceed to step 4 logic which handles books_found=0
         elif not books_data and matches_found > 0:
-             # This case indicates a potential regex/parsing error if cards were found but no data extracted
              print("Warning: Regex found card blocks but failed to extract valid book data (ID/Hash/Title/Author).")
-             # Consider this a partial failure for safety?
-             return {"success": False, "books_found": matches_found, "error": "Regex failed to extract details from cards"}
-        # Apply limit if specified - REMOVING this, limit is per-page now handled by pagination loop
-        # limit = config.get("limit") # Get limit from config
-        # if limit is not None and len(books_data) > limit:
-        #     print(f"Applying limit: Using first {limit} of {len(books_data)} extracted books.")
-        #     books_data = books_data[:limit]
+             extraction_successful = False # Mark as extraction failure
+             # Proceed to step 4, but it might return success=False depending on enable_file_output
 
         # --- Step 4: Save extracted data to to_download.txt --- 
         download_filename = "to_download.txt"
-        try:
-            with open(download_filename, "w", encoding="utf-8") as f:
-                for book in books_data:
-                    # Simple pipe-separated format: ID|HASH|TITLE|AUTHOR
-                    line = f"{book['id']}|{book['hash']}|{book['title'].replace('|', ' ')}|{book['authors'].replace('|', ' ')}\n"
-                    f.write(line) # Write the line including the newline character
-            print(f"Successfully saved data for {len(books_data)} books to {download_filename}")
-            # <<< Update return dict >>>
-            return {"success": True, "books_found": len(books_data)}
-        except IOError as e:
-            print(f"Error saving data to file {download_filename}: {e}")
-            # <<< Update return dict >>>
-            return {"success": False, "books_found": 0, "error": f"Failed to save download data: {e}"}
+        if enable_file_output:
+            try:
+                with open(download_filename, "w", encoding="utf-8") as f:
+                    for book in books_data:
+                        # Simple pipe-separated format: ID|HASH|TITLE|AUTHOR
+                        line = f"{book['id']}|{book['hash']}|{book['title'].replace('|', ' ')}|{book['authors'].replace('|', ' ')}\n"
+                        f.write(line) # Write the line including the newline character
+                print(f"Successfully saved data for {len(books_data)} books to {download_filename}")
+                # Return based on extraction success, books_found determined above
+                return {"success": extraction_successful, "books_found": len(books_data), "books_data": books_data}
+            except IOError as e:
+                print(f"Error saving data to file {download_filename}: {e}")
+                return {"success": False, "books_found": 0, "error": f"Failed to save download data: {e}", "books_data": []}
+        else:
+            print(f"Skipping write to {download_filename} (dry run).")
+            # Return based on extraction success, books_found determined above
+            return {"success": extraction_successful, "books_found": len(books_data), "books_data": books_data} 
