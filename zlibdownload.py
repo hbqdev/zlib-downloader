@@ -304,7 +304,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     authors = book_data.get("authors", "Unknown Author")
 
                     # --- Processing Logic --- 
-                    print(f"    ({idx+1}/{page_book_count}) Processing Book ID: {book_id} ('{title[:50]}...')")
+                    print(f"    ({idx+1}/{page_book_count}) Processing Book ID: {book_id} ('{title}')")
 
                     # 1. Check Couchbase (Always do this)
                     is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
