@@ -181,7 +181,8 @@ def run_download_process(config_file="config.json", categories_file="categories.
     total_books_processed_all_categories = 0
     total_downloads_attempted_this_run = 0
     initial_download_count_for_summary = downloads_left_today # Store initial count for summary
-    
+    halt_run_due_to_limit = False # <<< Global flag to stop run
+
     # <<< Initialize Dry Run Report File (if applicable) >>>
     report_file_handle = None
     dry_run_report_filename = None
@@ -276,71 +277,145 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     except IOError as e:
                         print(f"  Error reading {download_filename} for page {current_page}: {e}. Skipping download processing.")
                         continue # To next page
-                # In dry run, we'll handle data later
                 
-                if should_download and not books_to_process_page:
-                    print(f"  No valid book data loaded from {download_filename} for page {current_page} despite scrape success? Skipping.")
+                if should_download and not books_to_process_page and books_found_on_page > 0:
+                    # Check if file read failed but scrape *did* find books
+                    print(f"  Warning: Scrape found {books_found_on_page} books, but failed to load details from {download_filename}. Skipping page processing.")
                     continue # To next page
 
-                # <<< Collect data for dry run report >>>
-                if not should_download and scrape_result.get("success"): # Only collect if scrape ok
-                    page_books_data = scrape_result.get("books_data", [])
-                    if page_books_data:
-                        # <<< Write incrementally to report file >>>
+                # --- Download/Check/DryRun Logic --- 
+                page_book_count = books_found_on_page # Use count from scrape result
+                
+                # Determine data source based on mode
+                page_book_data_iterable = []
+                if should_download:
+                    page_book_data_iterable = books_to_process_page # Use data read from file
+                else:
+                    page_book_data_iterable = scrape_result.get("books_data", []) # Use data from scrape result
+                    if not page_book_data_iterable and books_found_on_page > 0:
+                         print(f"    [DRY RUN] Warning: Scrape reported {books_found_on_page} books, but no data received for processing/report.")
+                         
+                # Loop through books for this page
+                for idx, book_data in enumerate(page_book_data_iterable):
+                    book_id = book_data.get("id")
+                    book_hash = book_data.get("hash")
+                    title = book_data.get("title", "Unknown Title")
+                    authors = book_data.get("authors", "Unknown Author")
+
+                    # --- Processing Logic --- 
+                    print(f"    ({idx+1}/{page_book_count}) Processing Book ID: {book_id} ('{title[:50]}...')")
+
+                    # 1. Check Couchbase (Always do this)
+                    is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
+                    if is_already_downloaded_in_db:
+                        print("      Already in Couchbase. Skipping.")
+                        # Count as processed only if we didn't already count it in dry run collection
+                        if should_download: books_processed_this_category += 1 
+                        continue # To next book
+
+                    # 2. Handle Dry Run Mode OR Download Mode 
+                    if not should_download:
+                        # Dry Run: Just print and write to report
+                        print(f"      [DRY RUN] Found New: ID={book_id}, Hash={book_hash}, Title='{title[:60]}...', Authors='{authors[:50]}...'")
                         if report_file_handle:
-                            page_books_written = 0
                             try:
-                                for book in page_books_data:
-                                    # <<< Also print book details to console in dry run >>>
-                                    book_id = book.get('id','N/A')
-                                    book_hash = book.get('hash','N/A')
-                                    title = book.get('title','N/A')
-                                    authors = book.get('authors','N/A')
-                                    print(f"    [DRY RUN] Found: ID={book_id}, Hash={book_hash}, Title='{title[:60]}...', Authors='{authors[:50]}...'")
-                                    
-                                    # Write to file
-                                    line = f"{book_id}|{book_hash}|{title.replace('|',' ')}|{authors.replace('|',' ')}\n"
-                                    report_file_handle.write(line)
-                                    page_books_written += 1
-                                dry_run_book_count += page_books_written # Update total count
-                                # Message now redundant as details are printed above
-                                # print(f"    [DRY RUN] Wrote {page_books_written} book details to report.") 
+                                line = f"{book_id}|{book_hash}|{title.replace('|',' ')}|{authors.replace('|',' ')}\n"
+                                report_file_handle.write(line)
+                                dry_run_book_count += 1
                             except IOError as e:
-                                print(f"    [DRY RUN] Error writing to report file: {e}. Further reporting disabled.")
-                                report_file_handle.close() # Close on error
-                                report_file_handle = None 
-                        else:
-                             print(f"    [DRY RUN] Report file handle not available, cannot write details.")
-                            
-                        # No longer extend in-memory list: dry_run_results.extend(page_books_data)
-                        books_processed_this_category += len(page_books_data) # Still count books found
-                else: # Dry Run logic 
-                    # <<< Dry run logic using scrape_result['books_data'] >>>
-                    page_books_data = scrape_result.get("books_data", [])
-                    if page_books_data:
-                        dry_run_book_count += len(page_books_data) # Count books found
-                        books_processed_this_category += len(page_books_data) # Count books found
-                    else:
-                         if books_found_on_page > 0:
-                              # Log if scrape said books found but data is missing
-                              print(f"    [DRY RUN] Scrape reported {books_found_on_page} books found, but no data received for report.")
-                         else: # books_found_on_page was 0
-                              print(f"    [DRY RUN] Processed 0 books found on page {current_page}.")
+                                print(f"      [DRY RUN] Error writing to report file: {e}. Further reporting disabled.")
+                                report_file_handle.close()
+                                report_file_handle = None
+                        books_processed_this_category += 1 # Count as processed in dry run
+                        continue # To next book in dry run
                     
-                # --- End of Download/Check/DryRun Logic for Page --- 
+                    # --- Download Mode Specific Logic --- 
+                    # 3. Check if limit was already hit GLOBALLY
+                    if halt_run_due_to_limit:
+                        print("      Download limit hit earlier in run. Skipping download attempt.")
+                        continue # To next book
+
+                    # 4. Attempt Download (if not skipped by checks above)
+                    print(f"      Attempting download... ({downloads_left_today} left reported initially)")
+                    try:
+                        download_result = z.downloadBook({"id": book_id, "hash": book_hash})
+
+                        if download_result:
+                            # --- Successful Download --- 
+                            filename, content = download_result
+                            clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
+                            
+                            if not os.path.exists(output_dir):
+                                try:
+                                    os.makedirs(output_dir) 
+                                except OSError as e: 
+                                    print(f"      Error creating output directory '{output_dir}': {e}. Cannot save file.")
+                                    continue # Skip saving/marking this book
+                                     
+                            filepath = os.path.join(output_dir, clean_filename)
+                            
+                            try:
+                                with open(filepath, "wb") as f:
+                                    f.write(content)
+                                print(f"      Downloaded: {filepath}")
+                                
+                                print(f"      Marking book ID {book_id} as downloaded in Couchbase...")
+                                mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
+                                if not mark_success:
+                                    print(f"      Warning: Failed to mark book {book_id} in Couchbase.")
+                                
+                                books_processed_this_category += 1
+                                total_downloads_attempted_this_run += 1
+                                downloads_left_today -= 1 
+
+                                time.sleep(2) # Delay
+                                
+                            except IOError as e:
+                                print(f"      Error saving file '{filepath}': {e}")
+                                # Not counting as processed if save fails
+
+                        else:
+                            # --- Failed Download --- 
+                            print(f"      Download failed for book ID {book_id} (API returned None or error).")
+                            print("      Assuming download limit reached or Z-Library API error. Stopping further download attempts for this run.")
+                            halt_run_due_to_limit = True # <<< Set global stop flag
+                            # Continue processing remaining books on this page (will skip download attempts)
+
+                    except Exception as e:
+                        # --- Unexpected Download Error --- 
+                        import traceback
+                        print(f"      Unexpected error downloading book ID {book_id}: {e}")
+                        print(traceback.format_exc())
+                        # Optionally set limit flags here too?
+                        # page_limit_hit = True 
+                        halt_run_due_to_limit = True # <<< Set global stop on unexpected error too?
+                        # Continue processing remaining books on this page
+                
+                # --- End of Book Processing Loop for Page --- 
                 print(f"  Finished processing books for page {current_page}.")
-                if books_found_on_page > 0: time.sleep(1) # Delay between page scrapes if books were found
+                # Break pagination loop *after* processing page if global halt flag is set
+                if halt_run_due_to_limit:
+                    print(f"  Halting further page processing due to download limit/error encountered on page {current_page}.")
+                    break 
+                
+                # Delay between page scrapes if no halt occurred and books were found
+                if books_found_on_page > 0: time.sleep(1) 
             
             # --- End of Pagination Loop for Category --- 
-            print(f"=== Finished category: {cat_name}. Processed {books_processed_this_category} new books/listings in this category. ===")
+            print(f"=== Finished category: {cat_name}. Processed {books_processed_this_category} new books/listings in this category run. ===")
             total_books_processed_all_categories += books_processed_this_category
             
-            # <<< Only update the start page for the next run IF downloads are enabled >>>
+            # Update start page state only if downloads enabled
             if should_download:
                 category["start_page_next_run"] = last_successfully_scraped_page + 1
                 print(f"    Next run for '{cat_name}' will start at page {category['start_page_next_run']} (State updated)")
             else:
                 print(f"    [DRY RUN] State for '{cat_name}' not updated.")
+                
+            # <<< Break category loop if global halt flag is set >>>
+            if halt_run_due_to_limit:
+                print(f"\nHalting further category processing due to download limit/error.")
+                break
         
         # --- End of Category Loop --- 
 
