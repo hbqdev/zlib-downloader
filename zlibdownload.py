@@ -438,11 +438,21 @@ def run_download_process(config_file="config.json", categories_file="categories.
             
             # Update start page state only if downloads enabled
             if should_download:
-                category["start_page_next_run"] = last_successfully_scraped_page + 1
-                print(f"    🔄 Next run for '{cat_name}' will start at page {category['start_page_next_run']}")
-            else:
-                print(f"    ℹ️ [DRY RUN] State for '{cat_name}' not updated.")
+                if halt_run_due_to_limit:
+                    # If limit was hit, resume from the page where it happened
+                    next_page_to_try = current_page 
+                    print(f"    ⏸️ Download limit hit on page {current_page}. Next run will resume from this page.")
+                else:
+                    # If no limit hit, proceed to the page after the last successful scrape
+                    # (last_successfully_scraped_page would have been updated)
+                    next_page_to_try = last_successfully_scraped_page + 1
+                    print(f"    ✅ Category finished or moved to next page. Next run for '{cat_name}' will start at page {next_page_to_try}")
                 
+                category["start_page_next_run"] = next_page_to_try
+            else:
+                 print(f"    ℹ️ [DRY RUN] State for '{cat_name}' not updated.")
+                 
+            # Break category loop if global halt flag is set
             if halt_run_due_to_limit:
                 print(f"\n⛔ Halting further category processing due to download limit/error.")
                 break
