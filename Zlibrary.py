@@ -345,17 +345,54 @@ class Zlibrary:
             return None
 
         file_info = response["file"]
-        filename = file_info.get("description", f"book_{bookid}")
-        author_info = file_info.get("author")
+        title = file_info.get("description", f"book_{bookid}") # Use description as title
+        author = file_info.get("author")
         extension = file_info.get("extension", "bin")
 
-        try:
-            if author_info:
-                filename += f" ({author_info})"
-        except Exception:
-            pass
-        finally:
-            filename += f".{extension}"
+        # --- Clean Title ---
+        clean_title = title
+        # Define patterns to remove variations of Z-Library/zlib
+        # Make hyphen optional, allow optional surrounding (), [], or _
+        patterns_to_remove = [
+            r'[\(\[_]?Z-?Library[\)\]_]?', # Matches Z-Library, ZLibrary, (Z-Library), [Z-Library], _Z-Library_, etc.
+            r'[\(\[_]?zlib[\)\]_]?'         # Matches zlib, (zlib), [zlib], _zlib_, etc.
+        ]
+        for pattern in patterns_to_remove:
+            # Replace found pattern and any surrounding whitespace with a single space
+            # This avoids double spaces if the pattern was already surrounded by spaces
+            clean_title = re.sub(r'\s*' + pattern + r'\s*', ' ', clean_title, flags=re.IGNORECASE)
+
+        # Replace multiple consecutive spaces with a single space
+        clean_title = re.sub(r'\s+', ' ', clean_title)
+        # Strip leading/trailing whitespace AND underscores
+        clean_title = clean_title.strip('_ ')
+
+        # --- Clean Author ---
+        clean_author = "Unknown Author" # Default
+        if author:
+            # Replace common separators (like ; or |) with a space
+            author_with_spaces = re.sub(r'[;|]+', ' ', author)
+            # Collapse multiple spaces and strip
+            clean_author = re.sub(r'\s+', ' ', author_with_spaces).strip()
+        
+        # --- Construct Base Filename ---
+        # Use spaces and a hyphen separator
+        base_filename = f"{clean_title} - {clean_author}"
+
+        # --- Sanitize Filename ---
+        # 1. Sanitize (replace invalid filesystem chars with a SPACE)
+        invalid_chars_pattern = r'[\\/?:*"<>|]' # Common invalid chars
+        # Replace invalid chars with space to preserve word separation
+        clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
+
+        # 2. Replace multiple consecutive spaces (from cleaning or sanitization) with a single space
+        clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename)
+
+        # 3. Remove leading/trailing spaces
+        clean_base_filename = clean_base_filename.strip()
+
+        # --- Add Extension ---
+        filename = f"{clean_base_filename}.{extension}"
 
         ddl = file_info.get("downloadLink")
         if not ddl:

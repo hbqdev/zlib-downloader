@@ -4,6 +4,7 @@ import time
 import json
 import cbconnect
 import sys # <<< Added for sys.exit
+import re # <<< Added for filename sanitization
 from datetime import datetime # <<< Added for timestamp
 
 def load_json(file_path):
@@ -342,9 +343,47 @@ def run_download_process(config_file="config.json", categories_file="categories.
 
                         if download_result:
                             # --- Successful Download --- 
-                            filename, content = download_result
-                            clean_filename = "".join(c if c.isalnum() or c in [' ', '.', '-', '_'] else '_' for c in filename)
+                            # Original filename from download API (potentially truncated, contains extension)
+                            original_api_filename, content = download_result
+
+                            # --- Construct Filename from Full Data (from to_download.txt) ---
+                            # Use the full title and authors variables already available
+                            full_title = title # Already loaded from to_download via book_data
+                            full_authors = authors # Already loaded from to_download via book_data
                             
+                            # Clean the author string (replace separators with space, collapse spaces)
+                            if full_authors:
+                                authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
+                                clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
+                            else:
+                                clean_authors = "Unknown Author"
+                            
+                            # Construct base name with spaces and hyphen separator
+                            base_filename = f"{full_title} - {clean_authors}"
+
+                            # --- Sanitize Constructed Filename ---
+                            # 1. Replace invalid filesystem chars with a SPACE
+                            invalid_chars_pattern = r'[\\/?:*"<>|]' 
+                            clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
+
+                            # 2. Replace multiple consecutive spaces with a single space
+                            clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename)
+
+                            # 3. Remove leading/trailing spaces
+                            clean_base_filename = clean_base_filename.strip()
+                            
+                            # 4. Extract extension from the *original* API filename
+                            try:
+                                extension = os.path.splitext(original_api_filename)[1] # Gets .ext
+                                if not extension: # Handle case where original had no extension
+                                    extension = ".bin" # Default extension
+                            except Exception:
+                                extension = ".bin" # Default on error
+                                
+                            # 5. Combine sanitized base name and extension
+                            final_filename = f"{clean_base_filename}{extension}"
+
+                            # --- Save File ---
                             if not os.path.exists(output_dir):
                                 try:
                                     os.makedirs(output_dir) 
@@ -352,7 +391,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                     print(f"      Error creating output directory '{output_dir}': {e}. Cannot save file.")
                                     continue # Skip saving/marking this book
                                      
-                            filepath = os.path.join(output_dir, clean_filename)
+                            filepath = os.path.join(output_dir, final_filename)
                             
                             try:
                                 with open(filepath, "wb") as f:
