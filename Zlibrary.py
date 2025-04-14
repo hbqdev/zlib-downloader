@@ -336,95 +336,82 @@ class Zlibrary:
             return self.__getImageData(cover_url)
         return None
 
-    def __getBookFile(self, bookid: [int, str], hashid: str) -> tuple[str, bytes] | None:
-        response = self.__makeGetRequest(f"/eapi/book/{bookid}/{hashid}/file")
+    def __getBookFile(self, bookid: [int, str], hashid: str) -> tuple[str, requests.Response] | None:
+        """Initiates the download request and returns the filename and the streaming response object."""
+        response_info = self.__makeGetRequest(f"/eapi/book/{bookid}/{hashid}/file")
         
-        if not response or "file" not in response:
-            print(f"  Error: API response for book {bookid}/{hashid} did not contain 'file' key.")
-            print(f"  API Response: {response}")
+        if not response_info or "file" not in response_info:
+            print(f"  ❌ Error: API response for book {bookid}/{hashid} did not contain 'file' key.")
+            print(f"  API Response: {response_info}")
             return None
 
-        file_info = response["file"]
-        title = file_info.get("description", f"book_{bookid}") # Use description as title
+        file_info = response_info["file"]
+        title = file_info.get("description", f"book_{bookid}")
         author = file_info.get("author")
         extension = file_info.get("extension", "bin")
 
         # --- Clean Title ---
         clean_title = title
-        # Define patterns to remove variations of Z-Library/zlib
-        # Make hyphen optional, allow optional surrounding (), [], or _
         patterns_to_remove = [
-            r'[\(\[_]?Z-?Library[\)\]_]?', # Matches Z-Library, ZLibrary, (Z-Library), [Z-Library], _Z-Library_, etc.
-            r'[\(\[_]?zlib[\)\]_]?'         # Matches zlib, (zlib), [zlib], _zlib_, etc.
+            r'[\(\[_]?Z-?Library[\)\]_]?',
+            r'[\(\[_]?zlib[\)\]_]?'
         ]
         for pattern in patterns_to_remove:
-            # Replace found pattern and any surrounding whitespace with a single space
-            # This avoids double spaces if the pattern was already surrounded by spaces
             clean_title = re.sub(r'\s*' + pattern + r'\s*', ' ', clean_title, flags=re.IGNORECASE)
-
-        # Replace multiple consecutive spaces with a single space
-        clean_title = re.sub(r'\s+', ' ', clean_title)
-        # Strip leading/trailing whitespace AND underscores
-        clean_title = clean_title.strip('_ ')
+        clean_title = re.sub(r'\s+', ' ', clean_title).strip('_ ')
 
         # --- Clean Author ---
-        clean_author = "Unknown Author" # Default
+        clean_author = "Unknown Author"
         if author:
-            # Replace common separators (like ; or |) with a space
             author_with_spaces = re.sub(r'[;|]+', ' ', author)
-            # Collapse multiple spaces and strip
             clean_author = re.sub(r'\s+', ' ', author_with_spaces).strip()
         
         # --- Construct Base Filename ---
-        # Use spaces and a hyphen separator
         base_filename = f"{clean_title} - {clean_author}"
 
         # --- Sanitize Filename ---
-        # 1. Sanitize (replace invalid filesystem chars with a SPACE)
-        invalid_chars_pattern = r'[\\/?:*"<>|]' # Common invalid chars
-        # Replace invalid chars with space to preserve word separation
+        invalid_chars_pattern = r'[\\/?:*"<>|]'
         clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
-
-        # 2. Replace multiple consecutive spaces (from cleaning or sanitization) with a single space
-        clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename)
-
-        # 3. Remove leading/trailing spaces
-        clean_base_filename = clean_base_filename.strip()
+        clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
 
         # --- Add Extension ---
-        filename = f"{clean_base_filename}.{extension}"
+        # Use the extension from the API if available, otherwise default
+        final_filename = f"{clean_base_filename}{extension if extension else '.bin'}"
 
         ddl = file_info.get("downloadLink")
         if not ddl:
-            print(f"Error: No downloadLink found in API response for book {bookid}")
+            print(f"❌ Error: No downloadLink found in API response for book {bookid}")
             return None
 
         download_headers = self.__headers.copy()
         try:
             authority = ddl.split("/")[2]
-            download_headers["authority"] = authority 
+            download_headers["authority"] = authority
         except IndexError:
-            print("Warning: Could not parse authority from download link.")
+            print("⚠️ Warning: Could not parse authority from download link.")
 
         try:
+            # Initiate the streaming request
             res = requests.get(ddl, headers=download_headers, stream=True, timeout=60) 
             res.raise_for_status()
             if res.status_code == 200:
-                content = res.content 
-                return filename, content
+                # Return filename and the response object for streaming
+                return final_filename, res 
             else:
-                print(f"Error: Download request for book {bookid} returned status {res.status_code}")
+                print(f"❌ Error: Download request for book {bookid} returned status {res.status_code}")
                 return None
         except requests.exceptions.RequestException as e:
-            print(f"Error downloading book file from {ddl}: {e}")
+            print(f"❌ Error initiating download stream from {ddl}: {e}")
             return None
 
-    def downloadBook(self, book: dict[str, str]) -> tuple[str, bytes] | None:
+    def downloadBook(self, book: dict[str, str]) -> tuple[str, requests.Response] | None:
+        """Gets download info and returns filename and streaming response object."""
         book_id = book.get("id")
         book_hash = book.get("hash")
         if not book_id or not book_hash:
-            print("Error: Book dictionary missing id or hash for download.")
+            print("❌ Error: Book dictionary missing id or hash for download.")
             return None
+        # Directly return the result of __getBookFile
         return self.__getBookFile(book_id, book_hash)
 
     def isLoggedIn(self) -> bool:
