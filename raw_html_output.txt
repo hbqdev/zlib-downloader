@@ -1,1149 +1,1149 @@
 <z-bookcard
-                                        id="2835408"
-                    isbn="9784766117370"
-                    termshash=""
-                    href="/book/2835408/c41a1d/how-to-draw-manga-sketchingstyle-vol2-logical-proportions.html"
-                    download="/dl/2835408/d514d7"
+                                        id="25094472"
+                    isbn="9781462921362"
+                    termshash="362838f2b54d948579b2cb272b33be5b"
+                    href="/book/25094472/524287/how-to-create-manga-drawing-facial-expressions-the-ultimate-bible-for-beginning-artists.html"
+                    download="/dl/25094472/9006b3"
                     deleted=""
-                    publisher="Graphic-sha"
+                    publisher="Tuttle Publishing"
                     language="english"
-                    year="2007"
+                    year="2020"
                     extension="pdf"
-                    filesize="69.55 MB"
-                    rating="5.0"
-                    quality="5.0"
+                    filesize="16.55 MB"
+                    rating="3.0"
+                    quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5e632a0418c98e5346742cd9c518bc4f6433cbaa892e63c5261dbbfd1247a1b3.jpg" />
-                    <div slot="title">How to Draw Manga - Sketching-Style Vol.2 - Logical Proportions</div>
-                    <div slot="author">Hayashi; Hikaru</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/dd90cba8072ea6ab290f234dbe8a015ae9978c5563bfb6a023c7f5997a05c311.jpg" />
+                    <div slot="title">How to Create Manga - Drawing Facial Expressions: The Ultimate Bible For Beginning Artists</div>
+                    <div slot="author">NextCreator Henshubu</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="16821332"
-                    isbn="9780760370667"
-                    termshash="e35bf462f8c1435a8f58a28741435535"
-                    href="/book/16821332/b471c0/drawing-is-for-everyone.html"
-                    download="/dl/16821332/a01d1e"
+                                        id="487312"
+                    isbn="9781921002113"
+                    termshash="1e5dd3de34aa5c215b57b38fac0d5210"
+                    href="/book/487312/3c04cb/dartiste-character-modeling-digital-artists-master-class.html"
+                    download="/dl/487312/575cb2"
                     deleted=""
-                    publisher="Art is for Everyone"
+                    publisher="Ballistic Publishing"
                     language="english"
-                    year="2021"
-                    extension="epub"
-                    filesize="15.33 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b0fceb1c3781435260cf8d22e2a89e26c7baf700213a88c68140e68534947c9b.jpg" />
-                    <div slot="title">Drawing Is for Everyone</div>
-                    <div slot="author">Kateri Ewing</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="21721844"
-                    isbn="9780473591755"
-                    termshash="84a3385bdecc0e07ddf87aaf6a18a6b3"
-                    href="/book/21721844/71c7ff/on-writing-and-worldbuilding-volume-ii.html"
-                    download="/dl/21721844/99b0c6"
-                    deleted=""
-                    publisher="HFM"
-                    language="english"
-                    year="2021"
+                    year="2005"
                     extension="pdf"
-                    filesize="1.76 MB"
+                    filesize="15.92 MB"
                     rating="5.0"
                     quality="4.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/e22d49d2cc0236b0b1ccfaa949f40349104f6c626e94ef9cee8aaff3a5726709.jpg" />
-                    <div slot="title">On Writing and Worldbuilding: Volume II</div>
-                    <div slot="author">Timothy Hickson; Kit Brookman (editor)</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5759ecc630c309fcb19c8de55131d26212f4d2628a7cc65e63f117cb30ce8500.jpg" />
+                    <div slot="title">D'artiste: Character Modeling. Digital Artists Master Class</div>
+                    <div slot="author">Daniel P. Wade; Pascal Blanché; Francisco Cortina; Steven Stahlberg</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="12115726"
-                    isbn="9781452182957"
-                    termshash="777a602c69618bd5bf5da2d26d6ea844"
-                    href="/book/12115726/3f6d13/make-your-art-no-matter-what.html"
-                    download="/dl/12115726/7bb58e"
+                                        id="5558004"
+                    isbn="9780856677045"
+                    termshash="df8704b80f9bceafc171bc57ff70d075"
+                    href="/book/5558004/7233bc/watchmaking-horology.html"
+                    download="/dl/5558004/9d189b"
                     deleted=""
-                    publisher="Chronicle Books"
+                    publisher="Philip Wilson Publishers"
                     language="english"
-                    year="2021"
-                    extension="epub"
-                    filesize="1.24 MB"
-                    rating="4.0"
-                    quality="5.0"
+                    year="2013"
+                    extension="pdf"
+                    filesize="169.01 MB"
+                    rating="1.0"
+                    quality="1.5"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ec616b3e6bc18f849d05015e1afd2e6eda1654353e87401f1f884191e2fd2e70.jpg" />
-                    <div slot="title">Make Your Art No Matter What</div>
-                    <div slot="author">Beth Pickens</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ba6a83bdb429e9bbad855c66db7b29a7678db1742a80cabda4220cf98abe8324.jpg" />
+                    <div slot="title">Watchmaking , Horology</div>
+                    <div slot="author">George Daniels</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5571763"
-                    isbn=""
+                                        id="21446253"
+                    isbn="9781506713748"
                     termshash=""
-                    href="/book/5571763/8d651a/bridgmans-complete-guide-to-drawing-from-life.html"
-                    download="/dl/5571763/8c2f95"
+                    href="/book/21446253/c522f5/the-art-of-splatoon-2.html"
+                    download="/dl/21446253/18726b"
                     deleted=""
-                    publisher="Sterling"
+                    publisher="Dark Horse Books"
                     language="english"
-                    year="0"
+                    year="2019"
                     extension="pdf"
-                    filesize="81.80 MB"
-                    rating="5.0"
-                    quality="5.0"
+                    filesize="63.36 MB"
+                    rating="4.0"
+                    quality="3.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/be21c3413055a0154f6facfc5875fb46cccf90700203c92e7a8b5ecfd766d84a.jpg" />
-                    <div slot="title">Bridgman's Complete Guide to Drawing From Life</div>
-                    <div slot="author">George B. Bridgman</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/42448ae8dea30c9852c50dd7b4042b09b288792dffd98ef174faa4ba567bb7cb.jpg" />
+                    <div slot="title">The Art of Splatoon 2</div>
+                    <div slot="author">Nintendo</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="1234392"
-                    isbn="9784766115307"
-                    termshash="2bde85dbb7cc242a5c4104bc86fb694f"
-                    href="/book/1234392/823046/how-to-draw-manga-vol-38-ninja-samurai-portrayal.html"
-                    download="/dl/1234392/edde2d"
+                                        id="2525062"
+                    isbn="9780823034086"
+                    termshash="fd2526c1d84dbd78883c5fb8ccb831d1"
+                    href="/book/2525062/7534bf/still-life-painting-atelier-an-introduction-to-oil-painting.html"
+                    download="/dl/2525062/5fcb79"
                     deleted=""
-                    publisher="Graphic-Sha"
+                    publisher="Watson-Guptill"
                     language="english"
-                    year="2005"
+                    year="2010"
                     extension="pdf"
-                    filesize="47.48 MB"
-                    rating="5.0"
-                    quality="5.0"
+                    filesize="108.12 MB"
+                    rating="0.0"
+                    quality="4.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/f612cdae6d0a3b08ee638c04efdecbb31cdc8205ffa1a280def324b57fc08d2e.jpg" />
-                    <div slot="title">How to Draw Manga - Vol. 38 - Ninja &amp; Samurai Portrayal</div>
-                    <div slot="author">Team Esaka</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b543c2d62b6405d7be0acebba82a156aa96c6ca579701e1af5d427e9f7b13913.jpg" />
+                    <div slot="title">Still Life Painting Atelier An Introduction to Oil Painting</div>
+                    <div slot="author">Michael Friel</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3314382"
-                    isbn=""
-                    termshash="da9f134a832c324bfcdc584feb664c7e"
-                    href="/book/3314382/6e0935/secrets-of-watercolor-from-basics-to-special-effects.html"
-                    download="/dl/3314382/515436"
+                                        id="6011511"
+                    isbn="9780770434540"
+                    termshash="38bb4718988e5bddf66bd8dd48556bde"
+                    href="/book/6011511/41bf7a/the-oil-painting-course-youve-always-wanted.html"
+                    download="/dl/6011511/d1c592"
                     deleted=""
-                    publisher=""
+                    publisher="Watson-Guptill"
                     language="english"
-                    year="0"
+                    year="2013"
+                    extension="epub"
+                    filesize="32.98 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ef5f9e8888bc71b3e0efc9eba88c2221fab259443c35335487e38789324339b0.jpg" />
+                    <div slot="title">The Oil Painting Course You've Always Wanted</div>
+                    <div slot="author">Kathleen Staiger</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5640481"
+                    isbn="9781462921249"
+                    termshash="77502357dd75e2e9f90a1d87d592a939"
+                    href="/book/5640481/c5c93e/the-complete-guide-to-drawing-for-beginners-21-stepbystep-lessons-over-450-illustrations.html"
+                    download="/dl/5640481/e73e85"
+                    deleted=""
+                    publisher="Tuttle Publishing"
+                    language="english"
+                    year="2020"
+                    extension="epub"
+                    filesize="32.17 MB"
+                    rating="4.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/351b978635e5d9ff71fc075c08ff1d1fab8be3c66fd7c06cf653eb307d64ffe8.jpg" />
+                    <div slot="title">The Complete Guide to Drawing for Beginners: 21 Step-by-Step Lessons - Over 450 illustrations!</div>
+                    <div slot="author">Yoshiko Ogura</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3417003"
+                    isbn="9780882298207"
+                    termshash=""
+                    href="/book/3417003/c61e50/sight-singing-through-melodic-analysis-a-guide-to-the-study-of-sight-singing-and-an-aid-to-ear-trai.html"
+                    download="/dl/3417003/e53472"
+                    deleted=""
+                    publisher="Scarecrow Press"
+                    language="english"
+                    year="2000"
                     extension="pdf"
-                    filesize="5.69 MB"
+                    filesize="34.60 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/882f55be91a22dd2bbf3a799d81108d7f6ea7feefa6d1a70f7e0aeb5703cb835.jpg" />
-                    <div slot="title">Secrets of Watercolor: From Basics to Special Effects</div>
-                    <div slot="author">Joe García</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c0b11ef1149a53d25782f1cc03ee6c73354a211504e93ea9d8fccdab58c14c72.jpg" />
+                    <div slot="title">Sight Singing Through Melodic Analysis, A Guide to the Study of Sight Singing and an Aid to Ear Training Instruction</div>
+                    <div slot="author">Leland D. Bland</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="6162359"
+                                        id="1133512"
                     isbn=""
-                    termshash="2357f1be52b064272b532a100cbea9fc"
-                    href="/book/6162359/e4c3fa/toddler-2-books-in-1-toddler-discipline-and-toddlers-development-learn-the-best-parenting-strateg.html"
-                    download="/dl/6162359/6504ee"
+                    termshash=""
+                    href="/book/1133512/982c80/the-art-of-guild-wars-2.html"
+                    download="/dl/1133512/8deba2"
+                    deleted=""
+                    publisher="Arenanet"
+                    language="english"
+                    year="2009"
+                    extension="pdf"
+                    filesize="41.31 MB"
+                    rating="4.5"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/10212f6860246663ff689e445336e1a8ae05bcfd275204b327026581346eec20.jpg" />
+                    <div slot="title">The Art of Guild Wars 2</div>
+                    <div slot="author">Ree Soesbee</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5863642"
+                    isbn="9780399582158"
+                    termshash="e6f1f3549b5c6da0e67c92af99225c0f"
+                    href="/book/5863642/e825c7/peggy-deans-guide-to-nature-drawing-and-watercolor.html"
+                    download="/dl/5863642/d14e1d"
+                    deleted=""
+                    publisher="National Geographic Books"
+                    language="english"
+                    year="2019"
+                    extension="epub"
+                    filesize="113.82 MB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7c0012eeacf0a2cb22237604ec21260fa56b84ad4810b01a601d7c8de28b4be9.jpg" />
+                    <div slot="title">Peggy Dean's Guide to Nature Drawing and Watercolor</div>
+                    <div slot="author">Peggy Dean</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5852495"
+                    isbn=""
+                    termshash="2bac972054528f860f3dd5467e30bc04"
+                    href="/book/5852495/398ecd/the-natural-way-to-draw.html"
+                    download="/dl/5852495/3b6a96"
+                    deleted=""
+                    publisher="Read Books"
+                    language="english"
+                    year="2013"
+                    extension="epub"
+                    filesize="23.09 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/428a4df68aa510a462d2cb0ea92d8a87215989510cd1e0390b51b74c4c71067c.jpg" />
+                    <div slot="title">The Natural Way to Draw</div>
+                    <div slot="author">Kimon Nicolaïdes</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28337827"
+                    isbn="9781909414860"
+                    termshash="b5e52b00efb1ebdc167ad4e351c53195"
+                    href="/book/28337827/093a5b/creating-characters-for-the-entertainment-industry.html"
+                    download="/dl/28337827/91df02"
+                    deleted=""
+                    publisher="3dtotal Publishing"
+                    language="english"
+                    year="2019"
+                    extension="pdf"
+                    filesize="90.46 MB"
+                    rating="0.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f62d9c3193bae13cab3333db0f8a8955081dbc73788b3ea8cbc09904a3d00db1.jpg" />
+                    <div slot="title">Creating Characters for the Entertainment Industry</div>
+                    <div slot="author">3dtotal Publishing; Kenneth Anderson; Devon Cady-Lee; Cécile Carre; Hollie Mengert</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="540036"
+                    isbn="9780195146103"
+                    termshash="8928a01a443b95dcca9399d59b6fc8d9"
+                    href="/book/540036/0e11dd/psychology-for-musicians-understanding-and-acquiring-the-skills.html"
+                    download="/dl/540036/6c0eaa"
+                    deleted=""
+                    publisher="Oxford University Press"
+                    language="english"
+                    year="2007"
+                    extension="pdf"
+                    filesize="1.33 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/59d9105c387fca5e93d0668de8d96f8eb6767c40f7a5643765a956741e0e04ff.jpg" />
+                    <div slot="title">Psychology for Musicians: Understanding and Acquiring the Skills</div>
+                    <div slot="author">Andreas C. Lehmann; John A. Sloboda; Robert H. Woody</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="610634"
+                    isbn="9780521603805"
+                    termshash="30307fb27c26b226d9542033a9376963"
+                    href="/book/610634/c70350/an-introduction-to-music-studies.html"
+                    download="/dl/610634/7c2d72"
+                    deleted=""
+                    publisher="Cambridge University Press"
+                    language="english"
+                    year="2009"
+                    extension="pdf"
+                    filesize="2.84 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d5ef4003f3f520ed7dd2d299becaf70d3885449ac1c548eab2728fcbadf5b27b.jpg" />
+                    <div slot="title">An Introduction to Music Studies</div>
+                    <div slot="author">J. P. E. Harper-Scott; Jim Samson</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5837029"
+                    isbn=""
+                    termshash="34b45e5256f57195373425c23e8dfe10"
+                    href="/book/5837029/ae52a6/how-to-draw-manga-ultimate-guide-to-drawing-beautiful-girls-how-to-draw-anime-and-manga-like-a-pr.html"
+                    download="/dl/5837029/2eeb92"
                     deleted=""
                     publisher=""
                     language="english"
                     year="2020"
                     extension="epub"
-                    filesize="1.58 MB"
+                    filesize="14.45 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/677f4ae9c305231a0ab9816dd03cc28d211b9fffb6d1b5dd0e2c5eb8e661aaac.jpg" />
+                    <div slot="title">How To Draw Manga : Ultimate Guide To Drawing Beautiful Girls (How To Draw Anime and Manga Like a Pro Book 4)</div>
+                    <div slot="author">Azumi Ono</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5811567"
+                    isbn=""
+                    termshash="b75f23abe3e80ac9dac8e75fee062ddc"
+                    href="/book/5811567/8e12d4/the-esl-ell-teachers-survival-guide.html"
+                    download="/dl/5811567/b0b11a"
+                    deleted=""
+                    publisher="Wiley"
+                    language="english"
+                    year="2012"
+                    extension="epub"
+                    filesize="2.56 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d931bd7081625ac6248fe1a1c1dbae9436ec2d17bf135e9f37c226ab695891fc.jpg" />
+                    <div slot="title">The ESL / ELL Teacher's Survival Guide</div>
+                    <div slot="author">Larry Ferlazzo; Katie Hull Sypnieski</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1214567"
+                    isbn="9780748641581"
+                    termshash="1349ca8cc508fe9605f55eb127d36d71"
+                    href="/book/1214567/b4588a/research-methods-in-theatre-and-performance-research-methods-for-the-arts-and-the-humanities.html"
+                    download="/dl/1214567/752bb1"
+                    deleted=""
+                    publisher="Edinburgh University Press"
+                    language="english"
+                    year="2011"
+                    extension="pdf"
+                    filesize="1.72 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/69c568234e79692ef6bf099ff548bf4914f75b16a65c2f8de3257924b2874f8e.jpg" />
+                    <div slot="title">Research Methods in Theatre and Performance (Research Methods for the Arts and the Humanities)</div>
+                    <div slot="author">Baz Kershaw; Helen Nicholson (editors)</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4968329"
+                    isbn=""
+                    termshash="39307b476d291cce384c6403b53bd501"
+                    href="/book/4968329/b3958c/the-james-bond-dossier.html"
+                    download="/dl/4968329/a2d19e"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="epub"
+                    filesize="918 KB"
                     rating="5.0"
                     quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b75bcffd0b82d49756d9ab8e0462f5f8148b8f462048377856f27bea5fa81ef0.jpg" />
-                    <div slot="title">TODDLER: 2 BOOKS IN 1: Toddler Discipline and Toddlers Development. Learn the Best Parenting Strategies for Sensitive Child Raising with this Montessori Education and Children Development Guide</div>
-                    <div slot="author">Jamie Karp</div>
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">The James Bond Dossier</div>
+                    <div slot="author">Kingsley Amis</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="25351878"
-                    isbn="9781101873854"
-                    termshash=""
-                    href="/book/25351878/86f020/word-power-made-easy.html"
-                    download="/dl/25351878/363cc8"
-                    deleted=""
-                    publisher="Anchor"
-                    language="english"
-                    year="2014"
-                    extension="pdf"
-                    filesize="29.20 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/da55f3dd4bfeef0f964ce1b46b65f1f1462e45eba60b4ccf3dc0fa89c316ff0c.jpg" />
-                    <div slot="title">Word Power Made Easy</div>
-                    <div slot="author">Norman Lewis</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="21670028"
-                    isbn="9781912843428"
-                    termshash=""
-                    href="/book/21670028/51314b/anatomy-for-artists-drawing-form-pose-the-ultimate-guide-to-drawing-anatomy-in-perspective-and-p.html"
-                    download="/dl/21670028/216498"
-                    deleted=""
-                    publisher="3dtotal Publishing"
-                    language="english"
-                    year="2022"
-                    extension="pdf"
-                    filesize="106.37 MB"
-                    rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9c5e31e570baa922bc2f735c1966e2229a409fe0277e851f62a0a7ae38a2ab77.jpg" />
-                    <div slot="title">Anatomy for Artists: Drawing Form &amp; Pose: The ultimate guide to drawing anatomy in perspective and pose</div>
-                    <div slot="author">Tom Fox</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2579920"
-                    isbn=""
-                    termshash=""
-                    href="/book/2579920/c710c3/realistic-figure-drawing.html"
-                    download="/dl/2579920/a14593"
-                    deleted=""
-                    publisher="North Light Books"
-                    language="english"
-                    year="1991"
-                    extension="pdf"
-                    filesize="68.52 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8661b9cade7d4f24c04837bd773cb1fd01d11d374ad222b3001322baecf6c18c.jpg" />
-                    <div slot="title">Realistic Figure Drawing</div>
-                    <div slot="author">Joseph Sheppard</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2579933"
-                    isbn=""
-                    termshash="a7ae270ea12500cb0a5faa4bf74e8bb5"
-                    href="/book/2579933/4a7ffd/the-figure-in-action-anatomy-for-the-artist.html"
-                    download="/dl/2579933/725088"
-                    deleted=""
-                    publisher="Batsford Ltd"
-                    language="english"
-                    year="1990"
-                    extension="pdf"
-                    filesize="90.56 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/2feba680b153acf63438bf875c880fd4e43e31609fe6172f2d9e7ffa5c9a9ee1.jpg" />
-                    <div slot="title">The Figure in Action - Anatomy for the Artist</div>
-                    <div slot="author">Louise Gordon</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="23295770"
-                    isbn="9780760374580"
-                    termshash="69bfc36214f311d3a6099c6901f3a913"
-                    href="/book/23295770/8d4698/the-world-of-urban-sketching-celebrating-the-evolution-of-drawing-and-painting-on-location-around.html"
-                    download="/dl/23295770/1f8ef7"
+                                        id="18324854"
+                    isbn="9780760373040"
+                    termshash="d022de8a63b90866a53efac64eba40d8"
+                    href="/book/18324854/972003/the-urban-sketching-handbook-color-first-ink-later.html"
+                    download="/dl/18324854/1120bf"
                     deleted=""
                     publisher="Quarry Books"
                     language="english"
-                    year="2022"
+                    year="2021"
                     extension="epub"
-                    filesize="65.58 MB"
+                    filesize="12.54 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/446d94524d0fa69f3f8961c07bad656f73b4c7e27968abf19d93366f1fbb49c1.jpg" />
+                    <div slot="title">The Urban Sketching Handbook Color First, Ink Later</div>
+                    <div slot="author">Mike Yoshiaki Daikubara</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3127603"
+                    isbn=""
+                    termshash=""
+                    href="/book/3127603/3ff2a2/fashion-illustration.html"
+                    download="/dl/3127603/596ccf"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="pdf"
+                    filesize="20.12 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3a0ae0804768b24a641b264094c6cd9c427ad6d7dabed284267c8a9b62c1c686.jpg" />
-                    <div slot="title">The World of Urban Sketching : Celebrating the Evolution of Drawing and Painting on Location Around the Globe - New Inspirations to See Your World One Sketch at a Time</div>
-                    <div slot="author">Stephanie Bower</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/6c54ded8f4239ce763609788432290bdce9e4a9bd4b67d32f78d2a44061cfc35.jpg" />
+                    <div slot="title">Fashion illustration</div>
+                    <div slot="author">Drake Nikolas</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="12369403"
-                    isbn="9781070952710"
-                    termshash="f1cff2de1dcf2bd10bc5cd78678a0057"
-                    href="/book/12369403/10c9cf/how-to-draw-cute-animals-learn-easy-stepbystep-kawaii-pets-a-fun-and-simple-step-by-step-anime-d.html"
-                    download="/dl/12369403/99d4b3"
+                                        id="25995889"
+                    isbn="9780719842825"
+                    termshash="cd321aadf5c13d41ea527aa491796af4"
+                    href="/book/25995889/13f3c1/painting-portraits-in-watercolour.html"
+                    download="/dl/25995889/1fce5f"
                     deleted=""
-                    publisher="Independently published"
+                    publisher="The Crowood Press"
                     language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="34.69 MB"
-                    rating="3.5"
+                    year="2023"
+                    extension="epub"
+                    filesize="16.68 MB"
+                    rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/baeb5e2b0b7d35bc955df8b2ee3e3403669b7518747bc953825e3356aa66d058.jpg" />
-                    <div slot="title">How To Draw Cute Animals: Learn Easy Step-by-step Kawaii Pets, A Fun And Simple Step By Step Anime Drawing Books For Beginners</div>
-                    <div slot="author">Punya Phoo</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/cc8b1f8d73914b2dd13735d389e9a6dee23240db63dc523deb8965716dc58656.jpg" />
+                    <div slot="title">Painting Portraits in Watercolour</div>
+                    <div slot="author">Liz Chaderton</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2580285"
-                    isbn=""
-                    termshash="c2be9f2963a0709402788100d18627fd"
-                    href="/book/2580285/863edf/perspective-using-the-grid-system-for-interior-design-sketching.html"
-                    download="/dl/2580285/ac9bd1"
+                                        id="4193890"
+                    isbn="9780198608295"
+                    termshash="6cc73d54a9fd9e503783b62003ad688c"
+                    href="/book/4193890/711cef/the-concise-oxford-dictionary-of-art-and-artists.html"
+                    download="/dl/4193890/7bdfdd"
                     deleted=""
-                    publisher="DAG Design"
+                    publisher="Oxford University Press"
+                    language="english"
+                    year="1996"
+                    extension="epub"
+                    filesize="1.42 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/033fac92b79dab1219b26543800b7a1f9b52a2128ff213fd833485962c377235.jpg" />
+                    <div slot="title">The Concise Oxford Dictionary of Art and Artists</div>
+                    <div slot="author">Chilvers Ian</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16734789"
+                    isbn="9780307786357"
+                    termshash="c60c408ee332b3b04aa57cf8b19867a1"
+                    href="/book/16734789/77b52f/how-to-draw-what-you-see.html"
+                    download="/dl/16734789/f475fe"
+                    deleted=""
+                    publisher="Watson-Guptill"
                     language="english"
                     year="2011"
                     extension="pdf"
-                    filesize="3.46 MB"
-                    rating="0.0"
-                    quality="5.0"
+                    filesize="9.84 MB"
+                    rating="5.0"
+                    quality="4.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/f61c9c79b0acc9132eba40814c578830d794b58b3a7efcd0eee367291c5336dd.jpg" />
-                    <div slot="title">PERSPECTIVE Using the Grid System for Interior Design Sketching</div>
-                    <div slot="author">Donald Gerds</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/4c5cf597a2954e2493e79b7a5f707f5c64739f98d2836b1919d86bc5cfdc7e60.jpg" />
+                    <div slot="title">How to Draw What You See</div>
+                    <div slot="author">Rudy de Reyna</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="23428173"
-                    isbn="9781446309520"
-                    termshash="1108b710d389c25758fce3ebf491bb6f"
-                    href="/book/23428173/143a63/drawing-architecture-the-beginners-guide-to-drawing-and-painting-buildings.html"
-                    download="/dl/23428173/3bebc0"
+                                        id="2615511"
+                    isbn="9780199924349"
+                    termshash="9f262678dd764a4f636b5a1768432b94"
+                    href="/book/2615511/1872b0/piano-lessons-with-claudio-arrau-a-guide-to-his-philosophy-and-techniques.html"
+                    download="/dl/2615511/b85144"
                     deleted=""
-                    publisher="David &amp; Charles"
+                    publisher="Oxford University Press"
+                    language="english"
+                    year="2014"
+                    extension="pdf"
+                    filesize="3.23 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/08a8a08e61f89dd4be0bdd81996832d4dbedfbc182eef4881255fc92db69e0e1.jpg" />
+                    <div slot="title">Piano Lessons with Claudio Arrau: A Guide to His Philosophy and Techniques</div>
+                    <div slot="author">Victoria A. von Arx</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1048115"
+                    isbn="9784871975520"
+                    termshash=""
+                    href="/book/1048115/b662da/super-character-design-poses-vol-2-heroine.html"
+                    download="/dl/1048115/3fc461"
+                    deleted=""
+                    publisher="Japan Publication Trading Company"
+                    language="english"
+                    year="2004"
+                    extension="pdf"
+                    filesize="33.47 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d2dfb84b88f5b718e534aff11f18b0eb56ba5bc368663343636485a73cce2071.jpg" />
+                    <div slot="title">Super Character Design, Poses, Vol. 2 - Heroine</div>
+                    <div slot="author">You Kusano</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23045465"
+                    isbn=""
+                    termshash="b2ca557b9fbc5100346232e24df62479"
+                    href="/book/23045465/ea0a07/colour-pencil-drawing-tutorial-from-beginner-to-master.html"
+                    download="/dl/23045465/f2ae28"
+                    deleted=""
+                    publisher=""
                     language="english"
                     year="2022"
                     extension="pdf"
-                    filesize="7.13 MB"
+                    filesize="43.24 MB"
                     rating="5.0"
-                    quality="5.0"
+                    quality="4.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/e238e7848f847d4b2b51dfd81048eba0d3f19a159baf1fc12af70d84ae2b798a.jpg" />
-                    <div slot="title">Drawing Architecture: The beginner's guide to drawing and painting buildings</div>
-                    <div slot="author">Richard Taylor</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9131a18f9a3ced2d42df3f3f7e0bd2634c9e761a89e442bdfc80a261b795e2ef.jpg" />
+                    <div slot="title">Colour Pencil Drawing Tutorial from Beginner to Master</div>
+                    <div slot="author">Kevn Todd</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="16734539"
-                    isbn="9781647391225"
-                    termshash="6dbb97986102f8b0d645d7a46aa93d98"
-                    href="/book/16734539/d0baeb/30minute-drawing-for-beginners-easy-stepbystep-lessons-techniques-for-landscapes-still-lifes.html"
-                    download="/dl/16734539/6f76ba"
+                                        id="1161314"
+                    isbn="9781448848010"
+                    termshash="fe9c2456bc20da682cd5a95ff1da4457"
+                    href="/book/1161314/539684/drawing-manga-weapons-vehicles-and-accessories.html"
+                    download="/dl/1161314/deb611"
                     deleted=""
-                    publisher="Rockridge Press"
-                    language="english"
-                    year="2021"
-                    extension="mobi"
-                    filesize="2.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/127401d84b3a25bd84f2fbf5d438e44712460db674f72bf3097a444f92d01d12.jpg" />
-                    <div slot="title">30-Minute Drawing for Beginners: Easy Step-by-Step Lessons &amp; Techniques for Landscapes, Still Lifes, Figures, and More</div>
-                    <div slot="author">Jordan DeWilde</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5241179"
-                    isbn="9781629975603"
-                    termshash="59e137d291a8b2431bbc3acf0e8a41c8"
-                    href="/book/5241179/21f585/sketching-people-places-and-landscapes.html"
-                    download="/dl/5241179/244ef1"
-                    deleted=""
-                    publisher="The Teaching Company"
-                    language="english"
-                    year="2018"
-                    extension="pdf"
-                    filesize="3.59 MB"
-                    rating="1.0"
-                    quality="1.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b527359185e84a62b64b69b4f68241f05d87a0dfa57101fdeadc0a38a9278e1c.jpg" />
-                    <div slot="title">Sketching People, Places, and Landscapes</div>
-                    <div slot="author">James Richards; Shari Blaukopf; Paul Heaston; Stephanie Bower</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="1089698"
-                    isbn="9780715308462"
-                    termshash="58408c5eb57664a9a38d8c83a82614c9"
-                    href="/book/1089698/f283d4/the-artists-guide-to-mixing-colours-get-the-most-from-your-watercolour-palette-scan.html"
-                    download="/dl/1089698/aee557"
-                    deleted=""
-                    publisher="David &amp; Charles Publishers"
-                    language="english"
-                    year="1998"
-                    extension="pdf"
-                    filesize="53.72 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4a160905afb8689027bc9c9209c994f7bf2f2318224f83e4b9b772714b69ca27.gif" />
-                    <div slot="title">The Artist's Guide to Mixing Colours: Get the Most from Your Watercolour Palette {SCAN}</div>
-                    <div slot="author">Jenny Rodwell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="16421902"
-                    isbn="9780486129945"
-                    termshash="38f7ceec37a5238a498dc93329175839"
-                    href="/book/16421902/ba6804/anatomy-a-complete-guide-for-artists.html"
-                    download="/dl/16421902/5329d6"
-                    deleted=""
-                    publisher="Dover Publications"
+                    publisher="Rosen Central"
                     language="english"
                     year="2012"
                     extension="pdf"
-                    filesize="51.36 MB"
+                    filesize="10.83 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/dad076dcc9fe08c25ffa51b951cab990faaca90f83a63a6b9b22259b09859bed.jpg" />
+                    <div slot="title">Drawing Manga Weapons, Vehicles, and Accessories</div>
+                    <div slot="author">Anna Southgate; Keith Sparrow</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24747858"
+                    isbn="9781405322430"
+                    termshash="1ee54880ee15abc38bec62d0a841d693"
+                    href="/book/24747858/f38db6/art-the-definitive-visual-guide-scanned.html"
+                    download="/dl/24747858/ecc4ed"
+                    deleted=""
+                    publisher="DK/Dorling Kindersley"
+                    language="english"
+                    year="2008"
+                    extension="pdf"
+                    filesize="93.54 MB"
+                    rating="0.0"
+                    quality="3.5"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/92773de7a5bbcdd10472c8b2290059834997cad3a6fded545ec9db57a62891cb.jpg" />
+                    <div slot="title">Art: The Definitive Visual Guide (SCANNED)</div>
+                    <div slot="author">Andrew Graham-Dixon</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3061014"
+                    isbn="9780810845916"
+                    termshash="be143e7be2f44532d8a1a567b59ac1e3"
+                    href="/book/3061014/e1a8a1/the-craft-of-piano-playing-a-new-approach-to-piano-technique.html"
+                    download="/dl/3061014/d894c0"
+                    deleted=""
+                    publisher="Scarecrow Press"
+                    language="english"
+                    year="2003"
+                    extension="epub"
+                    filesize="4.83 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1935f8d2d52904ae11934867db819806e46ca726890ce6d3c8033aa97422e34b.jpg" />
+                    <div slot="title">The Craft of Piano Playing: A New Approach to Piano Technique</div>
+                    <div slot="author">Alan Fraser</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3680290"
+                    isbn="9781524972790"
+                    termshash=""
+                    href="/book/3680290/329357/rudiments-of-music-a-concise-guide-to-music-theory-third-edition.html"
+                    download="/dl/3680290/00dd01"
+                    deleted=""
+                    publisher="Kendall Hunt"
+                    language="english"
+                    year="2018"
+                    extension="pdf"
+                    filesize="142.23 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c994cb391c69cd49b8d052b2361ceb8f9e5686bcce09645300626192a8d98113.jpg" />
+                    <div slot="title">Rudiments of Music: A Concise Guide to Music Theory (Third Edition)</div>
+                    <div slot="author">Perry Goldstein</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="850295"
+                    isbn="9780822325840"
+                    termshash="e9c9b61f36130b7afce85f750101b093"
+                    href="/book/850295/51d0cd/modern-chinese-literary-and-cultural-studies-in-the-age-of-theory-reimagining-a-field-asiapacific.html"
+                    download="/dl/850295/a20d25"
+                    deleted=""
+                    publisher="Duke University Press Books"
+                    language="english"
+                    year="2001"
+                    extension="pdf"
+                    filesize="1.75 MB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/2e336c8b559370e165ec8471cb6deb136645fccc8dccd4e2174b669eb37e314e.jpg" />
+                    <div slot="title">Modern Chinese Literary and Cultural Studies in the Age of Theory: Reimagining a Field (Asia-Pacific: Culture, Politics, and Society)</div>
+                    <div slot="author">Rey Chow; Harry Harootunian; Masao Miyoshi; Charles A. Laughlin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17482443"
+                    isbn="9781440353864"
+                    termshash="71d8e0409e96e42f5f3be89189086d3a"
+                    href="/book/17482443/22746a/dracopedia-field-guide.html"
+                    download="/dl/17482443/07cf72"
+                    deleted=""
+                    publisher="Penguin Publishing Group"
+                    language="english"
+                    year="0"
+                    extension="epub"
+                    filesize="87.05 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a6c5d5b1a64df0d98d0ee9c147669f57c84c53c06198cd825e9eefa63798d5fc.jpg" />
+                    <div slot="title">Dracopedia Field Guide</div>
+                    <div slot="author">William O'Connor</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3337742"
+                    isbn="9780891340256"
+                    termshash="95f80375d43eb03dd6f372781983c0eb"
+                    href="/book/3337742/becfde/the-students-guide-to-painting.html"
+                    download="/dl/3337742/26e3bf"
+                    deleted=""
+                    publisher="North Light Books"
+                    language="english"
+                    year="1980"
+                    extension="pdf"
+                    filesize="11.11 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/04859dcb8db3585456bc0563815acd29d4f1b436423165cbd90d64ec928791cf.jpg" />
+                    <div slot="title">The Student's Guide to Painting</div>
+                    <div slot="author">Jack Faragasso</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5540015"
+                    isbn=""
+                    termshash=""
+                    href="/book/5540015/799895/drawing-book-of-faces.html"
+                    download="/dl/5540015/6d7a2a"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="pdf"
+                    filesize="6.79 MB"
+                    rating="4.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">Drawing book of Faces</div>
+                    <div slot="author">Ed Emberley</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21703809"
+                    isbn="9781781164266"
+                    termshash=""
+                    href="/book/21703809/8ecbc6/the-art-of-dead-space.html"
+                    download="/dl/21703809/9782a1"
+                    deleted=""
+                    publisher="Titan Books"
+                    language="english"
+                    year="2013"
+                    extension="pdf"
+                    filesize="45.80 MB"
                     rating="5.0"
                     quality="4.5"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/53a4dac1453c0ed4ffc552ebc43201e10b1829bdb3711d47320ff8dcff73c106.jpg" />
-                    <div slot="title">Anatomy : A Complete Guide for Artists</div>
-                    <div slot="author">Joseph Sheppard</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8db3adcfc6f5fb03d19042bfabbcd08d53b2da63a1fc5625c9f80415bcbb8dd0.jpg" />
+                    <div slot="title">The Art of Dead Space</div>
+                    <div slot="author">Martin Robinson</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="21445178"
-                    isbn="9781681984483"
-                    termshash=""
-                    href="/book/21445178/826773/morpho-simplified-forms.html"
-                    download="/dl/21445178/5d94ac"
+                                        id="8695300"
+                    isbn=""
+                    termshash="fd2526c1d84dbd78883c5fb8ccb831d1"
+                    href="/book/8695300/4db09f/master-still-life-portrait-atelier-a-beginner-guide-to-oil-painting.html"
+                    download="/dl/8695300/40e198"
                     deleted=""
-                    publisher="Rocky Nook"
+                    publisher=""
                     language="english"
-                    year="2019"
+                    year="2020"
+                    extension="epub"
+                    filesize="21.35 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/98e601891cd111eb2ee2d76efea0a20e95d6cfa9a304c223b4de79783c1fabfc.jpg" />
+                    <div slot="title">Master Still Life Portrait Atelier A Beginner Guide To Oil Painting</div>
+                    <div slot="author">Hewarere Publishing</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2664466"
+                    isbn=""
+                    termshash="3efdfb0fe00cb662d95e615e73c61e56"
+                    href="/book/2664466/1c086f/be-creative-a-quick-guide-to-developing-brilliant-ideas-unlocking-your-creative-potential.html"
+                    download="/dl/2664466/b3df62"
+                    deleted=""
+                    publisher="Jay Anthony Writing"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="150 KB"
+                    rating="1.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/094e13b98b29904e61ee0fc4513d80a96126ab0b5d7d6b8963349a7722659e7e.jpg" />
+                    <div slot="title">Be Creative - A Quick Guide to Developing Brilliant Ideas &amp; Unlocking Your Creative Potential</div>
+                    <div slot="author">Jay Anthony</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2480852"
+                    isbn="9788132347927"
+                    termshash="e66cc9e008f67ab6a961485037fc78b1"
+                    href="/book/2480852/8499f4/encyclopedia-of-mosaic-art.html"
+                    download="/dl/2480852/50f101"
+                    deleted=""
+                    publisher="English Press"
+                    language="english"
+                    year="2012"
                     extension="pdf"
-                    filesize="116.98 MB"
+                    filesize="10.65 MB"
+                    rating="3.5"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b947249fbe953b02c75f3cf6ceebef71cc0d645bd41f5e2cf99aa0e61651af24.jpg" />
+                    <div slot="title">Encyclopedia of Mosaic Art</div>
+                    <div slot="author">Loma Sander</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18436668"
+                    isbn="9780823003327"
+                    termshash="2339cf5a56cc972a586fab372df49cdb"
+                    href="/book/18436668/42c7bf/the-artists-guide-to-sketching.html"
+                    download="/dl/18436668/44f838"
+                    deleted=""
+                    publisher="Watson-Guptill Publications"
+                    language="english"
+                    year="1982"
+                    extension="pdf"
+                    filesize="155.49 MB"
+                    rating="5.0"
+                    quality="2.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7d900d1b45dd16c17386718157028b094a61ce65e6583d4a44937f947cd42d61.jpg" />
+                    <div slot="title">The Artist's Guide to Sketching</div>
+                    <div slot="author">James Gurney; Thomas Kinkade</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="13423173"
+                    isbn="9798438964742"
+                    termshash="84ae9daba42cad3b7523975f7c53587e"
+                    href="/book/13423173/0a5ff1/how-to-read-paintings.html"
+                    download="/dl/13423173/a99553"
+                    deleted=""
+                    publisher="Thinksheet"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="18.92 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/6225219f6b1cc70978d773909b18c87fca4ace46f0fb68e30ba109b5a624f65d.jpg" />
+                    <div slot="title">How to Read Paintings</div>
+                    <div slot="author">Christopher Jones</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18416132"
+                    isbn="9780060769"
+                    termshash="b18134da24f616221f69dd81feb8649e"
+                    href="/book/18416132/c88c60/the-art-of-reading-poetry.html"
+                    download="/dl/18416132/422e52"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="pdf"
+                    filesize="2.43 MB"
                     rating="5.0"
                     quality="3.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/19d58e4546d4374d1e9c8ef0486bce08295caaed1b2937cbc38d0a762317e0d0.jpg" />
-                    <div slot="title">Morpho: Simplified Forms</div>
-                    <div slot="author">Michel Lauricella</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d3fa616871abd314a88ba969d3c39faa529ed809224bee1e9e375101f3157113.jpg" />
+                    <div slot="title">The Art of Reading Poetry</div>
+                    <div slot="author">Harold Bloom</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="23326975"
-                    isbn="9784805316849"
-                    termshash="e652ff25c548f8da20c40f8f765d0cdf"
-                    href="/book/23326975/fda4a7/sketch-your-world-a-guide-to-sketch-journaling-over-500-illustrations.html"
-                    download="/dl/23326975/98da09"
+                                        id="3337238"
+                    isbn="9780442247355"
+                    termshash="2fa07c5750eb9e06e93ce7bb82f9920e"
+                    href="/book/3337238/73e78c/human-anatomy-and-figure-drawing.html"
+                    download="/dl/3337238/ec8a2a"
                     deleted=""
-                    publisher="チャールズ・イー・タトル出版"
+                    publisher="Van Nostrand Reinhold Company"
                     language="english"
-                    year="2022"
+                    year="1984"
                     extension="pdf"
-                    filesize="60.88 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0a0dbdef658f2f2417ebf39a6ac392f769acc199867c7e9bdd78c6918a2fb8f3.jpg" />
-                    <div slot="title">Sketch Your World: A Guide to Sketch Journaling (Over 500 illustrations!)</div>
-                    <div slot="author">Kimiko Sekimoto</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="27563622"
-                    isbn="9781098146962"
-                    termshash="4740b7824e82306bcf36482b166c4e7e"
-                    href="/book/27563622/b1f988/laws-of-ux-using-psychology-to-design-better-products-services.html"
-                    download="/dl/27563622/68a9a9"
-                    deleted=""
-                    publisher="O'Reilly Media"
-                    language="english"
-                    year="2024"
-                    extension="pdf"
-                    filesize="2.11 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1258a65243961608e356a754e80371d4a187eb757e1a81752e0f2e4b34857b1c.jpg" />
-                    <div slot="title">Laws of UX: Using Psychology to Design Better Products &amp; Services</div>
-                    <div slot="author">Jon Yablonski</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="27308721"
-                    isbn="9781465491374"
-                    termshash="e1d08d00805da1c91e379530c792d498"
-                    href="/book/27308721/5a7a24/design-the-definitive-visual-guide.html"
-                    download="/dl/27308721/e1bc5b"
-                    deleted=""
-                    publisher="DK/Dorling Kindersley"
-                    language="english"
-                    year="2021"
-                    extension="pdf"
-                    filesize="55.71 MB"
-                    rating="1.0"
-                    quality="1.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e65b90cbc00755e6313d27e103b23fff9c6aece32456ec078528a77ac593087a.jpg" />
-                    <div slot="title">Design: The Definitive Visual Guide</div>
-                    <div slot="author">DK</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="17024076"
-                    isbn=""
-                    termshash="de6cce6d4be2d43a9db48b788bc98581"
-                    href="/book/17024076/405b22/american-english-file.html"
-                    download="/dl/17024076/918f38"
-                    deleted=""
-                    publisher="Oxford"
-                    language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="77.71 MB"
-                    rating="1.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ac32e6a4ab8c9af5a8c334151e23431a19bd898706396878222c4854663989e7.png" />
-                    <div slot="title">American English File</div>
-                    <div slot="author">Christina Latham-Koenig; Clive Oxenden; Jerry Lambert; Paul Seligson; Kate Chomacki</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5692337"
-                    isbn="9784766112399"
-                    termshash="77e27bb73065bacd53a76c82e30fe820"
-                    href="/book/5692337/1cdf7e/how-to-draw-manga-vol-29-putting-things-in-perspective.html"
-                    download="/dl/5692337/a1a398"
-                    deleted=""
-                    publisher="Graphic Sha Publishing Company"
-                    language="english"
-                    year="2002"
-                    extension="pdf"
-                    filesize="95.19 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/391a53f60b6a69c3ef7797902389e14fd33e93b9ac6c772fe9b368068d0fadcb.jpg" />
-                    <div slot="title">How to Draw Manga - Vol. 29 - Putting Things in Perspective</div>
-                    <div slot="author">K's Art</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5638220"
-                    isbn="9781101174883"
-                    termshash="4162b8c14cef811de025165d452003e0"
-                    href="/book/5638220/b12ea1/the-artists-way.html"
-                    download="/dl/5638220/c251f0"
-                    deleted=""
-                    publisher="PENGUIN group"
-                    language="english"
-                    year="2002"
-                    extension="mobi"
-                    filesize="560 KB"
-                    rating="3.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/09ebc45fb63b5539efed07da1fdb4745033b6d4fc568e4215f20f9bacd9c5dec.png" />
-                    <div slot="title">The Artist's Way</div>
-                    <div slot="author">Cameron; Julia</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3329014"
-                    isbn="9781440319839"
-                    termshash="ea97fa16248dd56c74b6f93d498e5ea1"
-                    href="/book/3329014/222c67/the-insiders-guide-to-creating-comics-and-graphic-novels.html"
-                    download="/dl/3329014/466d2b"
-                    deleted=""
-                    publisher="Penguin"
-                    language="english"
-                    year="2009"
-                    extension="epub"
-                    filesize="4.76 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/741cd0c92d4bd13512f0083a030f083784813a08aeeae6c0b29046041046dbe3.jpg" />
-                    <div slot="title">The Insider's Guide To Creating Comics And Graphic Novels</div>
-                    <div slot="author">Andy Schmidt</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3691020"
-                    isbn="9781440322945"
-                    termshash="b1c822cf9678220a48bed38557567641"
-                    href="/book/3691020/cf6880/composition-for-beginners.html"
-                    download="/dl/3691020/8b9220"
-                    deleted=""
-                    publisher="North Light Books"
-                    language="english"
-                    year="2011"
-                    extension="epub"
-                    filesize="10.53 MB"
-                    rating="2.5"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8f9c4669f2c7a2d07fcfabfe3322adf2dc76495fb62109cd0d3ac2229080f8aa.jpg" />
-                    <div slot="title">Composition for Beginners</div>
-                    <div slot="author">Craig Nelson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="24974794"
-                    isbn=""
-                    termshash="919dc55a677be60e077ad87b17890593"
-                    href="/book/24974794/f36b78/ink-and-wash-florals-stunning-botanical-projects-in-watercolor-ink.html"
-                    download="/dl/24974794/dc94f0"
-                    deleted=""
-                    publisher="Page Street Publishing"
-                    language="english"
-                    year="2022"
-                    extension="epub"
-                    filesize="9.20 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9263cc16f4d7e8dba5de9dcd5caf58bfadc3fdcc93b4d3f3022c08a26f286406.jpg" />
-                    <div slot="title">Ink and Wash Florals: Stunning Botanical Projects in Watercolor &amp; Ink</div>
-                    <div slot="author">Camilla Damsbo Brix</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="28212802"
-                    isbn="9781909414747"
-                    termshash=""
-                    href="/book/28212802/60f723/creating-stylized-characters.html"
-                    download="/dl/28212802/50ee50"
-                    deleted=""
-                    publisher="3DTotal Publishing"
-                    language="english"
-                    year="2018"
-                    extension="pdf"
-                    filesize="62.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/df4ece058d24eeeeef4c06457c4e783ce2dc0cdeedf0e717f7d48d8aece60dd0.jpg" />
-                    <div slot="title">Creating Stylized Characters</div>
-                    <div slot="author">3DTotal Publishing</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2873193"
-                    isbn="9780756622084"
-                    termshash="de6033b4082bcb77ed67bde675bc0a39"
-                    href="/book/2873193/592aa2/oilpainting-workshop.html"
-                    download="/dl/2873193/60a672"
-                    deleted=""
-                    publisher="Dk Pub"
-                    language="english"
-                    year="2006"
-                    extension="pdf"
-                    filesize="33.33 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7a527a6e9931eda40bcf97f3ecd472c8b3a4971c206d72208c17a9ec189517c6.jpg" />
-                    <div slot="title">Oil-painting Workshop</div>
-                    <div slot="author">Aggy Boshoff</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25398218"
-                    isbn="B0BQD9DZBW"
-                    termshash="2fd06f09e121a74456647f18c38c577b"
-                    href="/book/25398218/ed9520/the-art-and-science-of-figure-drawing-learn-to-observe-analyze-and-draw-the-human-body.html"
-                    download="/dl/25398218/a115e9"
-                    deleted=""
-                    publisher="Rocky Nook"
-                    language="english"
-                    year="2024"
-                    extension="epub"
-                    filesize="55.06 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9b53c57bce8a9d0bedd4d22855e209b50f3f1ac6c57ef512bd2229be0120d37b.jpg" />
-                    <div slot="title">The Art and Science of Figure Drawing: Learn to Observe, Analyze, and Draw the Human Body</div>
-                    <div slot="author">Brent Eviston</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3698046"
-                    isbn="9780486140469"
-                    termshash="6d1a207f5d609cb92456b5ed96332531"
-                    href="/book/3698046/705b32/freehand-perspective-and-sketching.html"
-                    download="/dl/3698046/4f7f9f"
-                    deleted=""
-                    publisher="Courier Corporation"
-                    language="english"
-                    year="2012"
-                    extension="epub"
-                    filesize="13.94 MB"
+                    filesize="62.47 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9f4f02ce8a047affc04626c24f452cbf2aa0d54c9bc0609a328b87f3b3c5b047.jpg" />
-                    <div slot="title">Freehand Perspective and Sketching</div>
-                    <div slot="author">Dora Miriam Norton</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4383922f661e5940917ffde01b484d56d98f07c634ad4f0beaab9991d2c0e574.jpg" />
+                    <div slot="title">Human Anatomy and Figure Drawing</div>
+                    <div slot="author">Jack N. Kramer</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="28212432"
-                    isbn="9780760385715"
-                    termshash="f59bfeb4b6c1b70ccfd457b906d03195"
-                    href="/book/28212432/7e3972/draw-like-an-artist-100-lessons-to-create-anime-and-manga-characters-stepbystep-line-drawing-a.html"
-                    download="/dl/28212432/dea5c3"
-                    deleted=""
-                    publisher="Quarry Books"
-                    language="english"
-                    year="2024"
-                    extension="pdf"
-                    filesize="69.72 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f54c2cf9aebc840aec07e7d8fbc7b2572c282eb0df0303a9e37ec2be68cf9dc4.jpg" />
-                    <div slot="title">Draw Like an Artist: 100 Lessons to Create Anime and Manga Characters: Step-by-Step Line Drawing - A Sourcebook for Aspiring Artists and Character Designers - Access video tutorials via QR codes!</div>
-                    <div slot="author">Brennan-Dent; Alex; ABD Illustrates</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2581284"
-                    isbn="9781851529735"
-                    termshash="543cf0d37cd98010e9e5bfc07cd86801"
-                    href="/book/2581284/c10fd1/painting-course.html"
-                    download="/dl/2581284/127808"
-                    deleted=""
-                    publisher="Bounty Books"
-                    language="english"
-                    year="1996"
-                    extension="pdf"
-                    filesize="58.27 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/53ef5c8eda7d2a460229037255e9fca3f63a97fa609091f4dc9f05b544982088.jpg" />
-                    <div slot="title">Painting Course</div>
-                    <div slot="author">Ronald Pearsall</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11002393"
-                    isbn="9781610583787"
-                    termshash="177ef0efbf8ea5bb7634e9cd7d81c80a"
-                    href="/book/11002393/df09eb/watercolor-flower-artists-bible.html"
-                    download="/dl/11002393/1ebbac"
-                    deleted=""
-                    publisher="Chartwell Books"
-                    language="english"
-                    year="2009"
-                    extension="epub"
-                    filesize="28.43 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1ae535e04ef40ad9905412e21e84485e79eb982e87b667a6e90c21b6f0774798.jpg" />
-                    <div slot="title">Watercolor Flower Artist's Bible</div>
-                    <div slot="author">Claire Brown</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="1196423"
-                    isbn="9780262016216"
-                    termshash="f1c57ba941ad6d82a2a2ca1177bd5b9e"
-                    href="/book/1196423/792872/101-things-to-learn-in-art-school.html"
-                    download="/dl/1196423/09dc2a"
-                    deleted=""
-                    publisher="The MIT Press"
-                    language="english"
-                    year="2011"
-                    extension="pdf"
-                    filesize="6.80 MB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0a5833b0b51af0b0b2c0e64a84e95f39ce45fc5049881a5139a381cc67627166.jpg" />
-                    <div slot="title">101 Things to Learn in Art School</div>
-                    <div slot="author">Kit White</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="614327"
-                    isbn="9780195142143"
-                    termshash="9f67487e90d02702fd0599a04a2dc6f0"
-                    href="/book/614327/446baa/animal-anatomy-for-artists.html"
-                    download="/dl/614327/e720e7"
-                    deleted=""
-                    publisher="Oxford University Press, USA"
-                    language="english"
-                    year="2004"
-                    extension="pdf"
-                    filesize="24.75 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/018d5c52e399dd5f28947006d1beecee5d076293590006bca9cfc9528f2a474b.jpg" />
-                    <div slot="title">Animal Anatomy for Artists</div>
-                    <div slot="author">Eliot Goldfinger</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25405289"
-                    isbn="9798888140628"
-                    termshash="3d504d34b9285c07a7ddd11ec30bb5c0"
-                    href="/book/25405289/3444cb/morpho-joint-forms-and-muscular-functions.html"
-                    download="/dl/25405289/c70ed3"
-                    deleted=""
-                    publisher="Rocky Nook"
-                    language="english"
-                    year="2023"
-                    extension="pdf"
-                    filesize="30.91 MB"
-                    rating="3.0"
-                    quality="3.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c5883f1c1b5940dc0f3b7fe0e8e7cfd42d53d6cd34b94ee8b4f0d7e66ec876c1.jpg" />
-                    <div slot="title">Morpho: Joint Forms and Muscular Functions</div>
-                    <div slot="author">Michel Lauricella </div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3691058"
-                    isbn="9780486466064"
-                    termshash="c8f949f6d07cd7d98f3880d991a42889"
-                    href="/book/3691058/d2cbd6/drawing-and-illustration-a-complete-guide.html"
-                    download="/dl/3691058/a1f758"
-                    deleted=""
-                    publisher="Dover Publications"
-                    language="english"
-                    year="2008"
-                    extension="epub"
-                    filesize="17.21 MB"
-                    rating="5.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/45768049a96cc615be108354a0e537e79220cd09dd636e0e0ab00c5c1ccf2140.jpg" />
-                    <div slot="title">Drawing and Illustration: A Complete Guide</div>
-                    <div slot="author">John Moranz</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="16734639"
-                    isbn="9781785004209"
-                    termshash="0bd8726d0b34f5d22f1218650bf92631"
-                    href="/book/16734639/838f3e/botanical-art-with-scientific-illustration.html"
-                    download="/dl/16734639/c9da07"
-                    deleted=""
-                    publisher="The Crowood Press"
-                    language="english"
-                    year="2018"
-                    extension="pdf"
-                    filesize="76.18 MB"
-                    rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/784a09907382cfd2e5b72f19d5eda1b10586a184ef5eefc95b4d0b7074ca7520.jpg" />
-                    <div slot="title">Botanical Art with Scientific Illustration</div>
-                    <div slot="author">Sarah Jane Humphrey</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="21867035"
-                    isbn="9781683730958"
-                    termshash="f578bc6d24f0352e096c59705404bbbb"
-                    href="/book/21867035/e6ef59/250-brief-creative-practical-art-therapy-techniques-a-guide-for-clinicians-and-clients.html"
-                    download="/dl/21867035/da817f"
-                    deleted=""
-                    publisher="PESI Publishing &amp; Media"
-                    language="english"
-                    year="2019"
-                    extension="epub"
-                    filesize="2.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/f4a389db51924ee3377d5366f0f7d4018c3d639d675fbab6fad566bdb0c69948.jpg" />
-                    <div slot="title">250 Brief, Creative &amp; Practical Art Therapy Techniques: A Guide for Clinicians and Clients</div>
-                    <div slot="author">Susan I. Buchalter</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3313965"
-                    isbn=""
-                    termshash="a76fe8f1ea982aeb8c53c81196b95adb"
-                    href="/book/3313965/e0b09b/painting-peaceful-country-landscapes-10-stepbystep-scenes-in-oil-and-acrylic.html"
-                    download="/dl/3313965/ab57d7"
-                    deleted=""
-                    publisher="F W Media, Inc."
-                    language="english"
-                    year="2007"
-                    extension="epub"
-                    filesize="7.98 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/187505569c01c10cc7222ce103cd44b8b641d5eed382edede2ba91825bd360a2.jpg" />
-                    <div slot="title">Painting Peaceful Country Landscapes: 10 Step-by-step Scenes in Oil and Acrylic</div>
-                    <div slot="author">Annette Dozier</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25361449"
-                    isbn="9781784882792"
-                    termshash=""
-                    href="/book/25361449/f1dfc0/365-days-of-creativity-inspire-your-imagination-with-art-every-day.html"
-                    download="/dl/25361449/8b3e9e"
-                    deleted=""
-                    publisher="Hardie Grant"
-                    language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="25.61 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9bbc3403f62fe149e6676f3919a0032ac10c1876a4f9bdcd290c3dee2127d4f3.jpg" />
-                    <div slot="title">365 Days of Creativity: Inspire Your Imagination with Art Every Day</div>
-                    <div slot="author">Lorna Scobie</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2604178"
+                                        id="5576929"
                     isbn="9781452127163"
-                    termshash="22ac64bea96d61c525a41bfb426dad15"
-                    href="/book/2604178/ee301d/the-complete-artists-manual-the-definitive-guide-to-painting-and-drawing.html"
-                    download="/dl/2604178/019ba1"
+                    termshash="9df10195f6697bd99ec918ff4a96798f"
+                    href="/book/5576929/8c1178/the-complete-artists-manual-the-definitive-guide-to-painting-and-drawing.html"
+                    download="/dl/5576929/f6497d"
                     deleted=""
                     publisher="Chronicle Books"
                     language="english"
                     year="2014"
                     extension="pdf"
-                    filesize="363.05 MB"
-                    rating="3.5"
+                    filesize="81.36 MB"
+                    rating="4.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c8d14edbff9142fb2dfdad052d08f9db7ba264eccb5e41f4e20f219838cc9d55.jpg" />
-                    <div slot="title">The Complete Artist's Manual: The Definitive Guide to Painting and Drawing</div>
-                    <div slot="author">Simon Jennings</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/18e62486e357a1a0efbb64f46487a608bbeae8c3ded8f94dc32cdf66bf7fd3e0.jpg" />
+                    <div slot="title">The complete artist's manual : the definitive guide to painting and drawing</div>
+                    <div slot="author">(Artiste) Simon Jennings</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="28323009"
-                    isbn="9780593449233"
-                    termshash="164b1f59f8df065cf4fd69c861dba0b3"
-                    href="/book/28323009/e3e3d9/your-brain-on-art-how-the-arts-transform-us.html"
-                    download="/dl/28323009/c032ce"
+                                        id="18307788"
+                    isbn="9781631599231"
+                    termshash="3c2f838fd8a6ce2972a0b3e2352c90ab"
+                    href="/book/18307788/5db9ac/sketching-techniques-for-artists.html"
+                    download="/dl/18307788/34d6b2"
                     deleted=""
-                    publisher="Random House"
+                    publisher=""
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="9.04 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/49643c9d7a971218fec30e3d1855abc171644429d1cc3c80bbefdd714c2423a6.jpg" />
+                    <div slot="title">Sketching Techniques for Artists</div>
+                    <div slot="author">Alex Hillkurtz</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5274430"
+                    isbn=""
+                    termshash="095d42949431f795296a4e5c3d120399"
+                    href="/book/5274430/33974b/drop-into-genius.html"
+                    download="/dl/5274430/e75ad7"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="pdf"
+                    filesize="2.29 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e4fab139c6769df837a7da125707e10ff3faf0b6866e869dc6a74909540ac6c6.jpg" />
+                    <div slot="title">Drop Into Genius</div>
+                    <div slot="author">Paul R.Scheele</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="13080848"
+                    isbn=""
+                    termshash="22ffed14c8ee30594bce30ea422658af"
+                    href="/book/13080848/cdd3bc/love-languages-from-classics-all-about-love-from-90-must-read-novels-and-200-quotes-for-your-daily.html"
+                    download="/dl/13080848/b4c126"
+                    deleted=""
+                    publisher="#PrB.rating#0.0"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="1.53 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a4244ca72bd3c5c1d1fff2b8b4807f476a7cf27b13db96cbdad4f521e2e1d1f4.jpg" />
+                    <div slot="title">Love Languages From Classics: All About Love From 90 Must Read Novels and +200 Quotes for Your Daily Inspiration and Wisdom</div>
+                    <div slot="author">Golden Classics [Classics; Golden]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24795112"
+                    isbn="9781982179359"
+                    termshash="3710e3c36c5bce0efeb7014b4996aa7c"
+                    href="/book/24795112/c57593/the-ugly-history-of-beautiful-things-essays-on-desire-and-consumption.html"
+                    download="/dl/24795112/bb9176"
+                    deleted=""
+                    publisher="Simon &amp; Schuster"
                     language="english"
                     year="2023"
                     extension="epub"
-                    filesize="23.72 MB"
+                    filesize="2.13 MB"
                     rating="0.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2b95cfd0df94f36e90026c3284638ea76ed5c4fb68d131c04d629a9d172319be.jpg" />
-                    <div slot="title">Your Brain on Art: How the Arts Transform Us</div>
-                    <div slot="author">Susan Magsamen; Ivy Ross</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c87080145821357acaeb3d7e08208f58b0a5ddbfe319183838f32d469eb997c3.jpg" />
+                    <div slot="title">The Ugly History of Beautiful Things: Essays on Desire and Consumption</div>
+                    <div slot="author">Katy Kelleher</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="1046330"
-                    isbn="0836280059"
-                    termshash="ad42b054b907ab024e7886edc0ee8534"
-                    href="/book/1046330/d2d885/the-annotated-mona-lisa-a-crash-course-in-art-history-from-prehistoric-to-postmodern.html"
-                    download="/dl/1046330/a6ab01"
+                                        id="25360054"
+                    isbn=""
+                    termshash="850b52d4c14c1b4a95229dcf1d7b6887"
+                    href="/book/25360054/8baa5a/painting-birds-in-watercolour.html"
+                    download="/dl/25360054/8c2e59"
                     deleted=""
-                    publisher="Andrews McMeel Publishing"
+                    publisher="The Crowood Press"
                     language="english"
-                    year="1992"
+                    year="0"
+                    extension="epub"
+                    filesize="13.48 MB"
+                    rating="4.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5add04f66519f43ef46d17f82bd2752df6c0e0518899214b8630aa4f45f4c46f.jpg" />
+                    <div slot="title">Painting Birds in Watercolour</div>
+                    <div slot="author">Liz Chaderton</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24260911"
+                    isbn="9780760375174"
+                    termshash="7c1c94c8e3084cfa12f53f62349e5224"
+                    href="/book/24260911/a2c5f9/universal-principles-of-design.html"
+                    download="/dl/24260911/0274da"
+                    deleted=""
+                    publisher="Rockport Publishers"
+                    language="english"
+                    year="2023"
+                    extension="epub"
+                    filesize="22.75 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7c8cb65d353d97ba7a28430e363180500dfe5bbce55588f7ae24ecaf43cb4c60.jpg" />
+                    <div slot="title">Universal Principles of Design</div>
+                    <div slot="author">William Lidwell; Kritina Holden; Jill Butler</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16872678"
+                    isbn="9780194812184"
+                    termshash="99b4510413b58ed6c02c7a01bb20fc4d"
+                    href="/book/16872678/7893af/family-and-friends-2-class-book.html"
+                    download="/dl/16872678/56940f"
+                    deleted=""
+                    publisher="Oxford"
+                    language="english"
+                    year="2013"
                     extension="pdf"
-                    filesize="21.18 MB"
+                    filesize="29.76 MB"
                     rating="0.0"
-                    quality="1.0"
+                    quality="0.0"
                                         premium                    contentTypeParam = ""
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4e74f085d4625bfdf352231b05e99da2dba5c5fbb48907644499d22806795406.jpg" />
-                    <div slot="title">The Annotated Mona Lisa - A Crash Course in Art History from Prehistoric to Post-Modern</div>
-                    <div slot="author">Carol Strickland; John Boswell</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5952394"
-                    isbn="9780307829375"
-                    termshash="e5ff4e5863f6f1bf424c2455f2fa5ab4"
-                    href="/book/5952394/9e15d8/art-from-intuition.html"
-                    download="/dl/5952394/a54388"
-                    deleted=""
-                    publisher="Watson-Guptill"
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="101.57 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/085ce33850a1e77e332a8fa0a3e914ddd7829a17997f63cf31ff550dcb187140.jpg" />
-                    <div slot="title">Art From Intuition</div>
-                    <div slot="author">Dean Nimmer</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3685943"
-                    isbn="9781440334726"
-                    termshash="9735666cf67c021ed4cbb5de0c773305"
-                    href="/book/3685943/e5c5c0/shojo-fashion-manga-art-school-boys-how-to-draw-cool-characters-action-scenes-and-modern-looks.html"
-                    download="/dl/3685943/9670de"
-                    deleted=""
-                    publisher="IMPACT Books"
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="40.43 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d63d7a163c6c39cf174f830f4adf0887a25c542552b38e04f35876a91c1afe8f.jpg" />
-                    <div slot="title">Shojo Fashion Manga Art School, Boys: How to Draw Cool Characters, Action Scenes and Modern Looks</div>
-                    <div slot="author">Irene Flores; Krisanne McSpadden</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1d9c294fc0687e27c06957d732a18fc3000b9ac56c1fa89f80756775579e7eaf.jpg" />
+                    <div slot="title">Family and Friends 2 - Class book</div>
+                    <div slot="author">Naomi Simmons</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>

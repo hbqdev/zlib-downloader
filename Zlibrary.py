@@ -337,7 +337,7 @@ class Zlibrary:
         return None
 
     def __getBookFile(self, bookid: [int, str], hashid: str) -> tuple[str, requests.Response] | None:
-        """Initiates the download request and returns the filename and the streaming response object."""
+        """Initiates download, determines extension, and returns (extension, response_object)."""
         response_info = self.__makeGetRequest(f"/eapi/book/{bookid}/{hashid}/file")
         
         if not response_info or "file" not in response_info:
@@ -346,37 +346,16 @@ class Zlibrary:
             return None
 
         file_info = response_info["file"]
-        title = file_info.get("description", f"book_{bookid}")
-        author = file_info.get("author")
-        extension = file_info.get("extension", "bin")
+        # Determine extension from API, default to .bin
+        extension = file_info.get("extension")
+        if not extension: # Ensure extension is not empty or None
+            print(f"  ⚠️ Warning: API did not provide extension for book {bookid}. Defaulting to .bin")
+            file_extension = ".bin"
+        else:
+            # Ensure the extension starts with a dot
+            file_extension = f".{extension}" if not extension.startswith('.') else extension
 
-        # --- Clean Title ---
-        clean_title = title
-        patterns_to_remove = [
-            r'[\(\[_]?Z-?Library[\)\]_]?',
-            r'[\(\[_]?zlib[\)\]_]?'
-        ]
-        for pattern in patterns_to_remove:
-            clean_title = re.sub(r'\s*' + pattern + r'\s*', ' ', clean_title, flags=re.IGNORECASE)
-        clean_title = re.sub(r'\s+', ' ', clean_title).strip('_ ')
-
-        # --- Clean Author ---
-        clean_author = "Unknown Author"
-        if author:
-            author_with_spaces = re.sub(r'[;|]+', ' ', author)
-            clean_author = re.sub(r'\s+', ' ', author_with_spaces).strip()
-        
-        # --- Construct Base Filename ---
-        base_filename = f"{clean_title} - {clean_author}"
-
-        # --- Sanitize Filename ---
-        invalid_chars_pattern = r'[\\/?:*"<>|]'
-        clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
-        clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
-
-        # --- Add Extension ---
-        # Use the extension from the API if available, otherwise default
-        final_filename = f"{clean_base_filename}{extension if extension else '.bin'}"
+        # --- No filename construction needed here anymore --- 
 
         ddl = file_info.get("downloadLink")
         if not ddl:
@@ -391,12 +370,11 @@ class Zlibrary:
             print("⚠️ Warning: Could not parse authority from download link.")
 
         try:
-            # Initiate the streaming request
-            res = requests.get(ddl, headers=download_headers, stream=True, timeout=60) 
+            res = requests.get(ddl, headers=download_headers, stream=True, timeout=60)
             res.raise_for_status()
             if res.status_code == 200:
-                # Return filename and the response object for streaming
-                return final_filename, res 
+                # Return the determined extension string and the response object
+                return file_extension, res
             else:
                 print(f"❌ Error: Download request for book {bookid} returned status {res.status_code}")
                 return None
@@ -405,13 +383,12 @@ class Zlibrary:
             return None
 
     def downloadBook(self, book: dict[str, str]) -> tuple[str, requests.Response] | None:
-        """Gets download info and returns filename and streaming response object."""
+        """Gets download info and returns (extension, streaming response object)."""
         book_id = book.get("id")
         book_hash = book.get("hash")
         if not book_id or not book_hash:
             print("❌ Error: Book dictionary missing id or hash for download.")
             return None
-        # Directly return the result of __getBookFile
         return self.__getBookFile(book_id, book_hash)
 
     def isLoggedIn(self) -> bool:

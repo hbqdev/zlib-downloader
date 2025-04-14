@@ -328,49 +328,68 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         download_result = z.downloadBook({"id": book_id, "hash": book_hash})
 
                         if download_result:
-                            # --- Successful Download --- 
-                            # `downloadBook` now returns (filename, response_object)
-                            final_filename, response = download_result
+                            # --- Successful Download Initiation ---
+                            # `downloadBook` now returns (extension_string, response_object)
+                            file_extension, response = download_result 
+                            
+                            # --- Construct Filename from Full Data (from to_download.txt) ---
+                            full_title = title    # Already loaded from to_download via book_data
+                            full_authors = authors # Already loaded from to_download via book_data
+                            
+                            # Clean the author string (replace separators with space, collapse spaces)
+                            if full_authors:
+                                authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
+                                clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
+                            else:
+                                clean_authors = "Unknown Author"
+                            
+                            # Construct base name with spaces and hyphen separator
+                            base_filename = f"{full_title} - {clean_authors}"
+
+                            # --- Sanitize Constructed Base Filename ---
+                            # 1. Replace invalid filesystem chars with a SPACE
+                            invalid_chars_pattern = r'[\\/?:*"<>|]' 
+                            clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
+
+                            # 2. Replace multiple consecutive spaces with a single space
+                            clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
+
+                            # --- Combine with Extension and Save ---
+                            final_filename = f"{clean_base_filename}{file_extension}" # Use extension from downloadBook
+                            filepath = os.path.join(output_dir, final_filename)
                             
                             # --- Save File with Progress Bar ---
-                            filepath = os.path.join(output_dir, final_filename)
-
                             try:
-                                # Get total size from headers, default to 0 if not available
                                 total_size = int(response.headers.get('content-length', 0))
-                                block_size = 1024 # 1 Kibibyte
+                                block_size = 1024 
                                 
-                                # Setup tqdm progress bar
                                 progress_bar = tqdm(
                                     total=total_size, 
                                     unit='iB', 
                                     unit_scale=True,
-                                    desc=f"      Downloading {final_filename[:40]}...", # Truncate filename for display
-                                    leave=False # Clear bar on completion
+                                    desc=f"      Downloading {final_filename[:40]}...", 
+                                    leave=False 
                                 )
                                 
-                                # Ensure output directory exists
                                 if not os.path.exists(output_dir):
                                     try: os.makedirs(output_dir)
                                     except OSError as e:
                                         print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
                                         progress_bar.close()
-                                        continue # Skip to next book
+                                        continue 
 
-                                # Write file chunk by chunk and update progress
                                 with open(filepath, "wb") as f:
                                     for data in response.iter_content(block_size):
                                         progress_bar.update(len(data))
                                         f.write(data)
                                         
-                                progress_bar.close() # Close the progress bar
+                                progress_bar.close() 
 
-                                # Check if download was complete (optional but good)
                                 if total_size != 0 and progress_bar.n != total_size:
                                     print(f"\n      ⚠️ WARNING: Download incomplete for {final_filename}. Expected {total_size}, got {progress_bar.n}.")
-                                    # Decide if you want to delete the partial file: os.remove(filepath)
                                 else:
-                                    print(f"      ✅ Downloaded: {final_filename}") # Print filename *after* progress bar
+                                    # Print the *final* filename used for saving
+                                    print(f"      ✅ Downloaded: {final_filename}") 
                                 
                                 print(f"      📝 Marking book ID {book_id} in Couchbase...")
                                 mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
