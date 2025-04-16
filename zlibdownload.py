@@ -202,30 +202,34 @@ def run_download_process(config_file="config.json", categories_file="categories.
             cat_name = category.get("name", f"ID {cat_id}")
             scrape_enabled = category.get("scrape_enabled", False)
             max_pages = category.get("max_pages_to_scrape", 1)
-            start_page = category.get("start_page_next_run", 1)
+            # books_processed_on_page is read/updated directly within the category dict
+            current_page_to_scrape = category.get("next_page_to_scrape", 1)
 
             if not scrape_enabled:
                 print(f"\n⏭️ Skipping disabled category: {cat_name}")
                 continue
             
             if not all([cat_id, cat_slug]):
-                print(f"\n⚠️ Skipping category with missing id/slug: {category}")
+                print(f"\n⚠️ Skipping category with missing id/slug: {cat_name}") # Use name for clarity
                 continue
             
-            end_page = start_page + max_pages - 1
-            print(f"\n📚 Processing Category: {cat_name} (Pages {start_page} to {end_page})")
+            # Calculate the range of pages to process in THIS run
+            # Start from the saved page, go up to max_pages relative to that start
+            start_page_this_run = current_page_to_scrape
+            end_page_this_run = start_page_this_run + max_pages - 1 
+            print(f"\n📚 Processing Category: {cat_name} (Targeting Pages {start_page_this_run} to {end_page_this_run})")
             
             books_processed_this_category = 0
             limit_hit_for_this_category = False
-            last_successfully_scraped_page = start_page - 1
+            last_successfully_scraped_page = start_page_this_run - 1
 
             # Inner Loop: Pagination
-            for current_page in range(start_page, end_page + 1):
+            for current_page in range(start_page_this_run, end_page_this_run + 1):
                 if limit_hit_for_this_category and should_download:
                     print(f"  ⛔ Download limit hit, skipping further pages for: {cat_name}")
                     break
 
-                print(f"\n📄 Scraping Page {current_page}/{end_page} for Category: {cat_name}")
+                print(f"\n📄 Scraping Page {current_page}/{end_page_this_run} for Category: {cat_name}")
                 
                 if should_download and os.path.exists(download_filename):
                     try: os.remove(download_filename)
@@ -287,19 +291,29 @@ def run_download_process(config_file="config.json", categories_file="categories.
                          print(f"    ⚠️ [DRY RUN] Scrape reported {books_found_on_page} books, but no data received.")
                          
                 # Loop through books for this page
+                # We will now directly use and modify category["books_processed_on_page"]
+                
                 for idx, book_data in enumerate(page_book_data_iterable):
                     book_id = book_data.get("id")
                     book_hash = book_data.get("hash")
                     title = book_data.get("title", "Unknown Title")
                     authors = book_data.get("authors", "Unknown Author")
 
+                    # --- Check if book should be skipped (already processed in a previous run) ---
+                    # Compare index directly with the authoritative counter in the category dict
+                    if idx < category.get("books_processed_on_page", 0):
+                        # No need to print skip message here, it's implied by the counter logic
+                        continue # Skip to the next book
+                        
+                    # --- Processing Logic (for books not skipped) ---
                     print(f"    📖 ({idx+1}/{page_book_count}) Processing: {book_id} ('{title}')")
 
                     # Check Couchbase
                     is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
                     if is_already_downloaded_in_db:
                         print("      ✓ Already in Couchbase. Skipping.")
-                        if should_download: books_processed_this_category += 1 
+                        # Directly increment the authoritative counter
+                        category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
                         continue
 
                     # Handle Dry Run Mode OR Download Mode
@@ -328,37 +342,29 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         download_result = z.downloadBook({"id": book_id, "hash": book_hash})
 
                         if download_result:
-                            # --- Successful Download Initiation ---
-                            # `downloadBook` now returns (extension_string, response_object)
+                            # Successful Download Initiation
                             file_extension, response = download_result 
                             
-                            # --- Construct Filename from Full Data (from to_download.txt) ---
-                            full_title = title    # Already loaded from to_download via book_data
-                            full_authors = authors # Already loaded from to_download via book_data
+                            # Construct Filename from Full Data
+                            full_title = title   
+                            full_authors = authors 
                             
-                            # Clean the author string (replace separators with space, collapse spaces)
                             if full_authors:
                                 authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
                                 clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
                             else:
                                 clean_authors = "Unknown Author"
                             
-                            # Construct base name with spaces and hyphen separator
                             base_filename = f"{full_title} - {clean_authors}"
 
-                            # --- Sanitize Constructed Base Filename ---
-                            # 1. Replace invalid filesystem chars with a SPACE
                             invalid_chars_pattern = r'[\\/?:*"<>|]' 
                             clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
-
-                            # 2. Replace multiple consecutive spaces with a single space
                             clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
 
-                            # --- Combine with Extension and Save ---
-                            final_filename = f"{clean_base_filename}{file_extension}" # Use extension from downloadBook
+                            final_filename = f"{clean_base_filename}{file_extension}"
                             filepath = os.path.join(output_dir, final_filename)
                             
-                            # --- Save File with Progress Bar ---
+                            # Save File with Progress Bar
                             try:
                                 total_size = int(response.headers.get('content-length', 0))
                                 block_size = 1024 
@@ -388,52 +394,77 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                 if total_size != 0 and progress_bar.n != total_size:
                                     print(f"\n      ⚠️ WARNING: Download incomplete for {final_filename}. Expected {total_size}, got {progress_bar.n}.")
                                 else:
-                                    # Print the *final* filename used for saving
                                     print(f"      ✅ Downloaded: {final_filename}") 
                                 
                                 print(f"      📝 Marking book ID {book_id} in Couchbase...")
                                 mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
                                 if not mark_success:
                                     print(f"      ⚠️ Failed to mark book {book_id} in Couchbase.")
+                                else:
+                                    # --- SAVE STATE AFTER SUCCESSFUL DOWNLOAD + MARK ---
+                                    # Directly increment the authoritative counter
+                                    category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                    if not save_json(categories, categories_file):
+                                        print("      ❌ CRITICAL ERROR: Failed to save updated state to categories.json! Halting to prevent data loss.")
+                                        cleanup_db()
+                                        sys.exit(1) # Stop immediately if state save fails
+                                    # Use the updated value directly from the category dict for logging
+                                    print(f"      💾 State saved. Processed {category.get('books_processed_on_page', 0)} books on page {current_page}.")
+                                    # --- END SAVE STATE ---
                                 
-                                books_processed_this_category += 1
+                                books_processed_this_category += 1 # Overall counter for summary
                                 total_downloads_attempted_this_run += 1
                                 downloads_left_today -= 1 
-                                time.sleep(0.5) # Short delay after successful download
+                                time.sleep(0.5) 
 
                             except IOError as e:
                                 print(f"\n      ❌ Error saving file '{filepath}': {e}")
-                                if progress_bar: progress_bar.close()
+                                if 'progress_bar' in locals() and progress_bar: progress_bar.close()
                             except Exception as e:
                                 print(f"\n      ❌ Unexpected error during download/saving for {final_filename}: {e}")
                                 import traceback
                                 print(traceback.format_exc())
-                                if progress_bar: progress_bar.close()
-                                # Consider if this should trigger halt_run_due_to_limit = True
+                                if 'progress_bar' in locals() and progress_bar: progress_bar.close()
 
                         else:
-                            # Failed Download
                             print(f"      ❌ Download failed for book ID {book_id}")
                             print("      ⛔ Assuming download limit reached. Stopping further attempts.")
                             halt_run_due_to_limit = True
+                            break # <<< BREAK inner book loop immediately on limit hit
 
                     except Exception as e:
-                        # Unexpected Download Error
-                        import traceback
                         print(f"      ❌ Unexpected error downloading book ID {book_id}: {e}")
+                        import traceback
                         print(traceback.format_exc())
                         halt_run_due_to_limit = True
+                        break # <<< BREAK inner book loop immediately on limit hit
+                    
+                    # If limit was hit inside the loop, break outer loop too
+                    if halt_run_due_to_limit:
+                         break
+
+                # --- After processing all books for a page --- 
+                if not halt_run_due_to_limit:
+                   # Page completed successfully, update state for the *next* page
+                   print(f"  ✅ Finished processing all {page_book_count} items for page {current_page}.")
+                   category["next_page_to_scrape"] = current_page + 1
+                   if not save_json(categories, categories_file):
+                       print(f"      ❌ CRITICAL ERROR: Failed to save state after completing page {current_page}! Halting.")
+                       cleanup_db()
+                       sys.exit(1)
+                   print(f"      💾 State saved. Next page for {cat_name} is {category['next_page_to_scrape']}.")
+                # else: Limit was hit, state was saved after the last successful download, do nothing here
                 
-                # End of Book Processing Loop for Page
-                print(f"  ✅ Finished processing books for page {current_page}.")
+                # Break page loop if global halt flag is set
                 if halt_run_due_to_limit:
-                    print(f"  ⛔ Halting further page processing due to download limit/error.")
+                    print(f"  ⛔ Halting further page processing for {cat_name} due to download limit/error.")
                     break 
                 
+                # Delay between page scrapes
                 if books_found_on_page > 0: time.sleep(1) 
             
             # End of Pagination Loop for Category
-            print(f"✅ Finished category: {cat_name}. Processed {books_processed_this_category} new books/listings.")
+            print(f"✅ Finished category: {cat_name}. Processed {books_processed_this_category} new books/listings in this run.")
             total_books_processed_all_categories += books_processed_this_category
             
             # Update start page state only if downloads enabled
@@ -448,7 +479,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     next_page_to_try = last_successfully_scraped_page + 1
                     print(f"    ✅ Category finished or moved to next page. Next run for '{cat_name}' will start at page {next_page_to_try}")
                 
-                category["start_page_next_run"] = next_page_to_try
+                category["next_page_to_scrape"] = next_page_to_try
             else:
                  print(f"    ℹ️ [DRY RUN] State for '{cat_name}' not updated.")
                  
@@ -469,7 +500,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
         # Final Cleanup & Summary
         cleanup_db()
         if should_download and categories: 
-            print("\n💾 Saving updated category start pages...")
+            print("\n💾 Performing final state save...")
             save_json(categories, categories_file)
         elif not should_download:
             print("\nℹ️ [DRY RUN] Skipping save of category start pages.")
