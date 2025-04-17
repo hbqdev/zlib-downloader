@@ -442,78 +442,163 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     break # Break the WHILE loop for pages
                     
                 # === Verify Full Page Completion via Couchbase ===
-                # If we reached here, the book loop finished without hitting the limit.
-                # Now, double-check ALL books on this page against Couchbase to confirm completion.
                 print(f"  Verifying completion status for page {current_page} against Couchbase...")
                 books_verified_count = 0
                 verification_failed = False
-                if page_book_count > 0: # Only verify if there were books found
+                missing_books_data = [] # Store data of books not found in CB
+                if page_book_count > 0: 
                     for verify_idx, verify_book_data in enumerate(page_book_data_iterable):
                         verify_book_id = verify_book_data.get("id")
                         if not verify_book_id:
-                            print(f"    ⚠️ Verification Warning: Missing book ID at index {verify_idx} on page {current_page}.")
-                            continue # Skip verification for this item
-                            
+                             print(f"    ⚠️ Verification Warning: Missing book ID at index {verify_idx}...")
+                             continue 
                         try:
                             if cbconnect.check_if_downloaded(collection, verify_book_id):
                                 books_verified_count += 1
-                            # else: Book not found in Couchbase (This shouldn't happen if previous loop worked)
+                            else:
+                                # If not in CB, add its data to the list to attempt download
+                                missing_books_data.append(verify_book_data)
                         except Exception as verify_e:
                              print(f"    ❌ Verification Error: Couchbase check failed for book {verify_book_id}: {verify_e}")
-                             verification_failed = True # Mark verification as failed if DB error occurs
+                             verification_failed = True 
                              # Optional: break verification loop on first error?
-                             # break 
                              
-                    print(f"    Verification Result: {books_verified_count} / {page_book_count} books confirmed in Couchbase.")
+                print(f"    Verification Result: {books_verified_count} / {page_book_count} books confirmed in Couchbase initially.")
+                if missing_books_data:
+                    print(f"    Found {len(missing_books_data)} book(s) missing from Couchbase. Will attempt download.")
                 else:
                      print("    Skipping verification as no books were loaded for this page.")
-                     # Treat as complete if no books were found/loaded? Or maintain state?
-                     # For now, let's assume if page_book_count is 0, we advance.
-                     books_verified_count = 0 # Ensure it matches page_book_count for the check below
+                     books_verified_count = 0 
 
-                # === Update State Based on Verification ===
-                if not verification_failed and books_verified_count == page_book_count:
-                    # --- Page Fully Completed --- 
-                    print(f"  ✅ Page {current_page} confirmed fully processed.")
-                    
-                    # Increment count of *new* pages scraped in this run
-                    new_pages_scraped_this_run += 1
-                    
-                    # Update state for the next page
-                    next_page_to_start = current_page + 1
-                    category["next_page_to_scrape"] = next_page_to_start
-                    category["books_processed_on_page"] = 0 # Reset for next page
-                    if not save_json(categories, categories_file):
-                        print(f"      ❌ CRITICAL ERROR: Failed to save state after completing page {current_page}! Halting.")
-                        cleanup_db()
-                        sys.exit(1)
-                    print(f"      💾 State saved. Next page for '{cat_name}' is {next_page_to_start}.")
-
-                    # Check if we should continue to the next page in THIS RUN
-                    if new_pages_scraped_this_run >= max_pages:
-                        print(f"  🏁 Reached max_pages_to_scrape ({max_pages}) for '{cat_name}' this run.")
-                        break # Break the WHILE loop for pages
-                    # Otherwise, the WHILE loop continues to the next page
+                # === Attempt Downloads for Missing Books (if any) ===
+                page_fully_completed_after_retry = False
+                if not halt_run_due_to_limit and not verification_failed and missing_books_data:
+                    print(f"  Attempting to download {len(missing_books_data)} missing book(s) identified during verification...")
+                    for book_data_to_retry in missing_books_data:
+                        # Re-check limit before each attempt in this loop
+                        if halt_run_due_to_limit:
+                            print("      ⛔ Download limit hit during retry phase. Stopping.")
+                            break # Break retry loop
+                            
+                        # --- Re-use Download Logic --- 
+                        book_id = book_data_to_retry.get("id")
+                        book_hash = book_data_to_retry.get("hash")
+                        title = book_data_to_retry.get("title", "Unknown Title")
+                        authors = book_data_to_retry.get("authors", "Unknown Author")
                         
-                else:
-                    # --- Page NOT Fully Completed (Verification failed or count mismatch) ---
-                    if verification_failed:
-                         print(f"  ⚠️ Page {current_page} verification incomplete due to Couchbase errors.")
-                    elif page_book_count > 0 : # Only report mismatch if books were expected
-                         print(f"  ⚠️ Page {current_page} verification mismatch. Expected {page_book_count}, found {books_verified_count} in Couchbase.")
-                    else: # Case where page_book_count was 0
-                         print(f"  ℹ️ Page {current_page} had no books to process.")
-                         
-                    print(f"     Current state kept: next_page={category['next_page_to_scrape']}, processed={category['books_processed_on_page']}")
-                    print(f"     Stopping processing for category '{cat_name}' this run to retry/investigate page {current_page}.")
-                    # Save the potentially self-corrected books_processed_on_page value from the main loop
-                    if not save_json(categories, categories_file):
-                         print(f"      ❌ CRITICAL ERROR: Failed to save current state before halting! Data loss possible.")
+                        print(f"    �� Retrying: {book_id} ('{title}')")
+                        # (Ensure necessary variables like collection, z, output_dir etc. are accessible)
+                        print(f"      ⬇️ Attempting download... ({downloads_left_today} left reported)")
+                        try:
+                            download_result = z.downloadBook({"id": book_id, "hash": book_hash})
+                            if download_result:
+                                # ... (Process download, save file, mark CB, save state) ...
+                                # This block is identical to the main loop's download success block
+                                file_extension, response = download_result
+                                # ... (construct final_filename) ...
+                                full_title = title # Use title/authors from retry data
+                                full_authors = authors
+                                if full_authors: # ... (clean authors) ...
+                                     authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
+                                     clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
+                                else: clean_authors = "Unknown Author"
+                                base_filename = f"{full_title} - {clean_authors}"
+                                invalid_chars_pattern = r'[\\/?:*"<>|]' 
+                                clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
+                                clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
+                                final_filename = f"{clean_base_filename}{file_extension}"
+                                filepath = os.path.join(output_dir, final_filename)
+                                
+                                try: # Save with progress
+                                    # ... (Progress bar logic) ...
+                                    total_size = int(response.headers.get('content-length', 0))
+                                    block_size = 1024 
+                                    progress_bar = tqdm(
+                                        total=total_size, 
+                                        unit='iB', 
+                                        unit_scale=True,
+                                        desc=f"      Downloading {final_filename[:40]}...", 
+                                        leave=False 
+                                    )
+                                    if not os.path.exists(output_dir): # ... (ensure dir) ...
+                                         try: os.makedirs(output_dir) 
+                                         except OSError as e: # ... (error handling) ...
+                                              print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
+                                              progress_bar.close()
+                                              continue # Skip this book if dir fails
+                                    with open(filepath, "wb") as f: # ... (write logic) ...
+                                         for data in response.iter_content(block_size):
+                                              progress_bar.update(len(data))
+                                              f.write(data)
+                                    progress_bar.close() 
+                                    if total_size != 0 and progress_bar.n != total_size: # ... (check completion) ...
+                                         print(f"\n      ⚠️ WARNING: Download incomplete for {final_filename}...")
+                                    else: print(f"      ✅ Downloaded: {final_filename}")
+                                    
+                                    # Mark and Save State
+                                    print(f"      📝 Marking book ID {book_id} in Couchbase...")
+                                    mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
+                                    if mark_success:
+                                        category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                        if not save_json(categories, categories_file):
+                                             # ... CRITICAL ERROR ...
+                                             print("      ❌ CRITICAL ERROR: Failed to save state! Halting.")
+                                             cleanup_db()
+                                             sys.exit(1)
+                                        print(f"      💾 State saved. Processed {category.get('books_processed_on_page', 0)} books on page {current_page}.")
+                                    else: print(f"      ⚠️ Failed to mark book {book_id} in Couchbase.")
+                                    # Update global counters
+                                    books_processed_this_category += 1 # Count retry attempts towards category total
+                                    total_downloads_attempted_this_run += 1
+                                    downloads_left_today -= 1
+                                    time.sleep(0.5)
+                                except Exception as save_err: # ... (save error handling) ...
+                                     print(f"      ❌ Error during file save/progress for {final_filename}: {save_err}")
+                                     # If save fails, maybe don't consider page complete?
+                                     # For now, just log and continue retry loop
+                            else: # Download failed
+                                print(f"      ❌ Retry Download failed for book ID {book_id}")
+                                print("      ⛔ Assuming download limit reached. Halting run.")
+                                halt_run_due_to_limit = True
+                                break # Break retry loop
+                        except Exception as dl_err: # Download initiation error
+                            print(f"      ❌ Unexpected error initiating retry download for {book_id}: {dl_err}")
+                            halt_run_due_to_limit = True
+                            break # Break retry loop
+                    # --- End of retry download loop --- 
+                    
+                    # Check if the retry loop finished because of limit, not completion
+                    if not halt_run_due_to_limit:
+                         page_fully_completed_after_retry = True # Mark as success if loop finished naturally
+                         print(f"  ✅ Successfully processed all identified missing books for page {current_page}.")
+                         # Now the page *should* be complete. Proceed to normal completion logic below.
+                
+                # === Update State Based on Final Completion Status ===
+                # Condition for advancing: No verification errors, no limit hit during retry, AND
+                # (either verification initially showed all OR retry successfully downloaded all missing)
+                if not verification_failed and not halt_run_due_to_limit and (not missing_books_data or page_fully_completed_after_retry):
+                     # --- Page Fully Completed (Either initially or after retry) --- 
+                     print(f"  ✅ Page {current_page} confirmed fully processed (after retries if needed).")
+
+                # Increment count of *new* pages scraped in this run
+                new_pages_scraped_this_run += 1
+                
+                # Update state for the next page
+                next_page_to_start = current_page + 1
+                category["next_page_to_scrape"] = next_page_to_start
+                category["books_processed_on_page"] = 0 # Reset for next page
+                if not save_json(categories, categories_file):
+                    print(f"      ❌ CRITICAL ERROR: Failed to save state after completing page {current_page}! Halting.")
+                    cleanup_db()
+                    sys.exit(1)
+                print(f"      💾 State saved. Next page for '{cat_name}' is {next_page_to_start}.")
+
+                # Check if we should continue to the next page in THIS RUN
+                if new_pages_scraped_this_run >= max_pages:
+                    print(f"  🏁 Reached max_pages_to_scrape ({max_pages}) for '{cat_name}' this run.")
                     break # Break the WHILE loop for pages
-                        
-                # Optional delay if loop continues
-                if not halt_run_due_to_limit: time.sleep(1)
-
+                # Otherwise, the WHILE loop continues to the next page
+                    
             # --- End of While Loop for Pages --- 
 
             # End of Pagination Loop for Category
