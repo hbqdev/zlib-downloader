@@ -228,11 +228,14 @@ def run_download_process(config_file="config.json", categories_file="categories.
             while not halt_run_due_to_limit and new_pages_scraped_this_run < max_pages:
                 current_page = category.get("next_page_to_scrape", 1)
                 # Get the number processed from the last run *before* starting the page
-                books_processed_before_page_start = category.get("books_processed_on_page", 0)
+                # books_processed_before_page_start = category.get("books_processed_on_page", 0) # No longer needed
                 
                 print(f"\n📄 Processing Page {current_page} for Category: {cat_name} (Target: {max_pages} new pages this run)")
-                if books_processed_before_page_start > 0:
-                     print(f"   ℹ️ Resuming page - {books_processed_before_page_start} books already processed.")
+                # Reset the processed count for this specific page run in memory
+                category["books_processed_on_page"] = 0
+                print(f"   ℹ️ Resetting in-memory processed count to 0 for page {current_page} check.")
+                # if books_processed_before_page_start > 0:
+                #      print(f"   ℹ️ Resuming page - {books_processed_before_page_start} books already processed.")
 
                 # --- Scrape the current page --- 
                 if should_download and os.path.exists(download_filename):
@@ -283,349 +286,259 @@ def run_download_process(config_file="config.json", categories_file="categories.
                          print(f"    ⚠️ [DRY RUN] Scrape reported {books_found_on_page} books, but no data received.")
                 
                 page_book_count = len(page_book_data_iterable) # Use actual length of loaded data
-                
-                # --- Process books on the current page --- 
-                page_completed_without_halt = True # Assume success initially
+
+                # List to store books found missing from Couchbase on this page
+                books_to_download_this_page = []
+
+                # --- First Pass: Check all books against Couchbase --- 
+                print(f"  Checking {page_book_count} books from page {current_page} against Couchbase...")
 
                 for idx, book_data in enumerate(page_book_data_iterable):
-                    # Check skip logic (using category["books_processed_on_page"])
+                    # Check skip logic using the value directly from the category dictionary
                     if idx < category.get("books_processed_on_page", 0):
                         continue
-                    
+
                     book_id = book_data.get("id")
-                    book_hash = book_data.get("hash")
+                    book_hash = book_data.get("hash") # Needed for download and dry run
                     title = book_data.get("title", "Unknown Title")
                     authors = book_data.get("authors", "Unknown Author")
-                    
-                    print(f"    📖 ({idx+1}/{page_book_count}) Processing: {book_id} ('{title}')")
 
-                    # Check Couchbase (updates category["books_processed_on_page"] in memory)
-                    is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
-                    if is_already_downloaded_in_db:
-                        print("      ✓ Already in Couchbase. Skipping.")
-                        category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                    if not book_id:
+                        print(f"    ⚠️ Skipping book at index {idx} due to missing ID.")
                         continue
 
-                    # Handle Dry Run or Download Mode
-                    if not should_download:
-                        print(f"      🔍 [DRY RUN] Found New: ID={book_id}, Hash={book_hash}, Title='{title[:60]}...', Authors='{authors[:50]}...'")
-                        if report_file_handle:
-                            try:
-                                line = f"{book_id}|{book_hash}|{title.replace('|',' ')}|{authors.replace('|',' ')}\n"
-                                report_file_handle.write(line)
-                                dry_run_book_count += 1
-                            except IOError as e:
-                                print(f"      ❌ [DRY RUN] Error writing to report file: {e}.")
-                                report_file_handle.close()
-                                report_file_handle = None
-                        books_processed_this_category += 1 # Counter for dry run summary
-                        continue
-                    
-                    # Check global limit flag before attempting download
-                    if halt_run_due_to_limit:
-                        print("      ⛔ Download limit hit earlier in run. Skipping remaining books.")
-                        page_completed_without_halt = False # Mark page as not fully processed
-                        break # Break book loop
+                    # print(f"    📖 ({idx+1}/{page_book_count}) Checking: {book_id} ('{title}')") # Verbose Check
 
-                    # --- Attempt Download --- 
-                    print(f"      ⬇️ Attempting download... ({downloads_left_today} left reported)")
+                    # Check Couchbase 
                     try:
-                        download_result = z.downloadBook({"id": book_id, "hash": book_hash})
+                        is_already_downloaded_in_db = cbconnect.check_if_downloaded(collection, book_id)
+                    except Exception as cb_err:
+                        print(f"    ❌ Error checking Couchbase for {book_id}: {cb_err}. Assuming not downloaded.")
+                        is_already_downloaded_in_db = False # Treat check error as not downloaded
 
-                        if download_result:
-                            file_extension, response = download_result
-                            # Construct Filename from Full Data
-                            full_title = title   
-                            full_authors = authors 
-                            if full_authors:
-                                authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
-                                clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
-                            else:
-                                clean_authors = "Unknown Author"
-                            base_filename = f"{full_title} - {clean_authors}"
-                            invalid_chars_pattern = r'[\\/?:*"<>|]' 
-                            clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
-                            clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
-                            final_filename = f"{clean_base_filename}{file_extension}"
-                            filepath = os.path.join(output_dir, final_filename)
-                            
-                            # Save File with Progress Bar
-                            try:
-                                total_size = int(response.headers.get('content-length', 0))
-                                block_size = 1024 
-                                
-                                progress_bar = tqdm(
-                                    total=total_size, 
-                                    unit='iB', 
-                                    unit_scale=True,
-                                    desc=f"      Downloading {final_filename[:40]}...", 
-                                    leave=False 
-                                )
-                                
-                                if not os.path.exists(output_dir):
-                                    try: os.makedirs(output_dir)
-                                    except OSError as e:
-                                        print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
-                                        progress_bar.close()
-                                        continue 
+                    if is_already_downloaded_in_db:
+                        print(f"      ✓ Already in Couchbase: {book_id} ('{title}')")
+                        # **Increment the counter in the dictionary directly**
+                        category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                        # We don't save state here, only after a successful download *attempted in this run*.
+                        continue # Move to the next book in the check loop
+                    else:
+                        # Book is NOT in Couchbase
+                        # Handle Dry Run or Add to Download List
+                        if not should_download:
+                            print(f"      🔍 [DRY RUN] Found New: ID={book_id}, Hash={book_hash}, Title='{title[:60]}...', Authors='{authors[:50]}...'")
+                            if report_file_handle:
+                                try:
+                                    line = f"{book_id}|{book_hash}|{title.replace('|',' ')}|{authors.replace('|',' ')}\n"
+                                    report_file_handle.write(line)
+                                    dry_run_book_count += 1
+                                except IOError as e:
+                                    print(f"      ❌ [DRY RUN] Error writing to report file: {e}.")
+                                    report_file_handle.close()
+                                    report_file_handle = None
+                            books_processed_this_category += 1 # Counter for dry run summary
+                            continue # Go to next book
+                        else:
+                            # In download mode and book is missing from CB
+                            print(f"      ➕ Not in Couchbase: {book_id} ('{title}'). Will download later.")
+                            # Store the original index along with the book data
+                            books_to_download_this_page.append((idx, book_data))
+                            # **DO NOT increment category["books_processed_on_page"] here.**
+                            # It will be incremented only after successful download below.
+                            # Continue checking the rest of the books on the page.
 
-                                with open(filepath, "wb") as f:
-                                    for data in response.iter_content(block_size):
-                                        progress_bar.update(len(data))
-                                        f.write(data)
-                                
-                                progress_bar.close()
-                                
-                                if total_size != 0 and progress_bar.n != total_size:
-                                    print(f"\n      ⚠️ WARNING: Download incomplete for {final_filename}...")
-                                else:
-                                    print(f"      ✅ Downloaded: {final_filename}")
-                                
-                                # Mark and Save State
-                                print(f"      📝 Marking book ID {book_id} in Couchbase...")
-                                mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
-                                if not mark_success:
-                                    print(f"      ⚠️ Failed to mark book {book_id} in Couchbase.")
-                                else:
-                                    # Increment counter *before* saving
-                                    category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
-                                    if not save_json(categories, categories_file):
-                                        print("      ❌ CRITICAL ERROR: Failed to save state! Halting.")
-                                        cleanup_db()
-                                        sys.exit(1)
-                                    print(f"      💾 State saved. Processed {category.get('books_processed_on_page', 0)} books on page {current_page}.")
-                                
-                                # Update overall counters
-                                books_processed_this_category += 1
-                                total_downloads_attempted_this_run += 1
-                                downloads_left_today -= 1
-                                time.sleep(0.5)
-                                
-                            except IOError as e:
-                                print(f"\n      ❌ Error saving file '{filepath}': {e}")
-                                if 'progress_bar' in locals() and progress_bar: progress_bar.close()
-                            except Exception as e:
-                                print(f"\n      ❌ Unexpected error during download/saving for {final_filename}: {e}")
-                                import traceback
-                                print(traceback.format_exc())
-                                if 'progress_bar' in locals() and progress_bar: progress_bar.close()
+                # --- End of First Pass Check Loop --- 
+                print(f"  Check complete. Found {len(books_to_download_this_page)} book(s) to download for page {current_page}.")
+                # Note: category["books_processed_on_page"] now reflects books found in CB in *this check* + those skipped.
 
-                        else: # Download failed (likely limit hit)
-                            print(f"      ❌ Download failed for book ID {book_id}")
-                            print("      ⛔ Assuming download limit reached. Halting run.")
-                            halt_run_due_to_limit = True
-                            page_completed_without_halt = False
-                            break # Break book loop
-
-                    except Exception as e: # Error *attempting* download
-                        print(f"      ❌ Unexpected error initiating download for book ID {book_id}: {e}")
-                        import traceback
-                        print(traceback.format_exc())
-                        halt_run_due_to_limit = True
-                        page_completed_without_halt = False
-                        break # Break book loop
-                    
-                    # Re-check limit flag immediately after download attempt block
-                    if halt_run_due_to_limit:
-                        break # Ensure we break book loop if limit was hit during download
-
-                # Check limit flag again immediately after try/except block
-                if halt_run_due_to_limit:
-                    break # Exit book loop if limit was hit
-
-                # --- End of Book Processing Loop for Page --- 
-                
-                # --- After processing books on page OR breaking due to limit ---
-                if halt_run_due_to_limit:
-                    print(f"  ⛔ Halting processing for page {current_page} due to download limit/error.")
-                    # State is saved after the last successful download, so just break.
-                    break # Break the WHILE loop for pages
-                    
-                # === Verify Full Page Completion via Couchbase ===
-                print(f"  Verifying completion status for page {current_page} against Couchbase...")
-                books_verified_count = 0
-                verification_failed = False
-                missing_books_data = [] # Store data of books not found in CB
-                if page_book_count > 0: 
-                    for verify_idx, verify_book_data in enumerate(page_book_data_iterable):
-                        verify_book_id = verify_book_data.get("id")
-                        if not verify_book_id:
-                             print(f"    ⚠️ Verification Warning: Missing book ID at index {verify_idx}...")
-                             continue 
-                        try:
-                            if cbconnect.check_if_downloaded(collection, verify_book_id):
-                                books_verified_count += 1
-                            else:
-                                # If not in CB, add its data to the list to attempt download
-                                missing_books_data.append(verify_book_data)
-                        except Exception as verify_e:
-                             print(f"    ❌ Verification Error: Couchbase check failed for book {verify_book_id}: {verify_e}")
-                             verification_failed = True 
-                             # Optional: break verification loop on first error?
-                             
-                print(f"    Verification Result: {books_verified_count} / {page_book_count} books confirmed in Couchbase initially.")
-                if missing_books_data:
-                    print(f"    Found {len(missing_books_data)} book(s) missing from Couchbase. Will attempt download.")
-                else:
-                     print("    Skipping verification as no books were loaded for this page.")
-                     books_verified_count = 0 
-
-                # === Attempt Downloads for Missing Books (if any) ===
-                page_fully_completed_after_retry = False
-                if not halt_run_due_to_limit and not verification_failed and missing_books_data:
-                    print(f"  Attempting to download {len(missing_books_data)} missing book(s) identified during verification...")
-                    for book_data_to_retry in missing_books_data:
-                        # Re-check limit before each attempt in this loop
+                # --- Second Pass: Attempt Downloads for Missing Books ---
+                if should_download and books_to_download_this_page:
+                    print(f"  Attempting downloads...")
+                    # Iterate through the list of (index, book_data) tuples
+                    for original_index, book_data_to_download in books_to_download_this_page:
+                        # Check global limit flag BEFORE attempting download
                         if halt_run_due_to_limit:
-                            print("      ⛔ Download limit hit during retry phase. Stopping.")
-                            break # Break retry loop
-                            
-                        # --- Re-use Download Logic --- 
-                        book_id = book_data_to_retry.get("id")
-                        book_hash = book_data_to_retry.get("hash")
-                        title = book_data_to_retry.get("title", "Unknown Title")
-                        authors = book_data_to_retry.get("authors", "Unknown Author")
+                            print("      ⛔ Download limit hit or error occurred previously. Skipping remaining downloads for this page.")
+                            break # Break download loop
+
+                        # --- Get book details --- 
+                        book_id = book_data_to_download.get("id")
+                        book_hash = book_data_to_download.get("hash")
+                        title = book_data_to_download.get("title", "Unknown Title")
+                        authors = book_data_to_download.get("authors", "Unknown Author")
+                        # current_processed_count = category.get("books_processed_on_page", 0) # No longer needed for msg
+
+                        # Use the original index for the message
+                        print(f"    📖 ({original_index + 1}/{page_book_count}) Downloading: {book_id} ('{title}')")
+                        print(f"      ⬇️ ({downloads_left_today} left reported)")
                         
-                        print(f"    �� Retrying: {book_id} ('{title}')")
-                        # (Ensure necessary variables like collection, z, output_dir etc. are accessible)
-                        print(f"      ⬇️ Attempting download... ({downloads_left_today} left reported)")
+                        # --- Download Attempt Block --- 
                         try:
                             download_result = z.downloadBook({"id": book_id, "hash": book_hash})
+
                             if download_result:
-                                # ... (Process download, save file, mark CB, save state) ...
-                                # This block is identical to the main loop's download success block
                                 file_extension, response = download_result
-                                # ... (construct final_filename) ...
-                                full_title = title # Use title/authors from retry data
+                                # Construct Filename 
+                                full_title = title
                                 full_authors = authors
-                                if full_authors: # ... (clean authors) ...
-                                     authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
-                                     clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
-                                else: clean_authors = "Unknown Author"
+                                if full_authors:
+                                    authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
+                                    clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
+                                else:
+                                    clean_authors = "Unknown Author"
                                 base_filename = f"{full_title} - {clean_authors}"
-                                invalid_chars_pattern = r'[\\/?:*"<>|]' 
+                                invalid_chars_pattern = r'[\\/?:*"<>|]'
                                 clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
                                 clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
                                 final_filename = f"{clean_base_filename}{file_extension}"
                                 filepath = os.path.join(output_dir, final_filename)
-                                
-                                try: # Save with progress
-                                    # ... (Progress bar logic) ...
+
+                                # Save File with Progress Bar
+                                try:
                                     total_size = int(response.headers.get('content-length', 0))
-                                    block_size = 1024 
+                                    block_size = 1024
+
                                     progress_bar = tqdm(
-                                        total=total_size, 
-                                        unit='iB', 
+                                        total=total_size,
+                                        unit='iB',
                                         unit_scale=True,
-                                        desc=f"      Downloading {final_filename[:40]}...", 
-                                        leave=False 
+                                        desc=f"      Saving {final_filename[:40]}...",
+                                        leave=False
                                     )
-                                    if not os.path.exists(output_dir): # ... (ensure dir) ...
-                                         try: os.makedirs(output_dir) 
-                                         except OSError as e: # ... (error handling) ...
-                                              print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
-                                              progress_bar.close()
-                                              continue # Skip this book if dir fails
-                                    with open(filepath, "wb") as f: # ... (write logic) ...
-                                         for data in response.iter_content(block_size):
-                                              progress_bar.update(len(data))
-                                              f.write(data)
-                                    progress_bar.close() 
-                                    if total_size != 0 and progress_bar.n != total_size: # ... (check completion) ...
-                                         print(f"\n      ⚠️ WARNING: Download incomplete for {final_filename}...")
-                                    else: print(f"      ✅ Downloaded: {final_filename}")
-                                    
-                                    # Mark and Save State
+
+                                    if not os.path.exists(output_dir):
+                                        try: os.makedirs(output_dir)
+                                        except OSError as e:
+                                            print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
+                                            progress_bar.close()
+                                            continue # Skip this book if dir fails
+
+                                    with open(filepath, "wb") as f:
+                                        for data in response.iter_content(block_size):
+                                            progress_bar.update(len(data))
+                                            f.write(data)
+                                    progress_bar.close()
+
+                                    if total_size != 0 and progress_bar.n != total_size:
+                                        print(f"\n      ⚠️ WARNING: Download size mismatch for {final_filename}...")
+                                    else:
+                                        print(f"      ✅ Saved: {final_filename}")
+
+                                    # Mark and Save State ONLY AFTER successful save
                                     print(f"      📝 Marking book ID {book_id} in Couchbase...")
                                     mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
-                                    if mark_success:
+                                    if not mark_success:
+                                        print(f"      ⚠️ Failed to mark book {book_id} in Couchbase. State may be inconsistent.")
+                                        # Continue processing other downloads unless limit hit
+                                    else:
+                                        # --- State Update Block --- 
+                                        # Increment counter *after* successful download/mark
+                                        # Use the dictionary value directly
                                         category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                        # Save the updated state immediately
                                         if not save_json(categories, categories_file):
-                                             # ... CRITICAL ERROR ...
-                                             print("      ❌ CRITICAL ERROR: Failed to save state! Halting.")
-                                             cleanup_db()
-                                             sys.exit(1)
-                                        print(f"      💾 State saved. Processed {category.get('books_processed_on_page', 0)} books on page {current_page}.")
-                                    else: print(f"      ⚠️ Failed to mark book {book_id} in Couchbase.")
-                                    # Update global counters
-                                    books_processed_this_category += 1 # Count retry attempts towards category total
-                                    total_downloads_attempted_this_run += 1
-                                    downloads_left_today -= 1
-                                    time.sleep(0.5)
-                                except Exception as save_err: # ... (save error handling) ...
-                                     print(f"      ❌ Error during file save/progress for {final_filename}: {save_err}")
-                                     # If save fails, maybe don't consider page complete?
-                                     # For now, just log and continue retry loop
-                            else: # Download failed
-                                print(f"      ❌ Retry Download failed for book ID {book_id}")
-                                print("      ⛔ Assuming download limit reached. Halting run.")
+                                            print("      ❌ CRITICAL ERROR: Failed to save state after marking book! Halting.")
+                                            cleanup_db()
+                                            sys.exit(1)
+                                        print(f"      💾 State saved. Processed count for page {current_page}: {category['books_processed_on_page']}")
+
+                                        # Update overall counters for *this run*
+                                        books_processed_this_category += 1 # Count newly downloaded book
+                                        total_downloads_attempted_this_run += 1
+                                        downloads_left_today -= 1
+                                        # --- End State Update Block ---
+
+                                    time.sleep(0.5) # Rate limiting
+
+                                except IOError as e:
+                                    print(f"\n      ❌ Error saving file '{filepath}': {e}")
+                                    if 'progress_bar' in locals() and progress_bar: progress_bar.close()
+                                    # If save fails, don't mark in CB or update state
+                                except Exception as e:
+                                    print(f"\n      ❌ Unexpected error during file save/progress for {final_filename}: {e}")
+                                    import traceback
+                                    print(traceback.format_exc())
+                                    if 'progress_bar' in locals() and progress_bar: progress_bar.close()
+                                    # If save fails, don't mark in CB or update state
+
+                            else: # Download failed (likely limit hit or API error)
+                                print(f"      ❌ Download failed for book ID {book_id}")
+                                if downloads_left_today <= 0:
+                                    print("      ⛔ Download limit likely reached. Halting subsequent downloads.")
+                                else:
+                                    print("      ⛔ Download attempt failed for other reason. Halting subsequent downloads for safety.")
                                 halt_run_due_to_limit = True
-                                break # Break retry loop
-                        except Exception as dl_err: # Download initiation error
-                            print(f"      ❌ Unexpected error initiating retry download for {book_id}: {dl_err}")
+                                # Break download loop; state saved reflects downloads *before* this failure
+                                break 
+
+                        except Exception as e: # Error *initiating* download
+                            print(f"      ❌ Unexpected error initiating download for book ID {book_id}: {e}")
+                            import traceback
+                            print(traceback.format_exc())
                             halt_run_due_to_limit = True
-                            break # Break retry loop
-                    # --- End of retry download loop --- 
-                    
-                    # Check if the retry loop finished because of limit, not completion
+                            # Break download loop; state saved reflects downloads *before* this failure
+                            break 
+
+                    # --- End of Download Loop for Missing Books ---
                     if not halt_run_due_to_limit:
-                         page_fully_completed_after_retry = True # Mark as success if loop finished naturally
-                         print(f"  ✅ Successfully processed all identified missing books for page {current_page}.")
-                         # Now the page *should* be complete. Proceed to normal completion logic below.
+                        print(f"  ✅ Finished download attempts for page {current_page}.")
                 
-                # === Update State Based on Final Completion Status ===
-                # Condition for advancing: No verification errors, no limit hit during retry, AND
-                # (either verification initially showed all OR retry successfully downloaded all missing)
-                if not verification_failed and not halt_run_due_to_limit and (not missing_books_data or page_fully_completed_after_retry):
-                     # --- Page Fully Completed (Either initially or after retry) --- 
-                     print(f"  ✅ Page {current_page} confirmed fully processed (after retries if needed).")
-
-                # Increment count of *new* pages scraped in this run
-                new_pages_scraped_this_run += 1
+                # --- Page Completion Logic --- 
+                # This runs *after* the check loop AND the download loop (if applicable)
                 
-                # Update state for the next page
-                next_page_to_start = current_page + 1
-                category["next_page_to_scrape"] = next_page_to_start
-                category["books_processed_on_page"] = 0 # Reset for next page
-                if not save_json(categories, categories_file):
-                    print(f"      ❌ CRITICAL ERROR: Failed to save state after completing page {current_page}! Halting.")
-                    cleanup_db()
-                    sys.exit(1)
-                print(f"      💾 State saved. Next page for '{cat_name}' is {next_page_to_start}.")
+                # Determine if the page is fully processed *now* using the dictionary value
+                page_fully_processed = category.get("books_processed_on_page", 0) == page_book_count
 
+                if halt_run_due_to_limit:
+                    print(f"  ⛔ Halting page {current_page} processing due to download limit/error.")
+                    # State was saved after the *last successful* download. No further save needed here.
+                    break # Break the WHILE loop for pages
+
+                # --- If no halt occurred ---
+                if page_fully_processed:
+                    print(f"  ✅ Page {current_page} confirmed fully processed ({category['books_processed_on_page']}/{page_book_count}).")
+                    new_pages_scraped_this_run += 1
+
+                    # Update state to move to the next page
+                    next_page_to_start = current_page + 1
+                    category["next_page_to_scrape"] = next_page_to_start
+                    category["books_processed_on_page"] = 0 # Reset for the new page
+                    last_successfully_scraped_page = current_page # Track for summary msg
+
+                    print(f"    Updating state: Next page for '{cat_name}' is {next_page_to_start}, processed count reset.")
+                    if not save_json(categories, categories_file):
+                        print(f"      ❌ CRITICAL ERROR: Failed to save state after completing page {current_page}! Halting.")
+                        cleanup_db()
+                        sys.exit(1)
+                else:
+                    # Page not fully processed, but limit was NOT hit. 
+                    # This implies potential non-limit download errors, CB errors during marking, or file save errors.
+                    # The state reflects the last successful download/mark.
+                    print(f"  ⚠️ Page {current_page} not fully processed ({category['books_processed_on_page']}/{page_book_count}), but download limit not hit.")
+                    print(f"     Next run will resume page {current_page} attempting remaining downloads.")
+                    # State should already be saved reflecting the last successful operation.
+                    # Break the page loop for this category to avoid potential infinite loops on persistent errors.
+                    break # Break the WHILE loop for pages
+                
                 # Check if we should continue to the next page in THIS RUN
                 if new_pages_scraped_this_run >= max_pages:
                     print(f"  🏁 Reached max_pages_to_scrape ({max_pages}) for '{cat_name}' this run.")
                     break # Break the WHILE loop for pages
-                # Otherwise, the WHILE loop continues to the next page
-                    
-            # --- End of While Loop for Pages --- 
+                # Otherwise, the WHILE loop continues to the next page if page was fully processed
 
-            # End of Pagination Loop for Category
-            print(f"✅ Finished category: {cat_name}. Processed {books_processed_this_category} new books/listings in this run.")
+            # --- End of While Loop for Pages ---
+
+            # Update category summary message (uses last_successfully_scraped_page)
+            print(f"\n✅ Finished processing pages for category: {cat_name}. Processed {books_processed_this_category} new books/listings in this run.")
             total_books_processed_all_categories += books_processed_this_category
-            
-            # Update start page state only if downloads enabled
-            if should_download:
-                if halt_run_due_to_limit:
-                    # If limit was hit, resume from the page where it happened
-                    next_page_to_try = current_page 
-                    print(f"    ⏸️ Download limit hit on page {current_page}. Next run will resume from this page.")
-                else:
-                    # If no limit hit, proceed to the page after the last successful scrape
-                    # (last_successfully_scraped_page would have been updated)
-                    next_page_to_try = last_successfully_scraped_page + 1
-                    print(f"    ✅ Category finished or moved to next page. Next run for '{cat_name}' will start at page {next_page_to_try}")
-                
-                category["next_page_to_scrape"] = next_page_to_try
-            else:
-                 print(f"    ℹ️ [DRY RUN] State for '{cat_name}' not updated.")
-                 
-            # Break category loop if global halt flag is set
+            # The next page state ('next_page_to_scrape' and 'books_processed_on_page')
+            # should already be correctly set and saved within the page loop.
+
+            # Break category loop if global halt flag is set during page processing
             if halt_run_due_to_limit:
-                print(f"\n⛔ Halting further category processing due to download limit/error.")
+                print(f"\n⛔ Halting further category processing due to download limit/error reached in '{cat_name}'.")
                 break
-        
+
         # End of Category Loop
 
     except KeyboardInterrupt:
