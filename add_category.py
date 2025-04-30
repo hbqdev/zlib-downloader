@@ -174,7 +174,15 @@ def main():
         new_entry["id"] = cat_id
         new_entry["slug"] = cat_slug
     elif entry_type == "search":
-        new_entry["search_term"] = search_term
+        new_entry = {
+            "name": entry_name,
+            "search_term": search_term,
+            "scrape_enabled": False,       # Default: disabled
+            "max_pages_to_scrape": 10,     # Default: 10 pages
+            "next_page_to_scrape": 1,      # Default: start at page 1
+            "books_processed_on_page": 0,  # Default: 0 processed
+            "order_to_download": next_order
+        }
 
     print(f"\nAdding new {entry_type} entry (Order: {next_order}):")
     print(json.dumps(new_entry, indent=2))

@@ -1,1149 +1,1149 @@
 <z-bookcard
-                                        id="3317987"
-                    isbn=""
-                    termshash="398297ea929f714edf8d89e537093600"
-                    href="/book/3317987/641f72/how-to-improve-your-concentration-the-7-secrets-of-how-to-improve-your-memory-and-to-stay-focused.html"
-                    download="/dl/3317987/ad1b3d"
+                                        id="25077634"
+                    isbn="B0BNMW8ZPH"
+                    termshash="d3ec91e319e7b15f29e5b74451a023c3"
+                    href="/book/25077634/465455/color-mixing-essentials-a-contemporary-beginners-guide-to-color-theory-and-color-mixing.html"
+                    download="/dl/25077634/1d4016"
                     deleted=""
                     publisher=""
                     language="english"
-                    year="2014"
+                    year="2023"
                     extension="pdf"
-                    filesize="469 KB"
+                    filesize="122.65 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/dbb63e50142878bcd15a88a42cd012ea95a7f3eb966c911eeea3d83742623db0.jpg" />
-                    <div slot="title">How to Improve Your Concentration: The 7 Secrets of How to Improve Your Memory and to Stay Focused</div>
-                                        <div slot="author">Thompson; Oliver</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a63bca421412d627c27689a158c9c9f485b4bc476c9d8ec28a330721780648f6.jpg" />
+                    <div slot="title">Color Mixing Essentials: A contemporary beginner's guide to color theory and color mixing</div>
+                                        <div slot="author">MATE ART</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="1167409"
-                    isbn="9781937918767"
-                    termshash="55c1e3a4c3c4c0fe5076f8dda517fb29"
-                    href="/book/1167409/c02ec3/memory-improvement-how-to-improve-your-memory-in-just-30-days.html"
-                    download="/dl/1167409/6f8b1b"
+                                        id="1150446"
+                    isbn="9780929552095"
+                    termshash="03e687d992e767d33710fa4ad4d9e488"
+                    href="/book/1150446/0dabe6/color-mixing-the-van-wyk-way-a-manual-for-oil-painters.html"
+                    download="/dl/1150446/79a5df"
                     deleted=""
-                    publisher="Laurenzana Press"
+                    publisher="Art Instruction Assoc"
                     language="english"
-                    year="2013"
+                    year="1995"
                     extension="pdf"
-                    filesize="1.12 MB"
+                    filesize="66.01 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/154ba7d144bbc8dd1bc064558c62d291635808de55ca0765029543cda60e34c0.jpg" />
-                    <div slot="title">Memory Improvement: How To Improve Your Memory In Just 30 Days</div>
-                                        <div slot="author">Ron White</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/25c544e762fac5d7f96cc6ec56a79cf57f9b8ba2e134c2130ab8fc15501a3f68.jpg" />
+                    <div slot="title">Color Mixing the Van Wyk Way - A Manual for Oil Painters</div>
+                                        <div slot="author">Helen Van Wyk</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="11915611"
-                    isbn=""
-                    termshash="4ade982f60d6b388be9292c7582434b3"
-                    href="/book/11915611/8593b4/how-to-improve-your-working-memory-unlock-your-unlimited-memory-to-memorize-everything-you-read-and.html"
-                    download="/dl/11915611/1a633f"
+                                        id="3689965"
+                    isbn="9781633224902"
+                    termshash="c58e030d40f162ca5f5e2030ffe7d9b9"
+                    href="/book/3689965/3fe52c/beginning-color-mixing-tips-and-techniques-for-mixing-vibrant-colors-and-cohesive-palettes.html"
+                    download="/dl/3689965/ca766b"
                     deleted=""
-                    publisher=""
+                    publisher="Walter Foster Publishing"
                     language="english"
-                    year="2020"
+                    year="2018"
                     extension="epub"
-                    filesize="1.87 MB"
+                    filesize="23.51 MB"
+                    rating="4.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/24bbe368ee265e999ec8c70f6cc06e252953ab97d4bf07a6768268d890e53996.jpg" />
+                    <div slot="title">Beginning Color Mixing: Tips and Techniques for Mixing Vibrant Colors and Cohesive Palettes</div>
+                                        <div slot="author">Kimberly Adams</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3323497"
+                    isbn="9781627887663"
+                    termshash="d5f6cdbe4bd733dcbe9cb4de8757a248"
+                    href="/book/3323497/087054/color-lab-for-mixedmedia-artists.html"
+                    download="/dl/3323497/2ca30c"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="51.94 MB"
+                    rating="5.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ad07ab622d46e8f1ceda68802a09688297bec257a1a6e562a1fe6eb2963d4c4e.jpg" />
+                    <div slot="title">Color Lab for Mixed-Media Artists</div>
+                                        <div slot="author">Deborah Forman</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3690290"
+                    isbn="9781633224674"
+                    termshash="464d6f77ae589323b6d911ffee08cf40"
+                    href="/book/3690290/bf69b2/expressive-painting-tips-and-techniques-for-practical-applications-in-watercolor-including-color-t.html"
+                    download="/dl/3690290/947b4d"
+                    deleted=""
+                    publisher="Walter Foster Publishing"
+                    language="english"
+                    year="2018"
+                    extension="epub"
+                    filesize="29.99 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d3fd8fe678a9048e1220cfc9ddc660966c6b6d912ee30596e23c65a659b815d8.jpg" />
+                    <div slot="title">Expressive Painting: Tips and Techniques for Practical Applications in Watercolor, Including Color Theory, Color Mixing, and Understanding Color Relationships</div>
+                                        <div slot="author">Joseph Stoddard</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21347850"
+                    isbn="9780811770279"
+                    termshash="aaf49cdbcd58fef1941c4d5e8bd8d735"
+                    href="/book/21347850/454044/complete-color-mixing-guide-for-acrylics-oils-and-watercolors.html"
+                    download="/dl/21347850/ae3ece"
+                    deleted=""
+                    publisher="Stackpole Books"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="121.72 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/8b2c47d51b14568c67ea86d2e1c0bfc5f5677c3d2c3d9318dd7928d9f320f3d3.jpg" />
+                    <div slot="title">Complete Color Mixing Guide for Acrylics, Oils, and Watercolors</div>
+                                        <div slot="author">John Barber</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="10004902"
+                    isbn="9781631595509"
+                    termshash="13ab184712b52e18a540301971d3841d"
+                    href="/book/10004902/690b27/the-new-color-mixing-companion.html"
+                    download="/dl/10004902/09ba59"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2018"
+                    extension="epub"
+                    filesize="32.60 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0aec272576f768cbcd6b381551db42c3dcc9e40bd57ff4a9ec60c46d4e9ecd68.jpg" />
+                    <div slot="title">The New Color Mixing Companion</div>
+                                        <div slot="author">Josie Lewis</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="632959"
+                    isbn="9782880468194"
+                    termshash="72c8fa5612e9997967ad990c58853dc4"
+                    href="/book/632959/032c5f/color-management-a-comprehensive-guide-for-graphic-designers.html"
+                    download="/dl/632959/c8e67c"
+                    deleted=""
+                    publisher="MIX"
+                    language="english"
+                    year="2005"
+                    extension="pdf"
+                    filesize="165.57 MB"
                     rating="5.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/3c63d10a6c636e0c4a2c325c4f306088b71cfe2576eff3e1738044162c57e9c7.jpg" />
-                    <div slot="title">How to Improve Your Working Memory: Unlock Your Unlimited Memory to Memorize Everything You Read and Hear, Apply Creative Visualization and Association ... (Accelerated Learning Techniques Book 4)</div>
-                                        <div slot="author">Arianna Peterson</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/855e223163d1ab48d317a53341be98d265b8d95112e4c7c06ee838608fc0639b.jpg" />
+                    <div slot="title">Color Management: A Comprehensive Guide for Graphic Designers</div>
+                                        <div slot="author">John Drew; Sarah Meyer</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="11915612"
-                    isbn=""
-                    termshash="4ade982f60d6b388be9292c7582434b3"
-                    href="/book/11915612/2b2b7a/how-to-improve-your-working-memory-unlock-your-unlimited-memory-to-memorize-everything-you-read-and.html"
-                    download="/dl/11915612/22640e"
+                                        id="5901785"
+                    isbn="9780715322956"
+                    termshash="3e2ad14feafaccb8b6e4a8fcfba82e47"
+                    href="/book/5901785/087c86/color-mixing-handbook.html"
+                    download="/dl/5901785/411256"
                     deleted=""
-                    publisher=""
+                    publisher="David &amp; Charles"
                     language="english"
-                    year="2020"
+                    year="2007"
+                    extension="epub"
+                    filesize="44.28 MB"
+                    rating="2.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5f165fa85c1dfa8e1c1eed68e7f682cbb4947b9d892ea376d92fd841dcc78393.jpg" />
+                    <div slot="title">Color Mixing Handbook</div>
+                                        <div slot="author">Various Contributors</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21468645"
+                    isbn="9781560108733"
+                    termshash=""
+                    href="/book/21468645/264f8a/color-mixing-recipes-for-oil-acrylic.html"
+                    download="/dl/21468645/ae82c3"
+                    deleted=""
+                    publisher="Walter Foster Publishing"
+                    language="english"
+                    year="2004"
                     extension="pdf"
-                    filesize="2.26 MB"
+                    filesize="6.55 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e47266bed4253e472d07dc2f1410f5ed363cc92aabaede4765140d4790598e66.jpg" />
-                    <div slot="title">How to Improve Your Working Memory: Unlock Your Unlimited Memory to Memorize Everything You Read and Hear, Apply Creative Visualization and Association ... (Accelerated Learning Techniques Book 4)</div>
-                                        <div slot="author">Peterson; Arianna</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/8a9cf2923766c83539cbc4b6d150b9d361938bb00f5607bba5f452e688a5d0dc.jpg" />
+                    <div slot="title">Color Mixing Recipes for Oil &amp; Acrylic</div>
+                                        <div slot="author">William F Powell</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="11321713"
-                    isbn="B08TCB4Z5F"
-                    termshash="1ecb3b5b79f45397fa2bee1783f00c5e"
-                    href="/book/11321713/b73581/memorization-techniques-3-manuscripts-in-1-book-including-how-to-improve-memory-how-to-mind-map-a.html"
-                    download="/dl/11321713/4b24f9"
+                                        id="25261552"
+                    isbn="9798366001120"
+                    termshash="4a2fb7e58611b829a8213db479a781bd"
+                    href="/book/25261552/4961d3/color-mixing-essentials.html"
+                    download="/dl/25261552/468fa1"
                     deleted=""
                     publisher="Independently Published"
                     language="english"
-                    year="2021"
-                    extension="pdf"
-                    filesize="1.35 MB"
-                    rating="3.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/fd2951b47883f481da0cde48a554e2da067e0ca78d1a495379f00691f53eb60d.jpg" />
-                    <div slot="title">Memorization Techniques, 3 Manuscripts in 1 Book, Including How to Improve Memory, How to Mind Map and How to Study Effectively</div>
-                                        <div slot="author">Bates; Troye</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2319619"
-                    isbn="9781843179535"
-                    termshash="8a9fa55ca3ff05bf0888e4dadf282caf"
-                    href="/book/2319619/537df5/how-to-think-like-sherlock-improve-your-powers-of-observation-memory-and-deduction.html"
-                    download="/dl/2319619/99f991"
-                    deleted=""
-                    publisher="Michael O'Mara"
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="4.84 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9bf6d727bf8f55e43b2c5a03e1ecaa1abc65da68e123843b1ecb6d0158df1d89.jpg" />
-                    <div slot="title">How to Think Like Sherlock: Improve Your Powers of Observation, Memory and Deduction</div>
-                                        <div slot="author">Daniel Smith</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2518405"
-                    isbn="9788184005219"
-                    termshash="0f6950f1d8890f844a9c6f6ca3dc86f1"
-                    href="/book/2518405/63220a/how-to-memorize-anything-the-ultimate-handbook-to-enlighten-and-improve-your-memory.html"
-                    download="/dl/2518405/575dea"
-                    deleted=""
-                    publisher="Penguin/Ebury Press"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="3.46 MB"
-                    rating="3.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/123c0901f43dbcd6d48dccbd6afa3ceac81c2700736cffd7a652446e656cf5c7.jpg" />
-                    <div slot="title">How to Memorize Anything: The Ultimate Handbook to Enlighten and Improve Your Memory</div>
-                                        <div slot="author">Aditi Singhal; Sudhir Singhal</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2516402"
-                    isbn="9781484984079"
-                    termshash="6a0fe051adeedbe5ce0eca993056db49"
-                    href="/book/2516402/c3a8d9/mind-maps-how-to-improve-memory-writer-smarter-plan-better-think-faster-and-make-more-money.html"
-                    download="/dl/2516402/7e8b95"
-                    deleted=""
-                    publisher="CreateSpace Independent Publishing Platform"
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="588 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7cb90fa68422764aec9e6c5bd921cd82f278052d73e14d452ffbafb8a9d4a2c0.jpg" />
-                    <div slot="title">Mind Maps: How to Improve Memory, Writer Smarter, Plan Better, Think Faster, and Make More Money</div>
-                                        <div slot="author">John S. Rhodes</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11179248"
-                    isbn="B08GG1PWYN"
-                    termshash="7ab4868531b97e29a439e7f8cb324a53"
-                    href="/book/11179248/8ee870/accelerated-learning-learn-how-high-performers-discover-new-skills-fast-improve-memory-increase.html"
-                    download="/dl/11179248/87cc70"
-                    deleted=""
-                    publisher="Madhan Kumar"
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="552 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/8e53741186d10e8232bee19d5de81fb8ba5fca944f45c26f5e4bfaac728f4308.jpg" />
-                    <div slot="title">Accelerated Learning - Learn How High Performers Discover New Skills Fast, Improve Memory, Increase Laser-Sharp Focus, and Increase Their Productivity Using Methods Such as Speed Reading</div>
-                                        <div slot="author">MADHAN KUMAR [KUMAR; MADHAN]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3315930"
-                    isbn=""
-                    termshash="38ad61179fcbd9e2830d83922e3e2054"
-                    href="/book/3315930/e5b20f/recall-forever-how-to-improve-your-memory-organize-your-mind-and-remember-everything.html"
-                    download="/dl/3315930/03d6d9"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="99 KB"
-                    rating="4.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/67930c6d560c79dc7f151d5f228bca9239e4d9e369b9bf62f105fb01e3b80cac.jpg" />
-                    <div slot="title">Recall Forever: How To Improve Your Memory, Organize Your Mind and Remember Everything</div>
-                                        <div slot="author">Lynch; George</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11124338"
-                    isbn="9798584045609"
-                    termshash="ae667242bf9d05df13b24588e450b772"
-                    href="/book/11124338/9a985d/the-super-memory-how-to-increase-memory-and-brain-power-3-memory-books-in-1-photographic-memory.html"
-                    download="/dl/11124338/5c847e"
-                    deleted=""
-                    publisher="upgrade"
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="73.26 MB"
+                    year="2022"
+                    extension="mobi"
+                    filesize="41.24 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c2400d708c59832a585745a54d5a7611d82c34baa273905cdeb8a1a5dd181069.jpg" />
-                    <div slot="title">The Super Memory: How to Increase Memory and Brain Power - 3 Memory Books in 1: Photographic Memory, Memory Training and Memory Improvement</div>
-                                        <div slot="author">Edoardo Zeloni Magelli</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/57b1f0cddbc264653efbb66063454ce9b81e28873344616d8410a7b732785abe.jpg" />
+                    <div slot="title">Color Mixing Essentials</div>
+                                        <div slot="author">Jan Matejak</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3608274"
-                    isbn=""
-                    termshash="43196f6476e2e2c68a90c522907e5b16"
-                    href="/book/3608274/f5ff2f/the-dale-carnegie-course-in-effective-speaking-human-relations-and-developing-courage-and-confidenc.html"
-                    download="/dl/3608274/ec8f9c"
+                                        id="19024413"
+                    isbn="9781585422197"
+                    termshash="fe13f61e34d3aab6f5f4b5e2766ef757"
+                    href="/book/19024413/ba7106/color-a-course-in-mastering-the-art-of-mixing-colors.html"
+                    download="/dl/19024413/3f8168"
                     deleted=""
-                    publisher="Dale Carnegie"
+                    publisher="TarcherPerigee"
                     language="english"
-                    year="1989"
+                    year="2004"
+                    extension="epub"
+                    filesize="32.54 MB"
+                    rating="0.0"
+                    quality="1.5"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b98c8eb20effb709951fd3ad6139b03936419d2f5ac823470ce586dceb35b9c8.jpg" />
+                    <div slot="title">Color: A Course in Mastering the Art of Mixing Colors</div>
+                                        <div slot="author">Betty Edwards</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="22316287"
+                    isbn="9781585422197"
+                    termshash="7471fb7556cfefab33e719febbbc5330"
+                    href="/book/22316287/d3bce3/color-a-course-in-mastering-the-art-of-mixing-colors.html"
+                    download="/dl/22316287/e232c6"
+                    deleted=""
+                    publisher="Penguin"
+                    language="english"
+                    year="2004"
                     extension="pdf"
-                    filesize="11.16 MB"
+                    filesize="30.96 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/20a44207628fb6e036d11f5107ce2cdfdcd4fbdf01ad6d0c71de1bf88c401a93.jpg" />
-                    <div slot="title">The Dale Carnegie course in effective speaking, human relations and developing courage and confidence, improving your memory, leadership training : how the course is conducted and what you do at each session</div>
-                                        <div slot="author">Dale Carnegie &amp; Associates; Inc.</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/70ebd85536e75d2492c4e3b67a6a31e3c73708547fb96013e059020ed2ea1019.jpg" />
+                    <div slot="title">Color: A Course in Mastering the Art of Mixing Colors </div>
+                                        <div slot="author">Betty Edwards</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3312591"
-                    isbn="9781519337337"
-                    termshash="c9a4bb8804c57257181e722680dd0981"
-                    href="/book/3312591/2d7a43/sleep-exact-blueprint-on-how-to-sleep-better-and-feel-amazing-brain-health-memory-improvement.html"
-                    download="/dl/3312591/305357"
+                                        id="23072542"
+                    isbn="9781585422197"
+                    termshash=""
+                    href="/book/23072542/d6f3a5/color-a-course-in-mastering-the-art-of-mixing-colors.html"
+                    download="/dl/23072542/736c64"
                     deleted=""
-                    publisher="[CreateSpace Independent Publishing Platform]"
+                    publisher="Penguin"
+                    language="english"
+                    year="2004"
+                    extension="pdf"
+                    filesize="44.47 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5b40a321e8b68c4d6826bd699f702b31cb1b234b777d5d9be991c196d08426f1.png" />
+                    <div slot="title">Color - A Course In Mastering The Art Of Mixing Colors</div>
+                                        <div slot="author">Betty Edwards</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="732803"
+                    isbn="9781585422197"
+                    termshash=""
+                    href="/book/732803/8f1f54/color-a-course-in-mastering-the-art-of-mixing-colors.html"
+                    download="/dl/732803/6eedb7"
+                    deleted=""
+                    publisher="Tarcher"
+                    language="english"
+                    year="2004"
+                    extension="djvu"
+                    filesize="23.13 MB"
+                    rating="5.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/e6f4f15a63177adfed474af1605d949a31dfadd9a37246a1d85aaf163519333c.jpg" />
+                    <div slot="title">Color: A Course in Mastering the Art of Mixing Colors</div>
+                                        <div slot="author">Betty Edwards</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11917186"
+                    isbn="B011P6OU2G"
+                    termshash="f959abc2fcfbd8d1820886ba0aae5b08"
+                    href="/book/11917186/6945a9/colored-pencil-collage-nature-drawing-and-painting-for-mixed-media.html"
+                    download="/dl/11917186/0757f5"
+                    deleted=""
+                    publisher="F+W Media"
                     language="english"
                     year="2015"
-                    extension="epub"
-                    filesize="358 KB"
+                    extension="pdf"
+                    filesize="17.48 MB"
                     rating="4.0"
-                    quality="5.0"
+                    quality="4.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a72d86ce188769fd29f54eb1d86e099f6717b4e297276e397286c3fc568fda6c.jpg" />
-                    <div slot="title">Sleep : exact blueprint on how to sleep better and feel amazing : brain health, memory improvement &amp; increase energy</div>
-                                        <div slot="author">Adams; Brian</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/02267de4a62ea332062dfa250ad4b3db29bd7fb49e7071291cce0d94ca3ce401.jpg" />
+                    <div slot="title">Colored Pencil Collage: Nature Drawing and Painting for Mixed Media</div>
+                                        <div slot="author">Hoernig; Kelly [Hoernig; Kelly]</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="16836185"
-                    isbn="B00LHWPE5G"
-                    termshash="7e30e89e2f5b176871823c7cdd6cc15c"
-                    href="/book/16836185/bd7c62/brain-training-exercise-your-mind-and-improve-your-memory-improve-memory-improve-your-memory-mem.html"
-                    download="/dl/16836185/eb9b47"
+                                        id="5848842"
+                    isbn="9781627887663"
+                    termshash="d5f6cdbe4bd733dcbe9cb4de8757a248"
+                    href="/book/5848842/7b0c44/color-lab-for-mixedmedia-artists.html"
+                    download="/dl/5848842/60c41f"
                     deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="159 KB"
-                    rating="1.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/031ffef9191d205ed41b44555f78e755cfe3b84361e6d54086b54cc96587897e.jpg" />
-                    <div slot="title">Brain Training: Exercise Your Mind and Improve Your Memory (Improve memory, improve your memory, memory improvement, brain training, how to improve memory, improving memory)</div>
-                                        <div slot="author">Thomas P. Lester</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="16836184"
-                    isbn="B00LHWPE5G"
-                    termshash="7e30e89e2f5b176871823c7cdd6cc15c"
-                    href="/book/16836184/a1afc9/brain-training-exercise-your-mind-and-improve-your-memory-improve-memory-improve-your-memory-mem.html"
-                    download="/dl/16836184/94e6ff"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="azw3"
-                    filesize="167 KB"
-                    rating="1.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f505ea108ecd1f99f1fc587865d47cc77f4416226fdc4cbe96bdcd3465fe45d0.jpg" />
-                    <div slot="title">Brain Training: Exercise Your Mind and Improve Your Memory (Improve memory, improve your memory, memory improvement, brain training, how to improve memory, improving memory)</div>
-                                        <div slot="author">Thomas P. Lester</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3316065"
-                    isbn=""
-                    termshash="3f5506dfdbfe549000b71a365f1277fc"
-                    href="/book/3316065/041b11/improve-your-memory-how-to-improve-memory-learn-faster-remember-more-gain-focus-and-increase-pro.html"
-                    download="/dl/3316065/1f84a4"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="87 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8795eee2ce2095d66c839384425e7b9c21409c3d4e470bb1cc96a7445b4b2a79.jpg" />
-                    <div slot="title">Improve Your Memory: How to improve memory, learn faster, remember more, gain focus and increase productivity: Improve Memory Using Reshed Methods</div>
-                                        <div slot="author">Masterson; John</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18266444"
-                    isbn="B00B2SKRB6"
-                    termshash="467b835e878bec66696e9d60f31f51c1"
-                    href="/book/18266444/9a956c/how-to-improve-memory-the-ultimate-mind-power-manual-the-best-brain-exercises-to-improve-your-me.html"
-                    download="/dl/18266444/2e5c0d"
-                    deleted=""
-                    publisher="Success Sculpting, Inc."
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="803 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2c6e90a98f2aefa13a4044c4ea5ce14e3a3fe70f90c47c3e9b63fca9816caf1a.jpg" />
-                    <div slot="title">How To Improve Memory - The Ultimate Mind Power Manual - The Best Brain Exercises to Improve Your Memory and Master Your Mind Power (Success Sculpting Coach Series)</div>
-                                        <div slot="author">Success Sculpting Coach</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5228000"
-                    isbn="9781558216532"
-                    termshash="467b835e878bec66696e9d60f31f51c1"
-                    href="/book/5228000/407dab/how-to-improve-memory-the-ultimate-mind-power-manual-the-best-brain-exercises-to-improve-your-me.html"
-                    download="/dl/5228000/f78c37"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="0"
-                    extension="epub"
-                    filesize="802 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="/img/cover-not-exists.png" />
-                    <div slot="title">How To Improve Memory - The Ultimate Mind Power Manual - The Best Brain Exercises to Improve Your Memory and Master Your Mind Power</div>
-                                        <div slot="author">Success Sculpting Coach; Success Sculpting Inc</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18607796"
-                    isbn=""
-                    termshash="1dc67b51bf6337bc760e618d582adb7a"
-                    href="/book/18607796/bdbe3a/memory-mastery-how-to-improve-memory-blazingly-fast-the-secrets-to-learning-faster-gaining-more-c.html"
-                    download="/dl/18607796/a1aac6"
-                    deleted=""
-                    publisher=""
+                    publisher="Rockport Publishers"
                     language="english"
                     year="2015"
                     extension="epub"
-                    filesize="176 KB"
+                    filesize="35.65 MB"
                     rating="0.0"
                     quality="5.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a5d65bdee6414111429cfcce4ea6a070bfafbbce76f5aa2b5a3860c34b562209.jpg" />
-                    <div slot="title">Memory Mastery. How to Improve Memory Blazingly Fast! The Secrets to Learning Faster, Gaining More Clarity, Easily Recalling Details &amp; Significantly Increasing Your Memory Capacity</div>
-                                        <div slot="author">Walter E. Samuelson</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7b7766ecb7ad7688b14b2fc6d9f9c7150bf544bcdcf83188624b0e0f1c902c42.jpg" />
+                    <div slot="title">Color Lab for Mixed-Media Artists</div>
+                                        <div slot="author">Deborah Forman</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="18091361"
-                    isbn="B09LFZD32H"
-                    termshash="c09e6fc0bd92ed4d043a4357b27db5fc"
-                    href="/book/18091361/73568e/how-to-improve-shortterm-memory-how-memory-works-why-it-declines-and-how-to-turn-it-around.html"
-                    download="/dl/18091361/8cf9d9"
+                                        id="22247423"
+                    isbn="9781600582837"
+                    termshash="8bb06c5063b10cdc86121448e0e4d979"
+                    href="/book/22247423/46f8fe/1500-color-mixing-recipes-for-oil-acrylic-watercolor-achieve-precise-color-when-painting-landscap.html"
+                    download="/dl/22247423/e869e0"
                     deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
-                    extension="pdf"
-                    filesize="1.24 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/26a06a5a0afbe69b46b232ce94d53dfdc2e749d865eedad855516d41ae5be4b8.jpg" />
-                    <div slot="title">How To Improve Short-Term Memory: How Memory Works, Why It Declines, and How To Turn It Around</div>
-                                        <div slot="author">Faulk; Todd</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="13531201"
-                    isbn=""
-                    termshash="731bb02d7707c9c671f483769a39ea9d"
-                    href="/book/13531201/2f344d/how-to-concentrate-like-einstein-the-lazy-students-way-to-instantly-improve-memory-grades-with-t.html"
-                    download="/dl/13531201/553904"
-                    deleted=""
-                    publisher="#PrB.rating#2.93"
+                    publisher="Walter Foster Publishing"
                     language="english"
                     year="2012"
-                    extension="epub"
-                    filesize="272 KB"
-                    rating="1.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/cfc9a49dbd9b76fa5cd19b6157e8494ad5a184dc277bad59e99afeaea43ebef9.jpg" />
-                    <div slot="title">How to Concentrate Like Einstein: The Lazy Student's Way to Instantly Improve Memory &amp; Grades With the Doctor Vittoz Secret Concentration Technique.</div>
-                                        <div slot="author">Remy Roulier [Roulier; Remy]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="22330756"
-                    isbn="B00O8L85FY"
-                    termshash="7f17f813dc5956c00e023d3b59008d28"
-                    href="/book/22330756/d4f2ed/memory-improvement-how-to-unlock-the-power-of-your-mind-and-remember-things-you-never-thought-poss.html"
-                    download="/dl/22330756/ef016d"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="165 KB"
+                    extension="pdf"
+                    filesize="18.98 MB"
                     rating="5.0"
-                    quality="5.0"
+                    quality="4.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/60da889dae1669886a996b59734e85416cd56eabf12e1617672588f0ed236b81.jpg" />
-                    <div slot="title">Memory Improvement · How to Unlock the Power of Your Mind and Remember Things You Never Thought Possible Forever! (Memory Improvement Techniques, Memory ... and Boost Brain Power, Brain Training)</div>
-                                        <div slot="author">Wallace; Jonathan</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b746144a2ede990a349f5c55e1f1532a7543fbc0670b4e6b85af9064757d1968.jpg" />
+                    <div slot="title">1,500 Color Mixing Recipes for Oil, Acrylic Watercolor: Achieve Precise Color When Painting Landscapes, Portraits, Still Lifes, and More</div>
+                                        <div slot="author">William F. Powell</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5664920"
-                    isbn=""
-                    termshash="1a00e891a94d8470ba342f864da0c2ee"
-                    href="/book/5664920/165855/memory-improvement-accelerated-learning-and-brain-training-learn-how-to-optimize-and-improve-your.html"
-                    download="/dl/5664920/5bdeee"
+                                        id="1094419"
+                    isbn="0896894800"
+                    termshash="7b9132162e93c793adddae0e7891190c"
+                    href="/book/1094419/f0eba6/the-beaders-color-mixing-directory-200-failsafe-color-schemes-for-beautiful-beadwork.html"
+                    download="/dl/1094419/6f2c56"
                     deleted=""
-                    publisher=""
+                    publisher="Krause Publications"
                     language="english"
-                    year="2019"
-                    extension="azw3"
-                    filesize="269 KB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9307abb876438831e2b61949f6b16b06ce993d423f644ec2bc3c05d28567379e.jpg" />
-                    <div slot="title">Memory Improvement, Accelerated Learning and Brain Training: Learn How to Optimize and Improve Your Memory and Learning Capabilities for Top Results in University and at Work</div>
-                                        <div slot="author">Adams; John</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="6077983"
-                    isbn=""
-                    termshash="92dac21f9433a7c94ea4dba9369e3ee5"
-                    href="/book/6077983/b83ffe/how-to-improve-your-memory-an-everyday-guide-to-improving-your-memory-advance-and-helpful-strategi.html"
-                    download="/dl/6077983/92961b"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2020"
-                    extension="epub"
-                    filesize="2.27 MB"
+                    year="2007"
+                    extension="pdf"
+                    filesize="14.51 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fd1ad77a12212c34c199373e317f06396313a159a9372d8b8e69a8026bdf7625.jpg" />
-                    <div slot="title">How to Improve Your Memory: An everyday guide to improving your memory. Advance and helpful strategies to help you remember things and increasing learning</div>
-                                        <div slot="author">Carlos; Benjamin</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c3326bab58699735a763801445e614f0107acd6f38c5c1c6139f7c5f422fa080.jpg" />
+                    <div slot="title">The Beader's Color Mixing Directory: 200 failsafe color schemes for beautiful beadwork</div>
+                                        <div slot="author">Sandra Wallace</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="14449011"
-                    isbn=""
-                    termshash="fd6fa7ad6d0761a23866501c66aba7e8"
-                    href="/book/14449011/4c7295/memory-improvement-how-to-improve-your-memory-in-just-30-days.html"
-                    download="/dl/14449011/ed10aa"
+                                        id="21450556"
+                    isbn="9781600582837"
+                    termshash="8bb06c5063b10cdc86121448e0e4d979"
+                    href="/book/21450556/5f360d/1500-color-mixing-recipes-for-oil-acrylic-watercolor.html"
+                    download="/dl/21450556/8a8027"
+                    deleted=""
+                    publisher="Walter Foster Pub"
+                    language="english"
+                    year="2012"
+                    extension="pdf"
+                    filesize="18.98 MB"
+                    rating="5.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5e4027f25eb6485f6bb47702cd1af7c92af5f3ea26146adfbab10c2e1938cad1.jpg" />
+                    <div slot="title">1,500 Color Mixing Recipes for Oil, Acrylic &amp; Watercolor</div>
+                                        <div slot="author">William F Powell</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5638147"
+                    isbn="9781633224919"
+                    termshash="c58e030d40f162ca5f5e2030ffe7d9b9"
+                    href="/book/5638147/610dea/beginning-color-mixing.html"
+                    download="/dl/5638147/7463f0"
                     deleted=""
                     publisher=""
                     language="english"
                     year="0"
-                    extension="epub"
-                    filesize="576 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c4da4ecec9cf217304171b966f7f807377dae9987aaa4802a27e92ff1157f8c3.jpg" />
-                    <div slot="title">Memory Improvement: How To Improve Your Memory In Just 30 Days</div>
-                                        <div slot="author">White; Ron [White; Ron]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5856268"
-                    isbn=""
-                    termshash="0d2b1cc89292568863abe688b905d67c"
-                    href="/book/5856268/489f70/memory-train-your-brain-the-complete-guide-on-how-to-improve-your-memory-think-faster-concentra.html"
-                    download="/dl/5856268/fd3616"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2017"
-                    extension="azw3"
-                    filesize="599 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8e61eece60bfd1908a6282e0dae7f0377a0c1a51c9760f3c9eee65e02c1b03be.jpg" />
-                    <div slot="title">Memory. Train Your Brain.: The Complete Guide on How to Improve Your Memory, Think Faster, Concentrate More and Remember Everything</div>
-                                        <div slot="author">Wood; Benjamin</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18431592"
-                    isbn="B077K8TBSH"
-                    termshash="0d2b1cc89292568863abe688b905d67c"
-                    href="/book/18431592/5ac3e8/memory-train-your-brain-the-complete-guide-on-how-to-improve-your-memory-think-faster-concentra.html"
-                    download="/dl/18431592/75f0a7"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2017"
-                    extension="epub"
-                    filesize="565 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/df0f013fc217c9910008e9f1db567bcacb42e02e3f53e2e661de2f6e1043aafc.jpg" />
-                    <div slot="title">Memory. Train Your Brain.: The Complete Guide on How to Improve Your Memory, Think Faster, Concentrate More and Remember Everything</div>
-                                        <div slot="author">Benjamin Wood</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3313208"
-                    isbn=""
-                    termshash="d1231a762ff2b3d1dce8464182bd697a"
-                    href="/book/3313208/ba826e/how-to-improve-your-memory-for-students-study-less-but-still-ace-your-classes.html"
-                    download="/dl/3313208/2be52c"
-                    deleted=""
-                    publisher="Johnny Briones"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="685 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/70ccd2db23037e7289603ebe3642cd1126f11df284f97794ed874c6ba64cbf54.jpg" />
-                    <div slot="title">How to Improve Your Memory for Students: Study Less But Still Ace Your Classes</div>
-                                        <div slot="author">Johnny Briones</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="17567607"
-                    isbn=""
-                    termshash="9316d34e028bb3394b8de2d11192dceb"
-                    href="/book/17567607/acf1b3/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
-                    download="/dl/17567607/c50552"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
-                    extension="epub"
-                    filesize="1.45 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/84ea42cb18137f6f18d195526c2563877dc0bed0e3e09fbf81ae14829a84b891.jpg" />
-                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
-                                        <div slot="author">Joseph Milano</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18204948"
-                    isbn=""
-                    termshash="bc516766665c8baca21362f9b170c525"
-                    href="/book/18204948/7f439a/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
-                    download="/dl/18204948/63f463"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
                     extension="pdf"
-                    filesize="1.50 MB"
+                    filesize="48.34 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2f559d2d17dec53e477e9e66cdba53662111ae5ccee5cbcbfb72078cc5587aaf.jpg" />
-                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
-                                        <div slot="author">Milano; Joseph</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/938a462dd077c2e604e040f935436b1c42cec395036127461176f128577af6cf.jpg" />
+                    <div slot="title">Beginning Color Mixing</div>
+                                        <div slot="author">Kimberly Adams</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="23197467"
-                    isbn="9781785926341"
-                    termshash="6b00ea0d65c7ab1d9232fa8fd5c38b7d"
-                    href="/book/23197467/54295d/how-can-i-remember-all-that-simple-stuff-to-improve-your-working-memory.html"
-                    download="/dl/23197467/b7b218"
+                                        id="23384293"
+                    isbn="9781681987798"
+                    termshash="0ff4585dddcbcef7cabd1c0d04207993"
+                    href="/book/23384293/882c88/mastering-color-mixing-with-watercolors-essays-on-art-creativity-photography-nature-and-life.html"
+                    download="/dl/23384293/b47b37"
                     deleted=""
-                    publisher="Jessica Kingsley Publishers"
-                    language="english"
-                    year="2019"
-                    extension="epub"
-                    filesize="1.67 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d0a6a1df34cbf91ed378ed500c6224860d65f175e373117953f2095ed56d3dce.jpg" />
-                    <div slot="title">How Can I Remember All That?: Simple Stuff to Improve Your Working Memory</div>
-                                        <div slot="author">Tracy Packiam Alloway</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18055896"
-                    isbn=""
-                    termshash="9316d34e028bb3394b8de2d11192dceb"
-                    href="/book/18055896/0ba1b2/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
-                    download="/dl/18055896/becddd"
-                    deleted=""
-                    publisher=""
+                    publisher="Rocky Nook"
                     language="english"
                     year="2021"
                     extension="epub"
-                    filesize="1.45 MB"
+                    filesize="30.90 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/09f283203d15ced8d392ee2cd20ad8ec80b5a5c6eb1c06fa100f9e97b170d9c1.jpg" />
-                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
-                                        <div slot="author">Milano; Joseph</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3fe6e7cba1e3cd8705a64ffea84e60c2ee1f023d758d0977031fa912ba2e7a2c.jpg" />
+                    <div slot="title">Mastering Color Mixing with Watercolors: Essays on Art, Creativity, Photography, Nature, and Life</div>
+                                        <div slot="author">Isabelle Roelofs; Fabien Petillion</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3313207"
-                    isbn=""
-                    termshash="f2cb7b9e0d916a523f14d475263b01a3"
-                    href="/book/3313207/dd2f7c/how-to-improve-your-memory-study-less-but-still-ace-your-classes.html"
-                    download="/dl/3313207/7921e0"
+                                        id="11316820"
+                    isbn="9780062043207"
+                    termshash="3af0ebbfd8d617eed8409b57cc231c79"
+                    href="/book/11316820/1a4621/the-hair-color-mix-book.html"
+                    download="/dl/11316820/5e18f4"
                     deleted=""
-                    publisher="Johnny Briones"
+                    publisher="HarperCollins"
                     language="english"
-                    year="2015"
-                    extension="mobi"
-                    filesize="726 KB"
+                    year="2007"
+                    extension="epub"
+                    filesize="4.42 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/39237c859b561a17533ba193a7e375d3228c58c4f2d949c760355d670468deef.jpg" />
-                    <div slot="title">How To Improve Your Memory: Study Less But Still Ace Your Classes</div>
-                                        <div slot="author">Briones; Johnny</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/01e5c1b7de924b112e2e48e97559d4929c49523593ff33a41691b0711f0cd372.jpg" />
+                    <div slot="title">The Hair Color Mix Book</div>
+                                        <div slot="author">Lorri Goddard-Clark</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="28018079"
-                    isbn="9788184006827"
-                    termshash="0f6950f1d8890f844a9c6f6ca3dc86f1"
-                    href="/book/28018079/3e823c/how-to-memorize-anything-the-ultimate-handbook-to-explore-and-improve-your-memory.html"
-                    download="/dl/28018079/04b726"
-                    deleted=""
-                    publisher="Penguin/Ebury Press"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="3.42 MB"
-                    rating="3.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9fbc589ac7bf53a248ef914d7736162b6c8bd7ea7ed0c3e810e9805f5ee4c3bc.jpg" />
-                    <div slot="title">How to Memorize Anything: The Ultimate Handbook to Explore and Improve Your Memory</div>
-                                        <div slot="author">Aditi Singhal &amp; Sudhir Singhal</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3313851"
-                    isbn=""
-                    termshash="fb423815304042f7a7fe4313fa03ee27"
-                    href="/book/3313851/3e10c5/brain-brilliance-amazing-lessons-on-how-to-improve-memory-blazingly-fast-and-find-out-how-to-learn.html"
-                    download="/dl/3313851/9b90c5"
+                                        id="19202976"
+                    isbn="9781311177421"
+                    termshash="7deab5ac1d2cb0ba2d24b5a23b7a433c"
+                    href="/book/19202976/8a0b71/how-to-mix-color-for-oil-and-acrylic-paint-100-mixing-formulas-book.html"
+                    download="/dl/19202976/d2e1f5"
                     deleted=""
                     publisher=""
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="155 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a5076f4516857f6428922b5b79345848b2ad675cf26a1f1debfe19a77936c0ea.jpg" />
-                    <div slot="title">Brain Brilliance: Amazing Lessons on How to Improve Memory Blazingly Fast and Find Out How to Learn Much Faster</div>
-                                        <div slot="author">Deleon; Pat</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25723871"
-                    isbn=""
-                    termshash="3f9160ad2feeb9557def3690851e8197"
-                    href="/book/25723871/76cc9a/mind-hacking-secrets-and-unlimited-memory-power-2-books-in-1-learn-how-to-improve-your-memory-de.html"
-                    download="/dl/25723871/54b021"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="0"
-                    extension="epub"
-                    filesize="787 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/6dd241a2ce5a8b6f92db3ec053159c5c3e29037434d357447b67c23508c2e021.jpg" />
-                    <div slot="title">Mind Hacking Secrets and Unlimited Memory Power: 2 Books in 1: Learn How to Improve Your Memory &amp; Develop Fast, Clear Thinking in 2 Weeks + 42 Brain Training Techniques &amp; Memory Improvement Exercises</div>
-                                        <div slot="author">Scott Sharp</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="26993690"
-                    isbn=""
-                    termshash="3f9160ad2feeb9557def3690851e8197"
-                    href="/book/26993690/35683a/mind-hacking-secrets-and-unlimited-memory-power-2-books-in-1-learn-how-to-improve-your-memory-de.html"
-                    download="/dl/26993690/e4c18b"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="1.81 MB"
-                    rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0a4faecb764603f333fa984aa1d3696d0344e1c9f3ac2d4f51e763f46e8ed3c0.jpg" />
-                    <div slot="title">Mind Hacking Secrets and Unlimited Memory Power: 2 Books in 1: Learn How to Improve Your Memory &amp; Develop Fast, Clear Thinking in 2 Weeks + 42 Brain Training Techniques &amp; Memory Improvement Exercises</div>
-                                        <div slot="author">Sharp; Scott</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18833308"
-                    isbn="B09PNV5V3T"
-                    termshash="43390f5fe76b688cddeb29acee91eeaa"
-                    href="/book/18833308/114dcc/accelerated-learning-how-to-learn-fast-improve-memory-save-your-time-and-be-successful.html"
-                    download="/dl/18833308/ce60ef"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2022"
-                    extension="epub"
-                    filesize="261 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/6745dc6831f3a8cbab999f94fc1a88cc935d03cbe4785299cd737b56276bc02d.jpg" />
-                    <div slot="title">Accelerated Learning: How to Learn Fast, Improve Memory, Save Your Time and Be Successful</div>
-                                        <div slot="author">David McLain</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="19083638"
-                    isbn=""
-                    termshash="8a0e4fe1757d32a92a445473f7f9146e"
-                    href="/book/19083638/30a530/mind-mapping-how-to-create-mind-maps-stepbystep-the-best-way-to-improve-memory-creativity-conc.html"
-                    download="/dl/19083638/f0b5e2"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2022"
-                    extension="epub"
-                    filesize="213 KB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="/img/cover-not-exists.png" />
-                    <div slot="title">Mind Mapping: How to Create Mind Maps Step-by-step (The Best Way to Improve Memory, Creativity, Concentration &amp; More)</div>
-                                        <div slot="author">Martin Thomson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18032779"
-                    isbn="B00J66Z2S4"
-                    termshash="2241f66aef7f59dddfa41b9b3b29eca3"
-                    href="/book/18032779/c367e5/mind-maps-the-ultimate-guide-to-mind-mapping-how-to-create-mind-maps-and-improve-memory-in-30-day.html"
-                    download="/dl/18032779/e6d7e5"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="141 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b89ff3fd5f3c6da6b6513999fad23eba9d930e34781d1cd35dcbf1365e137eb5.jpg" />
-                    <div slot="title">Mind Maps: The Ultimate Guide to Mind Mapping - How to Create Mind Maps and Improve Memory in 30 Days or Less</div>
-                                        <div slot="author">Mike Pakulski</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="14127269"
-                    isbn=""
-                    termshash="6a0fe051adeedbe5ce0eca993056db49"
-                    href="/book/14127269/f89abd/mind-maps-how-to-improve-memory-write-smarter-plan-better-think-faster-and-make-more-money.html"
-                    download="/dl/14127269/b231f3"
-                    deleted=""
-                    publisher="JJ Fast Publishing, LLC"
                     language="english"
                     year="2013"
                     extension="epub"
-                    filesize="588 KB"
+                    filesize="1.95 MB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ccae475f7072bde2870aee951393605302dd2ce6dec7fcbdbb501e0da455ffaa.jpg" />
-                    <div slot="title">Mind Maps: How to Improve Memory, Write Smarter, Plan Better, Think Faster, and Make More Money</div>
-                                        <div slot="author">John S. Rhodes [Rhodes; John S.]</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d463ed988fd86ac02577c4f74c5b2d5e7b48932b24f08d4801bad1e193bdfcd2.jpg" />
+                    <div slot="title">How to Mix Color For Oil and Acrylic Paint -100 Mixing Formulas Book</div>
+                                        <div slot="author">; ; ; ; </div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2516403"
-                    isbn="9781484984079"
-                    termshash="c806758f6995ae939d124aeb68fc3297"
-                    href="/book/2516403/b820b3/mind-maps-how-to-improve-memory-writer-smarter-plan-better-think-faster-and-make-more-money.html"
-                    download="/dl/2516403/2bd200"
+                                        id="5776256"
+                    isbn="9781572848344"
+                    termshash="aae05faff51b9f025cfbecbb791c9036"
+                    href="/book/5776256/ef18c2/the-color-of-love-a-story-of-a-mixedrace-jewish-girl.html"
+                    download="/dl/5776256/6c0cf4"
                     deleted=""
-                    publisher="CreateSpace Independent Publishing Platform"
-                    language="english"
-                    year="2013"
-                    extension="mobi"
-                    filesize="1.11 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7cb90fa68422764aec9e6c5bd921cd82f278052d73e14d452ffbafb8a9d4a2c0.jpg" />
-                    <div slot="title">Mind Maps: How to Improve Memory, Writer Smarter, Plan Better, Think Faster, and Make More Money</div>
-                                        <div slot="author">John S. Rhodes</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11179249"
-                    isbn="B08GG1PWYN"
-                    termshash="7ab4868531b97e29a439e7f8cb324a53"
-                    href="/book/11179249/63a9fa/accelerated-learning-learn-how-high-performers-discover-new-skills-fast-improve-memory-increase.html"
-                    download="/dl/11179249/65a9f6"
-                    deleted=""
-                    publisher="UNKNOWN"
-                    language="english"
-                    year="2020"
-                    extension="azw3"
-                    filesize="306 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1008215642cac43e3a5e0369624b97f6bee8d4a53c372020b93af911cc2935a8.jpg" />
-                    <div slot="title">Accelerated Learning - Learn How High Performers Discover New Skills Fast, Improve Memory, Increase Laser-Sharp Focus, and Increase Their Productivity Using Methods Such as Speed Reading</div>
-                                        <div slot="author">MADHAN KUMAR [KUMAR; MADHAN]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11029451"
-                    isbn="B07B3RJV7N"
-                    termshash="e5169a3cc9ec2feb9b131efda6d3f21a"
-                    href="/book/11029451/67fb16/accelerated-learning-crash-course-how-to-easily-learn-new-skills-and-subjects-develop-laser-sharp.html"
-                    download="/dl/11029451/0079b1"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2018"
-                    extension="epub"
-                    filesize="166 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e5d94360fec4883d4088f5557479b7c8565d900b21a5c1d78aee0d26d09ba3ed.jpg" />
-                    <div slot="title">Accelerated Learning Crash Course: How to Easily Learn New Skills and Subjects, Develop Laser Sharp Focus, Triple Your Reading Speed and Improve Your Memory Ability!</div>
-                                        <div slot="author">Sebastian Croft</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="29575538"
-                    isbn="B0CRBN42MW"
-                    termshash="8764d203325bcb6f26a24e5d18dce38e"
-                    href="/book/29575538/61fdf7/dopamine-detox-guide-on-how-to-rewire-your-brain-and-live-a-life-of-digital-minimalism-quit-social.html"
-                    download="/dl/29575538/2b3646"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2024"
-                    extension="epub"
-                    filesize="1.28 MB"
-                    rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c9c27d59424852a5900a0dd2627cc3dd723b1a92687451a5ca0a66b164560b83.jpg" />
-                    <div slot="title">Dopamine Detox: Guide On How To Rewire Your Brain and Live A Life Of Digital Minimalism, Quit Social Media, Do Hard Things, Improve Your Memory, Concentration, And Productivity</div>
-                                        <div slot="author">Harris; Christopher</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="16579124"
-                    isbn="B07XLJVHJG"
-                    termshash="6c3398c8e16e088648520c971a881f26"
-                    href="/book/16579124/bbddc8/the-science-of-selflearning-how-to-use-learning-strategies-to-thinking-faster-learn-yourself-anyt.html"
-                    download="/dl/16579124/87657b"
-                    deleted=""
-                    publisher=""
+                    publisher="Agate Bolden"
                     language="english"
                     year="2019"
-                    extension="azw3"
-                    filesize="433 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/fa27f0441f36fb83c38b0c053d3ecbaddbb3c67e34eb0cd6fc2d6cc856beeba0.jpg" />
-                    <div slot="title">THE SCIENCE OF SELF-LEARNING: How to Use Learning Strategies to Thinking Faster, Learn Yourself Anything, Improve Your Memory and Learning Capabilities</div>
-                                        <div slot="author">Wallace Wright [Wright; Wallace]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11022847"
-                    isbn=""
-                    termshash="e5169a3cc9ec2feb9b131efda6d3f21a"
-                    href="/book/11022847/303f42/accelerated-learning-crash-course-how-to-easily-learn-new-skills-and-subjects-develop-laser-sharp.html"
-                    download="/dl/11022847/14bcda"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2018"
-                    extension="mobi"
+                    extension="epub"
                     filesize="263 KB"
                     rating="0.0"
                     quality="0.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/10e4506d8f6a64ca7bdba2196d325cbbfdceafffecc79fe4bca04443723be60e.jpg" />
-                    <div slot="title">Accelerated Learning Crash Course: How to Easily Learn New Skills and Subjects, Develop Laser Sharp Focus, Triple Your Reading Speed and Improve Your Memory Ability!</div>
-                                        <div slot="author">Croft; Sebastian</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7d11885d00bef7f7e3e21b301a9ad12e4260a87143d8c4f67f876c071ba1f1e8.jpg" />
+                    <div slot="title">The Color of Love: A Story of a Mixed-Race Jewish Girl</div>
+                                        <div slot="author">Gad; Marra B.</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3317986"
-                    isbn=""
-                    termshash="398297ea929f714edf8d89e537093600"
-                    href="/book/3317986/86291a/secrets-of-how-to-improve-your-memory-and-to-stay-focused.html"
-                    download="/dl/3317986/476154"
+                                        id="11039501"
+                    isbn="9781440333392"
+                    termshash="ecd36309f96381a9db9f9590800f528a"
+                    href="/book/11039501/7168b1/incite-2-color-passions-incite-the-best-of-mixed-media.html"
+                    download="/dl/11039501/3c1dd3"
                     deleted=""
-                    publisher=""
+                    publisher="North Light Books;F+W Media"
                     language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="159 KB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1f83c617361693f7ee94ae567f2161c0427d53be649c6f64e8e76de50e4f2677.jpg" />
-                    <div slot="title">Secrets of how to improve your memory and to stay focused</div>
-                                        <div slot="author">Thompson; Oliver</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5849017"
-                    isbn=""
-                    termshash="2e3396a61b25cbf7d7a151182941ddcd"
-                    href="/book/5849017/f0fe10/accelerated-learning-an-effective-guide-on-how-to-learn-every-topic-faster-improving-your-memory-a.html"
-                    download="/dl/5849017/c489f1"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2018"
+                    year="2014"
                     extension="azw3"
-                    filesize="199 KB"
-                    rating="0.0"
-                    quality="0.0"
+                    filesize="13.79 MB"
+                    rating="1.0"
+                    quality="1.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3bc0fab9db3b17c27c1fb9a05c5b346c88e2045c09d49b34e80b58972f5753d0.jpg" />
-                    <div slot="title">Accelerated Learning: An Effective Guide On How To Learn Every Topic Faster Improving Your Memory, Attention And Comprehension Skills</div>
-                                        <div slot="author">Bell; Leonard</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d60ec68b852deeeb588484f3872dcd822a53d3d3680ba4579bc21f147305826b.jpg" />
+                    <div slot="title">Incite 2: Color Passions (Incite: The Best of Mixed Media)</div>
+                                        <div slot="author">Jenny; Tonia(Editor)</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="18623118"
-                    isbn=""
-                    termshash="890f5bc7d9a3076d0bef2ebce9ceebce"
-                    href="/book/18623118/9c6a4b/memory-improvement-memory-manipulation-how-to-train-your-brain-to-think-faster-concentrate-more.html"
-                    download="/dl/18623118/24f109"
+                                        id="23441582"
+                    isbn="9783110586862"
+                    termshash="3264c3f5323a5f8dba53adfda4636ea5"
+                    href="/book/23441582/e2999b/encyclopedia-of-color-dyes-pigments-volume-3-mixed-metal-oxide-pigments-zinc-sulfide-pigments.html"
+                    download="/dl/23441582/809aa9"
                     deleted=""
-                    publisher=""
+                    publisher="De Gruyter"
                     language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="460 KB"
+                    year="2022"
+                    extension="pdf"
+                    filesize="72.48 MB"
                     rating="0.0"
                     quality="5.0"
                                         premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5acde43bff800fc4dae94b23c04347f1d0655dec025ab79a3f3b50c295c86ef3.jpg" />
-                    <div slot="title">Memory Improvement: Memory Manipulation: How to Train Your Brain to Think Faster, Concentrate More, and Remember Anything</div>
-                                        <div slot="author">T. Whitmore</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/082b76eaabc51764e192ba8e027fbe2a61fbbac1192abeb60caec5092487f006.jpg" />
+                    <div slot="title">Encyclopedia of Color, Dyes, Pigments, Volume 3: Mixed Metal Oxide Pigments - Zinc Sulfide Pigments</div>
+                                        <div slot="author">Gerhard Pfaff</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23274156"
+                    isbn="9781644031681"
+                    termshash="bea8cc12d0b01160601f92ba0d50cace"
+                    href="/book/23274156/3b9d7a/fabric-weaving-play-with-color-pattern-12-projects-12-designs-to-mix-match.html"
+                    download="/dl/23274156/ca43e8"
+                    deleted=""
+                    publisher="Stash Books"
+                    language="english"
+                    year="2022"
+                    extension="epub"
+                    filesize="113.00 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/235b42c4d99326cfbdbda141e16720a679aeef736f4093208565c0ab6f601011.jpg" />
+                    <div slot="title">Fabric Weaving : Play with Color &amp; Pattern — 12 Projects, 12 Designs to Mix &amp; Match</div>
+                                        <div slot="author">Tara J. Curtis; Mathew Boudreaux</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16812123"
+                    isbn="9781631599965"
+                    termshash="7d0c2f312d530be0b97d662a8e294ab5"
+                    href="/book/16812123/3a1fbf/mixed-media-color-studio-explore-modern-color-theory-to-create-unique-palettes-and-find-your-creat.html"
+                    download="/dl/16812123/bc4512"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="26.90 MB"
+                    rating="3.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9aae30e2ee6655bf9d2460eb5ae59f9841ee691d2f35fef7161e8187af45d6ab.jpg" />
+                    <div slot="title">Mixed Media Color Studio : Explore Modern Color Theory to Create Unique Palettes and Find Your Creative Voice</div>
+                                        <div slot="author">Kellee Wynne Conrad</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="541354"
+                    isbn="9780821828120"
+                    termshash=""
+                    href="/book/541354/a41042/coloring-mixed-hypergraphs-theory-algorithms-and-applications.html"
+                    download="/dl/541354/70afcb"
+                    deleted=""
+                    publisher="American Mathematical Society, Fields Institute"
+                    language="english"
+                    year="2002"
+                    extension="djvu"
+                    filesize="1.09 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1e37f87fb4cb98aa56f1053b8f0cdbc13b9db266057d83534712ee344bc9fd55.jpg" />
+                    <div slot="title">Coloring mixed hypergraphs: theory, algorithms, and applications</div>
+                                        <div slot="author">Vitaly I. Voloshin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="697353"
+                    isbn="9780821828120"
+                    termshash="b1653f9ddeab5e8d5cb62b3def6b680f"
+                    href="/book/697353/9fa727/coloring-mixed-hypergraphs-theory-algorithms-and-applications.html"
+                    download="/dl/697353/4e2692"
+                    deleted=""
+                    publisher="American Mathematical Society, Fields Institute"
+                    language="english"
+                    year="2002"
+                    extension="djvu"
+                    filesize="1.73 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1e37f87fb4cb98aa56f1053b8f0cdbc13b9db266057d83534712ee344bc9fd55.jpg" />
+                    <div slot="title">Coloring Mixed Hypergraphs: Theory, Algorithms and Applications</div>
+                                        <div slot="author">Vitaly I. Voloshin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="720449"
+                    isbn="9780821828120"
+                    termshash="5585111a4835334577f6ef8e93ce2033"
+                    href="/book/720449/62a039/coloring-mixed-hypergraphs-theory-algorithms-and-applications.html"
+                    download="/dl/720449/486bbc"
+                    deleted=""
+                    publisher="American Mathematical Society, Fields Institute"
+                    language="english"
+                    year="2002"
+                    extension="djvu"
+                    filesize="1.70 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1e37f87fb4cb98aa56f1053b8f0cdbc13b9db266057d83534712ee344bc9fd55.jpg" />
+                    <div slot="title">Coloring mixed hypergraphs: theory, algorithms and applications</div>
+                                        <div slot="author">Vitaly I. Voloshin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2405651"
+                    isbn="9780821828120"
+                    termshash="5585111a4835334577f6ef8e93ce2033"
+                    href="/book/2405651/1e26cc/coloring-mixed-hypergraphs-theory-algorithms-and-applications.html"
+                    download="/dl/2405651/dcec4f"
+                    deleted=""
+                    publisher="AMS"
+                    language="english"
+                    year="2002"
+                    extension="djvu"
+                    filesize="9.58 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c7e27a48600cd4bfcad0692490d4ee4db4f08495d6075120d41f697a01a967af.jpg" />
+                    <div slot="title">Coloring Mixed Hypergraphs. Theory, Algorithms and Applications</div>
+                                        <div slot="author">Voloshin V.</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5911832"
+                    isbn="9781440338533"
+                    termshash="f959abc2fcfbd8d1820886ba0aae5b08"
+                    href="/book/5911832/cc1a7f/colored-pencil-collage-nature-drawing-and-painting-for-mixed-media.html"
+                    download="/dl/5911832/2915b2"
+                    deleted=""
+                    publisher="F+W Media"
+                    language="english"
+                    year="2015"
+                    extension="azw3"
+                    filesize="16.55 MB"
+                    rating="4.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b21236e1a1e8f1a3e1223a6b8f4dc527afdded3e3621697812848942295c7434.jpg" />
+                    <div slot="title">Colored Pencil Collage: Nature Drawing and Painting for Mixed Media</div>
+                                        <div slot="author">Hoernig; Kelly</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26478388"
+                    isbn="9781531504571"
+                    termshash="b5b6ef7fb4d16e90386a64b3a7f5de16"
+                    href="/book/26478388/3f5634/colorful-palate-a-flavorful-journey-through-a-mixed-american-experience.html"
+                    download="/dl/26478388/d523de"
+                    deleted=""
+                    publisher="Fordham University Press"
+                    language="english"
+                    year="2023"
+                    extension="pdf"
+                    filesize="1.59 MB"
+                    rating="0.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/19a3de69f43fb625138ff82b89498815a6b6d4664cd41d1a71ad7047a1e1f608.jpg" />
+                    <div slot="title">Colorful Palate: A Flavorful Journey Through a Mixed American Experience</div>
+                                        <div slot="author">Raj Tawney</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2271531"
+                    isbn="9780896894808"
+                    termshash="69c8646d18a0714425ee9f59d2eedd33"
+                    href="/book/2271531/88910c/the-beaders-color-mixing-directory-200-failsafe-color-schemes-for-beautiful-beadwork.html"
+                    download="/dl/2271531/51993b"
+                    deleted=""
+                    publisher="Krause Publ"
+                    language="english"
+                    year="2007"
+                    extension="pdf"
+                    filesize="14.59 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c3326bab58699735a763801445e614f0107acd6f38c5c1c6139f7c5f422fa080.jpg" />
+                    <div slot="title">The Beader's Color Mixing Directory: 200 failsafe color schemes for beautiful beadwork</div>
+                                        <div slot="author">Sandra Wallace</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17711197"
+                    isbn="9781633224919"
+                    termshash="c58e030d40f162ca5f5e2030ffe7d9b9"
+                    href="/book/17711197/3af072/portfolio-beginning-color-mixing.html"
+                    download="/dl/17711197/f520bf"
+                    deleted=""
+                    publisher="Walter Foster Publishing"
+                    language="english"
+                    year="2018"
+                    extension="epub"
+                    filesize="23.65 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b4c759da22fa1ea2126d619dd6058b239d94f781729d8a65da563c84f511d499.jpg" />
+                    <div slot="title">Portfolio: Beginning Color Mixing</div>
+                                        <div slot="author">Kimberly Adams [Adams; Kimberly]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="30588869"
+                    isbn=""
+                    termshash="c58e030d40f162ca5f5e2030ffe7d9b9"
+                    href="/book/30588869/9c3eee/portfolio-beginning-color-mixing.html"
+                    download="/dl/30588869/b366b0"
+                    deleted=""
+                    publisher="Walter Foster Publishing"
+                    language="english"
+                    year="2018"
+                    extension="epub"
+                    filesize="23.51 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/bfb93b26b479ffa3831ae1075eceaa489bb3570176cf4e1257d94846731e2106.jpg" />
+                    <div slot="title">Portfolio: Beginning Color Mixing</div>
+                                        <div slot="author">Kimberly Adams</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24391251"
+                    isbn="9780062043207"
+                    termshash="3af0ebbfd8d617eed8409b57cc231c79"
+                    href="/book/24391251/2b2825/the-hair-color-mix-book-more-than-150-recipes-for-salonperfect-color-at-home.html"
+                    download="/dl/24391251/f38eeb"
+                    deleted=""
+                    publisher="HarperCollins"
+                    language="english"
+                    year="2007"
+                    extension="epub"
+                    filesize="4.42 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5370533bab422184309c861c7743825fd3db054dcdf2496575e9773b28694839.jpg" />
+                    <div slot="title">The Hair Color Mix Book: More Than 150 Recipes for Salon-Perfect Color at Home</div>
+                                        <div slot="author">Lorri Goddard-Clark</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11528094"
+                    isbn="9780062043207"
+                    termshash="3af0ebbfd8d617eed8409b57cc231c79"
+                    href="/book/11528094/637462/the-hair-color-mix-book.html"
+                    download="/dl/11528094/808731"
+                    deleted=""
+                    publisher="HarperCollins"
+                    language="english"
+                    year="2007"
+                    extension="mobi"
+                    filesize="1.46 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/01e5c1b7de924b112e2e48e97559d4929c49523593ff33a41691b0711f0cd372.jpg" />
+                    <div slot="title">The Hair Color Mix Book</div>
+                                        <div slot="author">Lorri Goddard-Clark</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11509167"
+                    isbn="9780062043207"
+                    termshash="3af0ebbfd8d617eed8409b57cc231c79"
+                    href="/book/11509167/1f39f7/the-hair-color-mix-book.html"
+                    download="/dl/11509167/e84398"
+                    deleted=""
+                    publisher="HarperCollins"
+                    language="english"
+                    year="2007"
+                    extension="azw3"
+                    filesize="4.48 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/01e5c1b7de924b112e2e48e97559d4929c49523593ff33a41691b0711f0cd372.jpg" />
+                    <div slot="title">The Hair Color Mix Book</div>
+                                        <div slot="author">Lorri Goddard-Clark</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17386956"
+                    isbn="9781631595967"
+                    termshash="2bef0592a40fd24cc0c470790228cf4b"
+                    href="/book/17386956/9c0439/paint-alchemy-exploring-processdriven-techniques-through-design-pattern-color-abstraction-acry.html"
+                    download="/dl/17386956/c624fb"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2018"
+                    extension="pdf"
+                    filesize="45.12 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d7a35987823a7fd52c48d48e65f0817b5554a768e0f4d8d535949b92d430964c.jpg" />
+                    <div slot="title">Paint Alchemy: Exploring Process-Driven Techniques through Design, Pattern, Color, Abstraction, Acrylic and Mixed Media</div>
+                                        <div slot="author">Ms. Eva Marie Magill-Oliver</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25466632"
+                    isbn="9783110587128"
+                    termshash="79c85876b21975098cd1ca963370a399"
+                    href="/book/25466632/74f4b7/encyclopedia-of-color-dyes-pigments-volume-3-mixed-metal-oxide-pigments-zinc-sulfide-pigments.html"
+                    download="/dl/25466632/ef7509"
+                    deleted=""
+                    publisher="De Gruyter"
+                    language="english"
+                    year="2022"
+                    extension="epub"
+                    filesize="5.83 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0ed10e455237f9f1a8b01a0d723693949f1f2c0ff7c5d5af7b6a10be513b5114.jpg" />
+                    <div slot="title">Encyclopedia of Color, Dyes, Pigments: Volume 3 Mixed Metal Oxide Pigments - Zinc Sulfide Pigments</div>
+                                        <div slot="author"></div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25466655"
+                    isbn="9783110587128"
+                    termshash="3264c3f5323a5f8dba53adfda4636ea5"
+                    href="/book/25466655/312f85/encyclopedia-of-color-dyes-pigments-volume-3-mixed-metal-oxide-pigments-zinc-sulfide-pigments.html"
+                    download="/dl/25466655/40a29e"
+                    deleted=""
+                    publisher="De Gruyter"
+                    language="english"
+                    year="2022"
+                    extension="pdf"
+                    filesize="72.32 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0ed10e455237f9f1a8b01a0d723693949f1f2c0ff7c5d5af7b6a10be513b5114.jpg" />
+                    <div slot="title">Encyclopedia of Color, Dyes, Pigments: Volume 3 Mixed Metal Oxide Pigments - Zinc Sulfide Pigments</div>
+                                        <div slot="author"></div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23079050"
+                    isbn="9780814780718"
+                    termshash="736000a6169a9d4c46c0758c40383945"
+                    href="/book/23079050/fe6f52/the-new-colored-people-the-mixedrace-movement-in-america.html"
+                    download="/dl/23079050/0f2e8d"
+                    deleted=""
+                    publisher="NYU Press"
+                    language="english"
+                    year="1997"
+                    extension="pdf"
+                    filesize="37.61 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1b2e5a88d72863ecd298af87c705acf8913ba6413e131da1ef0816eddcc0dcab.jpg" />
+                    <div slot="title">The New Colored People : The Mixed-Race Movement in America</div>
+                                        <div slot="author">Jon M. Spencer</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21856835"
+                    isbn="9781631599965"
+                    termshash="7d0c2f312d530be0b97d662a8e294ab5"
+                    href="/book/21856835/4979c0/mixed-media-color-studio-explore-modern-color-theory-to-create-unique-palettes-and-find-your-creati.html"
+                    download="/dl/21856835/02e374"
+                    deleted=""
+                    publisher="Quarry Books"
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="26.90 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9aae30e2ee6655bf9d2460eb5ae59f9841ee691d2f35fef7161e8187af45d6ab.jpg" />
+                    <div slot="title">Mixed Media Color Studio: Explore Modern Color Theory to Create Unique Palettes and Find Your Creative Voice</div>
+                                        <div slot="author">Kellee Wynne Conrad</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24477914"
+                    isbn="9781440303173"
+                    termshash="c4c7b637071cb0111b7a6807365e1f83"
+                    href="/book/24477914/1795aa/flavor-for-mixed-media-a-feast-of-techniques-for-texture-color-and-layers.html"
+                    download="/dl/24477914/5ad1f4"
+                    deleted=""
+                    publisher="Penguin Publishing Group"
+                    language="english"
+                    year="2011"
+                    extension="epub"
+                    filesize="25.60 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/36d61c5d3d04da06a00dc23868a40cd0e1069029d6ef401a41d09019335e9c21.jpg" />
+                    <div slot="title">Flavor for Mixed Media: A Feast of Techniques for Texture, Color and Layers</div>
+                                        <div slot="author">Mary Beth Shaw</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="602069"
+                    isbn=""
+                    termshash="71d83e6b085e2f3bd09158e84c3c44b2"
+                    href="/book/602069/9b9e6e/analysis-of-mixed-paints-color-pigments-and-varnishes-1-ed.html"
+                    download="/dl/602069/b1ba69"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="1908"
+                    extension="pdf"
+                    filesize="34.82 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fc7cdf916783db45245c223e3c94d4f8d7850c5a6245d86fe03b8cf4dd93367b.jpg" />
+                    <div slot="title">Analysis of mixed paints, color pigments and varnishes 1 ed.</div>
+                                        <div slot="author">Holley Clifford Dyer</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25732160"
+                    isbn="9781630886936"
+                    termshash="a92c244c53065653a23da26219b33b27"
+                    href="/book/25732160/73e846/remix-transitioning-your-church-to-living-color.html"
+                    download="/dl/25732160/c1b080"
+                    deleted=""
+                    publisher="Abingdon Press"
+                    language="english"
+                    year="2016"
+                    extension="epub"
+                    filesize="458 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/622ba17fdbd0e6457ee2d03ee11fd3a4dc78498e74708378b2b24555c9249ff6.jpg" />
+                    <div slot="title">Re:MIX : Transitioning Your Church to Living Color</div>
+                                        <div slot="author">Mark DeYmaz; Bob Whitesel</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11187905"
+                    isbn="2188241952"
+                    termshash="46f628e3816ae0ac5e6e241b1ee5cb91"
+                    href="/book/11187905/cb4c36/the-mixed-multitude-jews-of-color-in-the-american-jewish-community.html"
+                    download="/dl/11187905/4c5fe3"
+                    deleted=""
+                    publisher="University of North Carolina"
+                    language="english"
+                    year="2019"
+                    extension="pdf"
+                    filesize="224 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/cd27c5252450afeed36a201ac7bf13b1ac63cb7d7ffe0b502c8092c73c22d35b.jpg" />
+                    <div slot="title">The Mixed Multitude - Jews of Color in the American Jewish Community</div>
+                                        <div slot="author">Kendra Watkins</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
