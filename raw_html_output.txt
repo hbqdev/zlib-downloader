@@ -1,1149 +1,1149 @@
 <z-bookcard
-                                        id="883796"
-                    isbn="9780756651411"
-                    termshash="e1f095553cb4b23e9e60ff6ba0113840"
-                    href="/book/883796/5d377e/sketch-book-for-the-artist.html"
-                    download="/dl/883796/c9a068"
-                    deleted=""
-                    publisher="DK"
-                    language="english"
-                    year="2009"
-                    extension="pdf"
-                    filesize="98.59 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8962ac54621b9be7c2c501b2af85ba7a92f1428eeb0bf0871fc7866a453417f6.jpg" />
-                    <div slot="title">Sketch Book for the Artist</div>
-                    <div slot="author">Sarah Simblet</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2517100"
-                    isbn="9781465429872"
-                    termshash="17f249294a8d51dad1cbd525d64bd1f2"
-                    href="/book/2517100/8444d0/the-shakespeare-book-big-ideas-simply-explained-dk-big-ideas.html"
-                    download="/dl/2517100/238d61"
-                    deleted=""
-                    publisher="DK"
-                    language="english"
-                    year="2015"
-                    extension="pdf"
-                    filesize="38.98 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0fd6ce610ab1ef42ee19a6f3b6a6766deb3aa93eea09767a128edacf474c30d0.jpg" />
-                    <div slot="title">The Shakespeare Book: Big Ideas Simply Explained (DK Big Ideas)</div>
-                    <div slot="author">DK</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5577068"
-                    isbn="9780981624938"
-                    termshash="2672e90d1fe240486418cbe22fe10e55"
-                    href="/book/5577068/1324c2/art-models-4.html"
-                    download="/dl/5577068/2815ec"
-                    deleted=""
-                    publisher="Live Model Books"
-                    language="english"
-                    year="2009"
-                    extension="pdf"
-                    filesize="31.23 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/590d2d8bde2db2066fd4e069d003ec860ce188dc5b7ec5c6690cde6c1b041244.jpg" />
-                    <div slot="title">Art Models 4</div>
-                    <div slot="author">Maureen Johnson; Douglas Johnson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5865293"
-                    isbn="9781936801046"
-                    termshash="a52aca3fdfb378a0c1d7a8477dcd441e"
-                    href="/book/5865293/67dbee/art-models-5.html"
-                    download="/dl/5865293/f76e07"
-                    deleted=""
-                    publisher="Live Model Books"
-                    language="english"
-                    year="2010"
-                    extension="epub"
-                    filesize="28.86 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0153482f16fbe4a16623c07628fe1f310858128a2aedfcb1a806750e0561d30e.jpg" />
-                    <div slot="title">Art Models 5</div>
-                    <div slot="author">Maureen Johnson; Douglas Johnson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5272730"
+                                        id="3317987"
                     isbn=""
-                    termshash="485051fecc79d1f8b6cac658f1a8d7f8"
-                    href="/book/5272730/62267d/how-to-learn-anatomy.html"
-                    download="/dl/5272730/fdb246"
+                    termshash="398297ea929f714edf8d89e537093600"
+                    href="/book/3317987/641f72/how-to-improve-your-concentration-the-7-secrets-of-how-to-improve-your-memory-and-to-stay-focused.html"
+                    download="/dl/3317987/ad1b3d"
                     deleted=""
                     publisher=""
                     language="english"
-                    year="2019"
+                    year="2014"
                     extension="pdf"
-                    filesize="26.18 MB"
+                    filesize="469 KB"
                     rating="5.0"
                     quality="5.0"
-                                        premium                    contentTypeParam = ""
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/07878de57921e0323904db91009751ff82d621fe432d32e903538bc583679e0d.jpg" />
-                    <div slot="title">How to Learn Anatomy</div>
-                    <div slot="author">Mitch Leeuwe</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/dbb63e50142878bcd15a88a42cd012ea95a7f3eb966c911eeea3d83742623db0.jpg" />
+                    <div slot="title">How to Improve Your Concentration: The 7 Secrets of How to Improve Your Memory and to Stay Focused</div>
+                                        <div slot="author">Thompson; Oliver</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3334903"
-                    isbn="9780195052060"
-                    termshash=""
-                    href="/book/3334903/61b04c/human-anatomy-for-artists-the-elements-of-form.html"
-                    download="/dl/3334903/d366cf"
+                                        id="1167409"
+                    isbn="9781937918767"
+                    termshash="55c1e3a4c3c4c0fe5076f8dda517fb29"
+                    href="/book/1167409/c02ec3/memory-improvement-how-to-improve-your-memory-in-just-30-days.html"
+                    download="/dl/1167409/6f8b1b"
                     deleted=""
-                    publisher="Oxford University Press"
-                    language="english"
-                    year="1991"
-                    extension="pdf"
-                    filesize="83.54 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1e99230f3c44afdf698ba88bcaf90afc2e0d84c4e31326bdd293b55b384a89e7.jpg" />
-                    <div slot="title">Human Anatomy for Artists : The Elements of Form</div>
-                    <div slot="author">Eliot Goldfinger</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2579921"
-                    isbn="9781592538386"
-                    termshash="94dfba2e2d5df20e93a43f0118f5acad"
-                    href="/book/2579921/c736db/20-ways-to-draw-a-cat-and-44-other-awesome-animals.html"
-                    download="/dl/2579921/b7b753"
-                    deleted=""
-                    publisher="Quarry Books"
+                    publisher="Laurenzana Press"
                     language="english"
                     year="2013"
                     extension="pdf"
-                    filesize="52.61 MB"
+                    filesize="1.12 MB"
                     rating="5.0"
                     quality="5.0"
-                                        premium                    contentTypeParam = ""
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/717f5ff6cdc60fdb104d577addfe5e2259260f1a726afdc00f93c4a1365e8a97.jpg" />
-                    <div slot="title">20 Ways to Draw a Cat and 44 Other Awesome Animals</div>
-                    <div slot="author">Julia Kuo</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/154ba7d144bbc8dd1bc064558c62d291635808de55ca0765029543cda60e34c0.jpg" />
+                    <div slot="title">Memory Improvement: How To Improve Your Memory In Just 30 Days</div>
+                                        <div slot="author">Ron White</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3685887"
-                    isbn="9781633225909"
-                    termshash="3e4ecdf2aa01cdfb462526c90fa57efa"
-                    href="/book/3685887/186d81/special-subjects-basic-color-theory-an-introduction-to-color-for-beginning-artists.html"
-                    download="/dl/3685887/c2805a"
+                                        id="11915611"
+                    isbn=""
+                    termshash="4ade982f60d6b388be9292c7582434b3"
+                    href="/book/11915611/8593b4/how-to-improve-your-working-memory-unlock-your-unlimited-memory-to-memorize-everything-you-read-and.html"
+                    download="/dl/11915611/1a633f"
                     deleted=""
-                    publisher="Walter Foster Publishing"
+                    publisher=""
                     language="english"
-                    year="2018"
+                    year="2020"
                     extension="epub"
-                    filesize="26.89 MB"
+                    filesize="1.87 MB"
                     rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/90d7b6ccc013f35f93c6e6f4bc9291ae58310a4ed15828d7fee6201e054c9894.jpg" />
-                    <div slot="title">Special Subjects: Basic Color Theory: An Introduction to Color for Beginning Artists</div>
-                    <div slot="author">Patti Mollica</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/3c63d10a6c636e0c4a2c325c4f306088b71cfe2576eff3e1738044162c57e9c7.jpg" />
+                    <div slot="title">How to Improve Your Working Memory: Unlock Your Unlimited Memory to Memorize Everything You Read and Hear, Apply Creative Visualization and Association ... (Accelerated Learning Techniques Book 4)</div>
+                                        <div slot="author">Arianna Peterson</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5460345"
-                    isbn="9789198227734"
-                    termshash="cf0df95811f91471fbbba4f8f823f929"
-                    href="/book/5460345/bb74d6/the-character-designer.html"
-                    download="/dl/5460345/200c12"
+                                        id="11915612"
+                    isbn=""
+                    termshash="4ade982f60d6b388be9292c7582434b3"
+                    href="/book/11915612/2b2b7a/how-to-improve-your-working-memory-unlock-your-unlimited-memory-to-memorize-everything-you-read-and.html"
+                    download="/dl/11915612/22640e"
                     deleted=""
-                    publisher="21D Sweden AB"
-                    language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="206.39 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8cf7aca3226f4df524144e5218fc9e7a9b3839407f25cdf3894fc131f57545bd.jpg" />
-                    <div slot="title">The Character Designer</div>
-                    <div slot="author">21 Draw</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11639122"
-                    isbn="9788194815013"
-                    termshash="1908f53ab7971c7868e7f5763a8878f1"
-                    href="/book/11639122/5298dc/26-years-upsc-ias-ips-prelims-topicwise-solved-papers-1-2-1995-2020-11th-edition.html"
-                    download="/dl/11639122/4708aa"
-                    deleted=""
-                    publisher="Disha Publications"
+                    publisher=""
                     language="english"
                     year="2020"
                     extension="pdf"
-                    filesize="60.67 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
+                    filesize="2.26 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3f25f0a1790bf92b469de4b2e835c77c76ec817f834f654ad4608b04929e724a.jpg" />
-                    <div slot="title">26 Years UPSC IAS/ IPS Prelims Topic-wise Solved Papers 1 &amp; 2 (1995 - 2020) 11th Edition</div>
-                    <div slot="author">Mrunal Patel</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e47266bed4253e472d07dc2f1410f5ed363cc92aabaede4765140d4790598e66.jpg" />
+                    <div slot="title">How to Improve Your Working Memory: Unlock Your Unlimited Memory to Memorize Everything You Read and Hear, Apply Creative Visualization and Association ... (Accelerated Learning Techniques Book 4)</div>
+                                        <div slot="author">Peterson; Arianna</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5338282"
-                    isbn="9789198227734"
-                    termshash="2040557f890dbef1c74ccadec56ce5df"
-                    href="/book/5338282/74f3f6/the-character-designer-ebook-2.html"
-                    download="/dl/5338282/3c595d"
+                                        id="11321713"
+                    isbn="B08TCB4Z5F"
+                    termshash="1ecb3b5b79f45397fa2bee1783f00c5e"
+                    href="/book/11321713/b73581/memorization-techniques-3-manuscripts-in-1-book-including-how-to-improve-memory-how-to-mind-map-a.html"
+                    download="/dl/11321713/4b24f9"
+                    deleted=""
+                    publisher="Independently Published"
+                    language="english"
+                    year="2021"
+                    extension="pdf"
+                    filesize="1.35 MB"
+                    rating="3.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/fd2951b47883f481da0cde48a554e2da067e0ca78d1a495379f00691f53eb60d.jpg" />
+                    <div slot="title">Memorization Techniques, 3 Manuscripts in 1 Book, Including How to Improve Memory, How to Mind Map and How to Study Effectively</div>
+                                        <div slot="author">Bates; Troye</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2319619"
+                    isbn="9781843179535"
+                    termshash="8a9fa55ca3ff05bf0888e4dadf282caf"
+                    href="/book/2319619/537df5/how-to-think-like-sherlock-improve-your-powers-of-observation-memory-and-deduction.html"
+                    download="/dl/2319619/99f991"
+                    deleted=""
+                    publisher="Michael O'Mara"
+                    language="english"
+                    year="2013"
+                    extension="epub"
+                    filesize="4.84 MB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9bf6d727bf8f55e43b2c5a03e1ecaa1abc65da68e123843b1ecb6d0158df1d89.jpg" />
+                    <div slot="title">How to Think Like Sherlock: Improve Your Powers of Observation, Memory and Deduction</div>
+                                        <div slot="author">Daniel Smith</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2518405"
+                    isbn="9788184005219"
+                    termshash="0f6950f1d8890f844a9c6f6ca3dc86f1"
+                    href="/book/2518405/63220a/how-to-memorize-anything-the-ultimate-handbook-to-enlighten-and-improve-your-memory.html"
+                    download="/dl/2518405/575dea"
+                    deleted=""
+                    publisher="Penguin/Ebury Press"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="3.46 MB"
+                    rating="3.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/123c0901f43dbcd6d48dccbd6afa3ceac81c2700736cffd7a652446e656cf5c7.jpg" />
+                    <div slot="title">How to Memorize Anything: The Ultimate Handbook to Enlighten and Improve Your Memory</div>
+                                        <div slot="author">Aditi Singhal; Sudhir Singhal</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2516402"
+                    isbn="9781484984079"
+                    termshash="6a0fe051adeedbe5ce0eca993056db49"
+                    href="/book/2516402/c3a8d9/mind-maps-how-to-improve-memory-writer-smarter-plan-better-think-faster-and-make-more-money.html"
+                    download="/dl/2516402/7e8b95"
+                    deleted=""
+                    publisher="CreateSpace Independent Publishing Platform"
+                    language="english"
+                    year="2013"
+                    extension="epub"
+                    filesize="588 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7cb90fa68422764aec9e6c5bd921cd82f278052d73e14d452ffbafb8a9d4a2c0.jpg" />
+                    <div slot="title">Mind Maps: How to Improve Memory, Writer Smarter, Plan Better, Think Faster, and Make More Money</div>
+                                        <div slot="author">John S. Rhodes</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11179248"
+                    isbn="B08GG1PWYN"
+                    termshash="7ab4868531b97e29a439e7f8cb324a53"
+                    href="/book/11179248/8ee870/accelerated-learning-learn-how-high-performers-discover-new-skills-fast-improve-memory-increase.html"
+                    download="/dl/11179248/87cc70"
+                    deleted=""
+                    publisher="Madhan Kumar"
+                    language="english"
+                    year="2020"
+                    extension="pdf"
+                    filesize="552 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/8e53741186d10e8232bee19d5de81fb8ba5fca944f45c26f5e4bfaac728f4308.jpg" />
+                    <div slot="title">Accelerated Learning - Learn How High Performers Discover New Skills Fast, Improve Memory, Increase Laser-Sharp Focus, and Increase Their Productivity Using Methods Such as Speed Reading</div>
+                                        <div slot="author">MADHAN KUMAR [KUMAR; MADHAN]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3315930"
+                    isbn=""
+                    termshash="38ad61179fcbd9e2830d83922e3e2054"
+                    href="/book/3315930/e5b20f/recall-forever-how-to-improve-your-memory-organize-your-mind-and-remember-everything.html"
+                    download="/dl/3315930/03d6d9"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2014"
+                    extension="epub"
+                    filesize="99 KB"
+                    rating="4.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/67930c6d560c79dc7f151d5f228bca9239e4d9e369b9bf62f105fb01e3b80cac.jpg" />
+                    <div slot="title">Recall Forever: How To Improve Your Memory, Organize Your Mind and Remember Everything</div>
+                                        <div slot="author">Lynch; George</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11124338"
+                    isbn="9798584045609"
+                    termshash="ae667242bf9d05df13b24588e450b772"
+                    href="/book/11124338/9a985d/the-super-memory-how-to-increase-memory-and-brain-power-3-memory-books-in-1-photographic-memory.html"
+                    download="/dl/11124338/5c847e"
+                    deleted=""
+                    publisher="upgrade"
+                    language="english"
+                    year="2020"
+                    extension="pdf"
+                    filesize="73.26 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c2400d708c59832a585745a54d5a7611d82c34baa273905cdeb8a1a5dd181069.jpg" />
+                    <div slot="title">The Super Memory: How to Increase Memory and Brain Power - 3 Memory Books in 1: Photographic Memory, Memory Training and Memory Improvement</div>
+                                        <div slot="author">Edoardo Zeloni Magelli</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3608274"
+                    isbn=""
+                    termshash="43196f6476e2e2c68a90c522907e5b16"
+                    href="/book/3608274/f5ff2f/the-dale-carnegie-course-in-effective-speaking-human-relations-and-developing-courage-and-confidenc.html"
+                    download="/dl/3608274/ec8f9c"
+                    deleted=""
+                    publisher="Dale Carnegie"
+                    language="english"
+                    year="1989"
+                    extension="pdf"
+                    filesize="11.16 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/20a44207628fb6e036d11f5107ce2cdfdcd4fbdf01ad6d0c71de1bf88c401a93.jpg" />
+                    <div slot="title">The Dale Carnegie course in effective speaking, human relations and developing courage and confidence, improving your memory, leadership training : how the course is conducted and what you do at each session</div>
+                                        <div slot="author">Dale Carnegie &amp; Associates; Inc.</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3312591"
+                    isbn="9781519337337"
+                    termshash="c9a4bb8804c57257181e722680dd0981"
+                    href="/book/3312591/2d7a43/sleep-exact-blueprint-on-how-to-sleep-better-and-feel-amazing-brain-health-memory-improvement.html"
+                    download="/dl/3312591/305357"
+                    deleted=""
+                    publisher="[CreateSpace Independent Publishing Platform]"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="358 KB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a72d86ce188769fd29f54eb1d86e099f6717b4e297276e397286c3fc568fda6c.jpg" />
+                    <div slot="title">Sleep : exact blueprint on how to sleep better and feel amazing : brain health, memory improvement &amp; increase energy</div>
+                                        <div slot="author">Adams; Brian</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16836185"
+                    isbn="B00LHWPE5G"
+                    termshash="7e30e89e2f5b176871823c7cdd6cc15c"
+                    href="/book/16836185/bd7c62/brain-training-exercise-your-mind-and-improve-your-memory-improve-memory-improve-your-memory-mem.html"
+                    download="/dl/16836185/eb9b47"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2014"
+                    extension="epub"
+                    filesize="159 KB"
+                    rating="1.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/031ffef9191d205ed41b44555f78e755cfe3b84361e6d54086b54cc96587897e.jpg" />
+                    <div slot="title">Brain Training: Exercise Your Mind and Improve Your Memory (Improve memory, improve your memory, memory improvement, brain training, how to improve memory, improving memory)</div>
+                                        <div slot="author">Thomas P. Lester</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16836184"
+                    isbn="B00LHWPE5G"
+                    termshash="7e30e89e2f5b176871823c7cdd6cc15c"
+                    href="/book/16836184/a1afc9/brain-training-exercise-your-mind-and-improve-your-memory-improve-memory-improve-your-memory-mem.html"
+                    download="/dl/16836184/94e6ff"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2014"
+                    extension="azw3"
+                    filesize="167 KB"
+                    rating="1.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f505ea108ecd1f99f1fc587865d47cc77f4416226fdc4cbe96bdcd3465fe45d0.jpg" />
+                    <div slot="title">Brain Training: Exercise Your Mind and Improve Your Memory (Improve memory, improve your memory, memory improvement, brain training, how to improve memory, improving memory)</div>
+                                        <div slot="author">Thomas P. Lester</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3316065"
+                    isbn=""
+                    termshash="3f5506dfdbfe549000b71a365f1277fc"
+                    href="/book/3316065/041b11/improve-your-memory-how-to-improve-memory-learn-faster-remember-more-gain-focus-and-increase-pro.html"
+                    download="/dl/3316065/1f84a4"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2016"
+                    extension="epub"
+                    filesize="87 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8795eee2ce2095d66c839384425e7b9c21409c3d4e470bb1cc96a7445b4b2a79.jpg" />
+                    <div slot="title">Improve Your Memory: How to improve memory, learn faster, remember more, gain focus and increase productivity: Improve Memory Using Reshed Methods</div>
+                                        <div slot="author">Masterson; John</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18266444"
+                    isbn="B00B2SKRB6"
+                    termshash="467b835e878bec66696e9d60f31f51c1"
+                    href="/book/18266444/9a956c/how-to-improve-memory-the-ultimate-mind-power-manual-the-best-brain-exercises-to-improve-your-me.html"
+                    download="/dl/18266444/2e5c0d"
+                    deleted=""
+                    publisher="Success Sculpting, Inc."
+                    language="english"
+                    year="2013"
+                    extension="epub"
+                    filesize="803 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2c6e90a98f2aefa13a4044c4ea5ce14e3a3fe70f90c47c3e9b63fca9816caf1a.jpg" />
+                    <div slot="title">How To Improve Memory - The Ultimate Mind Power Manual - The Best Brain Exercises to Improve Your Memory and Master Your Mind Power (Success Sculpting Coach Series)</div>
+                                        <div slot="author">Success Sculpting Coach</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5228000"
+                    isbn="9781558216532"
+                    termshash="467b835e878bec66696e9d60f31f51c1"
+                    href="/book/5228000/407dab/how-to-improve-memory-the-ultimate-mind-power-manual-the-best-brain-exercises-to-improve-your-me.html"
+                    download="/dl/5228000/f78c37"
                     deleted=""
                     publisher=""
                     language="english"
                     year="0"
-                    extension="pdf"
-                    filesize="96.95 MB"
-                    rating="3.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b9a0e7397026600d94c22cf629e2b8e838b0127974a58867c515fc6051a0c5f6.jpg" />
-                    <div slot="title">The Character Designer eBook 2</div>
-                    <div slot="author">21 Draw</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="589054"
-                    isbn="9784921205003"
-                    termshash=""
-                    href="/book/589054/fba7b8/how-to-draw-manga-getting-started.html"
-                    download="/dl/589054/7a8945"
-                    deleted=""
-                    publisher="Graphic-Sha Publishing"
-                    language="english"
-                    year="2001"
-                    extension="pdf"
-                    filesize="45.80 MB"
-                    rating="5.0"
-                    quality="3.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9c9c81fcd82c9dc5609dbac64e3c3c8be4a68d125e4507bccae5df077838a914.jpg" />
-                    <div slot="title">How to Draw Manga: Getting Started</div>
-                    <div slot="author">Graphic-Sha</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3611738"
-                    isbn="9784766112382"
-                    termshash="23881b570ce04c7e393c729fb0d66623"
-                    href="/book/3611738/acdc68/how-to-draw-manga-bodies-anatomy.html"
-                    download="/dl/3611738/321f37"
-                    deleted=""
-                    publisher="Graphic-Sha"
-                    language="english"
-                    year="2001"
-                    extension="pdf"
-                    filesize="13.57 MB"
-                    rating="5.0"
-                    quality="3.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/30bfd04e47a5cc3c53a33dd893cdeea78e430fdb9d78af6b8c18da5811adbf7b.jpg" />
-                    <div slot="title">HOW TO DRAW MANGA : Bodies &amp; Anatomy</div>
-                    <div slot="author">The Society for the Study of Manga Techniques</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2470321"
-                    isbn="9780486780405"
-                    termshash="b69874247476d69f1c04876dbdf6fd5e"
-                    href="/book/2470321/a87686/the-painters-secret-geometry-a-study-of-composition-in-art.html"
-                    download="/dl/2470321/343fc5"
-                    deleted=""
-                    publisher="Dover Publications"
-                    language="english"
-                    year="2014"
                     extension="epub"
-                    filesize="42.36 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/bfb15e07654c4aab7db56528bf3655e44a7d988709d89c9c3df6705bf97bce21.jpg" />
-                    <div slot="title">The Painter's Secret Geometry: A Study of Composition in Art</div>
-                    <div slot="author">Charles Bouleau</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="6147283"
-                    isbn=""
-                    termshash=""
-                    href="/book/6147283/90681a/the-silver-way-techniques-tips-and-tutorials-for-effective-character-design.html"
-                    download="/dl/6147283/bb6a0e"
-                    deleted=""
-                    publisher="anon"
-                    language="english"
-                    year="2017"
-                    extension="pdf"
-                    filesize="26.31 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/82ebcc4063461f8bb78d75109d57077a0a459cb063bcc4e89f9f27390d6e18cb.jpg" />
-                    <div slot="title">The Silver Way: Techniques, Tips, and Tutorials for Effective Character Design</div>
-                    <div slot="author">Stephen Silver</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="739890"
-                    isbn="9780715304211"
-                    termshash=""
-                    href="/book/739890/ce7ba3/artists-guide-to-mixing-colours-how-to-get-the-most-from-your-palette-scan.html"
-                    download="/dl/739890/cb789a"
-                    deleted=""
-                    publisher="David &amp; Charles PLC"
-                    language="english"
-                    year="1996"
-                    extension="pdf"
-                    filesize="7.07 MB"
-                    rating="4.0"
-                    quality="3.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4a160905afb8689027bc9c9209c994f7bf2f2318224f83e4b9b772714b69ca27.gif" />
-                    <div slot="title">Artist's Guide to Mixing Colours: How to Get the Most from Your Palette {SCAN}</div>
-                    <div slot="author">Jenny Rodwell; Adrian Smith</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2214880"
-                    isbn="9781573227513"
-                    termshash="7d9624ce9e13641c15dd130a6a8b5d9f"
-                    href="/book/2214880/a3f508/shakespeare-the-invention-of-the-human.html"
-                    download="/dl/2214880/9f2afe"
-                    deleted=""
-                    publisher="Riverhead Trade"
-                    language="english"
-                    year="1999"
-                    extension="pdf"
-                    filesize="6.30 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b52e1441e3293255e9ac108f9cc8aa9bb75aa748fe4915441b0f1f4b0b980815.jpg" />
-                    <div slot="title">Shakespeare: The Invention of the Human</div>
-                    <div slot="author">Harold Bloom</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="894464"
-                    isbn="9780198112020"
-                    termshash="b5f4fcdaa3a492761c8df3139b88f122"
-                    href="/book/894464/969552/the-short-oxford-history-of-english-literature.html"
-                    download="/dl/894464/420d14"
-                    deleted=""
-                    publisher="Oxford University Press"
-                    language="english"
-                    year="1994"
-                    extension="pdf"
-                    filesize="2.19 MB"
-                    rating="0.0"
-                    quality="2.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b42307c8bb8c6d5c410eae3652ef34d4dd1eb77afdc56f8a50c261749c7e8fb0.jpg" />
-                    <div slot="title">The Short Oxford History of English Literature</div>
-                    <div slot="author">Andrew Sanders</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="13740852"
-                    isbn=""
-                    termshash=""
-                    href="/book/13740852/c9d1b6/general-knowledge.html"
-                    download="/dl/13740852/8ca4ce"
-                    deleted=""
-                    publisher="Lucent's"
-                    language="english"
-                    year="2008"
-                    extension="pdf"
-                    filesize="169.11 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/03df51750d553d172c90f7649d0b89ab3542d4465ba80bf192b9fe4b99414ab4.jpg" />
-                    <div slot="title">General Knowledge</div>
-                    <div slot="author">Lucent's</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2036239"
-                    isbn="9780615272818"
-                    termshash=""
-                    href="/book/2036239/5acc46/figure-drawing-design-and-invention.html"
-                    download="/dl/2036239/b4405f"
-                    deleted=""
-                    publisher="Michael Hampton"
-                    language="english"
-                    year="2009"
-                    extension="pdf"
-                    filesize="81.07 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fff8943007eb188b815d7b893d1a970f4e12b7212ab38dbc0ee8bce75eb838c6.jpg" />
-                    <div slot="title">Figure Drawing: Design and Invention</div>
-                    <div slot="author">Michael Hampton</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="21087295"
-                    isbn="9791197005121"
-                    termshash=""
-                    href="/book/21087295/032224/space-drawing-perspective.html"
-                    download="/dl/21087295/f2a0d0"
-                    deleted=""
-                    publisher="Superani"
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="196.75 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/52dd939dc50b6ca66856786a6cefe9d483f2871c3f017a8c45e9ec41579cb4d6.jpg" />
-                    <div slot="title">Space Drawing Perspective</div>
-                    <div slot="author">Dong Ho Kim</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3696361"
-                    isbn="9780572030155"
-                    termshash="cf783bb1fcdddb346a96142fc5a8599d"
-                    href="/book/3696361/9d8653/the-fundamentals-of-drawing-landscapes-a-practical-and-inspirational-course.html"
-                    download="/dl/3696361/faa6fa"
-                    deleted=""
-                    publisher="Arcturus"
-                    language="english"
-                    year="2004"
-                    extension="pdf"
-                    filesize="13.69 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8c337ae2a689d4d6c2c9781329abfe5bff04b183f109935f91bf47340bb1ad98.jpg" />
-                    <div slot="title">The Fundamentals of Drawing Landscapes: A Practical and Inspirational Course</div>
-                    <div slot="author">Barrington Barber</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="21125404"
-                    isbn="9781624650536"
-                    termshash="3f99ca2d0bb1e994d0a3f4bf7079342f"
-                    href="/book/21125404/67d915/framed-ink-2.html"
-                    download="/dl/21125404/078a8a"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="240.89 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/eef44933ed1aaf77035fc8ad947a9d304a5614aad0d6c47628b06439a85973dd.jpg" />
-                    <div slot="title">Framed Ink 2</div>
-                    <div slot="author">Marcos Mateu-Mestre</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2220702"
-                    isbn="9780823085682"
-                    termshash="f14ca1832ec8517e840ade89bc23e63b"
-                    href="/book/2220702/ce20f7/draw-50-famous-cartoons-the-stepbystep-way-to-draw-your-favorite-classic-cartoon-characters.html"
-                    download="/dl/2220702/1959d8"
-                    deleted=""
-                    publisher="Watson-Guptill"
-                    language="english"
-                    year="2012"
-                    extension="epub"
-                    filesize="21.82 MB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1ed26029b75ba2d6572c276e1c790e44a40f6283849cf1a5dbeebc4d991241e7.jpg" />
-                    <div slot="title">Draw 50 Famous Cartoons: The Step-by-Step Way to Draw Your Favorite Classic Cartoon Characters</div>
-                    <div slot="author">Lee J. Ames</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="579308"
-                    isbn="9784889960464"
-                    termshash=""
-                    href="/book/579308/32f685/how-to-draw-manga-vol-4-dressing-your-characters-in-casual-wear.html"
-                    download="/dl/579308/a75e09"
-                    deleted=""
-                    publisher="Graphic-Sha"
-                    language="english"
-                    year="2001"
-                    extension="pdf"
-                    filesize="28.25 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8ef1f34d052fc2c69ebffc2b7039449b2949f28bb0c0f8c87ea8f8c04b64c268.jpg" />
-                    <div slot="title">How to Draw Manga - Vol. 4 - Dressing Your Characters in Casual Wear</div>
-                    <div slot="author">Manga</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2289772"
-                    isbn="9781440323607"
-                    termshash="8320c391df1a524c0dd171ebf88a5f00"
-                    href="/book/2289772/d2512e/mastering-manga-how-to-draw-manga-faces.html"
-                    download="/dl/2289772/3b9545"
-                    deleted=""
-                    publisher="North Light Books"
-                    language="english"
-                    year="2012"
-                    extension="epub"
-                    filesize="7.45 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/ab7324913d6245672b2d45f9b35b0a6acf637f106f52ab9c2eefe8fc92a3fd32.jpg" />
-                    <div slot="title">Mastering Manga: How to Draw Manga Faces</div>
-                    <div slot="author">Mark Crilley</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="7601022"
-                    isbn="9780593328453"
-                    termshash="c1e5951acd9a047cb9a02f509fc28d86"
-                    href="/book/7601022/1004c3/drawing-anime-faces-and-feelings-800-facial-expressions-from-joy-to-terror-anger-surprise-sadne.html"
-                    download="/dl/7601022/1e2bde"
-                    deleted=""
-                    publisher="IMPACT Books"
-                    language="english"
-                    year="2020"
-                    extension="epub"
-                    filesize="277.81 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/875f8db76c21c7f8ebdd0e2d61bf9a07af1fbc0127a0c674eb0c9dcdc16a0d8c.jpg" />
-                    <div slot="title">Drawing Anime Faces and Feelings : 800 Facial Expressions from Joy to Terror, Anger, Surprise, Sadness and More</div>
-                    <div slot="author">Studio Hard Deluxe</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="575696"
-                    isbn="9784766114751"
-                    termshash="4dea4e9b928d86d4dce0ae57f2f498de"
-                    href="/book/575696/47e354/how-to-draw-manga-vol-3-compiling-application-and-practice.html"
-                    download="/dl/575696/b3e06f"
-                    deleted=""
-                    publisher="Graphic-sha"
-                    language="english"
-                    year="2000"
-                    extension="pdf"
-                    filesize="37.62 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0b40d9385da1791516170cfe7a4c830783e517e06e3744a1bfac1e4da8100bbe.jpg" />
-                    <div slot="title">How to Draw Manga - Vol. 3 - Compiling Application and Practice</div>
-                    <div slot="author">Manga</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2581093"
-                    isbn=""
-                    termshash=""
-                    href="/book/2581093/afa450/the-complete-art-of-comic-book-inking.html"
-                    download="/dl/2581093/a40d7b"
-                    deleted=""
-                    publisher="Dark Horse"
-                    language="english"
-                    year="2005"
-                    extension="pdf"
-                    filesize="55.14 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0e9fc7f62252fb66f9ae69b3f6f522cc46dfce6b9d68cd26f7c22784dcba56d5.jpg" />
-                    <div slot="title">The Complete Art of Comic Book Inking</div>
-                    <div slot="author">Gary Martin</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2861095"
-                    isbn="9781440317422"
-                    termshash="89fbc2314e876a8fdc7ae753304b1d75"
-                    href="/book/2861095/d15257/painting-vibrant-watercolors.html"
-                    download="/dl/2861095/bd753d"
-                    deleted=""
-                    publisher="Penguin"
-                    language="english"
-                    year="2009"
-                    extension="pdf"
-                    filesize="31.06 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3c6a7b7d7f2ed7076e5cec7618ff6cb0c1cfb69b49cf882cdbe9c549948be9d1.jpg" />
-                    <div slot="title">Painting Vibrant Watercolors</div>
-                    <div slot="author">Soon Y. Warren</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2835410"
-                    isbn="9784766119145"
-                    termshash=""
-                    href="/book/2835410/0e8cd9/how-to-draw-manga-sketchingstyle-vol4-all-about-perspective.html"
-                    download="/dl/2835410/cfd5c5"
-                    deleted=""
-                    publisher="Diamond [distributor], Graphic-sha"
-                    language="english"
-                    year="2008"
-                    extension="pdf"
-                    filesize="76.12 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9f3de00bcf2acb5228c0188bd4a8d482391f93a175b81e7b87d868bc16b92271.jpg" />
-                    <div slot="title">How to Draw Manga - Sketching-Style Vol.4 - All about Perspective</div>
-                    <div slot="author">Hikaru Hayashi</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2289308"
-                    isbn="9780823013814"
-                    termshash="b383577c700bc4dac7e23b2c199d6395"
-                    href="/book/2289308/c20c0e/drawing-on-the-funny-side-of-the-brain-how-to-come-up-with-jokes-for-cartoons-and-comic-strips.html"
-                    download="/dl/2289308/2ccecc"
-                    deleted=""
-                    publisher="Watson-Guptill"
-                    language="english"
-                    year="1998"
-                    extension="pdf"
-                    filesize="12.39 MB"
+                    filesize="802 KB"
                     rating="0.0"
                     quality="0.0"
-                                        premium                    contentTypeParam = ""
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/53da5664eb5d7ffd8fb89b2b036f44a4beba9b72c0201e600103d77201526fdc.jpg" />
-                    <div slot="title">Drawing on the Funny Side of the Brain : How to Come Up With Jokes for Cartoons and Comic Strips</div>
-                    <div slot="author">Christopher Hart</div>
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">How To Improve Memory - The Ultimate Mind Power Manual - The Best Brain Exercises to Improve Your Memory and Master Your Mind Power</div>
+                                        <div slot="author">Success Sculpting Coach; Success Sculpting Inc</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3363338"
-                    isbn="9781541698321"
-                    termshash="8fdea572a482ccc5844e77f440f94566"
-                    href="/book/3363338/adf206/the-design-of-everyday-things.html"
-                    download="/dl/3363338/26a615"
-                    deleted=""
-                    publisher="Springer"
-                    language="english"
-                    year="2013"
-                    extension="mobi"
-                    filesize="1.12 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5b1b09675863fec027502220db13d1569db8ddbef2b96cae88193d72bdbbbb90.jpg" />
-                    <div slot="title">The Design of Everyday Things</div>
-                    <div slot="author">Don Norman</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25092155"
-                    isbn="9781681989976"
-                    termshash=""
-                    href="/book/25092155/fddb19/morpho-anatomy-for-artists-mammals-elements-of-comparative-morphology.html"
-                    download="/dl/25092155/8b52aa"
-                    deleted=""
-                    publisher="Morpho: Anatomy for Artists"
-                    language="english"
-                    year="2023"
-                    extension="pdf"
-                    filesize="11.08 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e1c4934ce2b0ed06abdcaa72f20e20f185708ff9a8af05da94f38da94e3f976a.jpg" />
-                    <div slot="title">Morpho Anatomy for Artists: Mammals: Elements of Comparative Morphology</div>
-                    <div slot="author">Michel Lauricella</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3334842"
-                    isbn="9780823014248"
-                    termshash="024de0c6f798f0ab2c809e6a278ff000"
-                    href="/book/3334842/7f65fd/the-artists-guide-to-drawing-animals-how-to-draw-cats-dogs-and-other-favorite-pets.html"
-                    download="/dl/3334842/06b11d"
-                    deleted=""
-                    publisher="Watson-Guptill"
-                    language="english"
-                    year="2012"
-                    extension="pdf"
-                    filesize="42.10 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3b7389c6e10dd933fe24a5f19520a83b6ce7b185bc323756fcca76683b7a7d78.jpg" />
-                    <div slot="title">The Artist's Guide to Drawing Animals How to Draw Cats, Dogs, and Other Favorite Pets</div>
-                    <div slot="author">J.C. Amberlyn</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3362734"
+                                        id="18607796"
                     isbn=""
-                    termshash="6321706e20236db03828ee4c53137122"
-                    href="/book/3362734/b1a3bf/imaginefx-issue-151-september-2017-fantasy-illustration.html"
-                    download="/dl/3362734/d84cd9"
+                    termshash="1dc67b51bf6337bc760e618d582adb7a"
+                    href="/book/18607796/bdbe3a/memory-mastery-how-to-improve-memory-blazingly-fast-the-secrets-to-learning-faster-gaining-more-c.html"
+                    download="/dl/18607796/a1aac6"
                     deleted=""
                     publisher=""
-                    language="english"
-                    year="2017"
-                    extension="pdf"
-                    filesize="31.82 MB"
-                    rating="1.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3e577d1a24cfb17dd66887eab1b0c27e4b11d9be3a08fb243a9469a2ec7147b2.jpg" />
-                    <div slot="title">ImagineFX Issue 151 September 2017 (Fantasy Illustration)</div>
-                    <div slot="author">Claire Howlett</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="22490015"
-                    isbn="9780760371374"
-                    termshash="ef01e60b7a0f5ad5ea58b2c76f1dc26a"
-                    href="/book/22490015/18117c/design-your-own-anime-and-manga-characters-stepbystep-lessons-for-creating-and-drawing-unique-ch.html"
-                    download="/dl/22490015/5322e1"
-                    deleted=""
-                    publisher="TB Choi"
-                    language="english"
-                    year="2022"
-                    extension="pdf"
-                    filesize="14.70 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/86371195d84ddb079ca5b3226f738c166228d742f42ea118857a79021a5828fb.jpg" />
-                    <div slot="title">Design Your Own Anime and Manga Characters : Step-by-Step Lessons for Creating and Drawing Unique Characters</div>
-                    <div slot="author">TB Choi</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3336859"
-                    isbn="9781440337611"
-                    termshash="4bae3f7456c2ffe161e348645b00589f"
-                    href="/book/3336859/5b0796/the-absolute-beginners-big-book-of-drawing-and-painting.html"
-                    download="/dl/3336859/e152d6"
-                    deleted=""
-                    publisher="Penguin"
-                    language="english"
-                    year="2014"
-                    extension="pdf"
-                    filesize="73.20 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3b13ebc34b975d6a6d3822f4e704e304998562926bd3b396b50269f72507c4e1.jpg" />
-                    <div slot="title">The Absolute Beginner's Big Book of Drawing and Painting</div>
-                    <div slot="author">Mark Willenbrink; Mary Willenbrink</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="17124771"
-                    isbn=""
-                    termshash="3cb3ee371997a5721d797a3c19ebb7f4"
-                    href="/book/17124771/4aa44b/the-science-of-selflearning.html"
-                    download="/dl/17124771/dfb185"
-                    deleted=""
-                    publisher="PublishDrive"
-                    language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="916 KB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ff3008ac888a8f12f7cbbaf2e4d26285efacaed44d6ceeb2deb507a872185cfb.jpg" />
-                    <div slot="title">The Science of Self-Learning</div>
-                    <div slot="author">Peter Hollins</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2581299"
-                    isbn="9784889960440"
-                    termshash=""
-                    href="/book/2581299/9817a4/how-to-draw-manga-volume-2-compiling-techniques.html"
-                    download="/dl/2581299/936732"
-                    deleted=""
-                    publisher="Graphic-Sha Publishing"
-                    language="english"
-                    year="2000"
-                    extension="pdf"
-                    filesize="19.58 MB"
-                    rating="5.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/466340ae776419283e2218adac5bf894b74d95d3f2d51c0735a22fc986d2104c.jpg" />
-                    <div slot="title">HOW TO DRAW MANGA Volume 2: Compiling Techniques</div>
-                    <div slot="author">Hideki Matsuoka; Society for the Study of Manga Techniques</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5303233"
-                    isbn="9780471289302"
-                    termshash="fda54719c1ac96bc583c4c31dc766188"
-                    href="/book/5303233/cf6f46/design-and-form-the-basic-course-at-the-bauhaus-and-later.html"
-                    download="/dl/5303233/ca45a4"
-                    deleted=""
-                    publisher="John Wiley &amp; Sons"
-                    language="english"
-                    year="1975"
-                    extension="pdf"
-                    filesize="14.17 MB"
-                    rating="5.0"
-                    quality="2.5"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/95372504858670b1ed3a6595c91fbb8a2fbe928b92cebf70975c248bb97815d0.jpg" />
-                    <div slot="title">Design and Form: The Basic Course at the Bauhaus and Later</div>
-                    <div slot="author">Johannes Itten</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11641102"
-                    isbn="9781462921829"
-                    termshash="cc0bb40a105f63d4a8171437366a0af5"
-                    href="/book/11641102/84b8e5/drawing-cute-manga-chibi-a-beginners-guide-to-drawing-super-cute-characters.html"
-                    download="/dl/11641102/cdfa13"
-                    deleted=""
-                    publisher="Tuttle Publishing"
-                    language="english"
-                    year="2021"
-                    extension="epub"
-                    filesize="43.60 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fc52e36d26ee4f7776a1f98b998b745325b722cb954806d719ab97760314c931.jpg" />
-                    <div slot="title">Drawing Cute Manga Chibi: A Beginner's Guide to Drawing Super Cute Characters</div>
-                    <div slot="author">Ryusuke Hamamoto</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2491167"
-                    isbn="9781452135472"
-                    termshash="3b1f249f760c4bdfb281dd713a8e1179"
-                    href="/book/2491167/bb4a23/art-before-breakfast-a-zillion-ways-to-be-more-creative-no-matter-how-busy-you-are.html"
-                    download="/dl/2491167/1f24c3"
-                    deleted=""
-                    publisher="Chronicle Books LLC"
                     language="english"
                     year="2015"
                     extension="epub"
-                    filesize="42.03 MB"
-                    rating="5.0"
+                    filesize="176 KB"
+                    rating="0.0"
                     quality="5.0"
-                                        premium                    contentTypeParam = ""
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a54fb7d4fd0959ebbd64fc50be2e1fdbc4997a0524e197b42cf62319884007ec.jpg" />
-                    <div slot="title">Art Before Breakfast: A Zillion Ways to be More Creative No Matter How Busy You Are</div>
-                    <div slot="author">Danny Gregory</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a5d65bdee6414111429cfcce4ea6a070bfafbbce76f5aa2b5a3860c34b562209.jpg" />
+                    <div slot="title">Memory Mastery. How to Improve Memory Blazingly Fast! The Secrets to Learning Faster, Gaining More Clarity, Easily Recalling Details &amp; Significantly Increasing Your Memory Capacity</div>
+                                        <div slot="author">Walter E. Samuelson</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3330094"
-                    isbn="9784921205706"
-                    termshash="59d7fa6e79f5edb707dccb24b625ce83"
-                    href="/book/3330094/a5c158/how-to-draw-manga-lesson-2-hands.html"
-                    download="/dl/3330094/ffb99e"
-                    deleted=""
-                    publisher="Japanime Co. Ltd.;Manga University"
-                    language="english"
-                    year="2011"
-                    extension="epub"
-                    filesize="1.40 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/0ba174a217722a46bf418980dce817b0cc2a742de941c19c314a327b2c95596c.jpg" />
-                    <div slot="title">How to draw manga! Lesson #2, Hands</div>
-                    <div slot="author">Tadashi; Koda; University; Manga</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="691944"
-                    isbn="9780300093759"
-                    termshash="269dcdd4fc575f825a8ff298cc255b5a"
-                    href="/book/691944/071b8c/the-arts-of-korea-a-resource-for-educators.html"
-                    download="/dl/691944/97ab22"
-                    deleted=""
-                    publisher="Metropolitan Museum of Art"
-                    language="english"
-                    year="2002"
-                    extension="pdf"
-                    filesize="7.74 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5879d084a57e4ea9e7e79649ab4ea22cae57b11f9a6d608c940fa6e35e04ff24.jpg" />
-                    <div slot="title">The Arts of Korea : A Resource for Educators</div>
-                    <div slot="author">Elizabeth Hammer; Judith E. Smith</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="844333"
-                    isbn="9781581801675"
-                    termshash="0eebfdacfd05d0ed6e7486f6bb980abc"
-                    href="/book/844333/fd8659/mastering-the-watercolor-wash.html"
-                    download="/dl/844333/965216"
+                                        id="18091361"
+                    isbn="B09LFZD32H"
+                    termshash="c09e6fc0bd92ed4d043a4357b27db5fc"
+                    href="/book/18091361/73568e/how-to-improve-shortterm-memory-how-memory-works-why-it-declines-and-how-to-turn-it-around.html"
+                    download="/dl/18091361/8cf9d9"
                     deleted=""
                     publisher=""
                     language="english"
-                    year="2002"
+                    year="2021"
                     extension="pdf"
-                    filesize="4.43 MB"
-                    rating="4.0"
-                    quality="2.5"
-                                        premium                    contentTypeParam = ""
+                    filesize="1.24 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/aa6e1a8117319aa724d5c124455f30cbe21d7bea213ff1d79dd58a29d49618ca.jpg" />
-                    <div slot="title">Mastering the Watercolor Wash</div>
-                    <div slot="author">Joe García</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/26a06a5a0afbe69b46b232ce94d53dfdc2e749d865eedad855516d41ae5be4b8.jpg" />
+                    <div slot="title">How To Improve Short-Term Memory: How Memory Works, Why It Declines, and How To Turn It Around</div>
+                                        <div slot="author">Faulk; Todd</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5791340"
-                    isbn="9780802778130"
-                    termshash="7454d0b73bb0433c80ab9a1c072093be"
-                    href="/book/5791340/32e226/quadrivium-the-four-classical-liberal-arts-of-number-geometry-music-cosmology.html"
-                    download="/dl/5791340/2611b5"
+                                        id="13531201"
+                    isbn=""
+                    termshash="731bb02d7707c9c671f483769a39ea9d"
+                    href="/book/13531201/2f344d/how-to-concentrate-like-einstein-the-lazy-students-way-to-instantly-improve-memory-grades-with-t.html"
+                    download="/dl/13531201/553904"
                     deleted=""
-                    publisher="Wooden Books"
+                    publisher="#PrB.rating#2.93"
                     language="english"
-                    year="2011"
-                    extension="pdf"
-                    filesize="125.82 MB"
-                    rating="5.0"
-                    quality="3.0"
-                                        premium                    contentTypeParam = ""
+                    year="2012"
+                    extension="epub"
+                    filesize="272 KB"
+                    rating="1.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/548a4c492ae89f978466dd3500151ebfb725f8abd078f289e4ba75402df16278.jpg" />
-                    <div slot="title">Quadrivium - The Four Classical Liberal Arts of Number, Geometry, Music &amp; Cosmology</div>
-                    <div slot="author">Miranda Lundy; Daud Sutton; Anthony Ashton; Jason Martineau; John Martineau</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/cfc9a49dbd9b76fa5cd19b6157e8494ad5a184dc277bad59e99afeaea43ebef9.jpg" />
+                    <div slot="title">How to Concentrate Like Einstein: The Lazy Student's Way to Instantly Improve Memory &amp; Grades With the Doctor Vittoz Secret Concentration Technique.</div>
+                                        <div slot="author">Remy Roulier [Roulier; Remy]</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2579890"
-                    isbn="9781452129617"
-                    termshash="b7d950fd8b67213005d15363dbbd9f4c"
-                    href="/book/2579890/d03fc5/freehand-sketching-tricks-and-tips-drawn-from-art.html"
-                    download="/dl/2579890/5419de"
+                                        id="22330756"
+                    isbn="B00O8L85FY"
+                    termshash="7f17f813dc5956c00e023d3b59008d28"
+                    href="/book/22330756/d4f2ed/memory-improvement-how-to-unlock-the-power-of-your-mind-and-remember-things-you-never-thought-poss.html"
+                    download="/dl/22330756/ef016d"
                     deleted=""
-                    publisher="Hardie Grant Books"
+                    publisher=""
+                    language="english"
+                    year="2014"
+                    extension="epub"
+                    filesize="165 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/60da889dae1669886a996b59734e85416cd56eabf12e1617672588f0ed236b81.jpg" />
+                    <div slot="title">Memory Improvement · How to Unlock the Power of Your Mind and Remember Things You Never Thought Possible Forever! (Memory Improvement Techniques, Memory ... and Boost Brain Power, Brain Training)</div>
+                                        <div slot="author">Wallace; Jonathan</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5664920"
+                    isbn=""
+                    termshash="1a00e891a94d8470ba342f864da0c2ee"
+                    href="/book/5664920/165855/memory-improvement-accelerated-learning-and-brain-training-learn-how-to-optimize-and-improve-your.html"
+                    download="/dl/5664920/5bdeee"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2019"
+                    extension="azw3"
+                    filesize="269 KB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9307abb876438831e2b61949f6b16b06ce993d423f644ec2bc3c05d28567379e.jpg" />
+                    <div slot="title">Memory Improvement, Accelerated Learning and Brain Training: Learn How to Optimize and Improve Your Memory and Learning Capabilities for Top Results in University and at Work</div>
+                                        <div slot="author">Adams; John</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="6077983"
+                    isbn=""
+                    termshash="92dac21f9433a7c94ea4dba9369e3ee5"
+                    href="/book/6077983/b83ffe/how-to-improve-your-memory-an-everyday-guide-to-improving-your-memory-advance-and-helpful-strategi.html"
+                    download="/dl/6077983/92961b"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2020"
+                    extension="epub"
+                    filesize="2.27 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fd1ad77a12212c34c199373e317f06396313a159a9372d8b8e69a8026bdf7625.jpg" />
+                    <div slot="title">How to Improve Your Memory: An everyday guide to improving your memory. Advance and helpful strategies to help you remember things and increasing learning</div>
+                                        <div slot="author">Carlos; Benjamin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="14449011"
+                    isbn=""
+                    termshash="fd6fa7ad6d0761a23866501c66aba7e8"
+                    href="/book/14449011/4c7295/memory-improvement-how-to-improve-your-memory-in-just-30-days.html"
+                    download="/dl/14449011/ed10aa"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="epub"
+                    filesize="576 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c4da4ecec9cf217304171b966f7f807377dae9987aaa4802a27e92ff1157f8c3.jpg" />
+                    <div slot="title">Memory Improvement: How To Improve Your Memory In Just 30 Days</div>
+                                        <div slot="author">White; Ron [White; Ron]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5856268"
+                    isbn=""
+                    termshash="0d2b1cc89292568863abe688b905d67c"
+                    href="/book/5856268/489f70/memory-train-your-brain-the-complete-guide-on-how-to-improve-your-memory-think-faster-concentra.html"
+                    download="/dl/5856268/fd3616"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2017"
+                    extension="azw3"
+                    filesize="599 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8e61eece60bfd1908a6282e0dae7f0377a0c1a51c9760f3c9eee65e02c1b03be.jpg" />
+                    <div slot="title">Memory. Train Your Brain.: The Complete Guide on How to Improve Your Memory, Think Faster, Concentrate More and Remember Everything</div>
+                                        <div slot="author">Wood; Benjamin</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18431592"
+                    isbn="B077K8TBSH"
+                    termshash="0d2b1cc89292568863abe688b905d67c"
+                    href="/book/18431592/5ac3e8/memory-train-your-brain-the-complete-guide-on-how-to-improve-your-memory-think-faster-concentra.html"
+                    download="/dl/18431592/75f0a7"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2017"
+                    extension="epub"
+                    filesize="565 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/df0f013fc217c9910008e9f1db567bcacb42e02e3f53e2e661de2f6e1043aafc.jpg" />
+                    <div slot="title">Memory. Train Your Brain.: The Complete Guide on How to Improve Your Memory, Think Faster, Concentrate More and Remember Everything</div>
+                                        <div slot="author">Benjamin Wood</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3313208"
+                    isbn=""
+                    termshash="d1231a762ff2b3d1dce8464182bd697a"
+                    href="/book/3313208/ba826e/how-to-improve-your-memory-for-students-study-less-but-still-ace-your-classes.html"
+                    download="/dl/3313208/2be52c"
+                    deleted=""
+                    publisher="Johnny Briones"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="685 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/70ccd2db23037e7289603ebe3642cd1126f11df284f97794ed874c6ba64cbf54.jpg" />
+                    <div slot="title">How to Improve Your Memory for Students: Study Less But Still Ace Your Classes</div>
+                                        <div slot="author">Johnny Briones</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17567607"
+                    isbn=""
+                    termshash="9316d34e028bb3394b8de2d11192dceb"
+                    href="/book/17567607/acf1b3/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
+                    download="/dl/17567607/c50552"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="1.45 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/84ea42cb18137f6f18d195526c2563877dc0bed0e3e09fbf81ae14829a84b891.jpg" />
+                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
+                                        <div slot="author">Joseph Milano</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18204948"
+                    isbn=""
+                    termshash="bc516766665c8baca21362f9b170c525"
+                    href="/book/18204948/7f439a/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
+                    download="/dl/18204948/63f463"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2021"
+                    extension="pdf"
+                    filesize="1.50 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2f559d2d17dec53e477e9e66cdba53662111ae5ccee5cbcbfb72078cc5587aaf.jpg" />
+                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
+                                        <div slot="author">Milano; Joseph</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23197467"
+                    isbn="9781785926341"
+                    termshash="6b00ea0d65c7ab1d9232fa8fd5c38b7d"
+                    href="/book/23197467/54295d/how-can-i-remember-all-that-simple-stuff-to-improve-your-working-memory.html"
+                    download="/dl/23197467/b7b218"
+                    deleted=""
+                    publisher="Jessica Kingsley Publishers"
+                    language="english"
+                    year="2019"
+                    extension="epub"
+                    filesize="1.67 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d0a6a1df34cbf91ed378ed500c6224860d65f175e373117953f2095ed56d3dce.jpg" />
+                    <div slot="title">How Can I Remember All That?: Simple Stuff to Improve Your Working Memory</div>
+                                        <div slot="author">Tracy Packiam Alloway</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18055896"
+                    isbn=""
+                    termshash="9316d34e028bb3394b8de2d11192dceb"
+                    href="/book/18055896/0ba1b2/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
+                    download="/dl/18055896/becddd"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2021"
+                    extension="epub"
+                    filesize="1.45 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/09f283203d15ced8d392ee2cd20ad8ec80b5a5c6eb1c06fa100f9e97b170d9c1.jpg" />
+                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
+                                        <div slot="author">Milano; Joseph</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3313207"
+                    isbn=""
+                    termshash="f2cb7b9e0d916a523f14d475263b01a3"
+                    href="/book/3313207/dd2f7c/how-to-improve-your-memory-study-less-but-still-ace-your-classes.html"
+                    download="/dl/3313207/7921e0"
+                    deleted=""
+                    publisher="Johnny Briones"
+                    language="english"
+                    year="2015"
+                    extension="mobi"
+                    filesize="726 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/39237c859b561a17533ba193a7e375d3228c58c4f2d949c760355d670468deef.jpg" />
+                    <div slot="title">How To Improve Your Memory: Study Less But Still Ace Your Classes</div>
+                                        <div slot="author">Briones; Johnny</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28018079"
+                    isbn="9788184006827"
+                    termshash="0f6950f1d8890f844a9c6f6ca3dc86f1"
+                    href="/book/28018079/3e823c/how-to-memorize-anything-the-ultimate-handbook-to-explore-and-improve-your-memory.html"
+                    download="/dl/28018079/04b726"
+                    deleted=""
+                    publisher="Penguin/Ebury Press"
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="3.42 MB"
+                    rating="3.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9fbc589ac7bf53a248ef914d7736162b6c8bd7ea7ed0c3e810e9805f5ee4c3bc.jpg" />
+                    <div slot="title">How to Memorize Anything: The Ultimate Handbook to Explore and Improve Your Memory</div>
+                                        <div slot="author">Aditi Singhal &amp; Sudhir Singhal</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3313851"
+                    isbn=""
+                    termshash="fb423815304042f7a7fe4313fa03ee27"
+                    href="/book/3313851/3e10c5/brain-brilliance-amazing-lessons-on-how-to-improve-memory-blazingly-fast-and-find-out-how-to-learn.html"
+                    download="/dl/3313851/9b90c5"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="155 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a5076f4516857f6428922b5b79345848b2ad675cf26a1f1debfe19a77936c0ea.jpg" />
+                    <div slot="title">Brain Brilliance: Amazing Lessons on How to Improve Memory Blazingly Fast and Find Out How to Learn Much Faster</div>
+                                        <div slot="author">Deleon; Pat</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25723871"
+                    isbn=""
+                    termshash="3f9160ad2feeb9557def3690851e8197"
+                    href="/book/25723871/76cc9a/mind-hacking-secrets-and-unlimited-memory-power-2-books-in-1-learn-how-to-improve-your-memory-de.html"
+                    download="/dl/25723871/54b021"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="0"
+                    extension="epub"
+                    filesize="787 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/6dd241a2ce5a8b6f92db3ec053159c5c3e29037434d357447b67c23508c2e021.jpg" />
+                    <div slot="title">Mind Hacking Secrets and Unlimited Memory Power: 2 Books in 1: Learn How to Improve Your Memory &amp; Develop Fast, Clear Thinking in 2 Weeks + 42 Brain Training Techniques &amp; Memory Improvement Exercises</div>
+                                        <div slot="author">Scott Sharp</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26993690"
+                    isbn=""
+                    termshash="3f9160ad2feeb9557def3690851e8197"
+                    href="/book/26993690/35683a/mind-hacking-secrets-and-unlimited-memory-power-2-books-in-1-learn-how-to-improve-your-memory-de.html"
+                    download="/dl/26993690/e4c18b"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2019"
+                    extension="pdf"
+                    filesize="1.81 MB"
+                    rating="0.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0a4faecb764603f333fa984aa1d3696d0344e1c9f3ac2d4f51e763f46e8ed3c0.jpg" />
+                    <div slot="title">Mind Hacking Secrets and Unlimited Memory Power: 2 Books in 1: Learn How to Improve Your Memory &amp; Develop Fast, Clear Thinking in 2 Weeks + 42 Brain Training Techniques &amp; Memory Improvement Exercises</div>
+                                        <div slot="author">Sharp; Scott</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18833308"
+                    isbn="B09PNV5V3T"
+                    termshash="43390f5fe76b688cddeb29acee91eeaa"
+                    href="/book/18833308/114dcc/accelerated-learning-how-to-learn-fast-improve-memory-save-your-time-and-be-successful.html"
+                    download="/dl/18833308/ce60ef"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2022"
+                    extension="epub"
+                    filesize="261 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/6745dc6831f3a8cbab999f94fc1a88cc935d03cbe4785299cd737b56276bc02d.jpg" />
+                    <div slot="title">Accelerated Learning: How to Learn Fast, Improve Memory, Save Your Time and Be Successful</div>
+                                        <div slot="author">David McLain</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="19083638"
+                    isbn=""
+                    termshash="8a0e4fe1757d32a92a445473f7f9146e"
+                    href="/book/19083638/30a530/mind-mapping-how-to-create-mind-maps-stepbystep-the-best-way-to-improve-memory-creativity-conc.html"
+                    download="/dl/19083638/f0b5e2"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2022"
+                    extension="epub"
+                    filesize="213 KB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">Mind Mapping: How to Create Mind Maps Step-by-step (The Best Way to Improve Memory, Creativity, Concentration &amp; More)</div>
+                                        <div slot="author">Martin Thomson</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18032779"
+                    isbn="B00J66Z2S4"
+                    termshash="2241f66aef7f59dddfa41b9b3b29eca3"
+                    href="/book/18032779/c367e5/mind-maps-the-ultimate-guide-to-mind-mapping-how-to-create-mind-maps-and-improve-memory-in-30-day.html"
+                    download="/dl/18032779/e6d7e5"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2014"
+                    extension="epub"
+                    filesize="141 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b89ff3fd5f3c6da6b6513999fad23eba9d930e34781d1cd35dcbf1365e137eb5.jpg" />
+                    <div slot="title">Mind Maps: The Ultimate Guide to Mind Mapping - How to Create Mind Maps and Improve Memory in 30 Days or Less</div>
+                                        <div slot="author">Mike Pakulski</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="14127269"
+                    isbn=""
+                    termshash="6a0fe051adeedbe5ce0eca993056db49"
+                    href="/book/14127269/f89abd/mind-maps-how-to-improve-memory-write-smarter-plan-better-think-faster-and-make-more-money.html"
+                    download="/dl/14127269/b231f3"
+                    deleted=""
+                    publisher="JJ Fast Publishing, LLC"
                     language="english"
                     year="2013"
-                    extension="pdf"
-                    filesize="67.39 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
+                    extension="epub"
+                    filesize="588 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7a83d80dfaec5c6034b509ac6cc4762ba5932fd74dee22af63479df5e92c42ea.jpg" />
-                    <div slot="title">Freehand Sketching Tricks and Tips Drawn From Art</div>
-                    <div slot="author">Helen Birch</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ccae475f7072bde2870aee951393605302dd2ce6dec7fcbdbb501e0da455ffaa.jpg" />
+                    <div slot="title">Mind Maps: How to Improve Memory, Write Smarter, Plan Better, Think Faster, and Make More Money</div>
+                                        <div slot="author">John S. Rhodes [Rhodes; John S.]</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2695944"
-                    isbn="9784766117097"
-                    termshash=""
-                    href="/book/2695944/cfa7bd/how-to-draw-manga-sketchingstyle-vol1-sketching-to-plan.html"
-                    download="/dl/2695944/c6c402"
+                                        id="2516403"
+                    isbn="9781484984079"
+                    termshash="c806758f6995ae939d124aeb68fc3297"
+                    href="/book/2516403/b820b3/mind-maps-how-to-improve-memory-writer-smarter-plan-better-think-faster-and-make-more-money.html"
+                    download="/dl/2516403/2bd200"
                     deleted=""
-                    publisher="Graphic Sha Publishing Company"
+                    publisher="CreateSpace Independent Publishing Platform"
                     language="english"
-                    year="2007"
-                    extension="pdf"
-                    filesize="66.40 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
+                    year="2013"
+                    extension="mobi"
+                    filesize="1.11 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/89e9fb224ff6de6ba53bcf0b6e20576ebe9691b087a3be5856a22284b9c40484.jpg" />
-                    <div slot="title">How to Draw Manga - Sketching-Style Vol.1 - Sketching to Plan</div>
-                    <div slot="author">Manga University; Hikaru Hayashi; Takehiko Matsumoto; Kazuaki Morita</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7cb90fa68422764aec9e6c5bd921cd82f278052d73e14d452ffbafb8a9d4a2c0.jpg" />
+                    <div slot="title">Mind Maps: How to Improve Memory, Writer Smarter, Plan Better, Think Faster, and Make More Money</div>
+                                        <div slot="author">John S. Rhodes</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="2835408"
-                    isbn="9784766117370"
-                    termshash=""
-                    href="/book/2835408/c41a1d/how-to-draw-manga-sketchingstyle-vol2-logical-proportions.html"
-                    download="/dl/2835408/d514d7"
+                                        id="11179249"
+                    isbn="B08GG1PWYN"
+                    termshash="7ab4868531b97e29a439e7f8cb324a53"
+                    href="/book/11179249/63a9fa/accelerated-learning-learn-how-high-performers-discover-new-skills-fast-improve-memory-increase.html"
+                    download="/dl/11179249/65a9f6"
                     deleted=""
-                    publisher="Graphic-sha"
+                    publisher="UNKNOWN"
                     language="english"
-                    year="2007"
-                    extension="pdf"
-                    filesize="69.55 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
+                    year="2020"
+                    extension="azw3"
+                    filesize="306 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
                 >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5e632a0418c98e5346742cd9c518bc4f6433cbaa892e63c5261dbbfd1247a1b3.jpg" />
-                    <div slot="title">How to Draw Manga - Sketching-Style Vol.2 - Logical Proportions</div>
-                    <div slot="author">Hayashi; Hikaru</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1008215642cac43e3a5e0369624b97f6bee8d4a53c372020b93af911cc2935a8.jpg" />
+                    <div slot="title">Accelerated Learning - Learn How High Performers Discover New Skills Fast, Improve Memory, Increase Laser-Sharp Focus, and Increase Their Productivity Using Methods Such as Speed Reading</div>
+                                        <div slot="author">MADHAN KUMAR [KUMAR; MADHAN]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11029451"
+                    isbn="B07B3RJV7N"
+                    termshash="e5169a3cc9ec2feb9b131efda6d3f21a"
+                    href="/book/11029451/67fb16/accelerated-learning-crash-course-how-to-easily-learn-new-skills-and-subjects-develop-laser-sharp.html"
+                    download="/dl/11029451/0079b1"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2018"
+                    extension="epub"
+                    filesize="166 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e5d94360fec4883d4088f5557479b7c8565d900b21a5c1d78aee0d26d09ba3ed.jpg" />
+                    <div slot="title">Accelerated Learning Crash Course: How to Easily Learn New Skills and Subjects, Develop Laser Sharp Focus, Triple Your Reading Speed and Improve Your Memory Ability!</div>
+                                        <div slot="author">Sebastian Croft</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29575538"
+                    isbn="B0CRBN42MW"
+                    termshash="8764d203325bcb6f26a24e5d18dce38e"
+                    href="/book/29575538/61fdf7/dopamine-detox-guide-on-how-to-rewire-your-brain-and-live-a-life-of-digital-minimalism-quit-social.html"
+                    download="/dl/29575538/2b3646"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2024"
+                    extension="epub"
+                    filesize="1.28 MB"
+                    rating="0.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c9c27d59424852a5900a0dd2627cc3dd723b1a92687451a5ca0a66b164560b83.jpg" />
+                    <div slot="title">Dopamine Detox: Guide On How To Rewire Your Brain and Live A Life Of Digital Minimalism, Quit Social Media, Do Hard Things, Improve Your Memory, Concentration, And Productivity</div>
+                                        <div slot="author">Harris; Christopher</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16579124"
+                    isbn="B07XLJVHJG"
+                    termshash="6c3398c8e16e088648520c971a881f26"
+                    href="/book/16579124/bbddc8/the-science-of-selflearning-how-to-use-learning-strategies-to-thinking-faster-learn-yourself-anyt.html"
+                    download="/dl/16579124/87657b"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2019"
+                    extension="azw3"
+                    filesize="433 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/fa27f0441f36fb83c38b0c053d3ecbaddbb3c67e34eb0cd6fc2d6cc856beeba0.jpg" />
+                    <div slot="title">THE SCIENCE OF SELF-LEARNING: How to Use Learning Strategies to Thinking Faster, Learn Yourself Anything, Improve Your Memory and Learning Capabilities</div>
+                                        <div slot="author">Wallace Wright [Wright; Wallace]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11022847"
+                    isbn=""
+                    termshash="e5169a3cc9ec2feb9b131efda6d3f21a"
+                    href="/book/11022847/303f42/accelerated-learning-crash-course-how-to-easily-learn-new-skills-and-subjects-develop-laser-sharp.html"
+                    download="/dl/11022847/14bcda"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2018"
+                    extension="mobi"
+                    filesize="263 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/10e4506d8f6a64ca7bdba2196d325cbbfdceafffecc79fe4bca04443723be60e.jpg" />
+                    <div slot="title">Accelerated Learning Crash Course: How to Easily Learn New Skills and Subjects, Develop Laser Sharp Focus, Triple Your Reading Speed and Improve Your Memory Ability!</div>
+                                        <div slot="author">Croft; Sebastian</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3317986"
+                    isbn=""
+                    termshash="398297ea929f714edf8d89e537093600"
+                    href="/book/3317986/86291a/secrets-of-how-to-improve-your-memory-and-to-stay-focused.html"
+                    download="/dl/3317986/476154"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="159 KB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1f83c617361693f7ee94ae567f2161c0427d53be649c6f64e8e76de50e4f2677.jpg" />
+                    <div slot="title">Secrets of how to improve your memory and to stay focused</div>
+                                        <div slot="author">Thompson; Oliver</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5849017"
+                    isbn=""
+                    termshash="2e3396a61b25cbf7d7a151182941ddcd"
+                    href="/book/5849017/f0fe10/accelerated-learning-an-effective-guide-on-how-to-learn-every-topic-faster-improving-your-memory-a.html"
+                    download="/dl/5849017/c489f1"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2018"
+                    extension="azw3"
+                    filesize="199 KB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3bc0fab9db3b17c27c1fb9a05c5b346c88e2045c09d49b34e80b58972f5753d0.jpg" />
+                    <div slot="title">Accelerated Learning: An Effective Guide On How To Learn Every Topic Faster Improving Your Memory, Attention And Comprehension Skills</div>
+                                        <div slot="author">Bell; Leonard</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18623118"
+                    isbn=""
+                    termshash="890f5bc7d9a3076d0bef2ebce9ceebce"
+                    href="/book/18623118/9c6a4b/memory-improvement-memory-manipulation-how-to-train-your-brain-to-think-faster-concentrate-more.html"
+                    download="/dl/18623118/24f109"
+                    deleted=""
+                    publisher=""
+                    language="english"
+                    year="2015"
+                    extension="epub"
+                    filesize="460 KB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = "?content_type=book"
+                >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5acde43bff800fc4dae94b23c04347f1d0655dec025ab79a3f3b50c295c86ef3.jpg" />
+                    <div slot="title">Memory Improvement: Memory Manipulation: How to Train Your Brain to Think Faster, Concentrate More, and Remember Anything</div>
+                                        <div slot="author">T. Whitmore</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
