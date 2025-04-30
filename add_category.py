@@ -6,6 +6,7 @@ import re
 import argparse
 import sys
 import os
+from urllib.parse import unquote_plus # Needed for decoding search terms
 
 # --- JSON Helper Functions (similar to zlibdownload.py) ---
 def load_json(file_path):
@@ -43,15 +44,28 @@ def save_json(data, file_path):
         return False
 
 # --- Main Logic ---
-def extract_category_info(url):
-    """Extracts ID and slug from the Z-Library category URL."""
-    match = re.search(r'/category/(\d+)/([^/]+)', url)
-    if match:
-        cat_id = int(match.group(1))
-        cat_slug = match.group(2)
-        return cat_id, cat_slug
-    else:
-        return None, None
+def extract_url_info(url):
+    """Extracts relevant info (ID/slug or search term) from a Z-Library URL."""
+    # Try category format first
+    category_match = re.search(r'/category/(\d+)/([^/?]+)', url) # Stop slug at / or ?
+    if category_match:
+        cat_id = int(category_match.group(1))
+        cat_slug = category_match.group(2)
+        return {"type": "category", "id": cat_id, "slug": cat_slug}
+
+    # Try search format
+    search_match = re.search(r'/s/([^/?]+)', url) # Stop search term at / or ?
+    if search_match:
+        encoded_term = search_match.group(1)
+        try:
+            decoded_term = unquote_plus(encoded_term)
+            return {"type": "search", "search_term": decoded_term}
+        except Exception as e:
+            print(f"⚠️ Error decoding search term '{encoded_term}': {e}")
+            return None # Indicate error
+
+    # If neither matches
+    return None
 
 def fetch_category_name(url, slug):
     """Fetches the category page and extracts the full name from the H2 tag."""
@@ -84,52 +98,91 @@ def fetch_category_name(url, slug):
         return slug
 
 def main():
-    parser = argparse.ArgumentParser(description="Add a new category to categories.json from a Z-Library URL.")
-    parser.add_argument("url", help="The full URL of the Z-Library category page (e.g., 'https://z-library.sk/category/52/Techniques/s/?...')")
-    
+    parser = argparse.ArgumentParser(description="Add a new category or search term to categories.json from a Z-Library URL.")
+    parser.add_argument("url", help="The full URL of the Z-Library category page OR a search results page (e.g., 'https://z-library.sk/category/52/Techniques/s/?...' or 'https://z-library.sk/s/your%20search/?...')")
+
     args = parser.parse_args()
-    category_url = args.url
+    target_url = args.url
     categories_file = "categories.json"
 
-    # 1. Extract ID and Slug from URL
-    cat_id, cat_slug = extract_category_info(category_url)
-    if cat_id is None or cat_slug is None:
-        print(f"❌ Error: Could not extract category ID and slug from URL: {category_url}")
-        print("  Expected format like: .../category/ID/SLUG/...")
-        sys.exit(1)
-    print(f"Extracted ID: {cat_id}, Slug: {cat_slug}")
+    # 1. Extract info based on URL type
+    url_info = extract_url_info(target_url)
 
-    # 2. Fetch Category Name
-    cat_name = fetch_category_name(category_url, cat_slug)
+    if url_info is None:
+        print(f"❌ Error: Could not extract category OR search term from URL: {target_url}")
+        print("  Expected format like: .../category/ID/SLUG/... or .../s/SEARCH_TERM/...")
+        sys.exit(1)
+
+    entry_type = url_info["type"]
+    cat_id = url_info.get("id")
+    cat_slug = url_info.get("slug")
+    search_term = url_info.get("search_term")
+
+    # 2. Determine Name
+    entry_name = None
+    if entry_type == "category":
+        print(f"Extracted Category ID: {cat_id}, Slug: {cat_slug}")
+        entry_name = fetch_category_name(target_url, cat_slug)
+    elif entry_type == "search":
+        print(f"Extracted Search Term: '{search_term}'")
+        entry_name = f"Search: {search_term}" # Use search term directly for the name
 
     # 3. Load existing categories
     categories = load_json(categories_file)
     if categories is None: # Indicates a loading error
         sys.exit(1)
 
-    # 4. Check for duplicates
-    for existing_cat in categories:
-        if existing_cat.get("id") == cat_id:
-            print(f"ℹ️ Category ID {cat_id} ('{existing_cat.get('name', cat_slug)}') already exists in {categories_file}. No changes made.")
-            sys.exit(0)
+    # 4. Check for duplicates & Calculate next order
+    max_order = 0
+    duplicate_found = False
+    for idx, existing_entry in enumerate(categories):
+        # Check existing order, default to 0 if missing/invalid
+        try:
+            current_order = int(existing_entry.get('order_to_download', 0))
+            if current_order > max_order:
+                max_order = current_order
+        except (ValueError, TypeError):
+             print(f"⚠️ Warning: Invalid 'order_to_download' found at index {idx}. Treating as 0 for max order calculation.")
 
-    # 5. Create new category entry
-    new_category = {
-        "id": cat_id,
-        "slug": cat_slug,
-        "name": cat_name,
+        # Check for duplicates
+        if entry_type == "category" and existing_entry.get("id") == cat_id:
+            print(f"ℹ️ Category ID {cat_id} ('{existing_entry.get('name', cat_slug)}') already exists. No changes made.")
+            duplicate_found = True
+            break
+        elif entry_type == "search" and existing_entry.get("search_term") == search_term:
+            print(f"ℹ️ Search term '{search_term}' ('{existing_entry.get('name', entry_name)}') already exists. No changes made.")
+            duplicate_found = True
+            break
+
+    if duplicate_found:
+        sys.exit(0)
+
+    next_order = max_order + 1
+
+    # 5. Create new entry
+    new_entry = {
+        "name": entry_name,
         "scrape_enabled": False,       # Default: disabled
         "max_pages_to_scrape": 10,     # Default: 10 pages
         "next_page_to_scrape": 1,      # Default: start at page 1
-        "books_processed_on_page": 0   # Default: 0 processed
+        "books_processed_on_page": 0,  # Default: 0 processed
+        "order_to_download": next_order
     }
-    print(f"Adding new category:")
-    print(json.dumps(new_category, indent=2))
+
+    # Add type-specific fields
+    if entry_type == "category":
+        new_entry["id"] = cat_id
+        new_entry["slug"] = cat_slug
+    elif entry_type == "search":
+        new_entry["search_term"] = search_term
+
+    print(f"\nAdding new {entry_type} entry (Order: {next_order}):")
+    print(json.dumps(new_entry, indent=2))
 
     # 6. Append and Save
-    categories.append(new_category)
+    categories.append(new_entry)
     if save_json(categories, categories_file):
-        print(f"✅ Successfully added category ID {cat_id} to {categories_file}.")
+        print(f"✅ Successfully added '{entry_name}' to {categories_file}.")
     else:
         print(f"❌ Failed to save updated categories to {categories_file}.")
         sys.exit(1)

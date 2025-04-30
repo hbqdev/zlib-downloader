@@ -437,24 +437,26 @@ class Zlibrary:
 
     def search_scrape(
         self,
-        category_id: int, 
-        category_slug: str, 
         page: int,
+        category_id: int = None, # Now optional
+        category_slug: str = None, # Now optional
+        search_term: str = None, # New optional parameter
         enable_file_output: bool = True
      ) -> dict:
-        """Scrapes a specific category page on Z-Library.
+        """Scrapes a specific category page OR a search results page on Z-Library.
 
         Args:
-            category_id: The numerical ID of the category.
-            category_slug: The text slug of the category.
             page: The page number to scrape.
+            category_id: The numerical ID of the category (use if search_term is None).
+            category_slug: The text slug of the category (use if search_term is None).
+            search_term: The raw search term (use if category_id/slug are None).
             enable_file_output: If True, writes to raw_html_output.txt and to_download.txt.
 
         Returns:
             A dictionary containing:
             - 'success': True if the scrape and file write succeeded, False otherwise.
             - 'books_found': The number of book cards extracted from the page.
-            - 'books_data': A list of dictionaries containing extracted book details 
+            - 'books_data': A list of dictionaries containing extracted book details
                             (id, hash, title, authors) if successful.
             - 'error': An error message if success is False.
         """
@@ -462,12 +464,28 @@ class Zlibrary:
             print("Not logged in")
             return {"success": False, "books_found": 0, "error": "Not logged in", "books_data": []}
 
-        # --- Construct URL Dynamically --- 
-        # Assuming english and popular sort order for now
-        target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
-        print(f"Scraping URL: {target_url}")
+        # --- Construct URL Dynamically ---
+        target_url = None
+        scrape_type = "" # For logging
 
-        # --- Step 1: Fetch the HTML --- 
+        if search_term:
+            from urllib.parse import quote # Use quote instead of quote_plus
+            encoded_search_term = quote(search_term)
+            # Assuming common filters for search - REMOVE order=popular
+            target_url = f"https://{self.__domain}/s/{encoded_search_term}/?content_type=book&languages%5B0%5D=english&page={page}"
+            scrape_type = f"search term '{search_term}'"
+        elif category_id and category_slug:
+            # Existing category logic
+            # Keep order=popular for categories as it was there originally
+            target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
+            scrape_type = f"category {category_id}/{category_slug}"
+        else:
+            # Error: Insufficient information
+            return {"success": False, "books_found": 0, "error": "Must provide either search_term or category_id/category_slug", "books_data": []}
+
+        print(f"Scraping {scrape_type}, Page {page} - URL: {target_url}")
+
+        # --- Step 1: Fetch the HTML ---
         try:
             response = requests.get(
                 target_url,
@@ -565,16 +583,12 @@ class Zlibrary:
         
         # Determine success based on extraction, books_found is the count
         extraction_successful = True # Assume success unless specific error below
-        if not books_data and matches_found == 0:
+        if matches_found == 0: # Changed condition slightly: 0 matches means 0 books found
              print("Regex did not extract any book data. This might be the last page or an empty page.")
              # This is considered a successful scrape of an empty page
              pass # Proceed to step 4 logic which handles books_found=0
-        elif not books_data and matches_found > 0:
-             print("Warning: Regex found card blocks but failed to extract valid book data (ID/Hash/Title/Author).")
-             extraction_successful = False # Mark as extraction failure
-             # Proceed to step 4, but it might return success=False depending on enable_file_output
 
-        # --- Step 4: Save extracted data to to_download.txt --- 
+        # --- Step 4: Save extracted data to to_download.txt ---
         download_filename = "to_download.txt"
         if enable_file_output:
             try:

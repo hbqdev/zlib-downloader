@@ -118,7 +118,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
     email = config.get("email")
     password = config.get("password")
     domain = config.get("domain", "z-library.sk")
-    should_download = config.get("download_books", True)
+    should_download = config.get("download_books", False)
     output_dir = config.get("output_dir")
     download_filename = "to_download.txt"
     fetch_full = config.get("fetch_full_history", False)
@@ -195,8 +195,17 @@ def run_download_process(config_file="config.json", categories_file="categories.
             report_file_handle = None
 
     try:
+        # Sort Categories/Targets by order_to_download
+        try:
+            categories.sort(key=lambda x: int(x.get('order_to_download', float('inf'))))
+            print("ℹ️ Processing targets ordered by 'order_to_download'.")
+        except ValueError:
+            print("⚠️ Warning: Found non-integer value in 'order_to_download'. Sorting might be incorrect.")
+        except Exception as e:
+            print(f"⚠️ Warning: Error during sorting by 'order_to_download': {e}. Proceeding with original order.")
+
         # Outer Loop: Categories
-        for category in tqdm(categories, desc="Processing categories", unit="category"):
+        for category in tqdm(categories, desc="Processing targets", unit="target"):
             cat_id = category.get("id")
             cat_slug = category.get("slug")
             cat_name = category.get("name", f"ID {cat_id}")
@@ -205,20 +214,26 @@ def run_download_process(config_file="config.json", categories_file="categories.
             # books_processed_on_page is read/updated directly within the category dict
             current_page_to_scrape = category.get("next_page_to_scrape", 1)
 
+            # --- New: Check for search term --- 
+            search_term = category.get("search_term")
+            is_search_scrape = bool(search_term) # True if search_term is present and not empty
+            scrape_target_name = cat_name if not is_search_scrape else category.get("name", f"Search: '{search_term}'")
+
             if not scrape_enabled:
-                print(f"\n⏭️ Skipping disabled category: {cat_name}")
+                print(f"\n⏭️ Skipping disabled target: {scrape_target_name}")
                 continue
-            
-            if not all([cat_id, cat_slug]):
-                print(f"\n⚠️ Skipping category with missing id/slug: {cat_name}") # Use name for clarity
+
+            # --- Validation: Ensure we have either category info or search term ---
+            if not is_search_scrape and not all([cat_id, cat_slug]):
+                print(f"\n⚠️ Skipping category with missing id/slug: {scrape_target_name}")
                 continue
-            
+            # No explicit validation needed for search_term here, empty check is done by bool()
+
             # Calculate the range of pages to process in THIS run
-            # Start from the saved page, go up to max_pages relative to that start
             start_page_this_run = current_page_to_scrape
-            end_page_this_run = start_page_this_run + max_pages - 1 
-            print(f"\n📚 Processing Category: {cat_name} (Targeting Pages {start_page_this_run} to {end_page_this_run})")
-            
+            end_page_this_run = start_page_this_run + max_pages - 1
+            print(f"\n📚 Processing Target: {scrape_target_name} (Targeting Pages {start_page_this_run} to {end_page_this_run})")
+
             books_processed_this_category = 0
             limit_hit_for_this_category = False
             last_successfully_scraped_page = start_page_this_run - 1
@@ -227,34 +242,41 @@ def run_download_process(config_file="config.json", categories_file="categories.
             new_pages_scraped_this_run = 0
             while not halt_run_due_to_limit and new_pages_scraped_this_run < max_pages:
                 current_page = category.get("next_page_to_scrape", 1)
-                # Get the number processed from the last run *before* starting the page
-                # books_processed_before_page_start = category.get("books_processed_on_page", 0) # No longer needed
-                
-                print(f"\n📄 Processing Page {current_page} for Category: {cat_name} (Target: {max_pages} new pages this run)")
-                # Reset the processed count for this specific page run in memory
+                print(f"\n📄 Processing Page {current_page} for Target: {scrape_target_name} (Target: {max_pages} new pages this run)")
                 category["books_processed_on_page"] = 0
                 print(f"   ℹ️ Resetting in-memory processed count to 0 for page {current_page} check.")
-                # if books_processed_before_page_start > 0:
-                #      print(f"   ℹ️ Resuming page - {books_processed_before_page_start} books already processed.")
 
                 # --- Scrape the current page --- 
                 if should_download and os.path.exists(download_filename):
                     try: os.remove(download_filename)
                     except OSError as e: print(f"⚠️ Could not remove old {download_filename}: {e}")
-                
-                scrape_result = z.search_scrape(cat_id, cat_slug, current_page, enable_file_output=should_download)
+
+                # --- Call appropriate scrape method ---
+                if is_search_scrape:
+                    scrape_result = z.search_scrape(
+                        search_term=search_term,
+                        page=current_page,
+                        enable_file_output=should_download
+                    )
+                else: # It's a category scrape
+                    scrape_result = z.search_scrape(
+                        category_id=cat_id,
+                        category_slug=cat_slug,
+                        page=current_page,
+                        enable_file_output=should_download
+                    )
+                # --- End Scrape Call ---
+
                 books_found_on_page = scrape_result.get("books_found", 0)
 
                 if not scrape_result.get("success", False):
-                    print(f"  ❌ Error scraping page {current_page}: {scrape_result.get('error', 'Unknown error')}")
-                    print(f"  Skipping rest of category '{cat_name}' for this run.")
-                    break # Break the 'while' loop for this category
-                
+                    print(f"  ❌ Error scraping page {current_page} for {scrape_target_name}: {scrape_result.get('error', 'Unknown error')}")
+                    print(f"  Skipping rest of target '{scrape_target_name}' for this run.")
+                    break # Break the 'while' loop for this target
+
                 if books_found_on_page == 0:
-                    print(f"  📭 No books found on page {current_page}. Assuming end of category '{cat_name}'.")
-                    # If no books found, consider the category done for this run.
-                    # Don't increment next_page_to_scrape, let it retry next time if needed.
-                    break # Break the 'while' loop for this category
+                    print(f"  📭 No books found on page {current_page}. Assuming end of target '{scrape_target_name}'.")
+                    break # Break the 'while' loop for this target
 
                 print(f"  ✅ Found {books_found_on_page} potential books on page {current_page}.")
 
@@ -505,7 +527,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     category["books_processed_on_page"] = 0 # Reset for the new page
                     last_successfully_scraped_page = current_page # Track for summary msg
 
-                    print(f"    Updating state: Next page for '{cat_name}' is {next_page_to_start}, processed count reset.")
+                    print(f"    Updating state: Next page for '{scrape_target_name}' is {next_page_to_start}, processed count reset.")
                     if not save_json(categories, categories_file):
                         print(f"      ❌ CRITICAL ERROR: Failed to save state after completing page {current_page}! Halting.")
                         cleanup_db()
@@ -522,24 +544,24 @@ def run_download_process(config_file="config.json", categories_file="categories.
                 
                 # Check if we should continue to the next page in THIS RUN
                 if new_pages_scraped_this_run >= max_pages:
-                    print(f"  🏁 Reached max_pages_to_scrape ({max_pages}) for '{cat_name}' this run.")
+                    print(f"  🏁 Reached max_pages_to_scrape ({max_pages}) for '{scrape_target_name}' this run.")
                     break # Break the WHILE loop for pages
                 # Otherwise, the WHILE loop continues to the next page if page was fully processed
 
             # --- End of While Loop for Pages ---
 
             # Update category summary message (uses last_successfully_scraped_page)
-            print(f"\n✅ Finished processing pages for category: {cat_name}. Processed {books_processed_this_category} new books/listings in this run.")
+            print(f"\n✅ Finished processing pages for target: {scrape_target_name}. Processed {books_processed_this_category} new books/listings in this run.")
             total_books_processed_all_categories += books_processed_this_category
             # The next page state ('next_page_to_scrape' and 'books_processed_on_page')
             # should already be correctly set and saved within the page loop.
 
             # Break category loop if global halt flag is set during page processing
             if halt_run_due_to_limit:
-                print(f"\n⛔ Halting further category processing due to download limit/error reached in '{cat_name}'.")
+                print(f"\n⛔ Halting further target processing due to download limit/error reached in '{scrape_target_name}'.")
                 break
 
-        # End of Category Loop
+        # End of Category/Target Loop
 
     except KeyboardInterrupt:
         print("\n⚠️ Process interrupted by user.")
