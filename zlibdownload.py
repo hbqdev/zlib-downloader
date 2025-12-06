@@ -476,12 +476,14 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                     print(f"\n      ❌ Error saving file '{filepath}': {e}")
                                     if 'progress_bar' in locals() and progress_bar: progress_bar.close()
                                     # If save fails, don't mark in CB or update state
+                                    continue # Skip to next file
                                 except Exception as e:
                                     print(f"\n      ❌ Unexpected error during file save/progress for {final_filename}: {e}")
                                     import traceback
                                     print(traceback.format_exc())
                                     if 'progress_bar' in locals() and progress_bar: progress_bar.close()
                                     # If save fails, don't mark in CB or update state
+                                    continue # Skip to next file
 
                             else: # Download failed (likely limit hit or API error)
                                 print(f"      ❌ Download failed for book ID {book_id}")
