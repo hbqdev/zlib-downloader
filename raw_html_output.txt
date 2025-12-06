@@ -1,1149 +1,1149 @@
 <z-bookcard
-                                        id="3317987"
-                    isbn=""
-                    termshash="398297ea929f714edf8d89e537093600"
-                    href="/book/3317987/641f72/how-to-improve-your-concentration-the-7-secrets-of-how-to-improve-your-memory-and-to-stay-focused.html"
-                    download="/dl/3317987/ad1b3d"
+                                        id="28100253"
+                    isbn="9780316321655"
+                    termshash="08de412fd9e91b204c65ff85ad5dbdf6"
+                    href="/book/28100253/2e97dc/song-of-the-huntress.html"
+                    download="/dl/28100253/cd8660"
                     deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="pdf"
-                    filesize="469 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/dbb63e50142878bcd15a88a42cd012ea95a7f3eb966c911eeea3d83742623db0.jpg" />
-                    <div slot="title">How to Improve Your Concentration: The 7 Secrets of How to Improve Your Memory and to Stay Focused</div>
-                                        <div slot="author">Thompson; Oliver</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="1167409"
-                    isbn="9781937918767"
-                    termshash="55c1e3a4c3c4c0fe5076f8dda517fb29"
-                    href="/book/1167409/c02ec3/memory-improvement-how-to-improve-your-memory-in-just-30-days.html"
-                    download="/dl/1167409/6f8b1b"
-                    deleted=""
-                    publisher="Laurenzana Press"
-                    language="english"
-                    year="2013"
-                    extension="pdf"
-                    filesize="1.12 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/154ba7d144bbc8dd1bc064558c62d291635808de55ca0765029543cda60e34c0.jpg" />
-                    <div slot="title">Memory Improvement: How To Improve Your Memory In Just 30 Days</div>
-                                        <div slot="author">Ron White</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11915611"
-                    isbn=""
-                    termshash="4ade982f60d6b388be9292c7582434b3"
-                    href="/book/11915611/8593b4/how-to-improve-your-working-memory-unlock-your-unlimited-memory-to-memorize-everything-you-read-and.html"
-                    download="/dl/11915611/1a633f"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2020"
-                    extension="epub"
-                    filesize="1.87 MB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/3c63d10a6c636e0c4a2c325c4f306088b71cfe2576eff3e1738044162c57e9c7.jpg" />
-                    <div slot="title">How to Improve Your Working Memory: Unlock Your Unlimited Memory to Memorize Everything You Read and Hear, Apply Creative Visualization and Association ... (Accelerated Learning Techniques Book 4)</div>
-                                        <div slot="author">Arianna Peterson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11915612"
-                    isbn=""
-                    termshash="4ade982f60d6b388be9292c7582434b3"
-                    href="/book/11915612/2b2b7a/how-to-improve-your-working-memory-unlock-your-unlimited-memory-to-memorize-everything-you-read-and.html"
-                    download="/dl/11915612/22640e"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="2.26 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e47266bed4253e472d07dc2f1410f5ed363cc92aabaede4765140d4790598e66.jpg" />
-                    <div slot="title">How to Improve Your Working Memory: Unlock Your Unlimited Memory to Memorize Everything You Read and Hear, Apply Creative Visualization and Association ... (Accelerated Learning Techniques Book 4)</div>
-                                        <div slot="author">Peterson; Arianna</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11321713"
-                    isbn="B08TCB4Z5F"
-                    termshash="1ecb3b5b79f45397fa2bee1783f00c5e"
-                    href="/book/11321713/b73581/memorization-techniques-3-manuscripts-in-1-book-including-how-to-improve-memory-how-to-mind-map-a.html"
-                    download="/dl/11321713/4b24f9"
-                    deleted=""
-                    publisher="Independently Published"
-                    language="english"
-                    year="2021"
-                    extension="pdf"
-                    filesize="1.35 MB"
-                    rating="3.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/fd2951b47883f481da0cde48a554e2da067e0ca78d1a495379f00691f53eb60d.jpg" />
-                    <div slot="title">Memorization Techniques, 3 Manuscripts in 1 Book, Including How to Improve Memory, How to Mind Map and How to Study Effectively</div>
-                                        <div slot="author">Bates; Troye</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2319619"
-                    isbn="9781843179535"
-                    termshash="8a9fa55ca3ff05bf0888e4dadf282caf"
-                    href="/book/2319619/537df5/how-to-think-like-sherlock-improve-your-powers-of-observation-memory-and-deduction.html"
-                    download="/dl/2319619/99f991"
-                    deleted=""
-                    publisher="Michael O'Mara"
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="4.84 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9bf6d727bf8f55e43b2c5a03e1ecaa1abc65da68e123843b1ecb6d0158df1d89.jpg" />
-                    <div slot="title">How to Think Like Sherlock: Improve Your Powers of Observation, Memory and Deduction</div>
-                                        <div slot="author">Daniel Smith</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2518405"
-                    isbn="9788184005219"
-                    termshash="0f6950f1d8890f844a9c6f6ca3dc86f1"
-                    href="/book/2518405/63220a/how-to-memorize-anything-the-ultimate-handbook-to-enlighten-and-improve-your-memory.html"
-                    download="/dl/2518405/575dea"
-                    deleted=""
-                    publisher="Penguin/Ebury Press"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="3.46 MB"
-                    rating="3.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/123c0901f43dbcd6d48dccbd6afa3ceac81c2700736cffd7a652446e656cf5c7.jpg" />
-                    <div slot="title">How to Memorize Anything: The Ultimate Handbook to Enlighten and Improve Your Memory</div>
-                                        <div slot="author">Aditi Singhal; Sudhir Singhal</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2516402"
-                    isbn="9781484984079"
-                    termshash="6a0fe051adeedbe5ce0eca993056db49"
-                    href="/book/2516402/c3a8d9/mind-maps-how-to-improve-memory-writer-smarter-plan-better-think-faster-and-make-more-money.html"
-                    download="/dl/2516402/7e8b95"
-                    deleted=""
-                    publisher="CreateSpace Independent Publishing Platform"
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="588 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7cb90fa68422764aec9e6c5bd921cd82f278052d73e14d452ffbafb8a9d4a2c0.jpg" />
-                    <div slot="title">Mind Maps: How to Improve Memory, Writer Smarter, Plan Better, Think Faster, and Make More Money</div>
-                                        <div slot="author">John S. Rhodes</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11179248"
-                    isbn="B08GG1PWYN"
-                    termshash="7ab4868531b97e29a439e7f8cb324a53"
-                    href="/book/11179248/8ee870/accelerated-learning-learn-how-high-performers-discover-new-skills-fast-improve-memory-increase.html"
-                    download="/dl/11179248/87cc70"
-                    deleted=""
-                    publisher="Madhan Kumar"
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="552 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/8e53741186d10e8232bee19d5de81fb8ba5fca944f45c26f5e4bfaac728f4308.jpg" />
-                    <div slot="title">Accelerated Learning - Learn How High Performers Discover New Skills Fast, Improve Memory, Increase Laser-Sharp Focus, and Increase Their Productivity Using Methods Such as Speed Reading</div>
-                                        <div slot="author">MADHAN KUMAR [KUMAR; MADHAN]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3315930"
-                    isbn=""
-                    termshash="38ad61179fcbd9e2830d83922e3e2054"
-                    href="/book/3315930/e5b20f/recall-forever-how-to-improve-your-memory-organize-your-mind-and-remember-everything.html"
-                    download="/dl/3315930/03d6d9"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="99 KB"
-                    rating="4.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/67930c6d560c79dc7f151d5f228bca9239e4d9e369b9bf62f105fb01e3b80cac.jpg" />
-                    <div slot="title">Recall Forever: How To Improve Your Memory, Organize Your Mind and Remember Everything</div>
-                                        <div slot="author">Lynch; George</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11124338"
-                    isbn="9798584045609"
-                    termshash="ae667242bf9d05df13b24588e450b772"
-                    href="/book/11124338/9a985d/the-super-memory-how-to-increase-memory-and-brain-power-3-memory-books-in-1-photographic-memory.html"
-                    download="/dl/11124338/5c847e"
-                    deleted=""
-                    publisher="upgrade"
-                    language="english"
-                    year="2020"
-                    extension="pdf"
-                    filesize="73.26 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c2400d708c59832a585745a54d5a7611d82c34baa273905cdeb8a1a5dd181069.jpg" />
-                    <div slot="title">The Super Memory: How to Increase Memory and Brain Power - 3 Memory Books in 1: Photographic Memory, Memory Training and Memory Improvement</div>
-                                        <div slot="author">Edoardo Zeloni Magelli</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3608274"
-                    isbn=""
-                    termshash="43196f6476e2e2c68a90c522907e5b16"
-                    href="/book/3608274/f5ff2f/the-dale-carnegie-course-in-effective-speaking-human-relations-and-developing-courage-and-confidenc.html"
-                    download="/dl/3608274/ec8f9c"
-                    deleted=""
-                    publisher="Dale Carnegie"
-                    language="english"
-                    year="1989"
-                    extension="pdf"
-                    filesize="11.16 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/20a44207628fb6e036d11f5107ce2cdfdcd4fbdf01ad6d0c71de1bf88c401a93.jpg" />
-                    <div slot="title">The Dale Carnegie course in effective speaking, human relations and developing courage and confidence, improving your memory, leadership training : how the course is conducted and what you do at each session</div>
-                                        <div slot="author">Dale Carnegie &amp; Associates; Inc.</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3312591"
-                    isbn="9781519337337"
-                    termshash="c9a4bb8804c57257181e722680dd0981"
-                    href="/book/3312591/2d7a43/sleep-exact-blueprint-on-how-to-sleep-better-and-feel-amazing-brain-health-memory-improvement.html"
-                    download="/dl/3312591/305357"
-                    deleted=""
-                    publisher="[CreateSpace Independent Publishing Platform]"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="358 KB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a72d86ce188769fd29f54eb1d86e099f6717b4e297276e397286c3fc568fda6c.jpg" />
-                    <div slot="title">Sleep : exact blueprint on how to sleep better and feel amazing : brain health, memory improvement &amp; increase energy</div>
-                                        <div slot="author">Adams; Brian</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="16836185"
-                    isbn="B00LHWPE5G"
-                    termshash="7e30e89e2f5b176871823c7cdd6cc15c"
-                    href="/book/16836185/bd7c62/brain-training-exercise-your-mind-and-improve-your-memory-improve-memory-improve-your-memory-mem.html"
-                    download="/dl/16836185/eb9b47"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="159 KB"
-                    rating="1.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/031ffef9191d205ed41b44555f78e755cfe3b84361e6d54086b54cc96587897e.jpg" />
-                    <div slot="title">Brain Training: Exercise Your Mind and Improve Your Memory (Improve memory, improve your memory, memory improvement, brain training, how to improve memory, improving memory)</div>
-                                        <div slot="author">Thomas P. Lester</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="16836184"
-                    isbn="B00LHWPE5G"
-                    termshash="7e30e89e2f5b176871823c7cdd6cc15c"
-                    href="/book/16836184/a1afc9/brain-training-exercise-your-mind-and-improve-your-memory-improve-memory-improve-your-memory-mem.html"
-                    download="/dl/16836184/94e6ff"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="azw3"
-                    filesize="167 KB"
-                    rating="1.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f505ea108ecd1f99f1fc587865d47cc77f4416226fdc4cbe96bdcd3465fe45d0.jpg" />
-                    <div slot="title">Brain Training: Exercise Your Mind and Improve Your Memory (Improve memory, improve your memory, memory improvement, brain training, how to improve memory, improving memory)</div>
-                                        <div slot="author">Thomas P. Lester</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3316065"
-                    isbn=""
-                    termshash="3f5506dfdbfe549000b71a365f1277fc"
-                    href="/book/3316065/041b11/improve-your-memory-how-to-improve-memory-learn-faster-remember-more-gain-focus-and-increase-pro.html"
-                    download="/dl/3316065/1f84a4"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2016"
-                    extension="epub"
-                    filesize="87 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8795eee2ce2095d66c839384425e7b9c21409c3d4e470bb1cc96a7445b4b2a79.jpg" />
-                    <div slot="title">Improve Your Memory: How to improve memory, learn faster, remember more, gain focus and increase productivity: Improve Memory Using Reshed Methods</div>
-                                        <div slot="author">Masterson; John</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18266444"
-                    isbn="B00B2SKRB6"
-                    termshash="467b835e878bec66696e9d60f31f51c1"
-                    href="/book/18266444/9a956c/how-to-improve-memory-the-ultimate-mind-power-manual-the-best-brain-exercises-to-improve-your-me.html"
-                    download="/dl/18266444/2e5c0d"
-                    deleted=""
-                    publisher="Success Sculpting, Inc."
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="803 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2c6e90a98f2aefa13a4044c4ea5ce14e3a3fe70f90c47c3e9b63fca9816caf1a.jpg" />
-                    <div slot="title">How To Improve Memory - The Ultimate Mind Power Manual - The Best Brain Exercises to Improve Your Memory and Master Your Mind Power (Success Sculpting Coach Series)</div>
-                                        <div slot="author">Success Sculpting Coach</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5228000"
-                    isbn="9781558216532"
-                    termshash="467b835e878bec66696e9d60f31f51c1"
-                    href="/book/5228000/407dab/how-to-improve-memory-the-ultimate-mind-power-manual-the-best-brain-exercises-to-improve-your-me.html"
-                    download="/dl/5228000/f78c37"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="0"
-                    extension="epub"
-                    filesize="802 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="/img/cover-not-exists.png" />
-                    <div slot="title">How To Improve Memory - The Ultimate Mind Power Manual - The Best Brain Exercises to Improve Your Memory and Master Your Mind Power</div>
-                                        <div slot="author">Success Sculpting Coach; Success Sculpting Inc</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18607796"
-                    isbn=""
-                    termshash="1dc67b51bf6337bc760e618d582adb7a"
-                    href="/book/18607796/bdbe3a/memory-mastery-how-to-improve-memory-blazingly-fast-the-secrets-to-learning-faster-gaining-more-c.html"
-                    download="/dl/18607796/a1aac6"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="176 KB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a5d65bdee6414111429cfcce4ea6a070bfafbbce76f5aa2b5a3860c34b562209.jpg" />
-                    <div slot="title">Memory Mastery. How to Improve Memory Blazingly Fast! The Secrets to Learning Faster, Gaining More Clarity, Easily Recalling Details &amp; Significantly Increasing Your Memory Capacity</div>
-                                        <div slot="author">Walter E. Samuelson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18091361"
-                    isbn="B09LFZD32H"
-                    termshash="c09e6fc0bd92ed4d043a4357b27db5fc"
-                    href="/book/18091361/73568e/how-to-improve-shortterm-memory-how-memory-works-why-it-declines-and-how-to-turn-it-around.html"
-                    download="/dl/18091361/8cf9d9"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
-                    extension="pdf"
-                    filesize="1.24 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/26a06a5a0afbe69b46b232ce94d53dfdc2e749d865eedad855516d41ae5be4b8.jpg" />
-                    <div slot="title">How To Improve Short-Term Memory: How Memory Works, Why It Declines, and How To Turn It Around</div>
-                                        <div slot="author">Faulk; Todd</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="13531201"
-                    isbn=""
-                    termshash="731bb02d7707c9c671f483769a39ea9d"
-                    href="/book/13531201/2f344d/how-to-concentrate-like-einstein-the-lazy-students-way-to-instantly-improve-memory-grades-with-t.html"
-                    download="/dl/13531201/553904"
-                    deleted=""
-                    publisher="#PrB.rating#2.93"
-                    language="english"
-                    year="2012"
-                    extension="epub"
-                    filesize="272 KB"
-                    rating="1.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/cfc9a49dbd9b76fa5cd19b6157e8494ad5a184dc277bad59e99afeaea43ebef9.jpg" />
-                    <div slot="title">How to Concentrate Like Einstein: The Lazy Student's Way to Instantly Improve Memory &amp; Grades With the Doctor Vittoz Secret Concentration Technique.</div>
-                                        <div slot="author">Remy Roulier [Roulier; Remy]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="22330756"
-                    isbn="B00O8L85FY"
-                    termshash="7f17f813dc5956c00e023d3b59008d28"
-                    href="/book/22330756/d4f2ed/memory-improvement-how-to-unlock-the-power-of-your-mind-and-remember-things-you-never-thought-poss.html"
-                    download="/dl/22330756/ef016d"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="165 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/60da889dae1669886a996b59734e85416cd56eabf12e1617672588f0ed236b81.jpg" />
-                    <div slot="title">Memory Improvement · How to Unlock the Power of Your Mind and Remember Things You Never Thought Possible Forever! (Memory Improvement Techniques, Memory ... and Boost Brain Power, Brain Training)</div>
-                                        <div slot="author">Wallace; Jonathan</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5664920"
-                    isbn=""
-                    termshash="1a00e891a94d8470ba342f864da0c2ee"
-                    href="/book/5664920/165855/memory-improvement-accelerated-learning-and-brain-training-learn-how-to-optimize-and-improve-your.html"
-                    download="/dl/5664920/5bdeee"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2019"
-                    extension="azw3"
-                    filesize="269 KB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/9307abb876438831e2b61949f6b16b06ce993d423f644ec2bc3c05d28567379e.jpg" />
-                    <div slot="title">Memory Improvement, Accelerated Learning and Brain Training: Learn How to Optimize and Improve Your Memory and Learning Capabilities for Top Results in University and at Work</div>
-                                        <div slot="author">Adams; John</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="6077983"
-                    isbn=""
-                    termshash="92dac21f9433a7c94ea4dba9369e3ee5"
-                    href="/book/6077983/b83ffe/how-to-improve-your-memory-an-everyday-guide-to-improving-your-memory-advance-and-helpful-strategi.html"
-                    download="/dl/6077983/92961b"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2020"
-                    extension="epub"
-                    filesize="2.27 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/fd1ad77a12212c34c199373e317f06396313a159a9372d8b8e69a8026bdf7625.jpg" />
-                    <div slot="title">How to Improve Your Memory: An everyday guide to improving your memory. Advance and helpful strategies to help you remember things and increasing learning</div>
-                                        <div slot="author">Carlos; Benjamin</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="14449011"
-                    isbn=""
-                    termshash="fd6fa7ad6d0761a23866501c66aba7e8"
-                    href="/book/14449011/4c7295/memory-improvement-how-to-improve-your-memory-in-just-30-days.html"
-                    download="/dl/14449011/ed10aa"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="0"
-                    extension="epub"
-                    filesize="576 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c4da4ecec9cf217304171b966f7f807377dae9987aaa4802a27e92ff1157f8c3.jpg" />
-                    <div slot="title">Memory Improvement: How To Improve Your Memory In Just 30 Days</div>
-                                        <div slot="author">White; Ron [White; Ron]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5856268"
-                    isbn=""
-                    termshash="0d2b1cc89292568863abe688b905d67c"
-                    href="/book/5856268/489f70/memory-train-your-brain-the-complete-guide-on-how-to-improve-your-memory-think-faster-concentra.html"
-                    download="/dl/5856268/fd3616"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2017"
-                    extension="azw3"
-                    filesize="599 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/8e61eece60bfd1908a6282e0dae7f0377a0c1a51c9760f3c9eee65e02c1b03be.jpg" />
-                    <div slot="title">Memory. Train Your Brain.: The Complete Guide on How to Improve Your Memory, Think Faster, Concentrate More and Remember Everything</div>
-                                        <div slot="author">Wood; Benjamin</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18431592"
-                    isbn="B077K8TBSH"
-                    termshash="0d2b1cc89292568863abe688b905d67c"
-                    href="/book/18431592/5ac3e8/memory-train-your-brain-the-complete-guide-on-how-to-improve-your-memory-think-faster-concentra.html"
-                    download="/dl/18431592/75f0a7"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2017"
-                    extension="epub"
-                    filesize="565 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/df0f013fc217c9910008e9f1db567bcacb42e02e3f53e2e661de2f6e1043aafc.jpg" />
-                    <div slot="title">Memory. Train Your Brain.: The Complete Guide on How to Improve Your Memory, Think Faster, Concentrate More and Remember Everything</div>
-                                        <div slot="author">Benjamin Wood</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3313208"
-                    isbn=""
-                    termshash="d1231a762ff2b3d1dce8464182bd697a"
-                    href="/book/3313208/ba826e/how-to-improve-your-memory-for-students-study-less-but-still-ace-your-classes.html"
-                    download="/dl/3313208/2be52c"
-                    deleted=""
-                    publisher="Johnny Briones"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="685 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/70ccd2db23037e7289603ebe3642cd1126f11df284f97794ed874c6ba64cbf54.jpg" />
-                    <div slot="title">How to Improve Your Memory for Students: Study Less But Still Ace Your Classes</div>
-                                        <div slot="author">Johnny Briones</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="17567607"
-                    isbn=""
-                    termshash="9316d34e028bb3394b8de2d11192dceb"
-                    href="/book/17567607/acf1b3/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
-                    download="/dl/17567607/c50552"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
-                    extension="epub"
-                    filesize="1.45 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/84ea42cb18137f6f18d195526c2563877dc0bed0e3e09fbf81ae14829a84b891.jpg" />
-                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
-                                        <div slot="author">Joseph Milano</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18204948"
-                    isbn=""
-                    termshash="bc516766665c8baca21362f9b170c525"
-                    href="/book/18204948/7f439a/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
-                    download="/dl/18204948/63f463"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
-                    extension="pdf"
-                    filesize="1.50 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2f559d2d17dec53e477e9e66cdba53662111ae5ccee5cbcbfb72078cc5587aaf.jpg" />
-                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
-                                        <div slot="author">Milano; Joseph</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="23197467"
-                    isbn="9781785926341"
-                    termshash="6b00ea0d65c7ab1d9232fa8fd5c38b7d"
-                    href="/book/23197467/54295d/how-can-i-remember-all-that-simple-stuff-to-improve-your-working-memory.html"
-                    download="/dl/23197467/b7b218"
-                    deleted=""
-                    publisher="Jessica Kingsley Publishers"
-                    language="english"
-                    year="2019"
-                    extension="epub"
-                    filesize="1.67 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/d0a6a1df34cbf91ed378ed500c6224860d65f175e373117953f2095ed56d3dce.jpg" />
-                    <div slot="title">How Can I Remember All That?: Simple Stuff to Improve Your Working Memory</div>
-                                        <div slot="author">Tracy Packiam Alloway</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18055896"
-                    isbn=""
-                    termshash="9316d34e028bb3394b8de2d11192dceb"
-                    href="/book/18055896/0ba1b2/how-to-learn-faster-and-be-more-productive-improve-your-memory-focus-your-mind-and-achieve-powerfu.html"
-                    download="/dl/18055896/becddd"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2021"
-                    extension="epub"
-                    filesize="1.45 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/09f283203d15ced8d392ee2cd20ad8ec80b5a5c6eb1c06fa100f9e97b170d9c1.jpg" />
-                    <div slot="title">How to Learn Faster and Be More Productive: Improve your Memory, Focus your Mind and Achieve Powerful Goals</div>
-                                        <div slot="author">Milano; Joseph</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3313207"
-                    isbn=""
-                    termshash="f2cb7b9e0d916a523f14d475263b01a3"
-                    href="/book/3313207/dd2f7c/how-to-improve-your-memory-study-less-but-still-ace-your-classes.html"
-                    download="/dl/3313207/7921e0"
-                    deleted=""
-                    publisher="Johnny Briones"
-                    language="english"
-                    year="2015"
-                    extension="mobi"
-                    filesize="726 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/39237c859b561a17533ba193a7e375d3228c58c4f2d949c760355d670468deef.jpg" />
-                    <div slot="title">How To Improve Your Memory: Study Less But Still Ace Your Classes</div>
-                                        <div slot="author">Briones; Johnny</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="28018079"
-                    isbn="9788184006827"
-                    termshash="0f6950f1d8890f844a9c6f6ca3dc86f1"
-                    href="/book/28018079/3e823c/how-to-memorize-anything-the-ultimate-handbook-to-explore-and-improve-your-memory.html"
-                    download="/dl/28018079/04b726"
-                    deleted=""
-                    publisher="Penguin/Ebury Press"
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="3.42 MB"
-                    rating="3.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9fbc589ac7bf53a248ef914d7736162b6c8bd7ea7ed0c3e810e9805f5ee4c3bc.jpg" />
-                    <div slot="title">How to Memorize Anything: The Ultimate Handbook to Explore and Improve Your Memory</div>
-                                        <div slot="author">Aditi Singhal &amp; Sudhir Singhal</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3313851"
-                    isbn=""
-                    termshash="fb423815304042f7a7fe4313fa03ee27"
-                    href="/book/3313851/3e10c5/brain-brilliance-amazing-lessons-on-how-to-improve-memory-blazingly-fast-and-find-out-how-to-learn.html"
-                    download="/dl/3313851/9b90c5"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2015"
-                    extension="epub"
-                    filesize="155 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a5076f4516857f6428922b5b79345848b2ad675cf26a1f1debfe19a77936c0ea.jpg" />
-                    <div slot="title">Brain Brilliance: Amazing Lessons on How to Improve Memory Blazingly Fast and Find Out How to Learn Much Faster</div>
-                                        <div slot="author">Deleon; Pat</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25723871"
-                    isbn=""
-                    termshash="3f9160ad2feeb9557def3690851e8197"
-                    href="/book/25723871/76cc9a/mind-hacking-secrets-and-unlimited-memory-power-2-books-in-1-learn-how-to-improve-your-memory-de.html"
-                    download="/dl/25723871/54b021"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="0"
-                    extension="epub"
-                    filesize="787 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/6dd241a2ce5a8b6f92db3ec053159c5c3e29037434d357447b67c23508c2e021.jpg" />
-                    <div slot="title">Mind Hacking Secrets and Unlimited Memory Power: 2 Books in 1: Learn How to Improve Your Memory &amp; Develop Fast, Clear Thinking in 2 Weeks + 42 Brain Training Techniques &amp; Memory Improvement Exercises</div>
-                                        <div slot="author">Scott Sharp</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="26993690"
-                    isbn=""
-                    termshash="3f9160ad2feeb9557def3690851e8197"
-                    href="/book/26993690/35683a/mind-hacking-secrets-and-unlimited-memory-power-2-books-in-1-learn-how-to-improve-your-memory-de.html"
-                    download="/dl/26993690/e4c18b"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2019"
-                    extension="pdf"
-                    filesize="1.81 MB"
-                    rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0a4faecb764603f333fa984aa1d3696d0344e1c9f3ac2d4f51e763f46e8ed3c0.jpg" />
-                    <div slot="title">Mind Hacking Secrets and Unlimited Memory Power: 2 Books in 1: Learn How to Improve Your Memory &amp; Develop Fast, Clear Thinking in 2 Weeks + 42 Brain Training Techniques &amp; Memory Improvement Exercises</div>
-                                        <div slot="author">Sharp; Scott</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18833308"
-                    isbn="B09PNV5V3T"
-                    termshash="43390f5fe76b688cddeb29acee91eeaa"
-                    href="/book/18833308/114dcc/accelerated-learning-how-to-learn-fast-improve-memory-save-your-time-and-be-successful.html"
-                    download="/dl/18833308/ce60ef"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2022"
-                    extension="epub"
-                    filesize="261 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/6745dc6831f3a8cbab999f94fc1a88cc935d03cbe4785299cd737b56276bc02d.jpg" />
-                    <div slot="title">Accelerated Learning: How to Learn Fast, Improve Memory, Save Your Time and Be Successful</div>
-                                        <div slot="author">David McLain</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="19083638"
-                    isbn=""
-                    termshash="8a0e4fe1757d32a92a445473f7f9146e"
-                    href="/book/19083638/30a530/mind-mapping-how-to-create-mind-maps-stepbystep-the-best-way-to-improve-memory-creativity-conc.html"
-                    download="/dl/19083638/f0b5e2"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2022"
-                    extension="epub"
-                    filesize="213 KB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="/img/cover-not-exists.png" />
-                    <div slot="title">Mind Mapping: How to Create Mind Maps Step-by-step (The Best Way to Improve Memory, Creativity, Concentration &amp; More)</div>
-                                        <div slot="author">Martin Thomson</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="18032779"
-                    isbn="B00J66Z2S4"
-                    termshash="2241f66aef7f59dddfa41b9b3b29eca3"
-                    href="/book/18032779/c367e5/mind-maps-the-ultimate-guide-to-mind-mapping-how-to-create-mind-maps-and-improve-memory-in-30-day.html"
-                    download="/dl/18032779/e6d7e5"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2014"
-                    extension="epub"
-                    filesize="141 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b89ff3fd5f3c6da6b6513999fad23eba9d930e34781d1cd35dcbf1365e137eb5.jpg" />
-                    <div slot="title">Mind Maps: The Ultimate Guide to Mind Mapping - How to Create Mind Maps and Improve Memory in 30 Days or Less</div>
-                                        <div slot="author">Mike Pakulski</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="14127269"
-                    isbn=""
-                    termshash="6a0fe051adeedbe5ce0eca993056db49"
-                    href="/book/14127269/f89abd/mind-maps-how-to-improve-memory-write-smarter-plan-better-think-faster-and-make-more-money.html"
-                    download="/dl/14127269/b231f3"
-                    deleted=""
-                    publisher="JJ Fast Publishing, LLC"
-                    language="english"
-                    year="2013"
-                    extension="epub"
-                    filesize="588 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ccae475f7072bde2870aee951393605302dd2ce6dec7fcbdbb501e0da455ffaa.jpg" />
-                    <div slot="title">Mind Maps: How to Improve Memory, Write Smarter, Plan Better, Think Faster, and Make More Money</div>
-                                        <div slot="author">John S. Rhodes [Rhodes; John S.]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2516403"
-                    isbn="9781484984079"
-                    termshash="c806758f6995ae939d124aeb68fc3297"
-                    href="/book/2516403/b820b3/mind-maps-how-to-improve-memory-writer-smarter-plan-better-think-faster-and-make-more-money.html"
-                    download="/dl/2516403/2bd200"
-                    deleted=""
-                    publisher="CreateSpace Independent Publishing Platform"
-                    language="english"
-                    year="2013"
-                    extension="mobi"
-                    filesize="1.11 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/7cb90fa68422764aec9e6c5bd921cd82f278052d73e14d452ffbafb8a9d4a2c0.jpg" />
-                    <div slot="title">Mind Maps: How to Improve Memory, Writer Smarter, Plan Better, Think Faster, and Make More Money</div>
-                                        <div slot="author">John S. Rhodes</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11179249"
-                    isbn="B08GG1PWYN"
-                    termshash="7ab4868531b97e29a439e7f8cb324a53"
-                    href="/book/11179249/63a9fa/accelerated-learning-learn-how-high-performers-discover-new-skills-fast-improve-memory-increase.html"
-                    download="/dl/11179249/65a9f6"
-                    deleted=""
-                    publisher="UNKNOWN"
-                    language="english"
-                    year="2020"
-                    extension="azw3"
-                    filesize="306 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1008215642cac43e3a5e0369624b97f6bee8d4a53c372020b93af911cc2935a8.jpg" />
-                    <div slot="title">Accelerated Learning - Learn How High Performers Discover New Skills Fast, Improve Memory, Increase Laser-Sharp Focus, and Increase Their Productivity Using Methods Such as Speed Reading</div>
-                                        <div slot="author">MADHAN KUMAR [KUMAR; MADHAN]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11029451"
-                    isbn="B07B3RJV7N"
-                    termshash="e5169a3cc9ec2feb9b131efda6d3f21a"
-                    href="/book/11029451/67fb16/accelerated-learning-crash-course-how-to-easily-learn-new-skills-and-subjects-develop-laser-sharp.html"
-                    download="/dl/11029451/0079b1"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2018"
-                    extension="epub"
-                    filesize="166 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e5d94360fec4883d4088f5557479b7c8565d900b21a5c1d78aee0d26d09ba3ed.jpg" />
-                    <div slot="title">Accelerated Learning Crash Course: How to Easily Learn New Skills and Subjects, Develop Laser Sharp Focus, Triple Your Reading Speed and Improve Your Memory Ability!</div>
-                                        <div slot="author">Sebastian Croft</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="29575538"
-                    isbn="B0CRBN42MW"
-                    termshash="8764d203325bcb6f26a24e5d18dce38e"
-                    href="/book/29575538/61fdf7/dopamine-detox-guide-on-how-to-rewire-your-brain-and-live-a-life-of-digital-minimalism-quit-social.html"
-                    download="/dl/29575538/2b3646"
-                    deleted=""
-                    publisher=""
-                    language="english"
+                    publisher="Redhook"
+                    language="English"
                     year="2024"
                     extension="epub"
-                    filesize="1.28 MB"
+                    filesize="4.03 MB"
                     rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c9c27d59424852a5900a0dd2627cc3dd723b1a92687451a5ca0a66b164560b83.jpg" />
-                    <div slot="title">Dopamine Detox: Guide On How To Rewire Your Brain and Live A Life Of Digital Minimalism, Quit Social Media, Do Hard Things, Improve Your Memory, Concentration, And Productivity</div>
-                                        <div slot="author">Harris; Christopher</div>
+                    quality="4.5"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b25af0c4244398daf4ceb7e89d26c4dfdbfba5539761fa396d40768d6aa5ed72.jpg" />
+                    <div slot="title">Song of the Huntress</div>
+                                        <div slot="author">Lucy Holland</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="16579124"
-                    isbn="B07XLJVHJG"
-                    termshash="6c3398c8e16e088648520c971a881f26"
-                    href="/book/16579124/bbddc8/the-science-of-selflearning-how-to-use-learning-strategies-to-thinking-faster-learn-yourself-anyt.html"
-                    download="/dl/16579124/87657b"
-                    deleted=""
-                    publisher=""
-                    language="english"
-                    year="2019"
-                    extension="azw3"
-                    filesize="433 KB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/fa27f0441f36fb83c38b0c053d3ecbaddbb3c67e34eb0cd6fc2d6cc856beeba0.jpg" />
-                    <div slot="title">THE SCIENCE OF SELF-LEARNING: How to Use Learning Strategies to Thinking Faster, Learn Yourself Anything, Improve Your Memory and Learning Capabilities</div>
-                                        <div slot="author">Wallace Wright [Wright; Wallace]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11022847"
+                                        id="12520889"
                     isbn=""
-                    termshash="e5169a3cc9ec2feb9b131efda6d3f21a"
-                    href="/book/11022847/303f42/accelerated-learning-crash-course-how-to-easily-learn-new-skills-and-subjects-develop-laser-sharp.html"
-                    download="/dl/11022847/14bcda"
+                    termshash="ea2d584f430406a7c22653648f9d1549"
+                    href="/book/12520889/6c0af4/aching-god-iconoclasts-book-1.html"
+                    download="/dl/12520889/c69c04"
                     deleted=""
                     publisher=""
-                    language="english"
+                    language="English"
                     year="2018"
-                    extension="mobi"
-                    filesize="263 KB"
-                    rating="0.0"
+                    extension="epub"
+                    filesize="1.47 MB"
+                    rating="3.0"
                     quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/10e4506d8f6a64ca7bdba2196d325cbbfdceafffecc79fe4bca04443723be60e.jpg" />
-                    <div slot="title">Accelerated Learning Crash Course: How to Easily Learn New Skills and Subjects, Develop Laser Sharp Focus, Triple Your Reading Speed and Improve Your Memory Ability!</div>
-                                        <div slot="author">Croft; Sebastian</div>
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/851f269bda03aad2ba563e2627d40bde45a4f83ab820dc65c376652a45d9c63e.jpg" />
+                    <div slot="title">Aching God (Iconoclasts Book 1)</div>
+                                        <div slot="author">Shel; Mike</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="3317986"
-                    isbn=""
-                    termshash="398297ea929f714edf8d89e537093600"
-                    href="/book/3317986/86291a/secrets-of-how-to-improve-your-memory-and-to-stay-focused.html"
-                    download="/dl/3317986/476154"
+                                        id="25750932"
+                    isbn="9781784973209"
+                    termshash="35cd4b3083cd34705a59c877d91e50f9"
+                    href="/book/25750932/4a1de2/the-grace-of-kings.html"
+                    download="/dl/25750932/842681"
                     deleted=""
-                    publisher=""
-                    language="english"
+                    publisher="Bloomsbury Publishing"
+                    language="English"
                     year="2015"
                     extension="epub"
-                    filesize="159 KB"
+                    filesize="986 KB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/76b46a1c289490d3843e8cf911685e885dd9f93f599a58585e566125e95176dd.jpg" />
+                    <div slot="title">The Grace of Kings</div>
+                                        <div slot="author">Ken Liu</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11481627"
+                    isbn="9798686079120"
+                    termshash="ada88c629752d29a56630b78ddfb70da"
+                    href="/book/11481627/1d753d/of-thorns-and-beauty-twisted-pages-book-1.html"
+                    download="/dl/11481627/8c4e0d"
+                    deleted=""
+                    publisher="Whiskey and Willow Publishing, LLC"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="633 KB"
                     rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/1f83c617361693f7ee94ae567f2161c0427d53be649c6f64e8e76de50e4f2677.jpg" />
-                    <div slot="title">Secrets of how to improve your memory and to stay focused</div>
-                                        <div slot="author">Thompson; Oliver</div>
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7c3f891d7550329ced466b5bdec63247ae3ff86852c1fc8100c315952cc29876.jpg" />
+                    <div slot="title">Of Thorns And Beauty (Twisted Pages, Book 1)</div>
+                                        <div slot="author">Madison; Elle &amp; Mahle; Robin D. [Madison; Elle &amp; Mahle; Robin D.]</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="5849017"
+                                        id="27953736"
                     isbn=""
-                    termshash="2e3396a61b25cbf7d7a151182941ddcd"
-                    href="/book/5849017/f0fe10/accelerated-learning-an-effective-guide-on-how-to-learn-every-topic-faster-improving-your-memory-a.html"
-                    download="/dl/5849017/c489f1"
+                    termshash="b834411f2c4de1153c846dbed891b821"
+                    href="/book/27953736/1f8e61/rise-of-the-cinder-fae.html"
+                    download="/dl/27953736/75b471"
                     deleted=""
-                    publisher=""
-                    language="english"
-                    year="2018"
-                    extension="azw3"
-                    filesize="199 KB"
+                    publisher="Whitney Dean"
+                    language="English"
+                    year="0"
+                    extension="epub"
+                    filesize="1.58 MB"
                     rating="0.0"
                     quality="0.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/3bc0fab9db3b17c27c1fb9a05c5b346c88e2045c09d49b34e80b58972f5753d0.jpg" />
-                    <div slot="title">Accelerated Learning: An Effective Guide On How To Learn Every Topic Faster Improving Your Memory, Attention And Comprehension Skills</div>
-                                        <div slot="author">Bell; Leonard</div>
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/cea89a6e2df2b6730a754db80974bb25042869dfca904bc0c5ea2c1b4a437756.jpg" />
+                    <div slot="title">Rise of the Cinder Fae</div>
+                                        <div slot="author">Whitney Dean</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="18623118"
-                    isbn=""
-                    termshash="890f5bc7d9a3076d0bef2ebce9ceebce"
-                    href="/book/18623118/9c6a4b/memory-improvement-memory-manipulation-how-to-train-your-brain-to-think-faster-concentrate-more.html"
-                    download="/dl/18623118/24f109"
+                                        id="27735761"
+                    isbn="9781635574104"
+                    termshash="38305302dcd635093449d6d94f8140d5"
+                    href="/book/27735761/c0411c/house-of-flame-and-shadow.html"
+                    download="/dl/27735761/f923e1"
                     deleted=""
-                    publisher=""
-                    language="english"
-                    year="2015"
+                    publisher="Bloomsbury Publishing"
+                    language="English"
+                    year="2024"
                     extension="epub"
-                    filesize="460 KB"
+                    filesize="6.75 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/3fa875a5ba304d1f81fc9b034ba5b9a5d10cdb3689172d5231018acbe233c854.jpg" />
+                    <div slot="title">House of Flame and Shadow</div>
+                                        <div slot="author">Sarah J. Maas</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26824255"
+                    isbn="B0CC423R7C"
+                    termshash="5dab24d3cff8cd0db51c0a98fffb3819"
+                    href="/book/26824255/6dabf3/reborn-as-a-demonic-tree-an-isekai-litrpg-adventure.html"
+                    download="/dl/26824255/ebbb70"
+                    deleted=""
+                    publisher="Aethon Books"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="1.39 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/91c9580f4e22bff16f8ac28a72dc6f8ced02219518ebb23aae418d2f390d5ab8.jpg" />
+                    <div slot="title">Reborn as a Demonic Tree: An Isekai LitRPG Adventure</div>
+                                        <div slot="author">XKarnation</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28350175"
+                    isbn=""
+                    termshash="de91e003f417e6a47dd017becdd58254"
+                    href="/book/28350175/20a788/7th-time-loop-the-villainess-enjoys-a-carefree-life-married-to-her-worst-enemy-novel-5.html"
+                    download="/dl/28350175/00113a"
+                    deleted=""
+                    publisher="Seven Seas Entertainment"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="15.05 MB"
+                    rating="5.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a363dce5559645691be00ab3eac40e99b91c0a3f598268156b0ccf4dafc1a607.jpg" />
+                    <div slot="title">7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy! novel 5</div>
+                                        <div slot="author">Touko Amekawa</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="118239699"
+                    isbn="9781526681454"
+                    termshash="6e8bdd70aefd52f55f0c4f8d82660648"
+                    href="/book/118239699/ba6284/a-dance-of-lies.html"
+                    download="/dl/118239699/297842"
+                    deleted=""
+                    publisher="Bloomsbury Publishing Plc"
+                    language="English"
+                    year="2025"
+                    extension="epub"
+                    filesize="1.86 MB"
                     rating="0.0"
                     quality="5.0"
-                                        premium                    contentTypeParam = "?content_type=book"
-                >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/5acde43bff800fc4dae94b23c04347f1d0655dec025ab79a3f3b50c295c86ef3.jpg" />
-                    <div slot="title">Memory Improvement: Memory Manipulation: How to Train Your Brain to Think Faster, Concentrate More, and Remember Anything</div>
-                                        <div slot="author">T. Whitmore</div>
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9114ea52c5831bdf46bf6a0afb124634bacbca8b8e2f129ab6b79933919dec3b.jpg" />
+                    <div slot="title">A Dance of Lies</div>
+                                        <div slot="author">Brittney Arena</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="12706901"
+                    isbn=""
+                    termshash="0293f4d0887eb820d919156bba085142"
+                    href="/book/12706901/40b4df/the-fractured-world-1.html"
+                    download="/dl/12706901/db517c"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="302 KB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ee316948d9690dce41fb1fc05f5d98b622c3fb2e56dc478668efaac289fd3d3c.jpg" />
+                    <div slot="title">The Fractured World 1</div>
+                                        <div slot="author">David Aries</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26730645"
+                    isbn="B0CL5JH8QK"
+                    termshash="e2c14e3a8dd847585dd65dff17eb756a"
+                    href="/book/26730645/9edb18/dawn-of-the-density-god-book-1.html"
+                    download="/dl/26730645/78fd7e"
+                    deleted=""
+                    publisher="Self-published"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="3.72 MB"
+                    rating="3.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2a7f5b63b511fad648783addc405892f9bb6cc2e2445a9f33c2c99fa03ab7a4c.jpg" />
+                    <div slot="title">Dawn of the Density God: Book 1</div>
+                                        <div slot="author">ToraAKR</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5071696"
+                    isbn=""
+                    termshash=""
+                    href="/book/5071696/365e9a/horror-on-the-orient-express-call-of-cthulhu-1920s.html"
+                    download="/dl/5071696/295298"
+                    deleted=""
+                    publisher="Chaosium"
+                    language="English"
+                    year="2014"
+                    extension="pdf"
+                    filesize="50.06 MB"
+                    rating="0.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/d64ffde915556bdf9a2d73022a0b9fff28010c0cdff9001b8abbd2da7541a4d8.png" />
+                    <div slot="title">Horror on the Orient Express (Call of Cthulhu 1920s)</div>
+                                        <div slot="author">Geoff Gillan; Mark Morrison; Lynn Willis; Lee Gibbons; Laurie Dietrick; Dean Engelhardt; Marco Morte; Mike Mason</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="119064794"
+                    isbn=""
+                    termshash="f9ea53e203283fbf699baa65be193178"
+                    href="/book/119064794/f1aec8/the-latenight-witches.html"
+                    download="/dl/119064794/9ac655"
+                    deleted=""
+                    publisher="Penguin Publishing Group"
+                    language="English"
+                    year="2025"
+                    extension="epub"
+                    filesize="2.33 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b27b11c26dc502cc6a16f198d1589a4f056f074accc449f8d1347f220f19e660.jpg" />
+                    <div slot="title">The Late-Night Witches</div>
+                                        <div slot="author">Auralee Wallace</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="21005800"
+                    isbn="B09TY3VHCP"
+                    termshash="40c647d57dc362666dc8e23af43f1964"
+                    href="/book/21005800/f161a5/paranoid-mage.html"
+                    download="/dl/21005800/6278b6"
+                    deleted=""
+                    publisher="Kindle"
+                    language="English"
+                    year="2022"
+                    extension="epub"
+                    filesize="598 KB"
+                    rating="3.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5d086d4189f9e45357a05893f66ebaeea10e6df3bf3913d6b4fb90f077930ae1.jpg" />
+                    <div slot="title">Paranoid Mage</div>
+                                        <div slot="author">Inadvisably Compelled</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11813830"
+                    isbn="B08YP862CH"
+                    termshash="aa080eb90a7014d2dbb8bcf5caf74d37"
+                    href="/book/11813830/7d9d12/death-before-dragons-books-13-an-urban-fantasy-series-box-set.html"
+                    download="/dl/11813830/276190"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="2021"
+                    extension="epub"
+                    filesize="906 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f9c2e962ab37e486bd33d638eafc1f4a5f63774e65bedb4415a062be8ad7a88d.jpg" />
+                    <div slot="title">Death Before Dragons (Books 1-3) - An Urban Fantasy Series Box Set</div>
+                                        <div slot="author">Lindsay Buroker</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17020887"
+                    isbn="B08GPP5KN1"
+                    termshash="14e2e7d6d3d65a923ff7bdafe371f71f"
+                    href="/book/17020887/9fb337/something.html"
+                    download="/dl/17020887/ab676a"
+                    deleted=""
+                    publisher="Mountaindale Press"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="407 KB"
+                    rating="1.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7b2122b613203f2a827d2e4b803d168093afca333b03153b2f1a54ba60690926.jpg" />
+                    <div slot="title">Something</div>
+                                        <div slot="author">Dakota Krout</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25665957"
+                    isbn="B0CF3MSKMD"
+                    termshash="2dbdc4a9c60490e9ca4e1f174e64fa85"
+                    href="/book/25665957/679101/dungeon-diving-103.html"
+                    download="/dl/25665957/710161"
+                    deleted=""
+                    publisher="anonymous"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="574 KB"
+                    rating="5.0"
+                    quality="4.5"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/792d5aa69216a30370178999d9b777137a9fdc31489cea77259537f952ed6f0b.jpg" />
+                    <div slot="title">Dungeon Diving 103</div>
+                                        <div slot="author">Bruce Sentar</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18192184"
+                    isbn="9781568820910"
+                    termshash="2bc20354c423bbf140454bca55474642"
+                    href="/book/18192184/cc3738/pulp-cthulhu-call-of-cthulhu-roleplaying.html"
+                    download="/dl/18192184/192713"
+                    deleted=""
+                    publisher="Chaosium Inc."
+                    language="English"
+                    year="2016"
+                    extension="pdf"
+                    filesize="34.25 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/263cc49a39058561242aeb19a1b4049c9a8d8ce36c5f1ecb533f55885fc533ba.jpg" />
+                    <div slot="title">Pulp Cthulhu (Call of Cthulhu Roleplaying)</div>
+                                        <div slot="author">Mike Mason; Alan Bligh; James Lowder; Jeff Tidball; Glyn White; Paul Fricker; Scott Dorward; Matt Sanderson; Dan Kramer; Victor Manuel Leza Moreno; Jonathan Wyke; Reuben Dodd; Richard Pace; Victor Manuel Leza Moreno; Roman Entsov; Fifa Finsdottir</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="2827079"
+                    isbn=""
+                    termshash="88fd1d509d9be622e47dd21c58ee2adf"
+                    href="/book/2827079/638791/the-land-forging-chaos-seeds-book-2.html"
+                    download="/dl/2827079/c88208"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="0"
+                    extension="epub"
+                    filesize="512 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="/img/cover-not-exists.png" />
+                    <div slot="title">The Land: Forging (Chaos Seeds Book 2)</div>
+                                        <div slot="author">Aleron Kong</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26203579"
+                    isbn=""
+                    termshash="424d634c55cb9666309941e2c8bf9350"
+                    href="/book/26203579/666281/red-rabbit.html"
+                    download="/dl/26203579/ffa066"
+                    deleted=""
+                    publisher="Tor Publishing Group"
+                    language="English"
+                    year="0"
+                    extension="epub"
+                    filesize="685 KB"
+                    rating="5.0"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/995b3af256e5d674ec9592a9c2081caffe63aab4191aba56640064ff63d4c977.jpg" />
+                    <div slot="title">Red Rabbit</div>
+                                        <div slot="author">Alex Grecian</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5519925"
+                    isbn=""
+                    termshash="88f3f4db492feae389c445b188d60fd2"
+                    href="/book/5519925/fd115c/scholar-of-magic.html"
+                    download="/dl/5519925/50ce4e"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="884 KB"
+                    rating="4.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/4487eb1aa8a8028582a0a1fb5f34282d6a929d869295ec0b728c46a2c8a2d5df.jpg" />
+                    <div slot="title">Scholar of Magic</div>
+                                        <div slot="author">Michael G. Manning</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4811098"
+                    isbn="9780399178481"
+                    termshash="8b81cef12881c83a41f6e051c9914b58"
+                    href="/book/4811098/e1c27c/reincarnation-blues.html"
+                    download="/dl/4811098/641792"
+                    deleted=""
+                    publisher="Random House Publishing Group"
+                    language="English"
+                    year="2017"
+                    extension="epub"
+                    filesize="6.12 MB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/803b16b5d465eb474aab3660fb9112242447a2d76e942862c0f85a528a10d5af.jpg" />
+                    <div slot="title">Reincarnation Blues</div>
+                                        <div slot="author">Michael Poore</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29511489"
+                    isbn="B0CW1FXD9G"
+                    termshash="52ec7cdfe4945d15cf8952236a2858b2"
+                    href="/book/29511489/d10b62/all-the-skills-book-4.html"
+                    download="/dl/29511489/644f07"
+                    deleted=""
+                    publisher="Avocado Ink Publishing"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="3.48 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/019275a55606bf8e06782c5e401ccaa3710863dea64c7021381a309fc8a7467b.jpg" />
+                    <div slot="title">All The Skills - Book 4</div>
+                                        <div slot="author">Honour Rae</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11008752"
+                    isbn=""
+                    termshash="551c828b064b8570f5cc15bf97a02999"
+                    href="/book/11008752/aa9c1d/herald-of-shalia-5.html"
+                    download="/dl/11008752/9f25df"
+                    deleted=""
+                    publisher="Smirk Publishing"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="1.75 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0c4b6e1b56fa1122e48f3c0433d468a6d0e3e3fd1107a5d67348e74aa44eaf29.jpg" />
+                    <div slot="title">Herald of Shalia 5</div>
+                                        <div slot="author">Tamryn Tamer [Tamer; Tamryn]</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25158469"
+                    isbn=""
+                    termshash="8bb195081fd6e37dd130fc642dabbd2d"
+                    href="/book/25158469/f4da96/when-the-vibe-is-right.html"
+                    download="/dl/25158469/93cb58"
+                    deleted=""
+                    publisher="HarperCollinsPublishers"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="2.82 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/11ed7eed5e4de2844a5a322a6859d0659b4ee714eeef71112f6babb618b9c1bd.jpg" />
+                    <div slot="title">When the Vibe Is Right</div>
+                                        <div slot="author">Sarah Dass</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="995219"
+                    isbn="9780313333491"
+                    termshash="1115d1978c660713d9fa5dc9a93148a1"
+                    href="/book/995219/e74d77/fairy-lore.html"
+                    download="/dl/995219/76f47a"
+                    deleted=""
+                    publisher="Greenwood"
+                    language="English"
+                    year="2006"
+                    extension="pdf"
+                    filesize="21.06 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/63b50bd0b85391b6da8fbd62c51079155777fd9b1c43fce058512779e2e100df.jpg" />
+                    <div slot="title">Fairy Lore</div>
+                                        <div slot="author">D. L. Ashliman</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1503688"
+                    isbn="9780441020423"
+                    termshash="a306bbd13676de481c1f1a3a10be7dbb"
+                    href="/book/1503688/8fd685/magic-slays-kate-daniels-05.html"
+                    download="/dl/1503688/6aaa6a"
+                    deleted=""
+                    publisher="Ace Books (Published by Berkley, a Division of Penguin Group-USA)"
+                    language="English"
+                    year="2011"
+                    extension="epub"
+                    filesize="387 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/61c450e055864e59659f264b552f3563cc4e9f57cad9590c3c563ea7fd29256d.jpg" />
+                    <div slot="title">Magic Slays (Kate Daniels, #05)</div>
+                                        <div slot="author">Ilona Andrews</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23855470"
+                    isbn="B0BFTLZGCS"
+                    termshash="e99e1eb0a8fcdd8f843701ba5bb1c497"
+                    href="/book/23855470/488e92/apocalypse-redux-book-one-a-litrpg-time-regression-adventure.html"
+                    download="/dl/23855470/046758"
+                    deleted=""
+                    publisher="Shadow Alley Press"
+                    language="English"
+                    year="2022"
+                    extension="epub"
+                    filesize="618 KB"
+                    rating="4.0"
+                    quality="4.5"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a2b60546060818d1833df26ed89add31317fae52e6c0238b68384550be949491.jpg" />
+                    <div slot="title">Apocalypse Redux - Book One: A LitRPG Time Regression Adventure</div>
+                                        <div slot="author">Jakob H. Greif</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11126190"
+                    isbn="B07HY82YRP"
+                    termshash="63d00a327a737eec131be3b529eaf5a7"
+                    href="/book/11126190/8bc75f/the-witchs-kind.html"
+                    download="/dl/11126190/eb7624"
+                    deleted=""
+                    publisher="Orbit"
+                    language="English"
+                    year="2019"
+                    extension="epub"
+                    filesize="2.44 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0f85821f1214fca4f4f798b4a77d6298a2a3441d1899e9d5d38a20e5be0f999d.jpg" />
+                    <div slot="title">The Witch's Kind</div>
+                                        <div slot="author">Louisa Morgan</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="118193428"
+                    isbn="B0DWX8SDZ8"
+                    termshash="c954e506cadd4fd5acdb0d0b3be786f0"
+                    href="/book/118193428/781f96/the-tales-of-arcana-fortune.html"
+                    download="/dl/118193428/751f51"
+                    deleted=""
+                    publisher="anonymous"
+                    language="English"
+                    year="2025"
+                    extension="epub"
+                    filesize="7.99 MB"
+                    rating="4.0"
+                    quality="4.5"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e0b618c3194bccbf3d9d30dd15bf26266dc0a8a3fe0345b634ddb09ebca1548d.jpg" />
+                    <div slot="title">The Tales of Arcana Fortune</div>
+                                        <div slot="author">Hafsa.A. Jawad</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="116195205"
+                    isbn="B0DRTW1KH4"
+                    termshash="e3d9010d3fb8d92150126857b51078f1"
+                    href="/book/116195205/3d5a92/duskbound.html"
+                    download="/dl/116195205/c80db1"
+                    deleted=""
+                    publisher="ONYX"
+                    language="English"
+                    year="2025"
+                    extension="epub"
+                    filesize="3.64 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b9d05d6679aaa4cbc6437617b628466bb4ba10c96ad045b0ab4f9fc9bc761ee7.jpg" />
+                    <div slot="title">Duskbound</div>
+                                        <div slot="author">Parker Lennox &amp; Bree Grenwich</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="31282537"
+                    isbn=""
+                    termshash="5a49f1ed4d85678301523cf5f31e940f"
+                    href="/book/31282537/600206/the-scholar-and-the-last-faerie-door.html"
+                    download="/dl/31282537/945306"
+                    deleted=""
+                    publisher="Orbit"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="4.61 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/dd425e9263c58812d3adfb03226ddb959f79fce5746462cc160e1b6bada55c4e.jpg" />
+                    <div slot="title">The Scholar and the Last Faerie Door</div>
+                                        <div slot="author">H. G. Parry</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="27991605"
+                    isbn="ccdf1ac7-0335-48eb-b1f2-abd4f2af6576"
+                    termshash="fc1e75b39e244aec8c23a0e47134edbd"
+                    href="/book/27991605/0ab11b/bride.html"
+                    download="/dl/27991605/45a916"
+                    deleted=""
+                    publisher="Penguin Publishing Group"
+                    language="English"
+                    year="2024"
+                    extension="mobi"
+                    filesize="1.50 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f5636b97bbd425108e0d8997d4b50e626aceba7da3610f2e0f424bd2236fff82.jpg" />
+                    <div slot="title">BRIDE</div>
+                                        <div slot="author">Ali Hazelwood</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="118697841"
+                    isbn=""
+                    termshash="82f6ee159d8df6620b3ac98b513dcf60"
+                    href="/book/118697841/bf46f7/a-resistance-of-witches.html"
+                    download="/dl/118697841/e7730c"
+                    deleted=""
+                    publisher="Penguin Publishing Group"
+                    language="English"
+                    year="2025"
+                    extension="epub"
+                    filesize="7.06 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c15884a331dd9af33853e3aad301b8a8090d69a0397bd7a6bf05a314348d58e7.jpg" />
+                    <div slot="title">A Resistance of Witches</div>
+                                        <div slot="author">Morgan Ryan</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26792993"
+                    isbn="B0B5KLVCHZ"
+                    termshash="f3f5b00314a2ba410de4b1c2e8f98a08"
+                    href="/book/26792993/700f79/blood-over-bright-haven.html"
+                    download="/dl/26792993/81ab40"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="2.78 MB"
+                    rating="4.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ea8fc394e1ab998d02a933058c1a68fe1c5ff7ffb540766130e6b2f11f1b7016.jpg" />
+                    <div slot="title">Blood Over Bright Haven</div>
+                                        <div slot="author">M. L. Wang</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11171341"
+                    isbn="9781492656623"
+                    termshash="19b0dcd99251ffd46c33a9f6993e183d"
+                    href="/book/11171341/779e3c/furyborn.html"
+                    download="/dl/11171341/a039d1"
+                    deleted=""
+                    publisher="Sourcebooks, Inc."
+                    language="English"
+                    year="2018"
+                    extension="mobi"
+                    filesize="1.89 MB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/37606de368c9084d239341820bded9621cc4140476ed9f8521e3631a52d7b80d.jpg" />
+                    <div slot="title">Furyborn</div>
+                                        <div slot="author">Claire Legrand</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4529470"
+                    isbn=""
+                    termshash="39e6d4ddb973d4c376224e50f95ea6b7"
+                    href="/book/4529470/844279/the-darkslayer-16-complete-series-omnibus.html"
+                    download="/dl/4529470/12644c"
+                    deleted=""
+                    publisher="Two-Ten Book Press"
+                    language="English"
+                    year="2015"
+                    extension="epub"
+                    filesize="5.71 MB"
+                    rating="0.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/bf34dd002ef42a94a54385670519def92e861189a877777fa31ff63e4ab36b44.jpg" />
+                    <div slot="title">The Darkslayer 1-6 - Complete Series Omnibus</div>
+                                        <div slot="author">Craig Halloran</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="26428469"
+                    isbn="9781250897459"
+                    termshash="a1fbe8751171c5b4891ec094b499bd76"
+                    href="/book/26428469/8bf2b1/the-night-hunt.html"
+                    download="/dl/26428469/d6928a"
+                    deleted=""
+                    publisher="Feiwel &amp; Friends"
+                    language="English"
+                    year="0"
+                    extension="epub"
+                    filesize="3.46 MB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/821a43cade4c9865bb6eba94ff56757ce3df7ace6b6ff57c81ad834bd6315062.jpg" />
+                    <div slot="title">The Night Hunt</div>
+                                        <div slot="author">Alexandra Christo</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29311252"
+                    isbn="9781801701716"
+                    termshash="7699a7cb7bb364bb0489680f45ac2fef"
+                    href="/book/29311252/6a1780/complete-works-of-j-r-r-tolkien.html"
+                    download="/dl/29311252/47194e"
+                    deleted=""
+                    publisher="Delphi Classics"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="34.85 MB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d8e93a4bcf39d18e4e3131b91f984e63a74ae5bf4d5122e9a58b0a931c612868.jpg" />
+                    <div slot="title">Complete Works Of J. R. R. Tolkien</div>
+                                        <div slot="author">J. R. R. Tolkien</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23129880"
+                    isbn="B0B61L1YS2"
+                    termshash="bf90bfb2373506835020c023da71c2d7"
+                    href="/book/23129880/5caa0f/blackmist-a-litrpg-adventure-my-best-friend-is-an-eldritch-horror-book-1.html"
+                    download="/dl/23129880/902920"
+                    deleted=""
+                    publisher="Aethon Books"
+                    language="English"
+                    year="2022"
+                    extension="epub"
+                    filesize="985 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5f23122978e5118bf40071002711457a62c97a67fa99fcf1ca49ff1d4e467171.jpg" />
+                    <div slot="title">Blackmist: A LitRPG Adventure (My Best Friend is an Eldritch Horror Book 1)</div>
+                                        <div slot="author">Actus</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="27672925"
+                    isbn="9788076933484"
+                    termshash="7d1d9527c673a1df4b359a9fbffbf5ea"
+                    href="/book/27672925/744199/the-edges-of-power-last-life-book-5-a-progression-fantasy-series.html"
+                    download="/dl/27672925/f6417a"
+                    deleted=""
+                    publisher="Magic Dome Books"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="315 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c1958776de295e75a3ece7a2c910346c620259ab34a4574f758c86d56e4a3e2a.jpg" />
+                    <div slot="title">The Edges of Power : Last Life (Book 5) A Progression Fantasy Series</div>
+                                        <div slot="author">Alexey Osadchuk</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4329130"
+                    isbn=""
+                    termshash="f8f118b4fe331fae6f6415ad37a49d8b"
+                    href="/book/4329130/51113d/the-kartoss-gambit-the-way-of-the-shaman-book-2.html"
+                    download="/dl/4329130/463042"
+                    deleted=""
+                    publisher="Magic Dome Books"
+                    language="English"
+                    year="2015"
+                    extension="epub"
+                    filesize="526 KB"
+                    rating="0.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/0a714c4f617dd875947be7ddd543e97fe5b4dd8eb1d04e72694cc28faf9f57fa.jpg" />
+                    <div slot="title">The Kartoss Gambit (The Way of the Shaman: Book #2)</div>
+                                        <div slot="author">Mahanenko Vasily</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="30126069"
+                    isbn="9798891606166"
+                    termshash="df5125c2523d73b07bb1c577de48bc1b"
+                    href="/book/30126069/6560d4/lout-of-counts-family-vol-1.html"
+                    download="/dl/30126069/39f0e6"
+                    deleted=""
+                    publisher="Seven Seas Entertainment"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="2.28 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/4231b59716a0cbddf52a87c50e6d4130b9e4e2b86bfd8f5ed26e05c519c3e8c5.jpg" />
+                    <div slot="title">Lout of Count's Family Vol. 1</div>
+                                        <div slot="author">Yu Ryeo-Han</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5750135"
+                    isbn="9781534409958"
+                    termshash="22f6dfac6cbe200bb2b87d20f599e7c6"
+                    href="/book/5750135/d77698/the-nemesis-the-diabolic-book-3.html"
+                    download="/dl/5750135/8bb409"
+                    deleted=""
+                    publisher="Simon &amp; Schuster Books for Young Readers"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="3.09 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e4be0ed3469cf02313a2c42405cf87aae3c278acff9de04558daf629eb63b3a5.jpg" />
+                    <div slot="title">The Nemesis (The Diabolic Book 3)</div>
+                                        <div slot="author">S. J. Kincaid</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="28345182"
+                    isbn="9781526602312"
+                    termshash="431d98be08c04a8e700a8172194140af"
+                    href="/book/28345182/434fb7/a-court-of-silver-flames.html"
+                    download="/dl/28345182/f22e8f"
+                    deleted=""
+                    publisher="Bloomsbury Publishing"
+                    language="English"
+                    year="2021"
+                    extension="epub"
+                    filesize="1.59 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/26ea17af8ec01af2540c100570b62dad1bd56d91de7d359a5f509980de4e8fc0.jpg" />
+                    <div slot="title">A Court of Silver Flames</div>
+                                        <div slot="author">Sarah J. Maas</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29672945"
+                    isbn="B0DD7T24K2"
+                    termshash="82bbe24bc938cb53018a64368f1b5b5e"
+                    href="/book/29672945/467490/azarinth-healer-book-four-a-litrpg-adventure.html"
+                    download="/dl/29672945/918b2c"
+                    deleted=""
+                    publisher="Portal Books"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="756 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d96ec18e4ca859cfd45b41892205c70d0642ec4945fb6f2583ce1d07c48121bf.jpg" />
+                    <div slot="title">Azarinth Healer Book Four: A LitRPG Adventure</div>
+                                        <div slot="author">Rhaegar</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3760921"
+                    isbn="B075V4VMDW"
+                    termshash="fcaa5d13f7b8d55854acecaf8e3a4d92"
+                    href="/book/3760921/76dfc3/the-rise-of-nagash-nagash-the-sorcerer-nagash-the-unbroken-nagash-immortal.html"
+                    download="/dl/3760921/5cafc4"
+                    deleted=""
+                    publisher="Black Library"
+                    language="English"
+                    year="2017"
+                    extension="epub"
+                    filesize="1.51 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/8e815df2f5828a5d064d4cef5e81250747947c19818fcbec939ca4ba42811227.jpg" />
+                    <div slot="title">The Rise of Nagash (Nagash the Sorcerer; Nagash the Unbroken; Nagash Immortal)</div>
+                                        <div slot="author">Lee Mike</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4374798"
+                    isbn="9780261102262"
+                    termshash="266dfe7e7f18cedc486d74fb946eef0b"
+                    href="/book/4374798/d37cd3/the-lays-of-beleriand.html"
+                    download="/dl/4374798/1c3c3d"
+                    deleted=""
+                    publisher="HarperCollins Publishers Ltd"
+                    language="English"
+                    year="2010"
+                    extension="epub"
+                    filesize="2.66 MB"
+                    rating="4.5"
+                    quality="4.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/50e4bd35974dc3eb2ca93b0b27200d0d8726f9e73f09b6824da04104bd073363.jpg" />
+                    <div slot="title">The Lays Of Beleriand</div>
+                                        <div slot="author">Tolkien; J R R</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="11720708"
+                    isbn="9781473222892"
+                    termshash="d63dc8f7e5f113315e6dab1994edb71d"
+                    href="/book/11720708/50108c/master-of-sorrows.html"
+                    download="/dl/11720708/a8cdd7"
+                    deleted=""
+                    publisher="Hachette UK"
+                    language="English"
+                    year="2019"
+                    extension="epub"
+                    filesize="1.91 MB"
+                    rating="5.0"
+                    quality="0.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/de9a0b41067ea6d5c5b5512e967e3e55b4b1758791ae12443e3c54f94ef6ce77.jpg" />
+                    <div slot="title">Master of Sorrows</div>
+                                        <div slot="author">Justin Call</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17195070"
+                    isbn="9780593199305"
+                    termshash="801c893c52f027e0d262a12aadf61d12"
+                    href="/book/17195070/066b96/battle-ground-the-dresden-files-17.html"
+                    download="/dl/17195070/cf391e"
+                    deleted=""
+                    publisher="Ace Books (Published by Berkley, a Division of Penguin Group-USA)"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="1.31 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2ac38c76fb7bab49c13d9ff46c163a66977b065ee4f34201239162213553f68a.jpg" />
+                    <div slot="title">Battle Ground (The Dresden Files, #17)</div>
+                                        <div slot="author">Jim Butcher</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
