@@ -413,6 +413,23 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                 clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
                                 clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
                                 final_filename = f"{clean_base_filename}{file_extension}"
+                                
+                                # Truncate filename if too long (max 255 bytes for filename component)
+                                max_filename_bytes = 255  # Standard filesystem limit for filename
+                                if len(final_filename.encode('utf-8')) > max_filename_bytes:
+                                    # Calculate how much we can use for the base part
+                                    extension_bytes = len(file_extension.encode('utf-8'))
+                                    available_bytes = max_filename_bytes - extension_bytes
+                                    if available_bytes < 10:
+                                        available_bytes = 10  # At least keep some chars
+                                    # Truncate the base part to fit within byte limit
+                                    base_bytes = clean_base_filename.encode('utf-8')
+                                    if len(base_bytes) > available_bytes:
+                                        # Truncate to fit, ensuring we don't break UTF-8 characters
+                                        truncated_base = base_bytes[:available_bytes].decode('utf-8', errors='ignore').strip()
+                                        clean_base_filename = truncated_base
+                                        final_filename = f"{clean_base_filename}{file_extension}"
+                                
                                 filepath = os.path.join(output_dir, final_filename)
 
                                 # Save File with Progress Bar
