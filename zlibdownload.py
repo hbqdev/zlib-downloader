@@ -218,6 +218,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
             search_term = category.get("search_term")
             is_search_scrape = bool(search_term) # True if search_term is present and not empty
             scrape_target_name = cat_name if not is_search_scrape else category.get("name", f"Search: '{search_term}'")
+            query_params = category.get("query_params")  # Get query parameters if present
 
             if not scrape_enabled:
                 print(f"\n⏭️ Skipping disabled target: {scrape_target_name}")
@@ -256,6 +257,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     scrape_result = z.search_scrape(
                         search_term=search_term,
                         page=current_page,
+                        query_params=query_params,
                         enable_file_output=should_download
                     )
                 else: # It's a category scrape
@@ -263,6 +265,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         category_id=cat_id,
                         category_slug=cat_slug,
                         page=current_page,
+                        query_params=query_params,
                         enable_file_output=should_download
                     )
                 # --- End Scrape Call ---

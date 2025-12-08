@@ -1,1149 +1,1149 @@
 <z-bookcard
-                                        id="28100253"
-                    isbn="9780316321655"
-                    termshash="08de412fd9e91b204c65ff85ad5dbdf6"
-                    href="/book/28100253/2e97dc/song-of-the-huntress.html"
-                    download="/dl/28100253/cd8660"
+                                        id="4965135"
+                    isbn="9781538724736"
+                    termshash="597f467d29e796d74dbb6fa18e2a1dd0"
+                    href="/book/4965135/4f8aae/verity.html"
+                    download="/dl/4965135/135297"
                     deleted=""
-                    publisher="Redhook"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="4.03 MB"
-                    rating="0.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b25af0c4244398daf4ceb7e89d26c4dfdbfba5539761fa396d40768d6aa5ed72.jpg" />
-                    <div slot="title">Song of the Huntress</div>
-                                        <div slot="author">Lucy Holland</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="12520889"
-                    isbn=""
-                    termshash="ea2d584f430406a7c22653648f9d1549"
-                    href="/book/12520889/6c0af4/aching-god-iconoclasts-book-1.html"
-                    download="/dl/12520889/c69c04"
-                    deleted=""
-                    publisher=""
-                    language="English"
-                    year="2018"
-                    extension="epub"
-                    filesize="1.47 MB"
-                    rating="3.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/851f269bda03aad2ba563e2627d40bde45a4f83ab820dc65c376652a45d9c63e.jpg" />
-                    <div slot="title">Aching God (Iconoclasts Book 1)</div>
-                                        <div slot="author">Shel; Mike</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25750932"
-                    isbn="9781784973209"
-                    termshash="35cd4b3083cd34705a59c877d91e50f9"
-                    href="/book/25750932/4a1de2/the-grace-of-kings.html"
-                    download="/dl/25750932/842681"
-                    deleted=""
-                    publisher="Bloomsbury Publishing"
-                    language="English"
-                    year="2015"
-                    extension="epub"
-                    filesize="986 KB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/76b46a1c289490d3843e8cf911685e885dd9f93f599a58585e566125e95176dd.jpg" />
-                    <div slot="title">The Grace of Kings</div>
-                                        <div slot="author">Ken Liu</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11481627"
-                    isbn="9798686079120"
-                    termshash="ada88c629752d29a56630b78ddfb70da"
-                    href="/book/11481627/1d753d/of-thorns-and-beauty-twisted-pages-book-1.html"
-                    download="/dl/11481627/8c4e0d"
-                    deleted=""
-                    publisher="Whiskey and Willow Publishing, LLC"
-                    language="English"
-                    year="2020"
-                    extension="epub"
-                    filesize="633 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7c3f891d7550329ced466b5bdec63247ae3ff86852c1fc8100c315952cc29876.jpg" />
-                    <div slot="title">Of Thorns And Beauty (Twisted Pages, Book 1)</div>
-                                        <div slot="author">Madison; Elle &amp; Mahle; Robin D. [Madison; Elle &amp; Mahle; Robin D.]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="27953736"
-                    isbn=""
-                    termshash="b834411f2c4de1153c846dbed891b821"
-                    href="/book/27953736/1f8e61/rise-of-the-cinder-fae.html"
-                    download="/dl/27953736/75b471"
-                    deleted=""
-                    publisher="Whitney Dean"
-                    language="English"
-                    year="0"
-                    extension="epub"
-                    filesize="1.58 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/cea89a6e2df2b6730a754db80974bb25042869dfca904bc0c5ea2c1b4a437756.jpg" />
-                    <div slot="title">Rise of the Cinder Fae</div>
-                                        <div slot="author">Whitney Dean</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="27735761"
-                    isbn="9781635574104"
-                    termshash="38305302dcd635093449d6d94f8140d5"
-                    href="/book/27735761/c0411c/house-of-flame-and-shadow.html"
-                    download="/dl/27735761/f923e1"
-                    deleted=""
-                    publisher="Bloomsbury Publishing"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="6.75 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/3fa875a5ba304d1f81fc9b034ba5b9a5d10cdb3689172d5231018acbe233c854.jpg" />
-                    <div slot="title">House of Flame and Shadow</div>
-                                        <div slot="author">Sarah J. Maas</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="26824255"
-                    isbn="B0CC423R7C"
-                    termshash="5dab24d3cff8cd0db51c0a98fffb3819"
-                    href="/book/26824255/6dabf3/reborn-as-a-demonic-tree-an-isekai-litrpg-adventure.html"
-                    download="/dl/26824255/ebbb70"
-                    deleted=""
-                    publisher="Aethon Books"
-                    language="English"
-                    year="2023"
-                    extension="epub"
-                    filesize="1.39 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/91c9580f4e22bff16f8ac28a72dc6f8ced02219518ebb23aae418d2f390d5ab8.jpg" />
-                    <div slot="title">Reborn as a Demonic Tree: An Isekai LitRPG Adventure</div>
-                                        <div slot="author">XKarnation</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="28350175"
-                    isbn=""
-                    termshash="de91e003f417e6a47dd017becdd58254"
-                    href="/book/28350175/20a788/7th-time-loop-the-villainess-enjoys-a-carefree-life-married-to-her-worst-enemy-novel-5.html"
-                    download="/dl/28350175/00113a"
-                    deleted=""
-                    publisher="Seven Seas Entertainment"
-                    language="English"
-                    year="2023"
-                    extension="epub"
-                    filesize="15.05 MB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a363dce5559645691be00ab3eac40e99b91c0a3f598268156b0ccf4dafc1a607.jpg" />
-                    <div slot="title">7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy! novel 5</div>
-                                        <div slot="author">Touko Amekawa</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="118239699"
-                    isbn="9781526681454"
-                    termshash="6e8bdd70aefd52f55f0c4f8d82660648"
-                    href="/book/118239699/ba6284/a-dance-of-lies.html"
-                    download="/dl/118239699/297842"
-                    deleted=""
-                    publisher="Bloomsbury Publishing Plc"
-                    language="English"
-                    year="2025"
-                    extension="epub"
-                    filesize="1.86 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9114ea52c5831bdf46bf6a0afb124634bacbca8b8e2f129ab6b79933919dec3b.jpg" />
-                    <div slot="title">A Dance of Lies</div>
-                                        <div slot="author">Brittney Arena</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="12706901"
-                    isbn=""
-                    termshash="0293f4d0887eb820d919156bba085142"
-                    href="/book/12706901/40b4df/the-fractured-world-1.html"
-                    download="/dl/12706901/db517c"
-                    deleted=""
-                    publisher=""
-                    language="English"
-                    year="2020"
-                    extension="epub"
-                    filesize="302 KB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ee316948d9690dce41fb1fc05f5d98b622c3fb2e56dc478668efaac289fd3d3c.jpg" />
-                    <div slot="title">The Fractured World 1</div>
-                                        <div slot="author">David Aries</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="26730645"
-                    isbn="B0CL5JH8QK"
-                    termshash="e2c14e3a8dd847585dd65dff17eb756a"
-                    href="/book/26730645/9edb18/dawn-of-the-density-god-book-1.html"
-                    download="/dl/26730645/78fd7e"
-                    deleted=""
-                    publisher="Self-published"
-                    language="English"
-                    year="2023"
-                    extension="epub"
-                    filesize="3.72 MB"
-                    rating="3.5"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2a7f5b63b511fad648783addc405892f9bb6cc2e2445a9f33c2c99fa03ab7a4c.jpg" />
-                    <div slot="title">Dawn of the Density God: Book 1</div>
-                                        <div slot="author">ToraAKR</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5071696"
-                    isbn=""
-                    termshash=""
-                    href="/book/5071696/365e9a/horror-on-the-orient-express-call-of-cthulhu-1920s.html"
-                    download="/dl/5071696/295298"
-                    deleted=""
-                    publisher="Chaosium"
-                    language="English"
-                    year="2014"
-                    extension="pdf"
-                    filesize="50.06 MB"
-                    rating="0.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/d64ffde915556bdf9a2d73022a0b9fff28010c0cdff9001b8abbd2da7541a4d8.png" />
-                    <div slot="title">Horror on the Orient Express (Call of Cthulhu 1920s)</div>
-                                        <div slot="author">Geoff Gillan; Mark Morrison; Lynn Willis; Lee Gibbons; Laurie Dietrick; Dean Engelhardt; Marco Morte; Mike Mason</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="119064794"
-                    isbn=""
-                    termshash="f9ea53e203283fbf699baa65be193178"
-                    href="/book/119064794/f1aec8/the-latenight-witches.html"
-                    download="/dl/119064794/9ac655"
-                    deleted=""
-                    publisher="Penguin Publishing Group"
-                    language="English"
-                    year="2025"
-                    extension="epub"
-                    filesize="2.33 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b27b11c26dc502cc6a16f198d1589a4f056f074accc449f8d1347f220f19e660.jpg" />
-                    <div slot="title">The Late-Night Witches</div>
-                                        <div slot="author">Auralee Wallace</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="21005800"
-                    isbn="B09TY3VHCP"
-                    termshash="40c647d57dc362666dc8e23af43f1964"
-                    href="/book/21005800/f161a5/paranoid-mage.html"
-                    download="/dl/21005800/6278b6"
-                    deleted=""
-                    publisher="Kindle"
-                    language="English"
-                    year="2022"
-                    extension="epub"
-                    filesize="598 KB"
-                    rating="3.5"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5d086d4189f9e45357a05893f66ebaeea10e6df3bf3913d6b4fb90f077930ae1.jpg" />
-                    <div slot="title">Paranoid Mage</div>
-                                        <div slot="author">Inadvisably Compelled</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11813830"
-                    isbn="B08YP862CH"
-                    termshash="aa080eb90a7014d2dbb8bcf5caf74d37"
-                    href="/book/11813830/7d9d12/death-before-dragons-books-13-an-urban-fantasy-series-box-set.html"
-                    download="/dl/11813830/276190"
-                    deleted=""
-                    publisher=""
+                    publisher="Grand Central Publishing"
                     language="English"
                     year="2021"
                     extension="epub"
-                    filesize="906 KB"
+                    filesize="518 KB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f9c2e962ab37e486bd33d638eafc1f4a5f63774e65bedb4415a062be8ad7a88d.jpg" />
-                    <div slot="title">Death Before Dragons (Books 1-3) - An Urban Fantasy Series Box Set</div>
-                                        <div slot="author">Lindsay Buroker</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/93ab0b23ec9094df8ad107c2f3affd66a68c8ffad7222fe0fc7c0109154c220c.jpg" />
+                    <div slot="title">Verity</div>
+                                        <div slot="author">Colleen Hoover</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="17020887"
-                    isbn="B08GPP5KN1"
-                    termshash="14e2e7d6d3d65a923ff7bdafe371f71f"
-                    href="/book/17020887/9fb337/something.html"
-                    download="/dl/17020887/ab676a"
+                                        id="1189762"
+                    isbn="9780062073471"
+                    termshash="9bbb3c0c67ab2709851a24e1afb50460"
+                    href="/book/1189762/bcfe15/and-then-there-were-none.html"
+                    download="/dl/1189762/f39968"
                     deleted=""
-                    publisher="Mountaindale Press"
+                    publisher="William Morrow Paperbacks"
                     language="English"
-                    year="2020"
+                    year="2011"
                     extension="epub"
-                    filesize="407 KB"
-                    rating="1.0"
+                    filesize="399 KB"
+                    rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7b2122b613203f2a827d2e4b803d168093afca333b03153b2f1a54ba60690926.jpg" />
-                    <div slot="title">Something</div>
-                                        <div slot="author">Dakota Krout</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/25ab4640652aaf18b05e2e264f3140a997af5a6883c0d203c1a35989a815695d.jpg" />
+                    <div slot="title">And Then There Were None</div>
+                                        <div slot="author">Agatha Christie</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="25665957"
-                    isbn="B0CF3MSKMD"
-                    termshash="2dbdc4a9c60490e9ca4e1f174e64fa85"
-                    href="/book/25665957/679101/dungeon-diving-103.html"
-                    download="/dl/25665957/710161"
+                                        id="5383687"
+                    isbn="9780241376928"
+                    termshash="fa5550ff09cf8272b6156a6c84726b8a"
+                    href="/book/5383687/c06a67/one-of-us-is-next-one-of-us-is-lying-2.html"
+                    download="/dl/5383687/b5d450"
                     deleted=""
-                    publisher="anonymous"
+                    publisher="Penguin Books, Limited"
                     language="English"
-                    year="2023"
+                    year="2020"
                     extension="epub"
-                    filesize="574 KB"
+                    filesize="500 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/e23e785c9f583d1f8a16a26af9c38b4a1c5e1356d70b600487db417d5320e6bb.jpg" />
+                    <div slot="title">One of Us Is Next (One of Us Is Lying #2)</div>
+                                        <div slot="author">Karen M. McManus</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5062010"
+                    isbn="9781405293181"
+                    termshash="c58da87e7683dcd474fdc7d16dd2e3e9"
+                    href="/book/5062010/678858/a-good-girls-guide-to-murder.html"
+                    download="/dl/5062010/39c92f"
+                    deleted=""
+                    publisher="Electric Monkey"
+                    language="English"
+                    year="2019"
+                    extension="epub"
+                    filesize="13.38 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/bed59a2a2bd3fa27dee709ed4dd0b38f6ce082b44d949692e75d8028416d96bd.jpg" />
+                    <div slot="title">A Good Girl's Guide to Murder</div>
+                                        <div slot="author">Holly Jackson</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1721380"
+                    isbn="9780007119318"
+                    termshash="c5f4c7341a83da3486e1b40c93f8c047"
+                    href="/book/1721380/c24863/murder-on-the-orient-express.html"
+                    download="/dl/1721380/f9a26a"
+                    deleted=""
+                    publisher="HarperCollins UK"
+                    language="English"
+                    year="1934"
+                    extension="epub"
+                    filesize="476 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/ab94343069746642534b384b9103ed2a6286ce79046fb41a077a0beffdcb158c.jpg" />
+                    <div slot="title">Murder on the Orient Express</div>
+                                        <div slot="author">Agatha Christie</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4330229"
+                    isbn="B01N7GREG9"
+                    termshash="4efa7e1601665d9c59a08aa2cd08cfa6"
+                    href="/book/4330229/026c3d/paint-it-all-red.html"
+                    download="/dl/4330229/3a88b8"
+                    deleted=""
+                    publisher="S.T. Abby"
+                    language="English"
+                    year="2016"
+                    extension="epub"
+                    filesize="200 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/5a6e7a3aa867b2d0832575d55abdc1c58c2aa038cc09bb4ae57fd5725b39b16b.jpg" />
+                    <div slot="title">Paint It All Red</div>
+                                        <div slot="author">S.T. Abby</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1254076"
+                    isbn="9780753724774"
+                    termshash="eaf4e2a112c0d4b035198114092c8331"
+                    href="/book/1254076/97c455/sherlock-holmes-complete-novels.html"
+                    download="/dl/1254076/34a94c"
+                    deleted=""
+                    publisher="Hachette Book Group"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="2.71 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/bdaba1ddc913db261f66fc0e8c6aa4c8b6a8f76499e98b411920ba43ea088afb.jpg" />
+                    <div slot="title">Sherlock Holmes Complete Novels</div>
+                                        <div slot="author">Arthur Conan Doyle</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="3834974"
+                    isbn="9781612133195"
+                    termshash="4aa8b39d52152526f61b8615fff060a1"
+                    href="/book/3834974/5ed968/ruthless-people.html"
+                    download="/dl/3834974/b171d9"
+                    deleted=""
+                    publisher="The Writer's Coffee Shop"
+                    language="English"
+                    year="2014"
+                    extension="epub"
+                    filesize="704 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/f194cfbe6451d8edaa52546e1a6c1641d4e47d687d71115386080191712aafe1.jpg" />
+                    <div slot="title">Ruthless People</div>
+                                        <div slot="author">J.J. McAvoy</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="22424088"
+                    isbn="9781419760860"
+                    termshash="c16c7c6acf158ed5f0d47abdc61311ae"
+                    href="/book/22424088/d04dce/lightlark.html"
+                    download="/dl/22424088/490e62"
+                    deleted=""
+                    publisher="Harry N. Abrams"
+                    language="English"
+                    year="2022"
+                    extension="epub"
+                    filesize="1.87 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5bd3194b5aef21d040b93e7791b3fca5da6e527aa3e8685bc01bf7f40ef222d3.jpg" />
+                    <div slot="title">Lightlark</div>
+                                        <div slot="author">Alex Aster</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="119304477"
+                    isbn="9780385546898"
+                    termshash="9b265090d36bb50b8073361a9733255d"
+                    href="/book/119304477/ae76c4/the-secret-of-secrets.html"
+                    download="/dl/119304477/c4f096"
+                    deleted=""
+                    publisher="Knopf Doubleday Publishing Group"
+                    language="English"
+                    year="2025"
+                    extension="epub"
+                    filesize="7.66 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/7c7ca4b72edba5085a50c4fdbb13d95f9482d522c92c1cfa5cf6b9121f62dfd6.jpg" />
+                    <div slot="title">The Secret of Secrets</div>
+                                        <div slot="author">Dan Brown</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5587860"
+                    isbn="9780008297183"
+                    termshash="a171831ec6509b646be38fbd80b4cfa3"
+                    href="/book/5587860/cf8cf5/the-guest-list.html"
+                    download=""
+                    deleted="1"
+                    publisher="HarperCollins"
+                    language="English"
+                    year="2019"
+                    extension="epub"
+                    filesize="657 KB"
+                    rating="2.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/14b5f322ac353f2d96bf6c716dedd5b3da8594000c26f3cec7d64aa9c276c768.jpg" />
+                    <div slot="title">The Guest List</div>
+                                        <div slot="author">Lucy Foley</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="6007819"
+                    isbn="9780008297169"
+                    termshash="a171831ec6509b646be38fbd80b4cfa3"
+                    href="/book/6007819/f92d20/the-guest-list.html"
+                    download=""
+                    deleted="1"
+                    publisher="HarperCollinsPublishers"
+                    language="English"
+                    year="2019"
+                    extension="epub"
+                    filesize="426 KB"
+                    rating="2.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/45236f9080a838fb3e8fe45fe16ff4f7600fd23926e38d876d9a85cac0dbb1dd.jpg" />
+                    <div slot="title">The Guest List</div>
+                                        <div slot="author">Lucy Foley</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1241946"
+                    isbn="9780061763403"
+                    termshash="01e86646527c4e56857ccac58f4dce0e"
+                    href="/book/1241946/7b2c85/the-murder-of-roger-ackroyd.html"
+                    download="/dl/1241946/d38b94"
+                    deleted=""
+                    publisher="HarperCollins"
+                    language="English"
+                    year="1926"
+                    extension="epub"
+                    filesize="769 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/c2e129f7493e1b362e52504dfa66fc7afb6925eb0b92c83f18a7f68dbee0d1e4.jpg" />
+                    <div slot="title">The Murder of Roger Ackroyd</div>
+                                        <div slot="author">Agatha Christie</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="852852"
+                    isbn="9780385504218"
+                    termshash="5d5dcb15aaebd31cb4f891ac9dc52e48"
+                    href="/book/852852/9de892/the-da-vinci-code-robert-langdon-2.html"
+                    download="/dl/852852/6c7345"
+                    deleted=""
+                    publisher="Anchor"
+                    language="English"
+                    year="2003"
+                    extension="epub"
+                    filesize="622 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/4bcaf10983534af9dc6d2861746bd2980688618be0c7cb1c6a43ab9014b25b9d.jpg" />
+                    <div slot="title">The Da Vinci Code (Robert Langdon 2)</div>
+                                        <div slot="author">Dan Brown</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="837315"
+                    isbn="9780141901251"
+                    termshash="e35b0406ff6aa26e734560e3029e14bc"
+                    href="/book/837315/db3714/the-count-of-monte-cristo-penguin-classics.html"
+                    download="/dl/837315/f7dd42"
+                    deleted=""
+                    publisher="Penguin Classics"
+                    language="English"
+                    year="2003"
+                    extension="epub"
+                    filesize="1.28 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/bb2bc85cd7893ac541f9540047ead8f969c6505f901c27668ff7c5a7c10cc3c3.jpg" />
+                    <div slot="title">The Count of Monte Cristo (Penguin Classics)</div>
+                                        <div slot="author">Alexandre Dumas</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17336670"
+                    isbn="9780241988251"
+                    termshash="c107d73ac9330d671d5715a525a8f096"
+                    href="/book/17336670/0a66c8/the-man-who-died-twice-a-thursday-murder-club-mystery-2.html"
+                    download="/dl/17336670/4a3663"
+                    deleted=""
+                    publisher="Viking, Penguin Books, Penguin Random House UK"
+                    language="English"
+                    year="2021"
+                    extension="epub"
+                    filesize="1.27 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5469b2e53b59e67f924d919e018e8a520d6b9862652c83143fe068afb0655e94.jpg" />
+                    <div slot="title">The Man Who Died Twice (A Thursday Murder Club Mystery #2)</div>
+                                        <div slot="author">Richard Osman</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="9925955"
+                    isbn="9780525708001"
+                    termshash="3a8ea48f6fa20b1acac5cfbace7ff2ee"
+                    href="/book/9925955/225095/the-cousins.html"
+                    download="/dl/9925955/329d85"
+                    deleted=""
+                    publisher="Delacorte Press"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="1.25 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/00f7a5242bfcfaae984d0abfee235c6fa433ae295d2e28ed643b3f80fa97457a.jpg" />
+                    <div slot="title">The Cousins</div>
+                                        <div slot="author">Karen M. McManus</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="22490244"
+                    isbn="9780316158237"
+                    termshash="0ddf6d715e8486310f6d23525dd17104"
+                    href="/book/22490244/931bc4/belladonna.html"
+                    download="/dl/22490244/bfa381"
+                    deleted=""
+                    publisher="Little, Brown Books for Young Readers"
+                    language="English"
+                    year="2022"
+                    extension="epub"
+                    filesize="449 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f9a4e0b3eec25b16b672b7b7c915e97678e4224eefe1e9a90aae83ce6d76d3e8.jpg" />
+                    <div slot="title">Belladonna</div>
+                                        <div slot="author">Adalyn Grace</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="29209959"
+                    isbn="9780008663803"
+                    termshash="0d5caccae41d2f089e14b0bade02e416"
+                    href="/book/29209959/710214/the-god-of-the-woods.html"
+                    download="/dl/29209959/bdb5ec"
+                    deleted=""
+                    publisher="Borough Press"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="800 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/6eca1e8a8dac3d523b7e8b937135ff5278769b45268c04a5ab4c95b19a1937b4.jpg" />
+                    <div slot="title">The God of the Woods</div>
+                                        <div slot="author">Liz Moore</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17122284"
+                    isbn="9780008365912"
+                    termshash="b6bf8990af12ad49f2a8b6eeb08d305f"
+                    href="/book/17122284/07da9a/how-to-kill-your-family.html"
+                    download="/dl/17122284/0b1e90"
+                    deleted=""
+                    publisher="Borough Press"
+                    language="English"
+                    year="2021"
+                    extension="epub"
+                    filesize="1016 KB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/237b7e88704707a7479222d3c1f3abf6059ea5deb16221a720f7bd1b3af3d4e0.png" />
+                    <div slot="title">How to Kill Your Family</div>
+                                        <div slot="author">Bella Mackie</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="27377340"
+                    isbn="9780593492925"
+                    termshash="7d698762a8845b58b2184b5e1c5f9a22"
+                    href="/book/27377340/2649bd/first-lie-wins.html"
+                    download="/dl/27377340/324772"
+                    deleted=""
+                    publisher="Penguin"
+                    language="English"
+                    year="2024"
+                    extension="epub"
+                    filesize="1.76 MB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/93e3f7ee51f5c29416ebe8b803810bc6466f0acc4cff7b24c6d813232828cb9d.jpg" />
+                    <div slot="title">First Lie Wins</div>
+                                        <div slot="author">Ashley Elston</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4292171"
+                    isbn="9780525505310"
+                    termshash="746b021c2b5e1ae5b827251e0b0e321e"
+                    href="/book/4292171/b62b65/the-couple-next-door.html"
+                    download="/dl/4292171/f67515"
+                    deleted=""
+                    publisher="Penguin"
+                    language="English"
+                    year="2018"
+                    extension="epub"
+                    filesize="500 KB"
+                    rating="3.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/85020b071e027b8910de3be0e679180fa5ac5c459a7fe2a1b16456b63a3034aa.png" />
+                    <div slot="title">The Couple Next Door</div>
+                                        <div slot="author">Shari Lapena</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5622260"
+                    isbn="9781913419653"
+                    termshash="dea8e9e7fcb49815ccd9c6c85210978b"
+                    href="/book/5622260/aef47e/the-perfect-marriage.html"
+                    download="/dl/5622260/0ba921"
+                    deleted=""
+                    publisher="Bloodhound Books"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="494 KB"
+                    rating="3.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d936f300854bcb941a770bae7ad039ad4626c509ac1202389b68af1cdd82f67d.jpg" />
+                    <div slot="title">The Perfect Marriage</div>
+                                        <div slot="author">Jeneva Rose</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4108718"
+                    isbn="9781423195122"
+                    termshash="226fd384cc59360f8502945a490b5f6a"
+                    href="/book/4108718/96d3ab/killer-instinct-the-naturals-2.html"
+                    download="/dl/4108718/6f0dc4"
+                    deleted=""
+                    publisher="Disney-Hyperion"
+                    language="English"
+                    year="2014"
+                    extension="epub"
+                    filesize="907 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/c025c2cf980ae99a266cccadefcfa460c22f7aa5c87da4e88bf731a54148e46b.jpg" />
+                    <div slot="title">Killer Instinct (The Naturals #2)</div>
+                                        <div slot="author">Jennifer Lynn Barnes</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17554756"
+                    isbn=""
+                    termshash="4b88990d5ec6af7c0263ad2925bee2f4"
+                    href="/book/17554756/844341/the-thursday-murder-club-a-novel.html"
+                    download="/dl/17554756/efcc86"
+                    deleted=""
+                    publisher="Penguin Publishing Group"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="2.14 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f3d97b22371be8ad67982eb118e6f5b57fe7072c17fddf0a05eadab1e35ef97f.jpg" />
+                    <div slot="title">The Thursday Murder Club. A Novel</div>
+                                        <div slot="author">Richard Osman</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4912550"
+                    isbn="9781640341760"
+                    termshash="85bf84e4a5aa7620f21b4ceec44e21ed"
+                    href="/book/4912550/0fa869/the-mafia-and-his-angel.html"
+                    download="/dl/4912550/7f7155"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="2017"
+                    extension="epub"
+                    filesize="355 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/5da0e20a4aba6afd4810ebe891e88eb67d974287680914d28fe48cb48b5d1c82.jpg" />
+                    <div slot="title">The Mafia And His Angel</div>
+                                        <div slot="author">James Lylah</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="924678"
+                    isbn="9780007119325"
+                    termshash="1c8bd06ded3c0224338bc696fdb903dd"
+                    href="/book/924678/318164/death-on-the-nile.html"
+                    download="/dl/924678/4ec761"
+                    deleted=""
+                    publisher="HarperCollins UK"
+                    language="English"
+                    year="2001"
+                    extension="pdf"
+                    filesize="2.20 MB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/942693bcc5e8256051fda522299fbac6c68d7c9f45b0be81a8752607c832ca5e.jpg" />
+                    <div slot="title">Death on the Nile</div>
+                                        <div slot="author">Agatha Christie</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16971504"
+                    isbn="9780593379851"
+                    termshash="31823ed4c8e5491308ba519c83338bbe"
+                    href="/book/16971504/6ee030/as-good-as-dead-the-finale-to-a-good-girls-guide-to-murder.html"
+                    download="/dl/16971504/7bb26b"
+                    deleted=""
+                    publisher="Delacorte Press"
+                    language="English"
+                    year="2021"
+                    extension="pdf"
+                    filesize="15.95 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/cd5bf779c5f16a01717ab5dd378f3fc572d15f7590a8c823082836071b579285.jpg" />
+                    <div slot="title">As Good as Dead: The Finale to A Good Girl's Guide to Murder</div>
+                                        <div slot="author">Holly Jackson</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="18941300"
+                    isbn="9781423181187"
+                    termshash="56cb0f5da7dacd8ed15f3bdaf5c7d60e"
+                    href="/book/18941300/9e7ddf/naturals-010-the-naturals.html"
+                    download="/dl/18941300/9a8801"
+                    deleted=""
+                    publisher="Disney-Hyperion"
+                    language="English"
+                    year="2013"
+                    extension="epub"
+                    filesize="1.80 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/74cfa8eae622647eaa973b22baea673598ae9a4fad9d8f57aeb37213f6945ef4.jpg" />
+                    <div slot="title">Naturals 01.0 - The Naturals</div>
+                                        <div slot="author">Jennifer Lynn Barnes</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="908375"
+                    isbn="9781409091486"
+                    termshash="847ecb8a1b219234da9c141bbbbb3c2e"
+                    href="/book/908375/ec3e0a/the-lost-symbol.html"
+                    download="/dl/908375/f7f1b8"
+                    deleted=""
+                    publisher="Doubleday"
+                    language="English"
+                    year="2009"
+                    extension="epub"
+                    filesize="1.21 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/051e7a72883eedb6ccf0a46a4399b8538ebd138dd9c07180ad0a6591f16601c7.jpg" />
+                    <div slot="title">The Lost Symbol</div>
+                                        <div slot="author">Dan Brown</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="16821492"
+                    isbn="9781982137366"
+                    termshash="8b620d5ef467105bf8212b680188d701"
+                    href="/book/16821492/fbaadc/the-night-she-disappeared.html"
+                    download="/dl/16821492/f4a961"
+                    deleted=""
+                    publisher="Random House"
+                    language="English"
+                    year="2021"
+                    extension="epub"
+                    filesize="450 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/575fc5c8c7fbb45434c31ebd0bdc23433382a758880de4af51390e84a5bac7f8.jpg" />
+                    <div slot="title">The Night She Disappeared</div>
+                                        <div slot="author">Lisa Jewell</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5555908"
+                    isbn="9780008370947"
+                    termshash="e23fd1d3c0556b3db668a93dd99f2c9f"
+                    href="/book/5555908/8ff546/his-and-hers.html"
+                    download="/dl/5555908/b3e5fa"
+                    deleted=""
+                    publisher="Flatiron Books"
+                    language="English"
+                    year="2020"
+                    extension="epub"
+                    filesize="491 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b96c01b6241e1f436400248886be53b2db6bd967e31969a4305ae18561649add.jpg" />
+                    <div slot="title">His and Hers</div>
+                                        <div slot="author">Alice Feeney</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17127398"
+                    isbn="9781368052405"
+                    termshash="3ea08e5478f708e2c2650fbea16a6a63"
+                    href="/book/17127398/c92f19/the-inheritance-games.html"
+                    download="/dl/17127398/5519ee"
+                    deleted=""
+                    publisher="Little, Brown Books for Young Readers"
+                    language="English"
+                    year="2020"
+                    extension="pdf"
+                    filesize="1.71 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/1638dae0199a541b9ce755834a1e07451678d90903fe5f83047541a342bf45d4.jpg" />
+                    <div slot="title">The Inheritance Games</div>
+                                        <div slot="author">Jennifer Lynn Barnes</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="4773623"
+                    isbn="9780753724774"
+                    termshash="8dd35c1303dc0f4f14bd6405bc4d8932"
+                    href="/book/4773623/31d43d/the-complete-sherlock-holmes-all-56-stories-and-4-novels-global-classics.html"
+                    download="/dl/4773623/f6471c"
+                    deleted=""
+                    publisher="GENERAL PRESS"
+                    language="English"
+                    year="2018"
+                    extension="epub"
+                    filesize="1.98 MB"
                     rating="5.0"
                     quality="4.5"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/792d5aa69216a30370178999d9b777137a9fdc31489cea77259537f952ed6f0b.jpg" />
-                    <div slot="title">Dungeon Diving 103</div>
-                                        <div slot="author">Bruce Sentar</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/bdaba1ddc913db261f66fc0e8c6aa4c8b6a8f76499e98b411920ba43ea088afb.jpg" />
+                    <div slot="title">The Complete Sherlock Holmes - All 56 Stories and 4 Novels (Global Classics)</div>
+                                        <div slot="author">Arthur Conan Doyle</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="18192184"
-                    isbn="9781568820910"
-                    termshash="2bc20354c423bbf140454bca55474642"
-                    href="/book/18192184/cc3738/pulp-cthulhu-call-of-cthulhu-roleplaying.html"
-                    download="/dl/18192184/192713"
+                                        id="4506388"
+                    isbn="9781473551084"
+                    termshash="c839836c78932fd7bce9ed420bd0ccb5"
+                    href="/book/4506388/201f36/the-one.html"
+                    download="/dl/4506388/310714"
                     deleted=""
-                    publisher="Chaosium Inc."
+                    publisher="Random House"
                     language="English"
-                    year="2016"
-                    extension="pdf"
-                    filesize="34.25 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/263cc49a39058561242aeb19a1b4049c9a8d8ce36c5f1ecb533f55885fc533ba.jpg" />
-                    <div slot="title">Pulp Cthulhu (Call of Cthulhu Roleplaying)</div>
-                                        <div slot="author">Mike Mason; Alan Bligh; James Lowder; Jeff Tidball; Glyn White; Paul Fricker; Scott Dorward; Matt Sanderson; Dan Kramer; Victor Manuel Leza Moreno; Jonathan Wyke; Reuben Dodd; Richard Pace; Victor Manuel Leza Moreno; Roman Entsov; Fifa Finsdottir</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="2827079"
-                    isbn=""
-                    termshash="88fd1d509d9be622e47dd21c58ee2adf"
-                    href="/book/2827079/638791/the-land-forging-chaos-seeds-book-2.html"
-                    download="/dl/2827079/c88208"
-                    deleted=""
-                    publisher=""
-                    language="English"
-                    year="0"
+                    year="2017"
                     extension="epub"
-                    filesize="512 KB"
-                    rating="5.0"
+                    filesize="473 KB"
+                    rating="3.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
                     <img data-src="/img/cover-not-exists.png" />
-                    <div slot="title">The Land: Forging (Chaos Seeds Book 2)</div>
-                                        <div slot="author">Aleron Kong</div>
+                    <div slot="title">The One</div>
+                                        <div slot="author">John Marrs</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="26203579"
-                    isbn=""
-                    termshash="424d634c55cb9666309941e2c8bf9350"
-                    href="/book/26203579/666281/red-rabbit.html"
-                    download="/dl/26203579/ffa066"
+                                        id="17123045"
+                    isbn="9781405298612"
+                    termshash="31823ed4c8e5491308ba519c83338bbe"
+                    href="/book/17123045/3390f4/as-good-as-dead-a-good-girls-guide-to-murder-3.html"
+                    download="/dl/17123045/1961e3"
                     deleted=""
-                    publisher="Tor Publishing Group"
-                    language="English"
-                    year="0"
-                    extension="epub"
-                    filesize="685 KB"
-                    rating="5.0"
-                    quality="4.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/995b3af256e5d674ec9592a9c2081caffe63aab4191aba56640064ff63d4c977.jpg" />
-                    <div slot="title">Red Rabbit</div>
-                                        <div slot="author">Alex Grecian</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5519925"
-                    isbn=""
-                    termshash="88f3f4db492feae389c445b188d60fd2"
-                    href="/book/5519925/fd115c/scholar-of-magic.html"
-                    download="/dl/5519925/50ce4e"
-                    deleted=""
-                    publisher=""
-                    language="English"
-                    year="2020"
-                    extension="epub"
-                    filesize="884 KB"
-                    rating="4.5"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/4487eb1aa8a8028582a0a1fb5f34282d6a929d869295ec0b728c46a2c8a2d5df.jpg" />
-                    <div slot="title">Scholar of Magic</div>
-                                        <div slot="author">Michael G. Manning</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="4811098"
-                    isbn="9780399178481"
-                    termshash="8b81cef12881c83a41f6e051c9914b58"
-                    href="/book/4811098/e1c27c/reincarnation-blues.html"
-                    download="/dl/4811098/641792"
-                    deleted=""
-                    publisher="Random House Publishing Group"
-                    language="English"
-                    year="2017"
-                    extension="epub"
-                    filesize="6.12 MB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/803b16b5d465eb474aab3660fb9112242447a2d76e942862c0f85a528a10d5af.jpg" />
-                    <div slot="title">Reincarnation Blues</div>
-                                        <div slot="author">Michael Poore</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="29511489"
-                    isbn="B0CW1FXD9G"
-                    termshash="52ec7cdfe4945d15cf8952236a2858b2"
-                    href="/book/29511489/d10b62/all-the-skills-book-4.html"
-                    download="/dl/29511489/644f07"
-                    deleted=""
-                    publisher="Avocado Ink Publishing"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="3.48 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/019275a55606bf8e06782c5e401ccaa3710863dea64c7021381a309fc8a7467b.jpg" />
-                    <div slot="title">All The Skills - Book 4</div>
-                                        <div slot="author">Honour Rae</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11008752"
-                    isbn=""
-                    termshash="551c828b064b8570f5cc15bf97a02999"
-                    href="/book/11008752/aa9c1d/herald-of-shalia-5.html"
-                    download="/dl/11008752/9f25df"
-                    deleted=""
-                    publisher="Smirk Publishing"
-                    language="English"
-                    year="2020"
-                    extension="epub"
-                    filesize="1.75 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0c4b6e1b56fa1122e48f3c0433d468a6d0e3e3fd1107a5d67348e74aa44eaf29.jpg" />
-                    <div slot="title">Herald of Shalia 5</div>
-                                        <div slot="author">Tamryn Tamer [Tamer; Tamryn]</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="25158469"
-                    isbn=""
-                    termshash="8bb195081fd6e37dd130fc642dabbd2d"
-                    href="/book/25158469/f4da96/when-the-vibe-is-right.html"
-                    download="/dl/25158469/93cb58"
-                    deleted=""
-                    publisher="HarperCollinsPublishers"
-                    language="English"
-                    year="2023"
-                    extension="epub"
-                    filesize="2.82 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/11ed7eed5e4de2844a5a322a6859d0659b4ee714eeef71112f6babb618b9c1bd.jpg" />
-                    <div slot="title">When the Vibe Is Right</div>
-                                        <div slot="author">Sarah Dass</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="995219"
-                    isbn="9780313333491"
-                    termshash="1115d1978c660713d9fa5dc9a93148a1"
-                    href="/book/995219/e74d77/fairy-lore.html"
-                    download="/dl/995219/76f47a"
-                    deleted=""
-                    publisher="Greenwood"
-                    language="English"
-                    year="2006"
-                    extension="pdf"
-                    filesize="21.06 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/63b50bd0b85391b6da8fbd62c51079155777fd9b1c43fce058512779e2e100df.jpg" />
-                    <div slot="title">Fairy Lore</div>
-                                        <div slot="author">D. L. Ashliman</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="1503688"
-                    isbn="9780441020423"
-                    termshash="a306bbd13676de481c1f1a3a10be7dbb"
-                    href="/book/1503688/8fd685/magic-slays-kate-daniels-05.html"
-                    download="/dl/1503688/6aaa6a"
-                    deleted=""
-                    publisher="Ace Books (Published by Berkley, a Division of Penguin Group-USA)"
-                    language="English"
-                    year="2011"
-                    extension="epub"
-                    filesize="387 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/61c450e055864e59659f264b552f3563cc4e9f57cad9590c3c563ea7fd29256d.jpg" />
-                    <div slot="title">Magic Slays (Kate Daniels, #05)</div>
-                                        <div slot="author">Ilona Andrews</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="23855470"
-                    isbn="B0BFTLZGCS"
-                    termshash="e99e1eb0a8fcdd8f843701ba5bb1c497"
-                    href="/book/23855470/488e92/apocalypse-redux-book-one-a-litrpg-time-regression-adventure.html"
-                    download="/dl/23855470/046758"
-                    deleted=""
-                    publisher="Shadow Alley Press"
-                    language="English"
-                    year="2022"
-                    extension="epub"
-                    filesize="618 KB"
-                    rating="4.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/a2b60546060818d1833df26ed89add31317fae52e6c0238b68384550be949491.jpg" />
-                    <div slot="title">Apocalypse Redux - Book One: A LitRPG Time Regression Adventure</div>
-                                        <div slot="author">Jakob H. Greif</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11126190"
-                    isbn="B07HY82YRP"
-                    termshash="63d00a327a737eec131be3b529eaf5a7"
-                    href="/book/11126190/8bc75f/the-witchs-kind.html"
-                    download="/dl/11126190/eb7624"
-                    deleted=""
-                    publisher="Orbit"
-                    language="English"
-                    year="2019"
-                    extension="epub"
-                    filesize="2.44 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/0f85821f1214fca4f4f798b4a77d6298a2a3441d1899e9d5d38a20e5be0f999d.jpg" />
-                    <div slot="title">The Witch's Kind</div>
-                                        <div slot="author">Louisa Morgan</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="118193428"
-                    isbn="B0DWX8SDZ8"
-                    termshash="c954e506cadd4fd5acdb0d0b3be786f0"
-                    href="/book/118193428/781f96/the-tales-of-arcana-fortune.html"
-                    download="/dl/118193428/751f51"
-                    deleted=""
-                    publisher="anonymous"
-                    language="English"
-                    year="2025"
-                    extension="epub"
-                    filesize="7.99 MB"
-                    rating="4.0"
-                    quality="4.5"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e0b618c3194bccbf3d9d30dd15bf26266dc0a8a3fe0345b634ddb09ebca1548d.jpg" />
-                    <div slot="title">The Tales of Arcana Fortune</div>
-                                        <div slot="author">Hafsa.A. Jawad</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="116195205"
-                    isbn="B0DRTW1KH4"
-                    termshash="e3d9010d3fb8d92150126857b51078f1"
-                    href="/book/116195205/3d5a92/duskbound.html"
-                    download="/dl/116195205/c80db1"
-                    deleted=""
-                    publisher="ONYX"
-                    language="English"
-                    year="2025"
-                    extension="epub"
-                    filesize="3.64 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/b9d05d6679aaa4cbc6437617b628466bb4ba10c96ad045b0ab4f9fc9bc761ee7.jpg" />
-                    <div slot="title">Duskbound</div>
-                                        <div slot="author">Parker Lennox &amp; Bree Grenwich</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="31282537"
-                    isbn=""
-                    termshash="5a49f1ed4d85678301523cf5f31e940f"
-                    href="/book/31282537/600206/the-scholar-and-the-last-faerie-door.html"
-                    download="/dl/31282537/945306"
-                    deleted=""
-                    publisher="Orbit"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="4.61 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/dd425e9263c58812d3adfb03226ddb959f79fce5746462cc160e1b6bada55c4e.jpg" />
-                    <div slot="title">The Scholar and the Last Faerie Door</div>
-                                        <div slot="author">H. G. Parry</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="27991605"
-                    isbn="ccdf1ac7-0335-48eb-b1f2-abd4f2af6576"
-                    termshash="fc1e75b39e244aec8c23a0e47134edbd"
-                    href="/book/27991605/0ab11b/bride.html"
-                    download="/dl/27991605/45a916"
-                    deleted=""
-                    publisher="Penguin Publishing Group"
-                    language="English"
-                    year="2024"
-                    extension="mobi"
-                    filesize="1.50 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/f5636b97bbd425108e0d8997d4b50e626aceba7da3610f2e0f424bd2236fff82.jpg" />
-                    <div slot="title">BRIDE</div>
-                                        <div slot="author">Ali Hazelwood</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="118697841"
-                    isbn=""
-                    termshash="82f6ee159d8df6620b3ac98b513dcf60"
-                    href="/book/118697841/bf46f7/a-resistance-of-witches.html"
-                    download="/dl/118697841/e7730c"
-                    deleted=""
-                    publisher="Penguin Publishing Group"
-                    language="English"
-                    year="2025"
-                    extension="epub"
-                    filesize="7.06 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c15884a331dd9af33853e3aad301b8a8090d69a0397bd7a6bf05a314348d58e7.jpg" />
-                    <div slot="title">A Resistance of Witches</div>
-                                        <div slot="author">Morgan Ryan</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="26792993"
-                    isbn="B0B5KLVCHZ"
-                    termshash="f3f5b00314a2ba410de4b1c2e8f98a08"
-                    href="/book/26792993/700f79/blood-over-bright-haven.html"
-                    download="/dl/26792993/81ab40"
-                    deleted=""
-                    publisher=""
-                    language="English"
-                    year="2023"
-                    extension="epub"
-                    filesize="2.78 MB"
-                    rating="4.5"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/ea8fc394e1ab998d02a933058c1a68fe1c5ff7ffb540766130e6b2f11f1b7016.jpg" />
-                    <div slot="title">Blood Over Bright Haven</div>
-                                        <div slot="author">M. L. Wang</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="11171341"
-                    isbn="9781492656623"
-                    termshash="19b0dcd99251ffd46c33a9f6993e183d"
-                    href="/book/11171341/779e3c/furyborn.html"
-                    download="/dl/11171341/a039d1"
-                    deleted=""
-                    publisher="Sourcebooks, Inc."
-                    language="English"
-                    year="2018"
-                    extension="mobi"
-                    filesize="1.89 MB"
-                    rating="5.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/37606de368c9084d239341820bded9621cc4140476ed9f8521e3631a52d7b80d.jpg" />
-                    <div slot="title">Furyborn</div>
-                                        <div slot="author">Claire Legrand</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="4529470"
-                    isbn=""
-                    termshash="39e6d4ddb973d4c376224e50f95ea6b7"
-                    href="/book/4529470/844279/the-darkslayer-16-complete-series-omnibus.html"
-                    download="/dl/4529470/12644c"
-                    deleted=""
-                    publisher="Two-Ten Book Press"
-                    language="English"
-                    year="2015"
-                    extension="epub"
-                    filesize="5.71 MB"
-                    rating="0.0"
-                    quality="0.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/bf34dd002ef42a94a54385670519def92e861189a877777fa31ff63e4ab36b44.jpg" />
-                    <div slot="title">The Darkslayer 1-6 - Complete Series Omnibus</div>
-                                        <div slot="author">Craig Halloran</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="26428469"
-                    isbn="9781250897459"
-                    termshash="a1fbe8751171c5b4891ec094b499bd76"
-                    href="/book/26428469/8bf2b1/the-night-hunt.html"
-                    download="/dl/26428469/d6928a"
-                    deleted=""
-                    publisher="Feiwel &amp; Friends"
-                    language="English"
-                    year="0"
-                    extension="epub"
-                    filesize="3.46 MB"
-                    rating="4.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/821a43cade4c9865bb6eba94ff56757ce3df7ace6b6ff57c81ad834bd6315062.jpg" />
-                    <div slot="title">The Night Hunt</div>
-                                        <div slot="author">Alexandra Christo</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="29311252"
-                    isbn="9781801701716"
-                    termshash="7699a7cb7bb364bb0489680f45ac2fef"
-                    href="/book/29311252/6a1780/complete-works-of-j-r-r-tolkien.html"
-                    download="/dl/29311252/47194e"
-                    deleted=""
-                    publisher="Delphi Classics"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="34.85 MB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d8e93a4bcf39d18e4e3131b91f984e63a74ae5bf4d5122e9a58b0a931c612868.jpg" />
-                    <div slot="title">Complete Works Of J. R. R. Tolkien</div>
-                                        <div slot="author">J. R. R. Tolkien</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="23129880"
-                    isbn="B0B61L1YS2"
-                    termshash="bf90bfb2373506835020c023da71c2d7"
-                    href="/book/23129880/5caa0f/blackmist-a-litrpg-adventure-my-best-friend-is-an-eldritch-horror-book-1.html"
-                    download="/dl/23129880/902920"
-                    deleted=""
-                    publisher="Aethon Books"
-                    language="English"
-                    year="2022"
-                    extension="epub"
-                    filesize="985 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/5f23122978e5118bf40071002711457a62c97a67fa99fcf1ca49ff1d4e467171.jpg" />
-                    <div slot="title">Blackmist: A LitRPG Adventure (My Best Friend is an Eldritch Horror Book 1)</div>
-                                        <div slot="author">Actus</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="27672925"
-                    isbn="9788076933484"
-                    termshash="7d1d9527c673a1df4b359a9fbffbf5ea"
-                    href="/book/27672925/744199/the-edges-of-power-last-life-book-5-a-progression-fantasy-series.html"
-                    download="/dl/27672925/f6417a"
-                    deleted=""
-                    publisher="Magic Dome Books"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="315 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/c1958776de295e75a3ece7a2c910346c620259ab34a4574f758c86d56e4a3e2a.jpg" />
-                    <div slot="title">The Edges of Power : Last Life (Book 5) A Progression Fantasy Series</div>
-                                        <div slot="author">Alexey Osadchuk</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="4329130"
-                    isbn=""
-                    termshash="f8f118b4fe331fae6f6415ad37a49d8b"
-                    href="/book/4329130/51113d/the-kartoss-gambit-the-way-of-the-shaman-book-2.html"
-                    download="/dl/4329130/463042"
-                    deleted=""
-                    publisher="Magic Dome Books"
-                    language="English"
-                    year="2015"
-                    extension="epub"
-                    filesize="526 KB"
-                    rating="0.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/0a714c4f617dd875947be7ddd543e97fe5b4dd8eb1d04e72694cc28faf9f57fa.jpg" />
-                    <div slot="title">The Kartoss Gambit (The Way of the Shaman: Book #2)</div>
-                                        <div slot="author">Mahanenko Vasily</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="30126069"
-                    isbn="9798891606166"
-                    termshash="df5125c2523d73b07bb1c577de48bc1b"
-                    href="/book/30126069/6560d4/lout-of-counts-family-vol-1.html"
-                    download="/dl/30126069/39f0e6"
-                    deleted=""
-                    publisher="Seven Seas Entertainment"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="2.28 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/4231b59716a0cbddf52a87c50e6d4130b9e4e2b86bfd8f5ed26e05c519c3e8c5.jpg" />
-                    <div slot="title">Lout of Count's Family Vol. 1</div>
-                                        <div slot="author">Yu Ryeo-Han</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="5750135"
-                    isbn="9781534409958"
-                    termshash="22f6dfac6cbe200bb2b87d20f599e7c6"
-                    href="/book/5750135/d77698/the-nemesis-the-diabolic-book-3.html"
-                    download="/dl/5750135/8bb409"
-                    deleted=""
-                    publisher="Simon &amp; Schuster Books for Young Readers"
-                    language="English"
-                    year="2020"
-                    extension="epub"
-                    filesize="3.09 MB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e4be0ed3469cf02313a2c42405cf87aae3c278acff9de04558daf629eb63b3a5.jpg" />
-                    <div slot="title">The Nemesis (The Diabolic Book 3)</div>
-                                        <div slot="author">S. J. Kincaid</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="28345182"
-                    isbn="9781526602312"
-                    termshash="431d98be08c04a8e700a8172194140af"
-                    href="/book/28345182/434fb7/a-court-of-silver-flames.html"
-                    download="/dl/28345182/f22e8f"
-                    deleted=""
-                    publisher="Bloomsbury Publishing"
+                    publisher="HarperCollins Publishers"
                     language="English"
                     year="2021"
                     extension="epub"
-                    filesize="1.59 MB"
+                    filesize="15.76 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/26ea17af8ec01af2540c100570b62dad1bd56d91de7d359a5f509980de4e8fc0.jpg" />
-                    <div slot="title">A Court of Silver Flames</div>
-                                        <div slot="author">Sarah J. Maas</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/6806656ba80a1310f92a544ed6f76325531aaf3d1a2ad574846c3435e2d90d26.jpg" />
+                    <div slot="title">As Good As Dead ( A Good Girl's Guide to Murder #3 )</div>
+                                        <div slot="author">Jackson; Holly</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="29672945"
-                    isbn="B0DD7T24K2"
-                    termshash="82bbe24bc938cb53018a64368f1b5b5e"
-                    href="/book/29672945/467490/azarinth-healer-book-four-a-litrpg-adventure.html"
-                    download="/dl/29672945/918b2c"
+                                        id="4699982"
+                    isbn="9780450417399"
+                    termshash="873231ce5d90729a6a66d55a688d1194"
+                    href="/book/4699982/a2eedd/misery.html"
+                    download="/dl/4699982/70d3d0"
                     deleted=""
-                    publisher="Portal Books"
-                    language="English"
-                    year="2024"
-                    extension="epub"
-                    filesize="756 KB"
-                    rating="5.0"
-                    quality="5.0"
-                                        premium                    contentTypeParam = ""
-                                    >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d96ec18e4ca859cfd45b41892205c70d0642ec4945fb6f2583ce1d07c48121bf.jpg" />
-                    <div slot="title">Azarinth Healer Book Four: A LitRPG Adventure</div>
-                                        <div slot="author">Rhaegar</div>
-                    <div slot="note"></div>
-                    <div slot="extend">
-                                                                                            </div>
-                                                                                                </z-bookcard>
-<z-bookcard
-                                        id="3760921"
-                    isbn="B075V4VMDW"
-                    termshash="fcaa5d13f7b8d55854acecaf8e3a4d92"
-                    href="/book/3760921/76dfc3/the-rise-of-nagash-nagash-the-sorcerer-nagash-the-unbroken-nagash-immortal.html"
-                    download="/dl/3760921/5cafc4"
-                    deleted=""
-                    publisher="Black Library"
+                    publisher="Simon and Schuster"
                     language="English"
                     year="2017"
                     extension="epub"
-                    filesize="1.51 MB"
+                    filesize="553 KB"
+                    rating="5.0"
+                    quality="3.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/0c3c930239e6e527b439b122dd187426e30cdc519c66e215fb1065b4e838973b.jpg" />
+                    <div slot="title">Misery</div>
+                                        <div slot="author">Stephen King</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="25470090"
+                    isbn="9780593183229"
+                    termshash="19255f1d62d596e3cd335f41bac4de87"
+                    href="/book/25470090/e32b48/the-only-one-left.html"
+                    download="/dl/25470090/ff6e8b"
+                    deleted=""
+                    publisher="Penguin"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="1.05 MB"
+                    rating="4.5"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/3d0ef9c3cfc76b710af27433a480e71cf55f49b910aadaf99fdecd84afd00c0e.jpg" />
+                    <div slot="title">The Only One Left</div>
+                                        <div slot="author">Riley Sager</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1240102"
+                    isbn="9780646418438"
+                    termshash="f4feb201211156b22b37cbe3f126e55a"
+                    href="/book/1240102/09072f/the-mysterious-affair-at-styles.html"
+                    download="/dl/1240102/70a793"
+                    deleted=""
+                    publisher="Deodand Pub"
+                    language="English"
+                    year="1920"
+                    extension="epub"
+                    filesize="702 KB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/8e815df2f5828a5d064d4cef5e81250747947c19818fcbec939ca4ba42811227.jpg" />
-                    <div slot="title">The Rise of Nagash (Nagash the Sorcerer; Nagash the Unbroken; Nagash Immortal)</div>
-                                        <div slot="author">Lee Mike</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/a2f622c12aa4ebdbfa95590686103acef4ac4570c08221829b7cba5214fe303d.jpg" />
+                    <div slot="title">The Mysterious Affair at Styles</div>
+                                        <div slot="author">Agatha Christie</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="4374798"
-                    isbn="9780261102262"
-                    termshash="266dfe7e7f18cedc486d74fb946eef0b"
-                    href="/book/4374798/d37cd3/the-lays-of-beleriand.html"
-                    download="/dl/4374798/1c3c3d"
+                                        id="16899103"
+                    isbn="9781728243207"
+                    termshash="0ee8f757bafc83fced5439bfae7fb4be"
+                    href="/book/16899103/d1a632/in-my-dreams-i-hold-a-knife.html"
+                    download="/dl/16899103/1587d4"
                     deleted=""
-                    publisher="HarperCollins Publishers Ltd"
+                    publisher="Sourcebooks Landmark"
                     language="English"
-                    year="2010"
+                    year="2021"
                     extension="epub"
-                    filesize="2.66 MB"
-                    rating="4.5"
-                    quality="4.0"
+                    filesize="1.67 MB"
+                    rating="4.0"
+                    quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/50e4bd35974dc3eb2ca93b0b27200d0d8726f9e73f09b6824da04104bd073363.jpg" />
-                    <div slot="title">The Lays Of Beleriand</div>
-                                        <div slot="author">Tolkien; J R R</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/d0756c31beae1f2f0a5273037fcf65f5381ea11428500a6c77b6cb9c1175a43c.jpg" />
+                    <div slot="title">In My Dreams I Hold a Knife</div>
+                                        <div slot="author">Ashley Winstead</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="11720708"
-                    isbn="9781473222892"
-                    termshash="d63dc8f7e5f113315e6dab1994edb71d"
-                    href="/book/11720708/50108c/master-of-sorrows.html"
-                    download="/dl/11720708/a8cdd7"
+                                        id="12670848"
+                    isbn="9780593333037"
+                    termshash="c456088ebacff11910530389af0c603c"
+                    href="/book/12670848/4d4b35/dial-a-for-aunties-aunties-1.html"
+                    download="/dl/12670848/b91dc6"
                     deleted=""
-                    publisher="Hachette UK"
+                    publisher="Berkley, Penguin Random House"
                     language="English"
-                    year="2019"
+                    year="2021"
                     extension="epub"
-                    filesize="1.91 MB"
+                    filesize="1.65 MB"
                     rating="5.0"
-                    quality="0.0"
+                    quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/de9a0b41067ea6d5c5b5512e967e3e55b4b1758791ae12443e3c54f94ef6ce77.jpg" />
-                    <div slot="title">Master of Sorrows</div>
-                                        <div slot="author">Justin Call</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9ee656962ec7ca1f73d51ce71749de4f9f99eea17322c4b498e728ecd59e6ddd.jpg" />
+                    <div slot="title">Dial A for Aunties (Aunties #1)</div>
+                                        <div slot="author">Jesse Q. Sutanto</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>
                                                                                                 </z-bookcard>
 <z-bookcard
-                                        id="17195070"
-                    isbn="9780593199305"
-                    termshash="801c893c52f027e0d262a12aadf61d12"
-                    href="/book/17195070/066b96/battle-ground-the-dresden-files-17.html"
-                    download="/dl/17195070/cf391e"
+                                        id="2884172"
+                    isbn="9780425274866"
+                    termshash="c0148b25c38bcc81934b438ca2f4ef61"
+                    href="/book/2884172/4e4799/big-little-lies.html"
+                    download="/dl/2884172/afe347"
                     deleted=""
-                    publisher="Ace Books (Published by Berkley, a Division of Penguin Group-USA)"
+                    publisher="Berkley"
+                    language="English"
+                    year="2015"
+                    extension="epub"
+                    filesize="927 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/b0bb5ffc3e0bfcb5e8072487a621a146708aef2a0588ef61e03be78fa076844f.jpg" />
+                    <div slot="title">Big Little Lies</div>
+                                        <div slot="author">Liane Moriarty</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="5157533"
+                    isbn="9781780896434"
+                    termshash="73c1b8746da3a5f7938cf8191cd59813"
+                    href="/book/5157533/8405dd/watching-you.html"
+                    download="/dl/5157533/595903"
+                    deleted=""
+                    publisher="Cornerstone Digital"
+                    language="English"
+                    year="2018"
+                    extension="epub"
+                    filesize="507 KB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/55ad5ff4176fa0d67dd2381e050ebe5a5995ad64c5aa3ec4821727a0bc4ee212.jpg" />
+                    <div slot="title">Watching You</div>
+                                        <div slot="author">Jewell Lisa</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="10979439"
+                    isbn="9781922492029"
+                    termshash="687f998326a06df521b82d816099e7d2"
+                    href="/book/10979439/4e41ae/our-thing.html"
+                    download="/dl/10979439/8c3a20"
+                    deleted=""
+                    publisher="Inki Publishing"
                     language="English"
                     year="2020"
                     extension="epub"
-                    filesize="1.31 MB"
+                    filesize="1.08 MB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/76857537e0c824e8e78a6e9cd549ce3bc636263dff7290905f08501be32aa7db.jpg" />
+                    <div slot="title">Our Thing</div>
+                                        <div slot="author">Nicci Harris</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="23674188"
+                    isbn=""
+                    termshash="567f7a915c8f5edd27319ed3485ce1f5"
+                    href="/book/23674188/b0b0d0/five-survive.html"
+                    download="/dl/23674188/786b5f"
+                    deleted=""
+                    publisher="Random House Children's Books"
+                    language="English"
+                    year="2022"
+                    extension="epub"
+                    filesize="9.03 MB"
                     rating="5.0"
                     quality="5.0"
                                         premium                    contentTypeParam = ""
                                     >
-                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/2ac38c76fb7bab49c13d9ff46c163a66977b065ee4f34201239162213553f68a.jpg" />
-                    <div slot="title">Battle Ground (The Dresden Files, #17)</div>
-                                        <div slot="author">Jim Butcher</div>
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/e02e9c8501de6c7da3a553c20099a8489731fcb2ac78d11496d8813db13194cb.jpg" />
+                    <div slot="title">Five Survive</div>
+                                        <div slot="author">Holly Jackson</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24088068"
+                    isbn=""
+                    termshash="3aeb172d3256d07f7497e1fa832de5ff"
+                    href="/book/24088068/045029/vera-wongs-unsolicited-advice-for-murderers-a-novel.html"
+                    download="/dl/24088068/e9b023"
+                    deleted=""
+                    publisher="Berkley, Penguin Random House"
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="1.75 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/061b734f2c3570605914a2b2856bb91d4683c705ba22791b4dd3a0e20054a63b.jpg" />
+                    <div slot="title">Vera Wong’s Unsolicited Advice for Murderers: A Novel</div>
+                                        <div slot="author">Jesse Q. Sutanto</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1721395"
+                    isbn="9780553119220"
+                    termshash="02ccd1c673ea2097de52b86b5e727493"
+                    href="/book/1721395/fbb44e/death-on-the-nile.html"
+                    download="/dl/1721395/3f7360"
+                    deleted=""
+                    publisher="HarperCollins"
+                    language="English"
+                    year="1937"
+                    extension="epub"
+                    filesize="1.35 MB"
+                    rating="5.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/2e8138bb5e506888db9c9eb3d9554fd4a7bbdac5ebab13db630acf1232ca10c3.jpg" />
+                    <div slot="title">Death on the Nile</div>
+                                        <div slot="author">Agatha Christie</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="24564151"
+                    isbn=""
+                    termshash="0f16bd1b393d7542edb87b56d38e412e"
+                    href="/book/24564151/81e142/dont-let-her-stay.html"
+                    download="/dl/24564151/ee7088"
+                    deleted=""
+                    publisher=""
+                    language="English"
+                    year="2023"
+                    extension="epub"
+                    filesize="276 KB"
+                    rating="4.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/foreignfiction/e82449b0a60efb5d2512e32d5a2b84d73ede2ef38ba520f65234a0f00293adb7.jpg" />
+                    <div slot="title">Don't Let Her Stay</div>
+                                        <div slot="author">Nicola Sanders</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="17580487"
+                    isbn="57865158"
+                    termshash="d70d68e6874a1ff2a19508a20212ef46"
+                    href="/book/17580487/2bb4d6/the-judges-list-the-whistler-2.html"
+                    download="/dl/17580487/c35dc1"
+                    deleted=""
+                    publisher="Doubleday Books"
+                    language="English"
+                    year="2021"
+                    extension="epub"
+                    filesize="962 KB"
+                    rating="3.0"
+                    quality="5.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/userbooks/9d42c8c9e127e93823e20b2cb8700f6a99ac252508e5e9cbb061893cc0e1995c.jpg" />
+                    <div slot="title">The Judge’s List ( The Whistler #2 )</div>
+                                        <div slot="author">John Grisham</div>
+                    <div slot="note"></div>
+                    <div slot="extend">
+                                                                                            </div>
+                                                                                                </z-bookcard>
+<z-bookcard
+                                        id="1070458"
+                    isbn="9780712646864"
+                    termshash="4589770c3ab1b6419dfcd1f146413476"
+                    href="/book/1070458/7d294a/jurassic-park-a-novel.html"
+                    download="/dl/1070458/cac98e"
+                    deleted=""
+                    publisher="Ballantine Books"
+                    language="English"
+                    year="1991"
+                    extension="epub"
+                    filesize="326 KB"
+                    rating="5.0"
+                    quality="2.0"
+                                        premium                    contentTypeParam = ""
+                                    >
+                    <img data-src="https://s3proxy.cdn-zlib.sk/covers100/collections/genesis/73bb376367feabe6cbaf9327a0ea3c3d157d07cc4a18b74f43b99d17e23ce056.png" />
+                    <div slot="title">Jurassic Park - A Novel</div>
+                                        <div slot="author">Michael Crichton</div>
                     <div slot="note"></div>
                     <div slot="extend">
                                                                                             </div>

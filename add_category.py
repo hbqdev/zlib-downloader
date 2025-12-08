@@ -6,7 +6,7 @@ import re
 import argparse
 import sys
 import os
-from urllib.parse import unquote_plus # Needed for decoding search terms
+from urllib.parse import unquote_plus, urlparse, parse_qs # Needed for decoding search terms and parsing query params
 
 # --- JSON Helper Functions (similar to zlibdownload.py) ---
 def load_json(file_path):
@@ -45,13 +45,28 @@ def save_json(data, file_path):
 
 # --- Main Logic ---
 def extract_url_info(url):
-    """Extracts relevant info (ID/slug or search term) from a Z-Library URL."""
+    """Extracts relevant info (ID/slug or search term) and query parameters from a Z-Library URL.
+    
+    Handles various URL formats:
+    - /category/ID/SLUG/s/?languages%5B%5D=english
+    - /category/ID/SLUG/s/?languages%5B%5D=english&selected_content_types%5B%5D=book
+    - /category/ID/SLUG/ (with or without query parameters)
+    - /s/SEARCH_TERM/ (with or without query parameters)
+    """
+    # Parse URL to extract query string
+    parsed_url = urlparse(url)
+    query_string = parsed_url.query
+    
     # Try category format first
-    category_match = re.search(r'/category/(\d+)/([^/?]+)', url) # Stop slug at / or ?
+    # Pattern matches: /category/ID/SLUG/ (stops at / or ? to handle query params)
+    category_match = re.search(r'/category/(\d+)/([^/?]+)', url)
     if category_match:
         cat_id = int(category_match.group(1))
         cat_slug = category_match.group(2)
-        return {"type": "category", "id": cat_id, "slug": cat_slug}
+        result = {"type": "category", "id": cat_id, "slug": cat_slug}
+        if query_string:
+            result["query_params"] = query_string
+        return result
 
     # Try search format
     search_match = re.search(r'/s/([^/?]+)', url) # Stop search term at / or ?
@@ -59,7 +74,10 @@ def extract_url_info(url):
         encoded_term = search_match.group(1)
         try:
             decoded_term = unquote_plus(encoded_term)
-            return {"type": "search", "search_term": decoded_term}
+            result = {"type": "search", "search_term": decoded_term}
+            if query_string:
+                result["query_params"] = query_string
+            return result
         except Exception as e:
             print(f"⚠️ Error decoding search term '{encoded_term}': {e}")
             return None # Indicate error
@@ -117,6 +135,7 @@ def main():
     cat_id = url_info.get("id")
     cat_slug = url_info.get("slug")
     search_term = url_info.get("search_term")
+    query_params = url_info.get("query_params")  # Store query parameters if present
 
     # 2. Determine Name
     entry_name = None
@@ -175,6 +194,10 @@ def main():
         new_entry["slug"] = cat_slug
     elif entry_type == "search":
         new_entry["search_term"] = search_term
+    
+    # Add query parameters if present
+    if query_params:
+        new_entry["query_params"] = query_params
 
     print(f"\nAdding new {entry_type} entry (Order: {next_order}):")
     print(json.dumps(new_entry, indent=2))

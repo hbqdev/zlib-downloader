@@ -441,6 +441,7 @@ class Zlibrary:
         category_id: int = None, # Now optional
         category_slug: str = None, # Now optional
         search_term: str = None, # New optional parameter
+        query_params: str = None, # Query string parameters (e.g., "languages%5B%5D=english&selected_content_types%5B%5D=book")
         enable_file_output: bool = True
      ) -> dict:
         """Scrapes a specific category page OR a search results page on Z-Library.
@@ -471,13 +472,30 @@ class Zlibrary:
         if search_term:
             from urllib.parse import quote # Use quote instead of quote_plus
             encoded_search_term = quote(search_term)
-            # Assuming common filters for search - REMOVE order=popular
-            target_url = f"https://{self.__domain}/s/{encoded_search_term}/?content_type=book&languages%5B0%5D=english&page={page}"
+            # Use provided query_params if available, otherwise use defaults
+            if query_params:
+                # Remove page and order parameters if present, then add our parameters
+                cleaned_params = re.sub(r'[&?]page=\d+', '', query_params)
+                cleaned_params = re.sub(r'^page=\d+&?', '', cleaned_params)
+                cleaned_params = re.sub(r'[&?]order=[^&]*', '', cleaned_params)
+                cleaned_params = re.sub(r'^order=[^&]*&?', '', cleaned_params)
+                target_url = f"https://{self.__domain}/s/{encoded_search_term}/?{cleaned_params}&order=popular&page={page}" if cleaned_params else f"https://{self.__domain}/s/{encoded_search_term}/?order=popular&page={page}"
+            else:
+                # Default filters for search
+                target_url = f"https://{self.__domain}/s/{encoded_search_term}/?content_type=book&languages%5B0%5D=english&order=popular&page={page}"
             scrape_type = f"search term '{search_term}'"
         elif category_id and category_slug:
-            # Existing category logic
-            # Keep order=popular for categories as it was there originally
-            target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
+            # Use provided query_params if available, otherwise use defaults
+            if query_params:
+                # Remove page and order parameters if present, then add our parameters
+                cleaned_params = re.sub(r'[&?]page=\d+', '', query_params)
+                cleaned_params = re.sub(r'^page=\d+&?', '', cleaned_params)
+                cleaned_params = re.sub(r'[&?]order=[^&]*', '', cleaned_params)
+                cleaned_params = re.sub(r'^order=[^&]*&?', '', cleaned_params)
+                target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?{cleaned_params}&order=popular&page={page}" if cleaned_params else f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?order=popular&page={page}"
+            else:
+                # Default filters for category
+                target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
             scrape_type = f"category {category_id}/{category_slug}"
         else:
             # Error: Insufficient information
