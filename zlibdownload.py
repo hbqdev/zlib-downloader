@@ -509,19 +509,23 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                 print(f"      ❌ Download failed for book ID {book_id}")
                                 if downloads_left_today <= 0:
                                     print("      ⛔ Download limit likely reached. Halting subsequent downloads.")
+                                    halt_run_due_to_limit = True
+                                    break
                                 else:
-                                    print("      ⛔ Download attempt failed for other reason. Halting subsequent downloads for safety.")
-                                halt_run_due_to_limit = True
-                                # Break download loop; state saved reflects downloads *before* this failure
-                                break 
+                                    print("      ⚠️ Download attempt failed (book may be unavailable). Skipping to next book.")
+                                    continue # Skip to next book instead of halting 
 
                         except Exception as e: # Error *initiating* download
                             print(f"      ❌ Unexpected error initiating download for book ID {book_id}: {e}")
                             import traceback
                             print(traceback.format_exc())
-                            halt_run_due_to_limit = True
-                            # Break download loop; state saved reflects downloads *before* this failure
-                            break 
+                            if downloads_left_today <= 0:
+                                print("      ⛔ Download limit likely reached. Halting subsequent downloads.")
+                                halt_run_due_to_limit = True
+                                break
+                            else:
+                                print("      ⚠️ Error during download. Skipping to next book.")
+                                continue # Skip to next book instead of halting 
 
                     # --- End of Download Loop for Missing Books ---
                     if not halt_run_due_to_limit:

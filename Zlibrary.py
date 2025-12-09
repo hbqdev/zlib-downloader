@@ -495,7 +495,7 @@ class Zlibrary:
                 target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?{cleaned_params}&order=popular&page={page}" if cleaned_params else f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?order=popular&page={page}"
             else:
                 # Default filters for category
-                target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
+            target_url = f"https://{self.__domain}/category/{category_id}/{category_slug}/s/?languages%5B0%5D=english&order=popular&page={page}"
             scrape_type = f"category {category_id}/{category_slug}"
         else:
             # Error: Insufficient information
