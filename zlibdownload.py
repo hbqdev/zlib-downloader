@@ -513,6 +513,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                     break
                                 else:
                                     print("      ⚠️ Download attempt failed (book may be unavailable). Skipping to next book.")
+                                    # Increment counter so page can be marked as complete
+                                    category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                    # Save state to persist the increment
+                                    if not save_json(categories, categories_file):
+                                        print("      ⚠️ Failed to save state after failed download. Continuing anyway.")
                                     continue # Skip to next book instead of halting 
 
                         except Exception as e: # Error *initiating* download
@@ -525,6 +530,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                 break
                             else:
                                 print("      ⚠️ Error during download. Skipping to next book.")
+                                # Increment counter so page can be marked as complete
+                                category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                # Save state to persist the increment
+                                if not save_json(categories, categories_file):
+                                    print("      ⚠️ Failed to save state after failed download. Continuing anyway.")
                                 continue # Skip to next book instead of halting 
 
                     # --- End of Download Loop for Missing Books ---
