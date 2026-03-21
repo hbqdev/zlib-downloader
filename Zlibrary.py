@@ -16,6 +16,7 @@ import re
 import html
 import os # Needed for file operations
 import json # Import json module here
+import time
 
 class Zlibrary:
     def __init__(
@@ -38,7 +39,15 @@ class Zlibrary:
             "Content-Type": "application/x-www-form-urlencoded",
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US,en;q=0.9",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "sec-ch-ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": '"Windows"',
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "sec-fetch-user": "?1",
+            "upgrade-insecure-requests": "1",
         }
         self.__cookies = {
             "siteLanguageV2": "en",
@@ -503,19 +512,42 @@ class Zlibrary:
 
         print(f"Scraping {scrape_type}, Page {page} - URL: {target_url}")
 
-        # --- Step 1: Fetch the HTML ---
-        try:
-            response = requests.get(
-                target_url,
-                cookies=self.__cookies,
-                headers=self.__headers,
-                timeout=30
-            )
-            response.raise_for_status()
+        # --- Step 1: Fetch the HTML (with retry/backoff for 503) ---
+        max_retries = 3
+        retry_delays = [5, 15, 30]  # seconds between retries
+        last_exception = None
+        response = None
 
-        except requests.exceptions.RequestException as e:
-            print(f"Error during request to {target_url}: {e}")
-            return {"success": False, "books_found": 0, "error": str(e), "books_data": []}
+        for attempt in range(max_retries):
+            try:
+                response = requests.get(
+                    target_url,
+                    cookies=self.__cookies,
+                    headers=self.__headers,
+                    timeout=30
+                )
+                if response.status_code == 503:
+                    wait = retry_delays[attempt] if attempt < len(retry_delays) else retry_delays[-1]
+                    print(f"⚠️ Got 503 on attempt {attempt + 1}/{max_retries}. Retrying in {wait}s...")
+                    time.sleep(wait)
+                    continue
+                response.raise_for_status()
+                break  # Success
+            except requests.exceptions.RequestException as e:
+                last_exception = e
+                if attempt < max_retries - 1:
+                    wait = retry_delays[attempt]
+                    print(f"⚠️ Request error on attempt {attempt + 1}/{max_retries}: {e}. Retrying in {wait}s...")
+                    time.sleep(wait)
+
+        if response is None or (response.status_code == 503):
+            err = f"503 Server Error after {max_retries} retries" if (response and response.status_code == 503) else str(last_exception)
+            print(f"Error during request to {target_url}: {err}")
+            return {"success": False, "books_found": 0, "error": err, "books_data": []}
+
+        if last_exception and (response is None or not response.ok):
+            print(f"Error during request to {target_url}: {last_exception}")
+            return {"success": False, "books_found": 0, "error": str(last_exception), "books_data": []}
 
         html_content = response.text
 

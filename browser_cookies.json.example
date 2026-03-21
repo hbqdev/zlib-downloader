@@ -1,0 +1,9 @@
+{
+  "remix_userid": "YOUR_USER_ID_HERE",
+  "remix_userkey": "YOUR_USER_KEY_HERE",
+  "siteLanguageV2": "en",
+  "_ga": "GA1.1.xxxxx",
+  "_ga_xxxxx": "GS1.1.xxxxx",
+  "cf_clearance": "your_cloudflare_clearance_token"
+}
+

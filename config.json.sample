@@ -11,6 +11,10 @@
   "output_dir": "/path/to/your/download/directory",
   "fetch_full_history": false,
   "force_scrape": true,
+  "use_browser_scraper": false,
+  "browser_headless": true,
+  "scraper_mode": "local",
+  "windows_firefox_debug_port": 9222,
   "filters": {
     "exactMatching": false,
     "yearFrom": null,

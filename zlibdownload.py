@@ -9,6 +9,12 @@ import logging
 from datetime import datetime
 from tqdm import tqdm
 
+try:
+    from browser_scraper import BrowserScraperSync
+    HAS_BROWSER_SCRAPER = True
+except ImportError:
+    HAS_BROWSER_SCRAPER = False
+
 def load_json(file_path):
     """Loads data from a JSON file."""
     try:
@@ -122,6 +128,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
     output_dir = config.get("output_dir")
     download_filename = "to_download.txt"
     fetch_full = config.get("fetch_full_history", False)
+    use_browser_scraper = config.get("use_browser_scraper", False)
+    browser_headless = config.get("browser_headless", True)
+    scraper_mode = config.get("scraper_mode", "local")           # "local" or "windows_firefox"
+    windows_firefox_host = config.get("windows_firefox_host", None)   # None = auto-detect WSL2 host
+    windows_firefox_port = config.get("windows_firefox_debug_port", 9222)
 
     if not email or not password:
         print("❌ Error: 'email' and 'password' must be specified in config.")
@@ -166,6 +177,23 @@ def run_download_process(config_file="config.json", categories_file="categories.
             print("⚠️ Proceeding, but download count messages might be inaccurate.")
     else:
         print("✅ Logged in. Download flag is false, will list/check books only.")
+
+    # Initialize Browser Scraper (if enabled)
+    browser_scraper = None
+    if use_browser_scraper:
+        if not HAS_BROWSER_SCRAPER:
+            print("❌ 'use_browser_scraper' is enabled but browser_scraper module not found. Falling back to requests.")
+            use_browser_scraper = False
+        else:
+            try:
+                print(f"🌐 Initializing browser scraper (headless={browser_headless})...")
+                browser_scraper = BrowserScraperSync(domain=domain)
+                browser_scraper.start(headless=browser_headless)
+                print("✅ Browser scraper ready.")
+            except Exception as e:
+                print(f"❌ Failed to start browser scraper: {e}. Falling back to requests.")
+                browser_scraper = None
+                use_browser_scraper = False
 
     # Call history fetch if requested
     if fetch_full:
@@ -253,7 +281,30 @@ def run_download_process(config_file="config.json", categories_file="categories.
                     except OSError as e: print(f"⚠️ Could not remove old {download_filename}: {e}")
 
                 # --- Call appropriate scrape method ---
-                if is_search_scrape:
+                if use_browser_scraper and browser_scraper:
+                    if is_search_scrape:
+                        scrape_result = browser_scraper.scrape_search(
+                            search_term=search_term,
+                            page=current_page,
+                            query_params=query_params
+                        )
+                    else:
+                        scrape_result = browser_scraper.scrape_category(
+                            category_id=cat_id,
+                            category_slug=cat_slug,
+                            page=current_page,
+                            query_params=query_params
+                        )
+                    # Write to_download.txt so the download pass can read it (include dl path as 5th field)
+                    if scrape_result.get("success") and should_download and scrape_result.get("books_data"):
+                        try:
+                            with open(download_filename, "w", encoding="utf-8") as f:
+                                for book in scrape_result["books_data"]:
+                                    dl = book.get('dl', '')
+                                    f.write(f"{book['id']}|{book['hash']}|{book['title']}|{book['authors']}|{dl}\n")
+                        except IOError as e:
+                            print(f"⚠️ Error writing {download_filename}: {e}")
+                elif is_search_scrape:
                     scrape_result = z.search_scrape(
                         search_term=search_term,
                         page=current_page,
@@ -290,21 +341,22 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         with open(download_filename, "r", encoding="utf-8") as f:
                             for line in f:
                                 parts = line.strip().split('|')
-                                if len(parts) == 4:
+                                if len(parts) >= 4:
                                     page_book_data_iterable.append({
                                         "id": parts[0],
                                         "hash": parts[1],
                                         "title": parts[2],
-                                        "authors": parts[3]
+                                        "authors": parts[3],
+                                        "dl": parts[4] if len(parts) >= 5 else ""
                                     })
                                 else:
                                     print(f"  ⚠️ Skipping malformed line: {line.strip()}")
                     except FileNotFoundError:
                         print(f"  ❌ {download_filename} not found after successful scrape. Skipping page.")
-                        break # Skip to next category if file missing
+                        break
                     except IOError as e:
                         print(f"  ❌ Error reading {download_filename}: {e}. Skipping page.")
-                        break # Skip to next category on read error
+                        break
                 else: # Dry run uses data directly from scrape result
                      page_book_data_iterable = scrape_result.get("books_data", [])
                      if not page_book_data_iterable and books_found_on_page > 0:
@@ -397,144 +449,137 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         print(f"    📖 ({original_index + 1}/{page_book_count}) Downloading: {book_id} ('{title}')")
                         print(f"      ⬇️ ({downloads_left_today} left reported)")
                         
-                        # --- Download Attempt Block --- 
+                        # --- Download Attempt Block ---
                         try:
-                            download_result = z.downloadBook({"id": book_id, "hash": book_hash})
+                            dl_path = book_data_to_download.get("dl", "")
 
-                            if download_result:
-                                file_extension, response = download_result
-                                # Construct Filename 
-                                full_title = title
-                                full_authors = authors
-                                if full_authors:
-                                    authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
-                                    clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
-                                else:
-                                    clean_authors = "Unknown Author"
-                                base_filename = f"{full_title} - {clean_authors}"
-                                invalid_chars_pattern = r'[\\/?:*"<>|]'
-                                clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
-                                clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
-                                final_filename = f"{clean_base_filename}{file_extension}"
-                                
-                                # Truncate filename if too long (max 255 bytes for filename component)
-                                max_filename_bytes = 255  # Standard filesystem limit for filename
-                                if len(final_filename.encode('utf-8')) > max_filename_bytes:
-                                    # Calculate how much we can use for the base part
-                                    extension_bytes = len(file_extension.encode('utf-8'))
-                                    available_bytes = max_filename_bytes - extension_bytes
-                                    if available_bytes < 10:
-                                        available_bytes = 10  # At least keep some chars
-                                    # Truncate the base part to fit within byte limit
-                                    base_bytes = clean_base_filename.encode('utf-8')
-                                    if len(base_bytes) > available_bytes:
-                                        # Truncate to fit, ensuring we don't break UTF-8 characters
-                                        truncated_base = base_bytes[:available_bytes].decode('utf-8', errors='ignore').strip()
-                                        clean_base_filename = truncated_base
-                                        final_filename = f"{clean_base_filename}{file_extension}"
-                                
-                                filepath = os.path.join(output_dir, final_filename)
-
-                                # Save File with Progress Bar
-                                try:
-                                    total_size = int(response.headers.get('content-length', 0))
-                                    block_size = 1024
-
-                                    progress_bar = tqdm(
-                                        total=total_size,
-                                        unit='iB',
-                                        unit_scale=True,
-                                        desc=f"      Saving {final_filename[:40]}...",
-                                        leave=False
-                                    )
-
-                                    if not os.path.exists(output_dir):
-                                        try: os.makedirs(output_dir)
-                                        except OSError as e:
-                                            print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
-                                            progress_bar.close()
-                                            continue # Skip this book if dir fails
-
-                                    with open(filepath, "wb") as f:
-                                        for data in response.iter_content(block_size):
-                                            progress_bar.update(len(data))
-                                            f.write(data)
-                                    progress_bar.close()
-
-                                    if total_size != 0 and progress_bar.n != total_size:
-                                        print(f"\n      ⚠️ WARNING: Download size mismatch for {final_filename}...")
-                                    else:
-                                        print(f"      ✅ Saved: {final_filename}")
-
-                                    # Mark and Save State ONLY AFTER successful save
+                            if browser_scraper and dl_path:
+                                # Use browser session to download via /dl/ path
+                                dl_result = browser_scraper.download_book_direct(dl_path, output_dir)
+                                if dl_result.get("success"):
+                                    final_filename = dl_result["filename"]
+                                    print(f"      ✅ Saved: {final_filename}")
                                     print(f"      📝 Marking book ID {book_id} in Couchbase...")
                                     mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
                                     if not mark_success:
-                                        print(f"      ⚠️ Failed to mark book {book_id} in Couchbase. State may be inconsistent.")
-                                        # Continue processing other downloads unless limit hit
+                                        print(f"      ⚠️ Failed to mark book {book_id} in Couchbase.")
                                     else:
-                                        # --- State Update Block --- 
-                                        # Increment counter *after* successful download/mark
-                                        # Use the dictionary value directly
                                         category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
-                                        # Save the updated state immediately
                                         if not save_json(categories, categories_file):
-                                            print("      ❌ CRITICAL ERROR: Failed to save state after marking book! Halting.")
+                                            print("      ❌ CRITICAL ERROR: Failed to save state! Halting.")
                                             cleanup_db()
                                             sys.exit(1)
-                                        print(f"      💾 State saved. Processed count for page {current_page}: {category['books_processed_on_page']}")
-
-                                        # Update overall counters for *this run*
-                                        books_processed_this_category += 1 # Count newly downloaded book
+                                        print(f"      💾 State saved. Processed count: {category['books_processed_on_page']}")
+                                        books_processed_this_category += 1
                                         total_downloads_attempted_this_run += 1
                                         downloads_left_today -= 1
-                                        # --- End State Update Block ---
-
-                                    time.sleep(0.5) # Rate limiting
-
-                                except IOError as e:
-                                    print(f"\n      ❌ Error saving file '{filepath}': {e}")
-                                    if 'progress_bar' in locals() and progress_bar: progress_bar.close()
-                                    # If save fails, don't mark in CB or update state
-                                    continue # Skip to next file
-                                except Exception as e:
-                                    print(f"\n      ❌ Unexpected error during file save/progress for {final_filename}: {e}")
-                                    import traceback
-                                    print(traceback.format_exc())
-                                    if 'progress_bar' in locals() and progress_bar: progress_bar.close()
-                                    # If save fails, don't mark in CB or update state
-                                    continue # Skip to next file
-
-                            else: # Download failed (likely limit hit or API error)
-                                print(f"      ❌ Download failed for book ID {book_id}")
-                                if downloads_left_today <= 0:
-                                    print("      ⛔ Download limit likely reached. Halting subsequent downloads.")
-                                    halt_run_due_to_limit = True
-                                    break
+                                    time.sleep(0.5)
                                 else:
-                                    print("      ⚠️ Download attempt failed (book may be unavailable). Skipping to next book.")
-                                    # Increment counter so page can be marked as complete
+                                    print(f"      ❌ Browser download failed: {dl_result.get('error')}")
+                                    print(f"      ⚠️ Skipping to next book.")
                                     category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
-                                    # Save state to persist the increment
-                                    if not save_json(categories, categories_file):
-                                        print("      ⚠️ Failed to save state after failed download. Continuing anyway.")
-                                    continue # Skip to next book instead of halting 
+                                    save_json(categories, categories_file)
 
-                        except Exception as e: # Error *initiating* download
-                            print(f"      ❌ Unexpected error initiating download for book ID {book_id}: {e}")
-                            import traceback
-                            print(traceback.format_exc())
+                            else:
+                                # Fallback: use requests-based API download
+                                download_result = z.downloadBook({"id": book_id, "hash": book_hash})
+
+                                if download_result:
+                                    file_extension, response = download_result
+                                    full_title = title
+                                    full_authors = authors
+                                    if full_authors:
+                                        authors_with_spaces = re.sub(r'[;|]+', ' ', full_authors)
+                                        clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
+                                    else:
+                                        clean_authors = "Unknown Author"
+                                    base_filename = f"{full_title} - {clean_authors}"
+                                    invalid_chars_pattern = r'[\\/?:*"<>|]'
+                                    clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
+                                    clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
+                                    final_filename = f"{clean_base_filename}{file_extension}"
+
+                                    max_filename_bytes = 255
+                                    if len(final_filename.encode('utf-8')) > max_filename_bytes:
+                                        extension_bytes = len(file_extension.encode('utf-8'))
+                                        available_bytes = max(max_filename_bytes - extension_bytes, 10)
+                                        base_bytes = clean_base_filename.encode('utf-8')
+                                        if len(base_bytes) > available_bytes:
+                                            clean_base_filename = base_bytes[:available_bytes].decode('utf-8', errors='ignore').strip()
+                                            final_filename = f"{clean_base_filename}{file_extension}"
+
+                                    filepath = os.path.join(output_dir, final_filename)
+
+                                    try:
+                                        total_size = int(response.headers.get('content-length', 0))
+                                        block_size = 1024
+                                        progress_bar = tqdm(total=total_size, unit='iB', unit_scale=True,
+                                                            desc=f"      Saving {final_filename[:40]}...", leave=False)
+                                        if not os.path.exists(output_dir):
+                                            try:
+                                                os.makedirs(output_dir)
+                                            except OSError as e:
+                                                print(f"\n      ❌ Error creating directory '{output_dir}': {e}")
+                                                progress_bar.close()
+                                                continue
+                                        with open(filepath, "wb") as f:
+                                            for data in response.iter_content(block_size):
+                                                progress_bar.update(len(data))
+                                                f.write(data)
+                                        progress_bar.close()
+                                        if total_size != 0 and progress_bar.n != total_size:
+                                            print(f"\n      ⚠️ WARNING: Download size mismatch for {final_filename}...")
+                                        else:
+                                            print(f"      ✅ Saved: {final_filename}")
+                                        print(f"      📝 Marking book ID {book_id} in Couchbase...")
+                                        mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
+                                        if not mark_success:
+                                            print(f"      ⚠️ Failed to mark book {book_id} in Couchbase.")
+                                        else:
+                                            category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                            if not save_json(categories, categories_file):
+                                                print("      ❌ CRITICAL ERROR: Failed to save state! Halting.")
+                                                cleanup_db()
+                                                sys.exit(1)
+                                            print(f"      💾 State saved. Processed count for page {current_page}: {category['books_processed_on_page']}")
+                                            books_processed_this_category += 1
+                                            total_downloads_attempted_this_run += 1
+                                            downloads_left_today -= 1
+                                        time.sleep(0.5)
+                                    except IOError as e:
+                                        print(f"\n      ❌ Error saving file '{filepath}': {e}")
+                                        if 'progress_bar' in locals() and progress_bar: progress_bar.close()
+                                        continue
+                                    except Exception as e:
+                                        print(f"\n      ❌ Unexpected error during file save for {final_filename}: {e}")
+                                        import traceback; print(traceback.format_exc())
+                                        if 'progress_bar' in locals() and progress_bar: progress_bar.close()
+                                        continue
+
+                                else:
+                                    print(f"      ❌ Download failed for book ID {book_id}")
+                                    if downloads_left_today <= 0:
+                                        print("      ⛔ Download limit likely reached. Halting subsequent downloads.")
+                                        halt_run_due_to_limit = True
+                                        break
+                                    else:
+                                        print("      ⚠️ Download attempt failed (book may be unavailable). Skipping to next book.")
+                                        category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                        if not save_json(categories, categories_file):
+                                            print("      ⚠️ Failed to save state after failed download. Continuing anyway.")
+                                        continue
+
+                        except Exception as e:
+                            print(f"      ❌ Unexpected error for book ID {book_id}: {e}")
+                            import traceback; print(traceback.format_exc())
                             if downloads_left_today <= 0:
-                                print("      ⛔ Download limit likely reached. Halting subsequent downloads.")
                                 halt_run_due_to_limit = True
                                 break
                             else:
-                                print("      ⚠️ Error during download. Skipping to next book.")
-                                # Increment counter so page can be marked as complete
                                 category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
-                                # Save state to persist the increment
                                 if not save_json(categories, categories_file):
-                                    print("      ⚠️ Failed to save state after failed download. Continuing anyway.")
+                                    print("      ⚠️ Failed to save state. Continuing anyway.")
+                                continue
                                 continue # Skip to next book instead of halting 
 
                     # --- End of Download Loop for Missing Books ---
@@ -607,6 +652,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
         print(traceback.format_exc())
     finally:
         # Final Cleanup & Summary
+        if browser_scraper:
+            try:
+                browser_scraper.close()
+            except Exception:
+                pass
         cleanup_db()
         if should_download and categories: 
             print("\n💾 Performing final state save...")

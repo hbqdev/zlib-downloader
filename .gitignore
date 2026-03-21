@@ -174,3 +174,4 @@ cython_debug/
 .pypirc
 *.txt
 *.json
+browser_profile_chrome/
