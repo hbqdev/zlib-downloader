@@ -202,7 +202,10 @@ def run_download_process(config_file="config.json", categories_file="categories.
                 browser_scraper.start(headless=browser_headless)
                 print("✅ Browser scraper ready.")
             except Exception as e:
-                print(f"❌ Failed to start browser scraper: {e}. Falling back to requests.")
+                import traceback
+                print(f"❌ Failed to start browser scraper: {e}")
+                print(traceback.format_exc())
+                print("   → Run 'python setup_browser.py' to set up the browser session first.")
                 browser_scraper = None
                 use_browser_scraper = False
 
