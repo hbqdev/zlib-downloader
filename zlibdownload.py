@@ -12,7 +12,10 @@ from tqdm import tqdm
 try:
     from browser_scraper import BrowserScraperSync
     HAS_BROWSER_SCRAPER = True
-except ImportError:
+except Exception as e:
+    import traceback
+    print(f"⚠️ Could not import browser_scraper: {e}")
+    print(traceback.format_exc())
     HAS_BROWSER_SCRAPER = False
 
 def load_json(file_path):
