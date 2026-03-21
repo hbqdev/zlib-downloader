@@ -1,0 +1,10 @@
+beautifulsoup4==4.12.3
+cloudscraper==1.2.71
+couchbase==4.3.5
+curl_cffi==0.13.0
+lxml==5.3.1
+playwright==1.57.0
+playwright-stealth==2.0.0
+requests==2.32.3
+requests-toolbelt==1.0.0
+tqdm==4.67.1

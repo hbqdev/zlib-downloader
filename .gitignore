@@ -173,5 +173,6 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 *.txt
+!requirements.txt
 *.json
 browser_profile_chrome/
