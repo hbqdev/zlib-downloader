@@ -316,6 +316,9 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         except IOError as e:
                             print(f"⚠️ Error writing {download_filename}: {e}")
                 elif is_search_scrape:
+                    if not z:
+                        print(f"  ❌ No API session and browser scraper unavailable — cannot scrape search '{search_term}'. Skipping.")
+                        break
                     scrape_result = z.search_scrape(
                         search_term=search_term,
                         page=current_page,
@@ -323,6 +326,9 @@ def run_download_process(config_file="config.json", categories_file="categories.
                         enable_file_output=should_download
                     )
                 else: # It's a category scrape
+                    if not z:
+                        print(f"  ❌ No API session and browser scraper unavailable — cannot scrape category '{scrape_target_name}'. Skipping.")
+                        break
                     scrape_result = z.search_scrape(
                         category_id=cat_id,
                         category_slug=cat_slug,
