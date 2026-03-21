@@ -157,26 +157,37 @@ def run_download_process(config_file="config.json", categories_file="categories.
             cbconnect.close_db(cluster)
             db_closed = True
 
-    print(f"🔑 Initializing Zlibrary for domain: {domain}...")
-    z = Zlibrary(email=email, password=password, domain=domain)
-    if not z.isLoggedIn():
-        print("❌ Fatal Error: Failed to login to Z-Library. Check credentials.")
-        cleanup_db()
-        sys.exit(1)
+    print(f"🔑 Initializing Zlibrary API for domain: {domain}...")
+    z = None
+    try:
+        z = Zlibrary(email=email, password=password, domain=domain)
+        if not z.isLoggedIn():
+            print("⚠️ Warning: Failed to login to Z-Library API. Will use browser-only mode.")
+            z = None
+    except Exception as e:
+        print(f"⚠️ Warning: Z-Library API login failed ({e}). Will use browser-only mode.")
+        z = None
 
     # Get Initial Download Count
     downloads_left_today = 0
     if should_download:
         try:
-            downloads_left_today = z.getDownloadsLeft()
-            print(f"✅ Successfully logged in. Downloads left today: {downloads_left_today}")
-            if downloads_left_today <= 0:
-                 print("⚠️ API reports 0 downloads left initially.")
+            if z:
+                downloads_left_today = z.getDownloadsLeft()
+                print(f"✅ API login successful. Downloads left today: {downloads_left_today}")
+                if downloads_left_today <= 0:
+                    print("⚠️ API reports 0 downloads left initially.")
+            else:
+                downloads_left_today = 10  # assume default; browser downloads will still work
+                print("ℹ️ API unavailable — assuming 10 downloads left. Browser downloads will track the real limit.")
         except Exception as e:
             print(f"⚠️ Could not get initial downloads left: {e}")
-            print("⚠️ Proceeding, but download count messages might be inaccurate.")
+            downloads_left_today = 10
     else:
-        print("✅ Logged in. Download flag is false, will list/check books only.")
+        if z:
+            print("✅ Logged in. Download flag is false, will list/check books only.")
+        else:
+            print("ℹ️ Browser-only mode. Download flag is false, will list/check books only.")
 
     # Initialize Browser Scraper (if enabled)
     browser_scraper = None
@@ -482,6 +493,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
 
                             else:
                                 # Fallback: use requests-based API download
+                                if not z:
+                                    print(f"      ❌ No API session and no dl path — cannot download book {book_id}. Skipping.")
+                                    category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
+                                    save_json(categories, categories_file)
+                                    continue
                                 download_result = z.downloadBook({"id": book_id, "hash": book_hash})
 
                                 if download_result:
