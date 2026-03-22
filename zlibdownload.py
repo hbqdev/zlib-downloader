@@ -114,7 +114,7 @@ def wait_for_daily_reset(z=None):
     # Next midnight UTC
     next_midnight = (now + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
     # Add 10-20 min random buffer so we don't all hit at once
-    buffer_secs = random.randint(600, 1200)
+    buffer_secs = random.randint(1800, 3600)
     wake_time = next_midnight + timedelta(seconds=buffer_secs)
     wait_secs = (wake_time - now).total_seconds()
 
