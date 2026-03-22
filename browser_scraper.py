@@ -239,6 +239,7 @@ class BrowserScraper:
     
     async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
         """Download a book using its /dl/ path directly via the browser session."""
+        from tqdm import tqdm
         url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
         try:
@@ -247,7 +248,24 @@ class BrowserScraper:
             download = await dl_info.value
             filename = download.suggested_filename
             filepath = os.path.join(output_dir, filename)
-            await download.save_as(filepath)
+
+            # Save to temp path first, then copy with progress bar
+            tmp_path = filepath + ".tmp"
+            await download.save_as(tmp_path)
+
+            file_size = os.path.getsize(tmp_path)
+            block_size = 65536
+            with tqdm(total=file_size, unit='iB', unit_scale=True,
+                      desc=f"      Saving {filename[:40]}...", leave=False) as pbar:
+                with open(tmp_path, 'rb') as src, open(filepath, 'wb') as dst:
+                    while True:
+                        chunk = src.read(block_size)
+                        if not chunk:
+                            break
+                        dst.write(chunk)
+                        pbar.update(len(chunk))
+
+            os.remove(tmp_path)
             return {"success": True, "filepath": filepath, "filename": filename}
         except Exception as e:
             return {"success": False, "error": str(e)}
