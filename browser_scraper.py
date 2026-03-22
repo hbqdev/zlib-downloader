@@ -238,14 +238,20 @@ class BrowserScraper:
         }
     
     async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
-        """Download a book via /dl/ path through the browser session.
-        Retries up to 3 times with a short page reset between attempts."""
+        """Download a book via /dl/ path through the browser session."""
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
 
         max_attempts = 3
         for attempt in range(1, max_attempts + 1):
             try:
+                # Reset page to blank before each attempt — prevents page.evaluate
+                # from hanging when the previous /dl/ navigation left a stale context
+                try:
+                    await self.page.goto("about:blank", wait_until="commit", timeout=10000)
+                except Exception:
+                    pass
+
                 async with self.page.expect_download(timeout=60000) as dl_info:
                     await self.page.evaluate(f'window.location.href = "{dl_url}"')
                 download = await dl_info.value
@@ -258,19 +264,8 @@ class BrowserScraper:
             except Exception as e:
                 err = str(e)
                 if attempt < max_attempts:
-                    print(f"      ⚠️  Download attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying...")
-                    # Navigate to homepage to reset page state before retry
-                    try:
-                        await self.page.goto(f"https://{self.domain}/", wait_until="domcontentloaded", timeout=30000)
-                        # Wait for Cloudflare if needed
-                        for _ in range(15):
-                            title = await self.page.title()
-                            if "checking" not in title.lower():
-                                break
-                            await self.page.wait_for_timeout(2000)
-                    except Exception:
-                        pass
-                    await self.page.wait_for_timeout(5000)
+                    print(f"      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 15s...")
+                    await self.page.wait_for_timeout(15000)
                 else:
                     return {"success": False, "error": err}
 
