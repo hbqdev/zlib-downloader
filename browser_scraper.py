@@ -130,7 +130,7 @@ class BrowserScraper:
             cleaned_params = re.sub(r'^order=[^&]*&?', '', cleaned_params)
             url = f"https://{self.domain}/category/{category_id}/{category_slug}/s/?{cleaned_params}&order=popular&page={page}" if cleaned_params else f"https://{self.domain}/category/{category_id}/{category_slug}/s/?order=popular&page={page}"
         else:
-            url = f"https://{self.domain}/category/{category_id}/{category_slug}/s/?languages%5B%5D=english&order=popular&page={page}"
+            url = f"https://{self.domain}/category/{category_id}/{category_slug}/s/?languages%5B%5D=english&selected_content_types%5B%5D=book&order=popular&page={page}"
         
         return await self._scrape_page(url, f"category {category_id}/{category_slug}")
     
@@ -151,7 +151,7 @@ class BrowserScraper:
             cleaned_params = re.sub(r'^order=[^&]*&?', '', cleaned_params)
             url = f"https://{self.domain}/s/{encoded_term}/?{cleaned_params}&order=popular&page={page}" if cleaned_params else f"https://{self.domain}/s/{encoded_term}/?order=popular&page={page}"
         else:
-            url = f"https://{self.domain}/s/{encoded_term}/?content_type=book&languages%5B%5D=english&order=popular&page={page}"
+            url = f"https://{self.domain}/s/{encoded_term}/?languages%5B%5D=english&selected_content_types%5B%5D=book&order=popular&page={page}"
         
         return await self._scrape_page(url, f"search '{search_term}'")
     
