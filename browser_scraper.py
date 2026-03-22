@@ -238,22 +238,21 @@ class BrowserScraper:
         }
     
     async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
-        """Download a book via /dl/ path through the browser session."""
+        """Download a book by opening the /dl/ URL in a new tab — mimics clicking download."""
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
 
         max_attempts = 3
         for attempt in range(1, max_attempts + 1):
+            dl_page = None
             try:
-                # Reset page to blank before each attempt — prevents page.evaluate
-                # from hanging when the previous /dl/ navigation left a stale context
-                try:
-                    await self.page.goto("about:blank", wait_until="commit", timeout=10000)
-                except Exception:
-                    pass
+                dl_page = await self.context.new_page()
+                async with dl_page.expect_download(timeout=60000) as dl_info:
+                    try:
+                        await dl_page.goto(dl_url, wait_until="commit", timeout=15000)
+                    except Exception:
+                        pass  # "Download is starting" is expected
 
-                async with self.page.expect_download(timeout=60000) as dl_info:
-                    await self.page.evaluate(f'window.location.href = "{dl_url}"')
                 download = await dl_info.value
                 filename = download.suggested_filename
                 filepath = os.path.join(output_dir, filename)
@@ -264,10 +263,16 @@ class BrowserScraper:
             except Exception as e:
                 err = str(e)
                 if attempt < max_attempts:
-                    print(f"      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 15s...")
-                    await self.page.wait_for_timeout(15000)
+                    print(f"      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 10s...")
+                    await asyncio.sleep(10)
                 else:
                     return {"success": False, "error": err}
+            finally:
+                if dl_page:
+                    try:
+                        await dl_page.close()
+                    except Exception:
+                        pass
 
 
 # Synchronous wrapper for easier use
