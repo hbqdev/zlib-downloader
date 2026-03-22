@@ -239,7 +239,6 @@ class BrowserScraper:
     
     async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
         """Download a book via /dl/ path through the browser session."""
-        import shutil
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
         try:
@@ -248,12 +247,7 @@ class BrowserScraper:
             download = await dl_info.value
             filename = download.suggested_filename
             filepath = os.path.join(output_dir, filename)
-            # Get Playwright's temp path and move it — rename is instant vs copy
-            tmp = await download.path()
-            if tmp and os.path.exists(tmp):
-                shutil.move(tmp, filepath)
-            else:
-                await download.save_as(filepath)
+            await download.save_as(filepath)
             size_mb = os.path.getsize(filepath) / (1024 * 1024)
             print(f"      ✅ {filename[:60]} ({size_mb:.1f} MB)")
             return {"success": True, "filepath": filepath, "filename": filename}
