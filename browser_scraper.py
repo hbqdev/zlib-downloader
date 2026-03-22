@@ -238,8 +238,7 @@ class BrowserScraper:
         }
     
     async def download_book_direct(self, dl_path: str, output_dir: str, save_timeout: int = 600) -> dict:
-        """Download a book by opening the /dl/ URL in a new tab — mimics clicking download.
-        save_timeout: max seconds to wait for the file transfer to complete (default 10 min)."""
+        """Download a book by opening the /dl/ URL in a new tab — mimics clicking download."""
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
 
@@ -257,17 +256,36 @@ class BrowserScraper:
                 download = await dl_info.value
                 filename = download.suggested_filename
                 filepath = os.path.join(output_dir, filename)
-                print(f"      ⬇️  {filename[:55]}...", end=" ", flush=True)
-                # save_as has no built-in timeout — wrap it so huge files don't hang forever
-                await asyncio.wait_for(download.save_as(filepath), timeout=save_timeout)
+
+                # Show live progress by polling Playwright's temp file size
+                async def save_with_progress():
+                    save_task = asyncio.create_task(download.save_as(filepath))
+                    print(f"      ⬇️  {filename[:55]}", end="", flush=True)
+                    last_size = 0
+                    while not save_task.done():
+                        await asyncio.sleep(3)
+                        try:
+                            tmp = await download.path()
+                            if tmp and os.path.exists(tmp):
+                                size = os.path.getsize(tmp) / (1024 * 1024)
+                                if size != last_size:
+                                    print(f"\r      ⬇️  {filename[:45]} {size:.1f} MB...", end="", flush=True)
+                                    last_size = size
+                        except Exception:
+                            pass
+                    await save_task  # re-raise any exception
+                    print()  # newline after progress
+
+                await asyncio.wait_for(save_with_progress(), timeout=save_timeout)
+
                 size_mb = os.path.getsize(filepath) / (1024 * 1024)
-                print(f"({size_mb:.1f} MB)")
+                print(f"      ✅ {filename[:55]} ({size_mb:.1f} MB)")
                 return {"success": True, "filepath": filepath, "filename": filename}
+
             except asyncio.TimeoutError:
-                print(f"\n      ⚠️  File transfer exceeded {save_timeout}s — skipping.")
-                # Clean up partial file
+                print(f"\n      ⚠️  Transfer exceeded {save_timeout}s — skipping.")
                 try:
-                    if os.path.exists(filepath):
+                    if 'filepath' in dir() and os.path.exists(filepath):
                         os.remove(filepath)
                 except Exception:
                     pass
@@ -275,7 +293,7 @@ class BrowserScraper:
             except Exception as e:
                 err = str(e)
                 if attempt < max_attempts:
-                    print(f"      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 5s...")
+                    print(f"\n      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 5s...")
                     await asyncio.sleep(5)
                 else:
                     return {"success": False, "error": err}
