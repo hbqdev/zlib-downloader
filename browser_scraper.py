@@ -242,12 +242,12 @@ class BrowserScraper:
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
 
-        max_attempts = 3
+        max_attempts = 2
         for attempt in range(1, max_attempts + 1):
             dl_page = None
             try:
                 dl_page = await self.context.new_page()
-                async with dl_page.expect_download(timeout=60000) as dl_info:
+                async with dl_page.expect_download(timeout=30000) as dl_info:
                     try:
                         await dl_page.goto(dl_url, wait_until="commit", timeout=15000)
                     except Exception:
@@ -263,8 +263,8 @@ class BrowserScraper:
             except Exception as e:
                 err = str(e)
                 if attempt < max_attempts:
-                    print(f"      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 10s...")
-                    await asyncio.sleep(10)
+                    print(f"      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 5s...")
+                    await asyncio.sleep(5)
                 else:
                     return {"success": False, "error": err}
             finally:
