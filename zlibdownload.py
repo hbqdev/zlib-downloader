@@ -526,7 +526,6 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                     dl_result = browser_scraper.download_book_direct(dl_path, output_dir)
                                     if dl_result.get("success"):
                                         final_filename = dl_result["filename"]
-                                        print(f"      ✅ Saved: {final_filename}")
                                         print(f"      📝 Marking book ID {book_id} in Couchbase...")
                                         mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
                                         if not mark_success:
@@ -541,7 +540,9 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                             books_processed_this_category += 1
                                             total_downloads_attempted_this_run += 1
                                             downloads_left_today -= 1
-                                        time.sleep(0.5)
+                                        delay = random.uniform(5, 15)
+                                        print(f"      ⏱️  Waiting {delay:.0f}s before next download...")
+                                        time.sleep(delay)
                                     else:
                                         print(f"      ❌ Browser download failed: {dl_result.get('error')}")
                                         print(f"      ⚠️ Skipping to next book.")
@@ -618,7 +619,9 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                                 books_processed_this_category += 1
                                                 total_downloads_attempted_this_run += 1
                                                 downloads_left_today -= 1
-                                            time.sleep(0.5)
+                                            delay = random.uniform(5, 15)
+                                            print(f"      ⏱️  Waiting {delay:.0f}s before next download...")
+                                            time.sleep(delay)
                                         except IOError as e:
                                             print(f"\n      ❌ Error saving file '{filepath}': {e}")
                                             if 'progress_bar' in locals() and progress_bar: progress_bar.close()
