@@ -515,8 +515,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                             # current_processed_count = category.get("books_processed_on_page", 0) # No longer needed for msg
     
                             # Use the original index for the message
-                            print(f"    📖 ({original_index + 1}/{page_book_count}) Downloading: {book_id} ('{title}')")
-                            print(f"      ⬇️ ({downloads_left_today} left reported)")
+                            print(f"    📖 ({original_index + 1}/{page_book_count}) [{downloads_left_today} left] {book_id} ('{title[:50]}')")
                             
                             # --- Download Attempt Block ---
                             try:

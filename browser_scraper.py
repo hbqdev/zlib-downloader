@@ -239,8 +239,6 @@ class BrowserScraper:
     
     async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
         """Download a book using its /dl/ path directly via the browser session."""
-        import threading
-        from tqdm import tqdm
         url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
         try:
@@ -249,37 +247,13 @@ class BrowserScraper:
             download = await dl_info.value
             filename = download.suggested_filename
             filepath = os.path.join(output_dir, filename)
-
-            # Poll file size in a background thread while save_as writes directly
-            done_event = threading.Event()
-
-            def show_progress():
-                pbar = tqdm(unit='iB', unit_scale=True,
-                            desc=f"      Saving {filename[:40]}...", leave=False)
-                last = 0
-                while not done_event.wait(timeout=0.2):
-                    try:
-                        size = os.path.getsize(filepath) if os.path.exists(filepath) else 0
-                        pbar.update(size - last)
-                        last = size
-                    except OSError:
-                        pass
-                # Final update
-                try:
-                    size = os.path.getsize(filepath) if os.path.exists(filepath) else 0
-                    pbar.update(size - last)
-                except OSError:
-                    pass
-                pbar.close()
-
-            t = threading.Thread(target=show_progress, daemon=True)
-            t.start()
+            print(f"      ⬇️  {filename[:60]}...", end=" ", flush=True)
             await download.save_as(filepath)
-            done_event.set()
-            t.join()
-
+            size_mb = os.path.getsize(filepath) / (1024 * 1024)
+            print(f"({size_mb:.1f} MB)")
             return {"success": True, "filepath": filepath, "filename": filename}
         except Exception as e:
+            print()  # newline if print above was partial
             return {"success": False, "error": str(e)}
 
 
