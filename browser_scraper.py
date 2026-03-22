@@ -237,8 +237,9 @@ class BrowserScraper:
             "books_data": books_data
         }
     
-    async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
-        """Download a book by opening the /dl/ URL in a new tab — mimics clicking download."""
+    async def download_book_direct(self, dl_path: str, output_dir: str, save_timeout: int = 600) -> dict:
+        """Download a book by opening the /dl/ URL in a new tab — mimics clicking download.
+        save_timeout: max seconds to wait for the file transfer to complete (default 10 min)."""
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
 
@@ -256,10 +257,21 @@ class BrowserScraper:
                 download = await dl_info.value
                 filename = download.suggested_filename
                 filepath = os.path.join(output_dir, filename)
-                await download.save_as(filepath)
+                print(f"      ⬇️  {filename[:55]}...", end=" ", flush=True)
+                # save_as has no built-in timeout — wrap it so huge files don't hang forever
+                await asyncio.wait_for(download.save_as(filepath), timeout=save_timeout)
                 size_mb = os.path.getsize(filepath) / (1024 * 1024)
-                print(f"      ✅ {filename[:60]} ({size_mb:.1f} MB)")
+                print(f"({size_mb:.1f} MB)")
                 return {"success": True, "filepath": filepath, "filename": filename}
+            except asyncio.TimeoutError:
+                print(f"\n      ⚠️  File transfer exceeded {save_timeout}s — skipping.")
+                # Clean up partial file
+                try:
+                    if os.path.exists(filepath):
+                        os.remove(filepath)
+                except Exception:
+                    pass
+                return {"success": False, "error": f"save_as timeout after {save_timeout}s"}
             except Exception as e:
                 err = str(e)
                 if attempt < max_attempts:
