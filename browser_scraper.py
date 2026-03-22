@@ -238,22 +238,26 @@ class BrowserScraper:
         }
     
     async def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
-        """Download a book using its /dl/ path directly via the browser session."""
-        url = f"https://{self.domain}{dl_path}"
+        """Download a book via /dl/ path through the browser session."""
+        import shutil
+        dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
         try:
             async with self.page.expect_download(timeout=120000) as dl_info:
-                await self.page.evaluate(f'window.location.href = "{url}"')
+                await self.page.evaluate(f'window.location.href = "{dl_url}"')
             download = await dl_info.value
             filename = download.suggested_filename
             filepath = os.path.join(output_dir, filename)
-            print(f"      ⬇️  {filename[:60]}...", end=" ", flush=True)
-            await download.save_as(filepath)
+            # Get Playwright's temp path and move it — rename is instant vs copy
+            tmp = await download.path()
+            if tmp and os.path.exists(tmp):
+                shutil.move(tmp, filepath)
+            else:
+                await download.save_as(filepath)
             size_mb = os.path.getsize(filepath) / (1024 * 1024)
-            print(f"({size_mb:.1f} MB)")
+            print(f"      ✅ {filename[:60]} ({size_mb:.1f} MB)")
             return {"success": True, "filepath": filepath, "filename": filename}
         except Exception as e:
-            print()  # newline if print above was partial
             return {"success": False, "error": str(e)}
 
 
