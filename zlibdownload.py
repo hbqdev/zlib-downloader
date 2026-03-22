@@ -399,6 +399,11 @@ def run_download_process(config_file="config.json", categories_file="categories.
     
                     if books_found_on_page == 0:
                         print(f"  📭 No books found on page {current_page}. Assuming end of target '{scrape_target_name}'.")
+                        category["scrape_enabled"] = False
+                        if not save_json(categories, categories_file):
+                            print("  ⚠️ Failed to save state after disabling category.")
+                        else:
+                            print(f"  ✅ Marked '{scrape_target_name}' as complete (scrape_enabled=false).")
                         break # Break the 'while' loop for this target
     
                     print(f"  ✅ Found {books_found_on_page} potential books on page {current_page}.")
