@@ -511,6 +511,13 @@ def run_download_process(config_file="config.json", categories_file="categories.
                             if halt_run_due_to_limit:
                                 print("      ⛔ Download limit hit or error occurred previously. Skipping remaining downloads for this page.")
                                 break # Break download loop
+
+                            # Check counter too — catches the case where limit was hit
+                            # on the previous book (counter decremented to 0)
+                            if downloads_left_today <= 0:
+                                print("      ⛔ Daily download limit reached. Waiting for reset...")
+                                halt_run_due_to_limit = True
+                                break
     
                             # --- Get book details --- 
                             book_id = book_data_to_download.get("id")
