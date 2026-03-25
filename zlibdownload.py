@@ -743,7 +743,24 @@ def run_download_process(config_file="config.json", categories_file="categories.
     
             # End of Category/Target Loop (for-loop completed without reset)
             if not limit_reset_this_iteration:
-                break  # all categories processed, exit outer while loop
+                # Check if there are any enabled categories left
+                enabled_categories = [c for c in categories if c.get("scrape_enabled", False)]
+                if not enabled_categories:
+                    print("\n✅ All categories have been fully processed (no enabled categories remaining).")
+                    break  # Exit outer while loop - nothing left to process
+                else:
+                    print(f"\n🔄 Completed one pass through all categories. Restarting with {len(enabled_categories)} enabled categories...")
+                    # Add a delay between full category passes to be respectful to the server
+                    delay = random.uniform(30, 60)
+                    print(f"⏱️  Waiting {delay:.0f}s before next pass...\n")
+                    time.sleep(delay)
+                    # Reload categories from disk in case anything changed
+                    categories = load_json(categories_file) or categories
+                    try:
+                        categories.sort(key=lambda x: int(x.get('order_to_download', float('inf'))))
+                    except Exception:
+                        pass
+                    # Continue the while True loop to process categories again
 
         # End of outer while loop
 
