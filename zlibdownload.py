@@ -109,7 +109,7 @@ def fetch_and_save_user_history(z_instance):
     print("✅ Finished Fetching Full User Download History")
 
 def wait_for_daily_reset(z=None):
-    """Sleep until Z-Library's daily limit resets (midnight UTC + buffer), then return new limit."""
+    """Sleep until Z-Library's daily limit resets (midnight UTC + buffer), then verify and return new limit."""
     now = datetime.now(timezone.utc)
     # Next midnight UTC
     next_midnight = (now + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
@@ -136,17 +136,42 @@ def wait_for_daily_reset(z=None):
             print(f"   💤 Still waiting... {hours_left:.1f} hours until reset ({wake_str})")
 
     print(f"\n🌅 Waking up — checking new download limit...")
-    # Try to get updated limit from API
-    new_limit = 999  # safe default
-    if z:
-        try:
-            new_limit = z.getDownloadsLeft()
-            print(f"✅ New daily limit: {new_limit} downloads available")
-        except Exception as e:
-            print(f"⚠️ Could not fetch new limit from API ({e}), assuming {new_limit}")
-    else:
-        print(f"ℹ️ No API session — assuming {new_limit} downloads available")
-    return new_limit
+    
+    # Try to get updated limit from API with verification loop
+    max_checks = 12  # Check up to 12 times (1 hour with 5min intervals)
+    check_interval = 300  # 5 minutes between checks
+    
+    for attempt in range(1, max_checks + 1):
+        new_limit = 0
+        if z:
+            try:
+                new_limit = z.getDownloadsLeft()
+                print(f"   📊 Check {attempt}/{max_checks}: {new_limit} downloads available")
+                
+                if new_limit > 0:
+                    print(f"✅ Daily limit restored: {new_limit} downloads available")
+                    return new_limit
+                else:
+                    if attempt < max_checks:
+                        print(f"   ⚠️ Limit still 0, waiting {check_interval//60} minutes before next check...")
+                        time.sleep(check_interval)
+                    else:
+                        print(f"   ⚠️ Limit still 0 after {max_checks} checks. Proceeding anyway...")
+                        return 10  # Return a conservative default
+                        
+            except Exception as e:
+                print(f"   ⚠️ Check {attempt}/{max_checks} failed: {e}")
+                if attempt < max_checks:
+                    time.sleep(check_interval)
+                else:
+                    print(f"   ⚠️ Could not verify limit after {max_checks} attempts. Assuming 10 downloads available.")
+                    return 10
+        else:
+            print(f"ℹ️ No API session — assuming 10 downloads available")
+            return 10
+    
+    # Fallback (should not reach here)
+    return 10
 
 
 def run_download_process(config_file="config.json", categories_file="categories.json"):
