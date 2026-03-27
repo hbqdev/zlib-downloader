@@ -123,7 +123,7 @@ def wait_for_daily_reset(z=None):
     print(f"   Sleeping until {wake_str} ({wait_secs/3600:.1f} hours from now)...")
     print(f"   (Press Ctrl+C to stop)\n")
 
-    # Sleep in 1-hour chunks, printing status so user knows it's alive
+    # Sleep in 1-hour chunks, checking the API after each chunk for an early reset
     slept = 0
     chunk = 3600  # 1 hour
     while slept < wait_secs:
@@ -131,34 +131,41 @@ def wait_for_daily_reset(z=None):
         sleep_now = min(chunk, remaining)
         time.sleep(sleep_now)
         slept += sleep_now
+
+        # Check API after every chunk (including the final one)
+        if z:
+            try:
+                new_limit = z.getDownloadsLeft()
+                if new_limit > 0:
+                    print(f"\n🌅 Limit restored early! {new_limit} downloads available.")
+                    return new_limit
+            except Exception as e:
+                print(f"   ⚠️ Hourly check failed: {e}")
+
         if slept < wait_secs:
             hours_left = (wait_secs - slept) / 3600
             print(f"   💤 Still waiting... {hours_left:.1f} hours until reset ({wake_str})")
 
     print(f"\n🌅 Waking up — checking new download limit...")
-    
-    # Try to get updated limit from API with verification loop
-    max_checks = 12  # Check up to 12 times (1 hour with 5min intervals)
-    check_interval = 300  # 5 minutes between checks
-    
+
+    # Post-sleep verification loop (up to 1 hour in 5-min intervals)
+    max_checks = 12
+    check_interval = 300  # 5 minutes
+
     for attempt in range(1, max_checks + 1):
-        new_limit = 0
         if z:
             try:
                 new_limit = z.getDownloadsLeft()
                 print(f"   📊 Check {attempt}/{max_checks}: {new_limit} downloads available")
-                
                 if new_limit > 0:
                     print(f"✅ Daily limit restored: {new_limit} downloads available")
                     return new_limit
+                if attempt < max_checks:
+                    print(f"   ⚠️ Limit still 0, waiting {check_interval//60} minutes before next check...")
+                    time.sleep(check_interval)
                 else:
-                    if attempt < max_checks:
-                        print(f"   ⚠️ Limit still 0, waiting {check_interval//60} minutes before next check...")
-                        time.sleep(check_interval)
-                    else:
-                        print(f"   ⚠️ Limit still 0 after {max_checks} checks. Proceeding anyway...")
-                        return 10  # Return a conservative default
-                        
+                    print(f"   ⚠️ Limit still 0 after {max_checks} checks. Proceeding anyway...")
+                    return 10
             except Exception as e:
                 print(f"   ⚠️ Check {attempt}/{max_checks} failed: {e}")
                 if attempt < max_checks:
@@ -169,7 +176,7 @@ def wait_for_daily_reset(z=None):
         else:
             print(f"ℹ️ No API session — assuming 10 downloads available")
             return 10
-    
+
     # Fallback (should not reach here)
     return 10
 
