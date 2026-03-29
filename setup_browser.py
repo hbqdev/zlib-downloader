@@ -70,21 +70,6 @@ async def setup():
     if _stealth:
         await _stealth.apply_stealth_async(page)
 
-    # Re-fulfill document responses to prevent "Download is starting" errors
-    async def _refulfill_documents(route):
-        if route.request.resource_type != "document":
-            await route.continue_()
-            return
-        try:
-            response = await route.fetch()
-            headers = {k: v for k, v in response.headers.items()
-                       if k.lower() != "content-disposition"}
-            await route.fulfill(status=response.status, headers=headers, body=await response.body())
-        except Exception:
-            await route.continue_()
-
-    await context.route("**/*", _refulfill_documents)
-
     print(f"\n  🌐 Navigating to https://{domain} ...")
     try:
         await page.goto(f"https://{domain}", wait_until="domcontentloaded", timeout=60000)
