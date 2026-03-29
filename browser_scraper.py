@@ -127,8 +127,14 @@ class BrowserScraper:
     @staticmethod
     async def _route_refulfill_documents(route):
         """Re-fulfill document responses to prevent Playwright aborting navigation
-        with 'Download is starting' when the server sends unexpected headers."""
+        with 'Download is starting' when the server sends unexpected headers.
+        Download URLs (/dl/ paths) are passed through unchanged so Playwright's
+        download event still fires correctly."""
         if route.request.resource_type != "document":
+            await route.continue_()
+            return
+        # Let actual file-download URLs pass through untouched so expect_download works
+        if "/dl/" in route.request.url:
             await route.continue_()
             return
         try:
