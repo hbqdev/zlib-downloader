@@ -60,6 +60,7 @@ class BrowserScraper:
             CHROME_PROFILE_DIR,
             executable_path=CHROME_EXECUTABLE,
             headless=effective_headless,
+            accept_downloads=True,
             args=[
                 "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
@@ -89,6 +90,7 @@ class BrowserScraper:
                 CHROME_PROFILE_DIR,
                 executable_path=CHROME_EXECUTABLE,
                 headless=True,
+                accept_downloads=True,
                 args=[
                     "--disable-blink-features=AutomationControlled",
                     "--no-sandbox",
@@ -198,9 +200,15 @@ class BrowserScraper:
 
             except Exception as e:
                 err_str = str(e)
-                if attempt < max_attempts - 1 and ("ERR_NETWORK_CHANGED" in err_str or "ERR_NETWORK" in err_str):
+                retryable = (
+                    "ERR_NETWORK_CHANGED" in err_str
+                    or "ERR_NETWORK" in err_str
+                    or "ERR_ABORTED" in err_str
+                    or "Download is starting" in err_str
+                )
+                if attempt < max_attempts - 1 and retryable:
                     wait = (attempt + 1) * 3
-                    print(f"⚠️  Network error on attempt {attempt + 1}/{max_attempts}, retrying in {wait}s...")
+                    print(f"⚠️  Transient error on attempt {attempt + 1}/{max_attempts}, retrying in {wait}s: {err_str[:80]}")
                     await self.page.wait_for_timeout(wait * 1000)
                     continue
                 print(f"❌ Error scraping page: {e}")
