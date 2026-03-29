@@ -73,6 +73,10 @@ class BrowserScraper:
             timezone_id="America/New_York",
         )
 
+        # Re-fulfill document responses so Playwright never aborts navigation
+        # with "Download is starting" when the server sends unexpected headers.
+        await self.context.route("**/*", self._route_refulfill_documents)
+
         self.page = self.context.pages[0] if self.context.pages else await self.context.new_page()
 
         if HAS_STEALTH and _stealth:
@@ -81,7 +85,10 @@ class BrowserScraper:
 
         if profile_is_new:
             # Navigate to the site and wait for the user to log in manually
-            await self.page.goto(f"https://{self.domain}/", wait_until="domcontentloaded", timeout=60000)
+            try:
+                await self.page.goto(f"https://{self.domain}/", wait_until="domcontentloaded", timeout=60000)
+            except Exception as e:
+                print(f"⚠️  Auto-navigation failed ({e!s:.80}). Navigate manually in the Chrome window.")
             print("⏳ Waiting for you to log in... close the Chrome window when done.")
             await self.context.wait_for_event("close", timeout=300000)
             # Re-launch headlessly now that the session is saved
@@ -102,6 +109,7 @@ class BrowserScraper:
                 locale="en-US",
                 timezone_id="America/New_York",
             )
+            await self.context.route("**/*", self._route_refulfill_documents)
             self.page = self.context.pages[0] if self.context.pages else await self.context.new_page()
             if HAS_STEALTH and _stealth:
                 await _stealth.apply_stealth_async(self.page)
@@ -115,6 +123,25 @@ class BrowserScraper:
         if self._playwright:
             await self._playwright.stop()
         print("🔌 Browser closed")
+
+    @staticmethod
+    async def _route_refulfill_documents(route):
+        """Re-fulfill document responses to prevent Playwright aborting navigation
+        with 'Download is starting' when the server sends unexpected headers."""
+        if route.request.resource_type != "document":
+            await route.continue_()
+            return
+        try:
+            response = await route.fetch()
+            headers = {k: v for k, v in response.headers.items()
+                       if k.lower() != "content-disposition"}
+            await route.fulfill(
+                status=response.status,
+                headers=headers,
+                body=await response.body(),
+            )
+        except Exception:
+            await route.continue_()
     
     async def scrape_category(
         self, 
@@ -187,6 +214,18 @@ class BrowserScraper:
                     status = response.status if response else 200
                 except Exception:
                     status = 200  # response object stale after redirect — assume OK
+
+                # If status is non-2xx, check whether the page actually loaded after
+                # a Cloudflare challenge (the initial 503 stays on `response` but the
+                # page may have navigated to the real content).
+                if status not in (200, 0):
+                    try:
+                        current_title = await self.page.title()
+                        challenge = "checking" in current_title.lower() or "just a moment" in current_title.lower()
+                        if not challenge:
+                            status = 200  # challenge resolved; real page is loaded
+                    except Exception:
+                        pass
 
                 if status == 503:
                     print(f"❌ Got 503 error - service unavailable")

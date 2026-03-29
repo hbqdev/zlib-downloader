@@ -70,8 +70,27 @@ async def setup():
     if _stealth:
         await _stealth.apply_stealth_async(page)
 
+    # Re-fulfill document responses to prevent "Download is starting" errors
+    async def _refulfill_documents(route):
+        if route.request.resource_type != "document":
+            await route.continue_()
+            return
+        try:
+            response = await route.fetch()
+            headers = {k: v for k, v in response.headers.items()
+                       if k.lower() != "content-disposition"}
+            await route.fulfill(status=response.status, headers=headers, body=await response.body())
+        except Exception:
+            await route.continue_()
+
+    await context.route("**/*", _refulfill_documents)
+
     print(f"\n  🌐 Navigating to https://{domain} ...")
-    await page.goto(f"https://{domain}", wait_until="domcontentloaded", timeout=60000)
+    try:
+        await page.goto(f"https://{domain}", wait_until="domcontentloaded", timeout=60000)
+    except Exception as e:
+        print(f"\n  ⚠️  Auto-navigation failed: {e!s:.100}")
+        print(f"  Please manually navigate to https://{domain} in the Chrome window.")
 
     print("\n  Chrome is open. Log in and wait for the page to fully load.")
     print("  Then CLOSE the Chrome window to save your session.")
