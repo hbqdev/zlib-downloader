@@ -83,7 +83,7 @@ def build_new_stem(title: str, authors: str) -> str:
 # Metadata embedding
 # ──────────────────────────────────────────────────────────────────────────────
 
-FULL_SAVE_SIZE_LIMIT_MB = 30  # Skip full PDF rewrites above this size
+FULL_SAVE_SIZE_LIMIT_MB = 99999  # No practical limit by default
 
 
 def embed_pdf_metadata(filepath: str, title: str, authors: str) -> tuple[bool, str]:
@@ -416,9 +416,8 @@ def main():
                         help="Number of parallel workers (default: 8)")
     parser.add_argument("--timeout", type=int, default=60,
                         help="Per-file timeout in seconds; files that hang are skipped (default: 60)")
-    parser.add_argument("--max-pdf-size", type=int, default=30,
-                        help="Skip full PDF rewrite (fallback path) for files larger than "
-                             "this many MB (default: 30). Incremental saves are always tried first.")
+    parser.add_argument("--max-pdf-size", type=int, default=99999,
+                        help="Skip full PDF rewrite for files larger than this many MB (default: unlimited)")
     args = parser.parse_args()
 
     global FULL_SAVE_SIZE_LIMIT_MB
