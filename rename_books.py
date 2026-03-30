@@ -97,9 +97,10 @@ def embed_pdf_metadata(filepath: str, title: str, authors: str) -> bool:
 
 
 def embed_epub_metadata(filepath: str, title: str, authors: str) -> bool:
+    tmp = None
     try:
-        from ebooklib import epub
-        import zipfile, shutil, tempfile
+        from ebooklib import epub  # noqa: F401 — confirms ebooklib is available
+        import zipfile, shutil
         from lxml import etree
 
         # ebooklib's write_epub requires a full round-trip; patch the OPF directly
@@ -145,7 +146,7 @@ def embed_epub_metadata(filepath: str, title: str, authors: str) -> bool:
         return True
     except Exception as e:
         print(f"    ⚠️  EPUB metadata embed failed: {e}")
-        if os.path.exists(tmp):
+        if tmp and os.path.exists(tmp):
             os.remove(tmp)
         return False
 
@@ -163,7 +164,8 @@ def needs_cleaning(stem: str) -> bool:
     return bool(_DOMAIN_SUFFIX_RE.search(stem))
 
 
-def process_file(filepath: str, dry_run: bool, embed_metadata: bool) -> dict:
+def process_file(filepath: str, dry_run: bool, embed_metadata: bool,
+                 metadata_only: bool = False) -> dict:
     directory = os.path.dirname(filepath)
     basename = os.path.basename(filepath)
     stem, ext = os.path.splitext(basename)
@@ -171,6 +173,26 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool) -> dict:
 
     if ext_lower not in SUPPORTED_EXTENSIONS:
         return {"action": "skipped", "reason": "unsupported extension"}
+
+    if metadata_only:
+        # Re-apply metadata to already-renamed files (no domain suffix required)
+        if ext_lower not in METADATA_EXTENSIONS:
+            return {"action": "skipped", "reason": "not a PDF/EPUB"}
+        # Parse title/authors from the clean "Authors - Title" stem
+        if " - " in stem:
+            authors, _, title = stem.partition(" - ")
+        else:
+            title, authors = stem, ""
+        if not title:
+            return {"action": "skipped", "reason": "could not parse title"}
+        result = {"action": "metadata_only", "file": basename,
+                  "title": title, "authors": authors, "metadata_embedded": False}
+        if not dry_run:
+            if ext_lower == ".pdf":
+                result["metadata_embedded"] = embed_pdf_metadata(filepath, title, authors)
+            elif ext_lower == ".epub":
+                result["metadata_embedded"] = embed_epub_metadata(filepath, title, authors)
+        return result
 
     if not needs_cleaning(stem):
         return {"action": "skipped", "reason": "no domain suffix found"}
@@ -220,7 +242,8 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool) -> dict:
     return result
 
 
-def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool, recursive: bool):
+def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
+                      recursive: bool, metadata_only: bool = False):
     if not os.path.isdir(root_dir):
         print(f"❌ Directory not found: {root_dir}")
         sys.exit(1)
@@ -237,17 +260,26 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool, recurs
                      if os.path.isfile(os.path.join(root_dir, f))]
 
     file_list.sort()
-    print(f"{'[DRY RUN] ' if dry_run else ''}Processing {len(file_list)} files in: {root_dir}\n")
+    mode_label = "[DRY RUN] " if dry_run else ""
+    if metadata_only:
+        mode_label += "[METADATA ONLY] "
+    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir}\n")
 
     for filepath in file_list:
         try:
-            res = process_file(filepath, dry_run, embed_metadata)
+            res = process_file(filepath, dry_run, embed_metadata, metadata_only)
             action = res["action"]
             if action in ("renamed", "dry_run"):
                 tag = "📝" if action == "dry_run" else "✅"
                 meta_tag = " + metadata" if res.get("metadata_embedded") else ""
                 print(f"  {tag} {res['old']}")
                 print(f"     → {res['new']}{meta_tag}")
+                renamed += 1
+                if res.get("metadata_embedded"):
+                    meta_ok += 1
+            elif action == "metadata_only":
+                tag = "📝" if dry_run else ("✅" if res.get("metadata_embedded") else "⚠️ ")
+                print(f"  {tag} metadata: {res['file']}")
                 renamed += 1
                 if res.get("metadata_embedded"):
                     meta_ok += 1
@@ -258,11 +290,15 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool, recurs
             errors += 1
 
     print(f"\n{'─'*60}")
-    mode = "Would rename" if dry_run else "Renamed"
-    print(f"  {mode}:  {renamed}")
-    print(f"  Skipped: {skipped}")
-    if embed_metadata and not dry_run:
+    if metadata_only:
+        print(f"  Processed: {renamed}")
         print(f"  Metadata embedded: {meta_ok}/{renamed}")
+    else:
+        mode = "Would rename" if dry_run else "Renamed"
+        print(f"  {mode}:  {renamed}")
+        print(f"  Skipped: {skipped}")
+        if embed_metadata and not dry_run:
+            print(f"  Metadata embedded: {meta_ok}/{renamed}")
     if errors:
         print(f"  Errors:  {errors}")
 
@@ -278,6 +314,9 @@ def main():
                         help="Skip embedding metadata into files (rename only)")
     parser.add_argument("--recursive", action="store_true",
                         help="Process subdirectories recursively")
+    parser.add_argument("--metadata-only", action="store_true",
+                        help="Re-embed metadata into already-renamed PDF/EPUB files "
+                             "(use this if a previous run renamed but failed to embed metadata)")
     args = parser.parse_args()
 
     process_directory(
@@ -285,6 +324,7 @@ def main():
         dry_run=args.dry_run,
         embed_metadata=not args.no_metadata,
         recursive=args.recursive,
+        metadata_only=args.metadata_only,
     )
 
 
