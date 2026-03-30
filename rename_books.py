@@ -83,36 +83,61 @@ def build_new_stem(title: str, authors: str) -> str:
 # Metadata embedding
 # ──────────────────────────────────────────────────────────────────────────────
 
-def embed_pdf_metadata(filepath: str, title: str, authors: str) -> bool:
+FULL_SAVE_SIZE_LIMIT_MB = 30  # Skip full PDF rewrites above this size
+
+
+def embed_pdf_metadata(filepath: str, title: str, authors: str) -> tuple[bool, str]:
+    """Returns (success, warning_message). warning_message is empty on success."""
     try:
         import fitz  # PyMuPDF
         doc = fitz.open(filepath)
-        existing = doc.metadata
-        # Skip if title and author already match (already processed)
+        existing = doc.metadata or {}
         if (existing.get("title", "").strip() == title.strip() and
                 existing.get("author", "").strip() == authors.strip()):
             doc.close()
-            return True  # already set, no write needed
-        doc.set_metadata({
-            "title": title,
-            "author": authors,
-        })
-        doc.saveIncr()
-        doc.close()
-        return True
+            return True, ""
+
+        doc.set_metadata({})
+        doc.set_metadata({"title": title, "author": authors})
+
+        try:
+            doc.saveIncr()
+            doc.close()
+            return True, ""
+        except Exception:
+            doc.close()
+
+        file_mb = os.path.getsize(filepath) / (1024 * 1024)
+        if file_mb > FULL_SAVE_SIZE_LIMIT_MB:
+            return False, f"PDF too large for full rewrite ({file_mb:.0f} MB > {FULL_SAVE_SIZE_LIMIT_MB} MB)"
+
+        import shutil
+        tmp = filepath + ".pdftmp"
+        try:
+            doc2 = fitz.open(filepath)
+            doc2.set_metadata({})
+            doc2.set_metadata({"title": title, "author": authors})
+            doc2.save(tmp, garbage=4, deflate=True)
+            doc2.close()
+            shutil.move(tmp, filepath)
+            return True, ""
+        except Exception as e2:
+            if os.path.exists(tmp):
+                os.remove(tmp)
+            return False, str(e2)
+
     except Exception as e:
-        print(f"    ⚠️  PDF metadata embed failed: {e}")
-        return False
+        return False, str(e)
 
 
-def embed_epub_metadata(filepath: str, title: str, authors: str) -> bool:
+def embed_epub_metadata(filepath: str, title: str, authors: str) -> tuple[bool, str]:
+    """Returns (success, warning_message). warning_message is empty on success."""
     tmp = None
     try:
-        from ebooklib import epub  # noqa: F401 — confirms ebooklib is available
+        from ebooklib import epub  # noqa: F401
         import zipfile, shutil
         from lxml import etree
 
-        # Quick check: read current OPF metadata before rewriting
         with zipfile.ZipFile(filepath, 'r') as zcheck:
             opf_path_check = None
             try:
@@ -132,18 +157,15 @@ def embed_epub_metadata(filepath: str, title: str, authors: str) -> bool:
                     existing_author = (tree.findtext(f"{{{ns_dc}}}creator") or
                                        tree.findtext(f".//{{{ns_dc}}}creator") or "").strip()
                     if existing_title == title.strip() and existing_author == authors.strip():
-                        return True  # already set, skip rewrite
+                        return True, ""
                 except Exception:
                     pass
 
-        # ebooklib's write_epub requires a full round-trip; patch the OPF directly
-        # by editing the zip in-place which is safer for large files.
         tmp = filepath + ".tmp"
         shutil.copy2(filepath, tmp)
 
         with zipfile.ZipFile(tmp, 'r') as zin, \
              zipfile.ZipFile(filepath, 'w', zipfile.ZIP_DEFLATED) as zout:
-            # Find the OPF file path from META-INF/container.xml
             opf_path = None
             try:
                 container = etree.fromstring(zin.read("META-INF/container.xml"))
@@ -157,31 +179,27 @@ def embed_epub_metadata(filepath: str, title: str, authors: str) -> bool:
             for item in zin.infolist():
                 data = zin.read(item.filename)
                 if opf_path and item.filename == opf_path:
-                    # Patch title and creator in OPF XML
                     try:
                         tree = etree.fromstring(data)
                         ns_dc = "http://purl.org/dc/elements/1.1/"
-                        # Update or create dc:title
                         t_el = tree.find(f".//{{{ns_dc}}}title")
                         if t_el is not None:
                             t_el.text = title
-                        # Update or create dc:creator
                         c_el = tree.find(f".//{{{ns_dc}}}creator")
                         if c_el is not None:
                             c_el.text = authors
                         data = etree.tostring(tree, xml_declaration=True,
                                               encoding="utf-8", pretty_print=False)
                     except Exception:
-                        pass  # leave data unchanged if parse fails
+                        pass
                 zout.writestr(item, data)
 
         os.remove(tmp)
-        return True
+        return True, ""
     except Exception as e:
-        print(f"    ⚠️  EPUB metadata embed failed: {e}")
         if tmp and os.path.exists(tmp):
             os.remove(tmp)
-        return False
+        return False, str(e)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -208,10 +226,8 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool,
         return {"action": "skipped", "reason": "unsupported extension"}
 
     if metadata_only:
-        # Re-apply metadata to already-renamed files (no domain suffix required)
         if ext_lower not in METADATA_EXTENSIONS:
             return {"action": "skipped", "reason": "not a PDF/EPUB"}
-        # Parse title/authors from the clean "Authors - Title" stem
         if " - " in stem:
             authors, _, title = stem.partition(" - ")
         else:
@@ -219,12 +235,14 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool,
         if not title:
             return {"action": "skipped", "reason": "could not parse title"}
         result = {"action": "metadata_only", "file": basename,
-                  "title": title, "authors": authors, "metadata_embedded": False}
+                  "title": title, "authors": authors, "metadata_embedded": False, "warn": ""}
         if not dry_run:
             if ext_lower == ".pdf":
-                result["metadata_embedded"] = embed_pdf_metadata(filepath, title, authors)
-            elif ext_lower == ".epub":
-                result["metadata_embedded"] = embed_epub_metadata(filepath, title, authors)
+                ok, warn = embed_pdf_metadata(filepath, title, authors)
+            else:
+                ok, warn = embed_epub_metadata(filepath, title, authors)
+            result["metadata_embedded"] = ok
+            result["warn"] = warn
         return result
 
     if not needs_cleaning(stem):
@@ -268,9 +286,13 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool,
     # Embed metadata
     if embed_metadata and ext_lower in METADATA_EXTENSIONS:
         if ext_lower == ".pdf":
-            result["metadata_embedded"] = embed_pdf_metadata(filepath, title, authors)
-        elif ext_lower == ".epub":
-            result["metadata_embedded"] = embed_epub_metadata(filepath, title, authors)
+            ok, warn = embed_pdf_metadata(filepath, title, authors)
+        else:
+            ok, warn = embed_epub_metadata(filepath, title, authors)
+        result["metadata_embedded"] = ok
+        result["warn"] = warn
+    else:
+        result["warn"] = ""
 
     return result
 
@@ -331,42 +353,39 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
 
     progress = tqdm(total=len(file_list), unit="file", dynamic_ncols=True) if tqdm else None
 
+    def _write(msg):
+        if progress:
+            progress.write(msg)
+        else:
+            print(msg)
+
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {pool.submit(handle, fp): fp for fp in file_list}
         for future in as_completed(futures):
             try:
                 filepath, res = future.result()
                 action = res["action"]
+                warn = res.get("warn", "")
                 if action in ("renamed", "dry_run"):
                     meta_tag = " + metadata" if res.get("metadata_embedded") else ""
                     tag = "📝" if action == "dry_run" else "✅"
-                    msg = f"  {tag} {res['old']} → {res['new']}{meta_tag}"
-                    if progress:
-                        progress.write(msg)
-                    else:
-                        print(msg)
+                    _write(f"  {tag} {res['old']} → {res['new']}{meta_tag}")
+                    if warn:
+                        _write(f"    ⚠️  {warn}")
                     renamed += 1
                     if res.get("metadata_embedded"):
                         meta_ok += 1
                 elif action == "metadata_only":
-                    if not res.get("metadata_embedded"):
-                        # Only print failures/warnings; successes are silent for speed
-                        msg = f"  ⚠️  skipped metadata: {res['file']}"
-                        if progress:
-                            progress.write(msg)
-                        else:
-                            print(msg)
                     renamed += 1
                     if res.get("metadata_embedded"):
                         meta_ok += 1
+                    elif warn and warn not in ("File is not a zip file",):
+                        # Only show non-trivial warnings (skip corrupt EPUB noise)
+                        _write(f"  ⚠️  {os.path.basename(filepath)}: {warn}")
                 else:
                     skipped += 1
             except Exception as e:
-                msg = f"  ❌ {os.path.basename(futures[future])}: {e}"
-                if progress:
-                    progress.write(msg)
-                else:
-                    print(msg)
+                _write(f"  ❌ {os.path.basename(futures[future])}: {e}")
                 errors += 1
             finally:
                 if progress:
@@ -406,7 +425,13 @@ def main():
                              "(use this if a previous run renamed but failed to embed metadata)")
     parser.add_argument("--workers", type=int, default=4,
                         help="Number of parallel workers (default: 4)")
+    parser.add_argument("--max-pdf-size", type=int, default=30,
+                        help="Skip full PDF rewrite (fallback path) for files larger than "
+                             "this many MB (default: 30). Incremental saves are always tried first.")
     args = parser.parse_args()
+
+    global FULL_SAVE_SIZE_LIMIT_MB
+    FULL_SAVE_SIZE_LIMIT_MB = args.max_pdf_size
 
     process_directory(
         root_dir=args.directory,
