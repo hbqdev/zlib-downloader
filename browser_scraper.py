@@ -25,6 +25,46 @@ except ImportError:
 CHROME_PROFILE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "browser_profile_chrome")
 CHROME_EXECUTABLE = "/usr/bin/google-chrome"
 
+# Matches trailing "(z-library.sk, 1lib.sk, ...)" domain groups in filenames
+_ZLIB_DOMAIN_RE = re.compile(
+    r'\s*\([^)]*(?:z-library|z-lib|1lib|singlelogin|zlibrary)[^)]*\)',
+    re.IGNORECASE,
+)
+# Matches the author block: last parenthesised group before extension
+_AUTHOR_GROUP_RE = re.compile(r'\(([^()]+)\)\s*$')
+
+
+def _clean_zlib_filename(filename: str) -> str:
+    """Clean a Z-Library suggested filename into 'Authors - Title.ext' format.
+
+    Input:  "Museums, Health and Well-Being (Helen J Chatterjee, Guy Noble) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
+    Output: "Helen J Chatterjee, Guy Noble - Museums, Health and Well-Being.pdf"
+    """
+    stem, ext = os.path.splitext(filename)
+
+    # Strip all domain suffix groups
+    cleaned = stem
+    while True:
+        new = _ZLIB_DOMAIN_RE.sub('', cleaned).rstrip()
+        if new == cleaned:
+            break
+        cleaned = new
+
+    # Extract author group (last parenthesised block)
+    m = _AUTHOR_GROUP_RE.search(cleaned)
+    if m:
+        authors = m.group(1).strip()
+        title = cleaned[:m.start()].strip().rstrip(',').strip()
+        new_stem = f"{authors} - {title}" if authors else title
+    else:
+        new_stem = cleaned.strip()
+
+    # Sanitize characters illegal on common filesystems
+    new_stem = re.sub(r'[\\/:*?"<>|]', '', new_stem)
+    new_stem = re.sub(r'\s+', ' ', new_stem).strip()
+
+    return (new_stem[:180] + ext) if new_stem else filename
+
 
 class BrowserScraper:
     def __init__(
@@ -307,7 +347,8 @@ class BrowserScraper:
                         pass  # "Download is starting" is expected
 
                 download = await dl_info.value
-                filename = download.suggested_filename
+                raw_filename = download.suggested_filename
+                filename = _clean_zlib_filename(raw_filename)
                 filepath = os.path.join(output_dir, filename)
 
                 # Show live progress by polling Playwright's temp file size
