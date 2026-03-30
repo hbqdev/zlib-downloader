@@ -7,14 +7,17 @@ Batch cleanup script for Z-Library downloaded files.
 
 Usage:
     python rename_books.py /path/to/books
-    python rename_books.py /path/to/books --dry-run     # preview only
-    python rename_books.py /path/to/books --no-metadata  # rename only, skip embedding
+    python rename_books.py /path/to/books --dry-run       # preview only
+    python rename_books.py /path/to/books --no-metadata   # rename only, skip embedding
+    python rename_books.py /path/to/books --metadata-only # re-embed metadata on clean files
+    python rename_books.py /path/to/books --workers 8     # parallel workers (default: 4)
 """
 
 import argparse
 import os
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -84,6 +87,12 @@ def embed_pdf_metadata(filepath: str, title: str, authors: str) -> bool:
     try:
         import fitz  # PyMuPDF
         doc = fitz.open(filepath)
+        existing = doc.metadata
+        # Skip if title and author already match (already processed)
+        if (existing.get("title", "").strip() == title.strip() and
+                existing.get("author", "").strip() == authors.strip()):
+            doc.close()
+            return True  # already set, no write needed
         doc.set_metadata({
             "title": title,
             "author": authors,
@@ -102,6 +111,30 @@ def embed_epub_metadata(filepath: str, title: str, authors: str) -> bool:
         from ebooklib import epub  # noqa: F401 — confirms ebooklib is available
         import zipfile, shutil
         from lxml import etree
+
+        # Quick check: read current OPF metadata before rewriting
+        with zipfile.ZipFile(filepath, 'r') as zcheck:
+            opf_path_check = None
+            try:
+                container = etree.fromstring(zcheck.read("META-INF/container.xml"))
+                ns = {"c": "urn:oasis:names:tc:opendocument:xmlns:container"}
+                rootfile = container.find(".//c:rootfile", ns)
+                if rootfile is not None:
+                    opf_path_check = rootfile.get("full-path")
+            except Exception:
+                pass
+            if opf_path_check:
+                try:
+                    tree = etree.fromstring(zcheck.read(opf_path_check))
+                    ns_dc = "http://purl.org/dc/elements/1.1/"
+                    existing_title = (tree.findtext(f"{{{ns_dc}}}title") or
+                                      tree.findtext(f".//{{{ns_dc}}}title") or "").strip()
+                    existing_author = (tree.findtext(f"{{{ns_dc}}}creator") or
+                                       tree.findtext(f".//{{{ns_dc}}}creator") or "").strip()
+                    if existing_title == title.strip() and existing_author == authors.strip():
+                        return True  # already set, skip rewrite
+                except Exception:
+                    pass
 
         # ebooklib's write_epub requires a full round-trip; patch the OPF directly
         # by editing the zip in-place which is safer for large files.
@@ -243,7 +276,7 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool,
 
 
 def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
-                      recursive: bool, metadata_only: bool = False):
+                      recursive: bool, metadata_only: bool = False, workers: int = 4):
     if not os.path.isdir(root_dir):
         print(f"❌ Directory not found: {root_dir}")
         sys.exit(1)
@@ -263,31 +296,41 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
     mode_label = "[DRY RUN] " if dry_run else ""
     if metadata_only:
         mode_label += "[METADATA ONLY] "
-    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir}\n")
+    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir} (workers={workers})\n")
 
-    for filepath in file_list:
-        try:
-            res = process_file(filepath, dry_run, embed_metadata, metadata_only)
-            action = res["action"]
-            if action in ("renamed", "dry_run"):
-                tag = "📝" if action == "dry_run" else "✅"
-                meta_tag = " + metadata" if res.get("metadata_embedded") else ""
-                print(f"  {tag} {res['old']}")
-                print(f"     → {res['new']}{meta_tag}")
-                renamed += 1
-                if res.get("metadata_embedded"):
-                    meta_ok += 1
-            elif action == "metadata_only":
-                tag = "📝" if dry_run else ("✅" if res.get("metadata_embedded") else "⚠️ ")
-                print(f"  {tag} metadata: {res['file']}")
-                renamed += 1
-                if res.get("metadata_embedded"):
-                    meta_ok += 1
-            else:
-                skipped += 1
-        except Exception as e:
-            print(f"  ❌ Error processing {os.path.basename(filepath)}: {e}")
-            errors += 1
+    def handle(filepath):
+        return filepath, process_file(filepath, dry_run, embed_metadata, metadata_only)
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(handle, fp): fp for fp in file_list}
+        done = 0
+        for future in as_completed(futures):
+            done += 1
+            try:
+                filepath, res = future.result()
+                action = res["action"]
+                if action in ("renamed", "dry_run"):
+                    tag = "📝" if action == "dry_run" else "✅"
+                    meta_tag = " + metadata" if res.get("metadata_embedded") else ""
+                    print(f"  {tag} {res['old']}\n     → {res['new']}{meta_tag}")
+                    renamed += 1
+                    if res.get("metadata_embedded"):
+                        meta_ok += 1
+                elif action == "metadata_only":
+                    tag = "📝" if dry_run else ("✅" if res.get("metadata_embedded") else "⚠️ ")
+                    print(f"  {tag} metadata: {res['file']}")
+                    renamed += 1
+                    if res.get("metadata_embedded"):
+                        meta_ok += 1
+                else:
+                    skipped += 1
+            except Exception as e:
+                print(f"  ❌ Error processing {os.path.basename(futures[future])}: {e}")
+                errors += 1
+
+            # Progress every 500 files
+            if done % 500 == 0:
+                print(f"  ... {done}/{len(file_list)} processed", flush=True)
 
     print(f"\n{'─'*60}")
     if metadata_only:
@@ -317,6 +360,8 @@ def main():
     parser.add_argument("--metadata-only", action="store_true",
                         help="Re-embed metadata into already-renamed PDF/EPUB files "
                              "(use this if a previous run renamed but failed to embed metadata)")
+    parser.add_argument("--workers", type=int, default=4,
+                        help="Number of parallel workers (default: 4)")
     args = parser.parse_args()
 
     process_directory(
@@ -325,6 +370,7 @@ def main():
         embed_metadata=not args.no_metadata,
         recursive=args.recursive,
         metadata_only=args.metadata_only,
+        workers=args.workers,
     )
 
 
