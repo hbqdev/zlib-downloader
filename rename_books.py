@@ -17,7 +17,7 @@ import argparse
 import os
 import re
 import sys
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed, TimeoutError as FutureTimeout
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -297,31 +297,15 @@ def process_file(filepath: str, dry_run: bool, embed_metadata: bool,
     return result
 
 
-def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
-                      recursive: bool, metadata_only: bool = False, workers: int = 4):
-    if not os.path.isdir(root_dir):
-        print(f"❌ Directory not found: {root_dir}")
-        sys.exit(1)
+def _worker(args):
+    """Module-level wrapper so ProcessPoolExecutor can pickle it."""
+    filepath, dry_run, embed_metadata, metadata_only = args
+    return filepath, process_file(filepath, dry_run, embed_metadata, metadata_only)
 
-    renamed = skipped = errors = meta_ok = 0
-    file_list = []
-
-    if recursive:
-        for dirpath, _, filenames in os.walk(root_dir):
-            for f in filenames:
-                file_list.append(os.path.join(dirpath, f))
-    else:
-        file_list = [os.path.join(root_dir, f) for f in os.listdir(root_dir)
-                     if os.path.isfile(os.path.join(root_dir, f))]
-
-    file_list.sort()
-    mode_label = "[DRY RUN] " if dry_run else ""
-    if metadata_only:
-        mode_label += "[METADATA ONLY] "
-    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir} (workers={workers})\n")
 
 def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
-                      recursive: bool, metadata_only: bool = False, workers: int = 4):
+                      recursive: bool, metadata_only: bool = False, workers: int = 8,
+                      file_timeout: int = 60):
     if not os.path.isdir(root_dir):
         print(f"❌ Directory not found: {root_dir}")
         sys.exit(1)
@@ -346,10 +330,7 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
     mode_label = "[DRY RUN] " if dry_run else ""
     if metadata_only:
         mode_label += "[METADATA ONLY] "
-    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir} (workers={workers})\n")
-
-    def handle(filepath):
-        return filepath, process_file(filepath, dry_run, embed_metadata, metadata_only)
+    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir} (workers={workers}, timeout={file_timeout}s)\n")
 
     progress = tqdm(total=len(file_list), unit="file", dynamic_ncols=True) if tqdm else None
 
@@ -359,11 +340,16 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
         else:
             print(msg)
 
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(handle, fp): fp for fp in file_list}
+    job_args = [(fp, dry_run, embed_metadata, metadata_only) for fp in file_list]
+
+    # ProcessPoolExecutor gives true isolation (each process has its own PyMuPDF state)
+    # and allows enforcing per-file timeouts via future.result(timeout=N)
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(_worker, a): a[0] for a in job_args}
         for future in as_completed(futures):
+            fp = futures[future]
             try:
-                filepath, res = future.result()
+                filepath, res = future.result(timeout=file_timeout)
                 action = res["action"]
                 warn = res.get("warn", "")
                 if action in ("renamed", "dry_run"):
@@ -379,13 +365,16 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
                     renamed += 1
                     if res.get("metadata_embedded"):
                         meta_ok += 1
-                    elif warn and warn not in ("File is not a zip file",):
-                        # Only show non-trivial warnings (skip corrupt EPUB noise)
-                        _write(f"  ⚠️  {os.path.basename(filepath)}: {warn}")
+                    elif warn and "zip file" not in warn:
+                        _write(f"  ⚠️  {os.path.basename(fp)}: {warn}")
                 else:
                     skipped += 1
+            except FutureTimeout:
+                future.cancel()
+                _write(f"  ⏱️  Timeout ({file_timeout}s): {os.path.basename(fp)} — skipped")
+                errors += 1
             except Exception as e:
-                _write(f"  ❌ {os.path.basename(futures[future])}: {e}")
+                _write(f"  ❌ {os.path.basename(fp)}: {e}")
                 errors += 1
             finally:
                 if progress:
@@ -423,8 +412,10 @@ def main():
     parser.add_argument("--metadata-only", action="store_true",
                         help="Re-embed metadata into already-renamed PDF/EPUB files "
                              "(use this if a previous run renamed but failed to embed metadata)")
-    parser.add_argument("--workers", type=int, default=4,
-                        help="Number of parallel workers (default: 4)")
+    parser.add_argument("--workers", type=int, default=8,
+                        help="Number of parallel workers (default: 8)")
+    parser.add_argument("--timeout", type=int, default=60,
+                        help="Per-file timeout in seconds; files that hang are skipped (default: 60)")
     parser.add_argument("--max-pdf-size", type=int, default=30,
                         help="Skip full PDF rewrite (fallback path) for files larger than "
                              "this many MB (default: 30). Incremental saves are always tried first.")
@@ -440,6 +431,7 @@ def main():
         recursive=args.recursive,
         metadata_only=args.metadata_only,
         workers=args.workers,
+        file_timeout=args.timeout,
     )
 
 
