@@ -298,39 +298,83 @@ def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
         mode_label += "[METADATA ONLY] "
     print(f"{mode_label}Processing {len(file_list)} files in: {root_dir} (workers={workers})\n")
 
+def process_directory(root_dir: str, dry_run: bool, embed_metadata: bool,
+                      recursive: bool, metadata_only: bool = False, workers: int = 4):
+    if not os.path.isdir(root_dir):
+        print(f"❌ Directory not found: {root_dir}")
+        sys.exit(1)
+
+    try:
+        from tqdm import tqdm
+    except ImportError:
+        tqdm = None
+
+    renamed = skipped = errors = meta_ok = 0
+    file_list = []
+
+    if recursive:
+        for dirpath, _, filenames in os.walk(root_dir):
+            for f in filenames:
+                file_list.append(os.path.join(dirpath, f))
+    else:
+        file_list = [os.path.join(root_dir, f) for f in os.listdir(root_dir)
+                     if os.path.isfile(os.path.join(root_dir, f))]
+
+    file_list.sort()
+    mode_label = "[DRY RUN] " if dry_run else ""
+    if metadata_only:
+        mode_label += "[METADATA ONLY] "
+    print(f"{mode_label}Processing {len(file_list)} files in: {root_dir} (workers={workers})\n")
+
     def handle(filepath):
         return filepath, process_file(filepath, dry_run, embed_metadata, metadata_only)
 
+    progress = tqdm(total=len(file_list), unit="file", dynamic_ncols=True) if tqdm else None
+
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {pool.submit(handle, fp): fp for fp in file_list}
-        done = 0
         for future in as_completed(futures):
-            done += 1
             try:
                 filepath, res = future.result()
                 action = res["action"]
                 if action in ("renamed", "dry_run"):
-                    tag = "📝" if action == "dry_run" else "✅"
                     meta_tag = " + metadata" if res.get("metadata_embedded") else ""
-                    print(f"  {tag} {res['old']}\n     → {res['new']}{meta_tag}")
+                    tag = "📝" if action == "dry_run" else "✅"
+                    msg = f"  {tag} {res['old']} → {res['new']}{meta_tag}"
+                    if progress:
+                        progress.write(msg)
+                    else:
+                        print(msg)
                     renamed += 1
                     if res.get("metadata_embedded"):
                         meta_ok += 1
                 elif action == "metadata_only":
-                    tag = "📝" if dry_run else ("✅" if res.get("metadata_embedded") else "⚠️ ")
-                    print(f"  {tag} metadata: {res['file']}")
+                    if not res.get("metadata_embedded"):
+                        # Only print failures/warnings; successes are silent for speed
+                        msg = f"  ⚠️  skipped metadata: {res['file']}"
+                        if progress:
+                            progress.write(msg)
+                        else:
+                            print(msg)
                     renamed += 1
                     if res.get("metadata_embedded"):
                         meta_ok += 1
                 else:
                     skipped += 1
             except Exception as e:
-                print(f"  ❌ Error processing {os.path.basename(futures[future])}: {e}")
+                msg = f"  ❌ {os.path.basename(futures[future])}: {e}"
+                if progress:
+                    progress.write(msg)
+                else:
+                    print(msg)
                 errors += 1
+            finally:
+                if progress:
+                    progress.set_postfix(renamed=renamed, meta=meta_ok, errors=errors, refresh=False)
+                    progress.update(1)
 
-            # Progress every 500 files
-            if done % 500 == 0:
-                print(f"  ... {done}/{len(file_list)} processed", flush=True)
+    if progress:
+        progress.close()
 
     print(f"\n{'─'*60}")
     if metadata_only:
