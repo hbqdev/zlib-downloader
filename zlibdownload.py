@@ -120,8 +120,8 @@ def wait_for_daily_reset(z=None):
 
     wake_str = wake_time.strftime("%Y-%m-%d %H:%M UTC")
     print(f"\n⏳ Daily download limit reached.")
-    print(f"   Sleeping until {wake_str} ({wait_secs/3600:.1f} hours from now)...")
-    print(f"   (Press Ctrl+C to stop)\n")
+    print(f"   Waiting for limit reset (max until {wake_str} — {wait_secs/3600:.1f} hours from now).")
+    print(f"   Checking API every hour for early reset. Press Ctrl+C to stop.\n")
 
     # Sleep in 1-hour chunks, checking the API after each chunk for an early reset
     slept = 0
