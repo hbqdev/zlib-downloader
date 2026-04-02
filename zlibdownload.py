@@ -584,7 +584,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                             books_processed_this_category += 1
                                             total_downloads_attempted_this_run += 1
                                             downloads_left_today -= 1
-                                        delay = random.uniform(5, 15)
+                                        delay = 5
                                         print(f"      ⏱️  Waiting {delay:.0f}s before next download...")
                                         time.sleep(delay)
                                     else:
@@ -663,7 +663,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                                 books_processed_this_category += 1
                                                 total_downloads_attempted_this_run += 1
                                                 downloads_left_today -= 1
-                                            delay = random.uniform(5, 15)
+                                            delay = 5
                                             print(f"      ⏱️  Waiting {delay:.0f}s before next download...")
                                             time.sleep(delay)
                                         except IOError as e:
