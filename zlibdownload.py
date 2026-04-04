@@ -295,6 +295,8 @@ def run_download_process(config_file="config.json", categories_file="categories.
     total_downloads_attempted_this_run = 0
     initial_download_count_for_summary = downloads_left_today
     halt_run_due_to_limit = False
+    consecutive_download_failures = 0
+    MAX_CONSECUTIVE_FAILURES = 3  # restart browser session after this many in a row
 
     # Initialize Dry Run Report File
     report_file_handle = None
@@ -569,6 +571,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                     # Use browser session to download via /dl/ path
                                     dl_result = browser_scraper.download_book_direct(dl_path, output_dir)
                                     if dl_result.get("success"):
+                                        consecutive_download_failures = 0
                                         final_filename = dl_result["filename"]
                                         print(f"      📝 Marking book ID {book_id} in Couchbase...")
                                         mark_success = cbconnect.mark_as_downloaded(collection, book_id, title, authors)
@@ -588,8 +591,21 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                         print(f"      ⏱️  Waiting {delay:.0f}s before next download...")
                                         time.sleep(delay)
                                     else:
+                                        consecutive_download_failures += 1
                                         print(f"      ❌ Browser download failed: {dl_result.get('error')}")
                                         print(f"      ⚠️ Skipping to next book.")
+                                        if consecutive_download_failures >= MAX_CONSECUTIVE_FAILURES:
+                                            print(f"\n🔄 {consecutive_download_failures} consecutive download failures — browser session likely stale. Restarting...")
+                                            try:
+                                                browser_scraper.close()
+                                            except Exception:
+                                                pass
+                                            try:
+                                                browser_scraper.start(headless=browser_headless)
+                                                consecutive_download_failures = 0
+                                                print("✅ Browser session restarted.")
+                                            except Exception as restart_err:
+                                                print(f"❌ Failed to restart browser: {restart_err}")
                                         category["books_processed_on_page"] = category.get("books_processed_on_page", 0) + 1
                                         save_json(categories, categories_file)
     
