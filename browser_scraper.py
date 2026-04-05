@@ -11,6 +11,7 @@ import json
 import re
 import os
 import subprocess
+import time
 from playwright.async_api import async_playwright, Browser, Page
 
 # Try to import stealth
@@ -78,6 +79,8 @@ class BrowserScraper:
         self.context = None
         self.page: Page = None
         self._playwright = None
+        self._last_nav_time: float = 0.0  # epoch seconds of last main-page navigation
+        self._CF_KEEPALIVE_INTERVAL = 20 * 60  # re-navigate after 20 min of no activity
 
     async def start(self, headless: bool = True):
         """Launch Chrome with a persistent profile.
@@ -155,6 +158,29 @@ class BrowserScraper:
                 await _stealth.apply_stealth_async(self.page)
 
         print(f"✅ Chrome started (headless={effective_headless}, profile: {CHROME_PROFILE_DIR})")
+
+        # Warm up the CF session immediately so downloads work right after start/restart
+        await self._keepalive_if_needed(force=True)
+
+    async def _keepalive_if_needed(self, force: bool = False):
+        """Navigate the main page to Z-Library to refresh Cloudflare cookies.
+        Only runs if more than _CF_KEEPALIVE_INTERVAL seconds have passed (or force=True).
+        CF clearance cookies expire after ~30-60 min; without this, download events
+        stop firing on long-running sessions because /dl/ gets a challenge page instead.
+        """
+        if not force and (time.time() - self._last_nav_time) < self._CF_KEEPALIVE_INTERVAL:
+            return
+        try:
+            await self.page.goto(
+                f"https://{self.domain}/",
+                wait_until="domcontentloaded",
+                timeout=20000,
+            )
+            self._last_nav_time = time.time()
+        except Exception as e:
+            # Non-fatal — best effort keepalive
+            print(f"      ⚠️  CF keepalive navigation failed ({e!s:.60}), continuing anyway.")
+
 
     async def close(self):
         """Close the browser — profile (including Cloudflare cookies) is saved automatically"""
@@ -281,8 +307,8 @@ class BrowserScraper:
                     print(f"❌ Got HTTP {status}")
                     return {"success": False, "books_found": 0, "error": f"HTTP {status}", "books_data": []}
 
+                self._last_nav_time = time.time()
                 break  # Success — exit retry loop
-
             except Exception as e:
                 err_str = str(e)
                 retryable = (
@@ -334,6 +360,10 @@ class BrowserScraper:
         """Download a book by opening the /dl/ URL in a new tab — mimics clicking download."""
         dl_url = f"https://{self.domain}{dl_path}"
         os.makedirs(output_dir, exist_ok=True)
+
+        # Refresh CF session if it's been idle too long — prevents download timeouts
+        # caused by expired cf_clearance cookies on long-running sessions.
+        await self._keepalive_if_needed()
 
         max_attempts = 2
         for attempt in range(1, max_attempts + 1):
