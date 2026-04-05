@@ -340,6 +340,10 @@ class BrowserScraper:
             dl_page = None
             try:
                 dl_page = await self.context.new_page()
+                # Bypass the context-level route handler on this page so that
+                # download redirects (which may not contain '/dl/') are not
+                # intercepted and stripped of Content-Disposition.
+                await dl_page.route("**/*", lambda route: route.continue_())
                 async with dl_page.expect_download(timeout=30000) as dl_info:
                     try:
                         await dl_page.goto(dl_url, wait_until="commit", timeout=15000)
