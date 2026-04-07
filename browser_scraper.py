@@ -170,12 +170,28 @@ class BrowserScraper:
         """
         if not force and (time.time() - self._last_nav_time) < self._CF_KEEPALIVE_INTERVAL:
             return
+        print(f"      🔄 Refreshing CF session (keepalive)...")
         try:
             await self.page.goto(
                 f"https://{self.domain}/",
                 wait_until="domcontentloaded",
-                timeout=20000,
+                timeout=30000,
             )
+            # Wait for any Cloudflare JS challenge to fully resolve before returning.
+            # Without this loop, domcontentloaded fires on the challenge page HTML
+            # *before* the JS runs and redirects — leaving CF cookies un-refreshed.
+            for _ in range(15):
+                try:
+                    await self.page.wait_for_load_state("domcontentloaded", timeout=5000)
+                    title = await self.page.title()
+                except Exception:
+                    await self.page.wait_for_timeout(2000)
+                    continue
+                if "checking" in title.lower() or "just a moment" in title.lower():
+                    print(f"      ⏳ CF challenge detected during keepalive, waiting...")
+                    await self.page.wait_for_timeout(2000)
+                else:
+                    break
             self._last_nav_time = time.time()
         except Exception as e:
             # Non-fatal — best effort keepalive
@@ -373,7 +389,11 @@ class BrowserScraper:
                 # Bypass the context-level route handler on this page so that
                 # download redirects (which may not contain '/dl/') are not
                 # intercepted and stripped of Content-Disposition.
-                await dl_page.route("**/*", lambda route: route.continue_())
+                # Must be a proper async handler — a sync lambda returning a
+                # coroutine would leave it unawaited, hanging the request.
+                async def _passthrough(route):
+                    await route.continue_()
+                await dl_page.route("**/*", _passthrough)
                 async with dl_page.expect_download(timeout=30000) as dl_info:
                     try:
                         await dl_page.goto(dl_url, wait_until="commit", timeout=15000)
