@@ -479,7 +479,26 @@ class BrowserScraperSync:
     
     def close(self):
         if self._loop:
-            self._loop.run_until_complete(self._scraper.close())
+            try:
+                self._loop.run_until_complete(self._scraper.close())
+            except Exception:
+                pass
+            finally:
+                # Explicitly close and discard the loop so the next start() gets a
+                # completely fresh event loop. Without this, hundreds of
+                # run_until_complete() calls accumulate stale internal asyncio state
+                # (pending callbacks, I/O watchers, cancelled tasks) which eventually
+                # causes Playwright operations to silently fail — matching the
+                # "works after manual restart but not auto-restart" symptom.
+                try:
+                    self._loop.close()
+                except Exception:
+                    pass
+                self._loop = None
+        # Recreate the inner scraper so all its state (context, page, timers) is fresh.
+        domain = self._scraper.domain
+        cookies_file = self._scraper.cookies_file
+        self._scraper = BrowserScraper(domain, cookies_file)
     
     def scrape_category(self, category_id: int, category_slug: str, page: int = 1, query_params: str = None) -> dict:
         return self._get_loop().run_until_complete(
