@@ -116,11 +116,12 @@ class BrowserScraper:
             timezone_id="America/New_York",
         )
 
-        # Re-fulfill document responses so Playwright never aborts navigation
-        # with "Download is starting" when the server sends unexpected headers.
-        await self.context.route("**/*", self._route_refulfill_documents)
-
+        # Route handler applied to self.page only — NOT context-wide.
+        # A context-level route applies to every new page including dl_page,
+        # intercepting download responses and stripping Content-Disposition,
+        # which prevents the download event from firing.
         self.page = self.context.pages[0] if self.context.pages else await self.context.new_page()
+        await self.page.route("**/*", self._route_refulfill_documents)
 
         if HAS_STEALTH and _stealth:
             await _stealth.apply_stealth_async(self.page)
@@ -152,11 +153,10 @@ class BrowserScraper:
                 locale="en-US",
                 timezone_id="America/New_York",
             )
-            await self.context.route("**/*", self._route_refulfill_documents)
             self.page = self.context.pages[0] if self.context.pages else await self.context.new_page()
+            await self.page.route("**/*", self._route_refulfill_documents)
             if HAS_STEALTH and _stealth:
                 await _stealth.apply_stealth_async(self.page)
-
         print(f"✅ Chrome started (headless={effective_headless}, profile: {CHROME_PROFILE_DIR})")
 
         # Warm up the CF session immediately so downloads work right after start/restart
@@ -386,14 +386,6 @@ class BrowserScraper:
             dl_page = None
             try:
                 dl_page = await self.context.new_page()
-                # Bypass the context-level route handler on this page so that
-                # download redirects (which may not contain '/dl/') are not
-                # intercepted and stripped of Content-Disposition.
-                # Must be a proper async handler — a sync lambda returning a
-                # coroutine would leave it unawaited, hanging the request.
-                async def _passthrough(route):
-                    await route.continue_()
-                await dl_page.route("**/*", _passthrough)
                 async with dl_page.expect_download(timeout=30000) as dl_info:
                     try:
                         await dl_page.goto(dl_url, wait_until="commit", timeout=15000)
