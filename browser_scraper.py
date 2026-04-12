@@ -384,6 +384,36 @@ class BrowserScraper:
             "books_data": books_data
         }
     
+    async def get_downloads_left(self) -> int:
+        """Read the remaining download count directly from the Z-Library page.
+        Returns -1 if the count cannot be determined.
+        This is more up-to-date than the API which can lag by minutes."""
+        try:
+            await self._keepalive_if_needed(force=True)
+            # Z-Library shows the download count in various elements;
+            # try a JS extraction from the page's user data / DOM.
+            count = await self.page.evaluate("""
+                () => {
+                    // Try data-downloads-left attribute or similar
+                    const el = document.querySelector('[data-downloads-left]');
+                    if (el) return parseInt(el.getAttribute('data-downloads-left'), 10);
+                    // Try text content patterns like "10 downloads left"
+                    const bodyText = document.body ? document.body.innerText : '';
+                    const m = bodyText.match(/(\\d+)\\s+(?:book[s]?\\s+)?download[s]?\\s+(?:left|remaining|available)/i);
+                    if (m) return parseInt(m[1], 10);
+                    // Try user-downloads-today type counters in the DOM
+                    const els = document.querySelectorAll('[class*="download"], [id*="download"], [class*="limit"], [id*="limit"]');
+                    for (const e of els) {
+                        const m2 = e.innerText && e.innerText.match(/(\\d+)/);
+                        if (m2) return parseInt(m2[1], 10);
+                    }
+                    return -1;
+                }
+            """)
+            return int(count) if count is not None and count >= 0 else -1
+        except Exception:
+            return -1
+
     async def download_book_direct(self, dl_path: str, output_dir: str, save_timeout: int = 600) -> dict:
         """Download a book by opening the /dl/ URL in a new tab — mimics clicking download."""
         dl_url = f"https://{self.domain}{dl_path}"
@@ -538,6 +568,11 @@ class BrowserScraperSync:
     def download_book_direct(self, dl_path: str, output_dir: str) -> dict:
         return self._get_loop().run_until_complete(
             self._scraper.download_book_direct(dl_path, output_dir)
+        )
+
+    def get_downloads_left(self) -> int:
+        return self._get_loop().run_until_complete(
+            self._scraper.get_downloads_left()
         )
 
 

@@ -550,23 +550,31 @@ def run_download_process(config_file="config.json", categories_file="categories.
                             # on the previous book (counter decremented to 0).
                             # Always re-confirm with the API before halting — the local
                             # counter may be stale (e.g. limit reset while we were scraping).
+                            # The API can lag; also check via the browser session as a fallback.
                             if downloads_left_today <= 0:
+                                fresh = 0
                                 if z:
                                     try:
                                         fresh = z.getDownloadsLeft()
                                         if fresh > 0:
                                             print(f"      ✅ API confirms {fresh} downloads available — local counter was stale. Resuming.")
                                             downloads_left_today = fresh
-                                        else:
-                                            print("      ⛔ Daily download limit reached (API confirmed). Waiting for reset...")
-                                            halt_run_due_to_limit = True
-                                            break
                                     except Exception as e:
-                                        print(f"      ⚠️ Could not re-check limit with API ({e}). Assuming limit hit.")
-                                        halt_run_due_to_limit = True
-                                        break
-                                else:
-                                    print("      ⛔ Daily download limit reached. Waiting for reset...")
+                                        print(f"      ⚠️ Could not re-check limit with API ({e}).")
+                                # If API still says 0, try the browser session (more up-to-date)
+                                if fresh <= 0 and browser_scraper:
+                                    try:
+                                        browser_fresh = browser_scraper.get_downloads_left()
+                                        if browser_fresh > 0:
+                                            print(f"      ✅ Browser session confirms {browser_fresh} downloads available (API was lagging). Resuming.")
+                                            downloads_left_today = browser_fresh
+                                            fresh = browser_fresh
+                                        else:
+                                            print(f"      ℹ️ Browser session also reports {browser_fresh} (may not support this check).")
+                                    except Exception as e:
+                                        print(f"      ⚠️ Browser limit check failed: {e}")
+                                if fresh <= 0 and downloads_left_today <= 0:
+                                    print("      ⛔ Daily download limit reached (API confirmed). Waiting for reset...")
                                     halt_run_due_to_limit = True
                                     break
     
