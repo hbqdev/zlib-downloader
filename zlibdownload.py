@@ -547,11 +547,28 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                 break # Break download loop
 
                             # Check counter too — catches the case where limit was hit
-                            # on the previous book (counter decremented to 0)
+                            # on the previous book (counter decremented to 0).
+                            # Always re-confirm with the API before halting — the local
+                            # counter may be stale (e.g. limit reset while we were scraping).
                             if downloads_left_today <= 0:
-                                print("      ⛔ Daily download limit reached. Waiting for reset...")
-                                halt_run_due_to_limit = True
-                                break
+                                if z:
+                                    try:
+                                        fresh = z.getDownloadsLeft()
+                                        if fresh > 0:
+                                            print(f"      ✅ API confirms {fresh} downloads available — local counter was stale. Resuming.")
+                                            downloads_left_today = fresh
+                                        else:
+                                            print("      ⛔ Daily download limit reached (API confirmed). Waiting for reset...")
+                                            halt_run_due_to_limit = True
+                                            break
+                                    except Exception as e:
+                                        print(f"      ⚠️ Could not re-check limit with API ({e}). Assuming limit hit.")
+                                        halt_run_due_to_limit = True
+                                        break
+                                else:
+                                    print("      ⛔ Daily download limit reached. Waiting for reset...")
+                                    halt_run_due_to_limit = True
+                                    break
     
                             # --- Get book details --- 
                             book_id = book_data_to_download.get("id")
@@ -587,6 +604,15 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                             books_processed_this_category += 1
                                             total_downloads_attempted_this_run += 1
                                             downloads_left_today -= 1
+                                            # Resync counter from API every 10 downloads to prevent drift
+                                            if z and total_downloads_attempted_this_run % 10 == 0:
+                                                try:
+                                                    fresh = z.getDownloadsLeft()
+                                                    if fresh != downloads_left_today:
+                                                        print(f"      🔄 Resynced download counter: local={downloads_left_today} → API={fresh}")
+                                                        downloads_left_today = fresh
+                                                except Exception:
+                                                    pass
                                         delay = 5
                                         print(f"      ⏱️  Waiting {delay:.0f}s before next download...")
                                         time.sleep(delay)
