@@ -193,6 +193,18 @@ class BrowserScraper:
                 else:
                     break
             self._last_nav_time = time.time()
+            # Diagnose session state so we can detect login expiry
+            try:
+                final_url = self.page.url
+                final_title = await self.page.title()
+                page_content = await self.page.content()
+                content_lower = page_content.lower()
+                if "sign in" in content_lower or "log in" in content_lower or "/login" in final_url:
+                    print(f"      ❌ Keepalive landed on LOGIN PAGE — session has expired! URL: {final_url[:80]}")
+                else:
+                    print(f"      ✅ Session OK after keepalive (title: '{final_title[:50]}')")
+            except Exception:
+                pass
         except Exception as e:
             # Non-fatal — best effort keepalive
             print(f"      ⚠️  CF keepalive navigation failed ({e!s:.60}), continuing anyway.")
@@ -393,7 +405,6 @@ class BrowserScraper:
                         pass  # "Download is starting" is expected
 
                 download = await dl_info.value
-                raw_filename = download.suggested_filename
                 filename = _clean_zlib_filename(raw_filename)
                 filepath = os.path.join(output_dir, filename)
 
@@ -432,6 +443,28 @@ class BrowserScraper:
                 return {"success": False, "error": f"save_as timeout after {save_timeout}s"}
             except Exception as e:
                 err = str(e)
+                # Diagnose what the page actually shows when download times out
+                if dl_page and "download" in err.lower():
+                    try:
+                        diag_url = dl_page.url
+                        diag_title = await dl_page.title()
+                        diag_content = await dl_page.content()
+                        # Check for common failure indicators
+                        content_lower = diag_content.lower()
+                        if "sign in" in content_lower or "log in" in content_lower or "login" in content_lower:
+                            diag_reason = "⚠️  PAGE SHOWS LOGIN WALL — session expired"
+                        elif "checking" in diag_title.lower() or "just a moment" in diag_title.lower():
+                            diag_reason = "⚠️  PAGE SHOWS CF CHALLENGE — not solved"
+                        elif "limit" in content_lower or "quota" in content_lower:
+                            diag_reason = "⚠️  PAGE SHOWS RATE LIMIT / QUOTA message"
+                        elif "<html" in content_lower:
+                            diag_reason = f"⚠️  PAGE IS HTML (not a file): title='{diag_title[:60]}'"
+                        else:
+                            diag_reason = f"⚠️  Unknown page state: title='{diag_title[:60]}'"
+                        print(f"      🔍 Download diag: url={diag_url[:80]}")
+                        print(f"      🔍 {diag_reason}")
+                    except Exception:
+                        pass
                 if attempt < max_attempts:
                     print(f"\n      ⚠️  Attempt {attempt}/{max_attempts} failed ({err[:60]}). Retrying in 5s...")
                     await asyncio.sleep(5)
