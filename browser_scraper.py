@@ -435,6 +435,7 @@ class BrowserScraper:
                         pass  # "Download is starting" is expected
 
                 download = await dl_info.value
+                raw_filename = download.suggested_filename
                 filename = _clean_zlib_filename(raw_filename)
                 filepath = os.path.join(output_dir, filename)
 
