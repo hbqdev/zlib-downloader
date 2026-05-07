@@ -33,6 +33,8 @@ class Zlibrary:
         self.__domain = domain
 
         self.__loggedin = False
+        self.__stored_email: str = email or ""
+        self.__stored_password: str = password or ""
         self.__headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
@@ -102,6 +104,16 @@ class Zlibrary:
         self, remix_userid: [int, str], remix_userkey: str
     ) -> dict[str, str]:
         return self.__checkIDandKey(remix_userid, remix_userkey)
+
+    def relogin(self) -> bool:
+        """Re-authenticate using stored credentials to get a fresh session and up-to-date profile data."""
+        if not self.__stored_email or not self.__stored_password:
+            return False
+        try:
+            result = self.__login(self.__stored_email, self.__stored_password)
+            return bool(result and result.get("success"))
+        except Exception:
+            return False
 
     def __makePostRequest(
         self, url: str, data: dict = {}, override=False, domain_override: str = None

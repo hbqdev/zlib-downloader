@@ -121,26 +121,28 @@ def wait_for_daily_reset(z=None):
     wake_str = wake_time.strftime("%Y-%m-%d %H:%M UTC")
     print(f"\n⏳ Daily download limit reached.")
     print(f"   Waiting for limit reset (max until {wake_str} — {wait_secs/3600:.1f} hours from now).")
-    print(f"   Checking API every hour for early reset. Press Ctrl+C to stop.\n")
+    print(f"   Checking API every 30 minutes for early reset. Press Ctrl+C to stop.\n")
 
-    # Sleep in 1-hour chunks, checking the API after each chunk for an early reset
+    # Sleep in 30-min chunks, re-logging in and checking the API after each chunk.
+    # Re-login is required because getProfile() can return stale cached data on a
+    # long-running session, while a fresh login always returns up-to-date counts.
     slept = 0
-    chunk = 3600  # 1 hour
+    chunk = 1800  # 30 minutes
     while slept < wait_secs:
         remaining = wait_secs - slept
         sleep_now = min(chunk, remaining)
         time.sleep(sleep_now)
         slept += sleep_now
 
-        # Check API after every chunk (including the final one)
         if z:
             try:
+                z.relogin()  # force fresh session so profile data is not stale
                 new_limit = z.getDownloadsLeft()
                 if new_limit > 0:
                     print(f"\n🌅 Limit restored early! {new_limit} downloads available.")
                     return new_limit
             except Exception as e:
-                print(f"   ⚠️ Hourly check failed: {e}")
+                print(f"   ⚠️ Periodic check failed: {e}")
 
         if slept < wait_secs:
             hours_left = (wait_secs - slept) / 3600
@@ -155,6 +157,7 @@ def wait_for_daily_reset(z=None):
     for attempt in range(1, max_checks + 1):
         if z:
             try:
+                z.relogin()
                 new_limit = z.getDownloadsLeft()
                 print(f"   📊 Check {attempt}/{max_checks}: {new_limit} downloads available")
                 if new_limit > 0:
@@ -661,7 +664,7 @@ def run_download_process(config_file="config.json", categories_file="categories.
                                             clean_authors = re.sub(r'\s+', ' ', authors_with_spaces).strip()
                                         else:
                                             clean_authors = "Unknown Author"
-                                        base_filename = f"{full_title} - {clean_authors}"
+                                        base_filename = f"{clean_authors} - {full_title}"
                                         invalid_chars_pattern = r'[\\/?:*"<>|]'
                                         clean_base_filename = re.sub(invalid_chars_pattern, ' ', base_filename)
                                         clean_base_filename = re.sub(r'\s+', ' ', clean_base_filename).strip()
