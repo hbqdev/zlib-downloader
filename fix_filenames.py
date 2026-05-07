@@ -152,6 +152,48 @@ def _segment_matches_author(segment: str, author_meta: str) -> bool:
     return overlap >= len(auth_words) and overlap >= len(seg_words) - 1
 
 
+_TITLE_STOP_WORDS = {
+    'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'be', 'it', 'its',
+}
+
+_GARBAGE_SEGMENT_RE = re.compile(
+    r'^(\d|[0-9a-fA-F]{8,}|.*\.(indd|tmp|qxd|pdf|epub|mobi)$)', re.IGNORECASE
+)
+
+
+def _looks_like_name(segment: str) -> bool:
+    """Return True if a segment could plausibly be a person's name (not a number, hash, or title)."""
+    if not segment or _GARBAGE_SEGMENT_RE.match(segment):
+        return False
+    words = segment.split()
+    if len(words) > 6:
+        return False
+    # Reject if the majority of words are stop/title words
+    content_words = [w for w in words if w.lower() not in _TITLE_STOP_WORDS]
+    return len(content_words) >= max(1, len(words) // 2)
+
+
+def _stem_word(w: str) -> str:
+    return w[:-1] if w.endswith('s') and len(w) > 3 else w
+
+
+def _segment_matches_title_partial(segment: str, title_meta: str) -> bool:
+    """Return True if all of the segment's content words appear in the title (handles truncation).
+
+    Uses a subset check: every content word in the segment must exist in the title,
+    and the title must be at least as long (in content words) as the segment.
+    Simple 's'-stripping handles truncated plurals (e.g. 'circuit' vs 'circuits').
+    """
+    seg_norm = _normalize_author_for_cmp(segment)
+    title_norm = _normalize_author_for_cmp(title_meta)
+    seg_words = {_stem_word(w) for w in seg_norm.split() if w not in _TITLE_STOP_WORDS}
+    title_words = {_stem_word(w) for w in title_norm.split() if w not in _TITLE_STOP_WORDS}
+    if not title_words or not seg_words:
+        return False
+    return seg_words.issubset(title_words) and len(title_words) >= len(seg_words)
+
+
 # ---------------------------------------------------------------------------
 # Filename construction
 # ---------------------------------------------------------------------------
@@ -199,7 +241,7 @@ def process_directory(directory: str, apply: bool) -> None:
         filepath = os.path.join(directory, filename)
         stem, ext = os.path.splitext(filename)
 
-        _title_meta, author_meta = get_metadata(filepath)
+        title_meta, author_meta = get_metadata(filepath)
 
         if not author_meta:
             print(f"  ⚠️  SKIP (no metadata): {filename}")
@@ -225,11 +267,29 @@ def process_directory(directory: str, apply: bool) -> None:
             # 'Title - Author' — needs swap
             correct_filename = _swap_segments(seg2, seg1, ext)
         else:
-            # Both or neither match — can't determine safely
-            print(f"  ❓ UNCERTAIN (ambiguous author detection): {filename}")
-            print(f"     metadata author: {author_meta}")
-            skipped_uncertain += 1
-            continue
+            # Author matching ambiguous — fallback: use title to identify which segment is the title.
+            # Many PDFs have the book title in the author field; use title_meta (or author_meta as
+            # last resort) to find the title segment, then infer the author segment.
+            title_candidates = [t for t in [title_meta, author_meta] if t]
+            resolved = False
+            for title_text in title_candidates:
+                seg1_is_title = _segment_matches_title_partial(seg1, title_text)
+                seg2_is_title = _segment_matches_title_partial(seg2, title_text)
+                if seg2_is_title and not seg1_is_title and _looks_like_name(seg1):
+                    # seg2 is the title, seg1 looks like a name → already Author-Title
+                    skipped_ok += 1
+                    resolved = True
+                    break
+                elif seg1_is_title and not seg2_is_title and _looks_like_name(seg2):
+                    # seg1 is the title, seg2 looks like a name → needs swap
+                    correct_filename = _swap_segments(seg2, seg1, ext)
+                    resolved = True
+                    break
+            if not resolved:
+                print(f"  ❓ UNCERTAIN: {filename}")
+                print(f"     metadata author: {author_meta}")
+                skipped_uncertain += 1
+                continue
 
         if filename == correct_filename:
             skipped_ok += 1
