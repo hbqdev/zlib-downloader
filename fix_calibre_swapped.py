@@ -128,45 +128,28 @@ def main():
             else:
                 moved += 1
 
-        # Remove the now-empty book folder
+        # Remove the now-empty book folder, then its parent if also empty
         if apply and os.path.isdir(book_folder):
             remaining = os.listdir(book_folder)
-            # Only remove cover.jpg and similar metadata files left behind
-            non_ebook = [x for x in remaining if not any(
+            ebook_remaining = [x for x in remaining if any(
                 x.lower().endswith(ext) for ext in
                 ['.epub','.pdf','.mobi','.azw','.azw3','.djvu','.fb2','.lit','.cbz','.cbr']
             )]
-            ebook_remaining = [x for x in remaining if x not in non_ebook]
             if not ebook_remaining:
                 try:
                     shutil.rmtree(book_folder)
                     print(f"         🗑️  Removed folder: {book_folder}")
+                    # Remove parent folder too if it's now empty
+                    parent_folder = os.path.dirname(book_folder)
+                    if parent_folder != CALIBRE_LIBRARY and os.path.isdir(parent_folder) and not os.listdir(parent_folder):
+                        os.rmdir(parent_folder)
+                        print(f"         🗑️  Removed empty parent: {os.path.basename(parent_folder)}")
                 except Exception as e:
                     print(f"         ⚠️  Could not remove folder {book_folder}: {e}")
             else:
                 print(f"         ⚠️  Folder still has ebook files, not removing: {book_folder}")
 
         ids_to_delete.append(bid)
-
-    # Remove empty subdirectories under the Calibre library root, bottom-up
-    # (depth 2 leaf folders first, then depth 1 parent folders)
-    if apply:
-        print("\n🧹 Cleaning up empty folders under library root...")
-        removed_dirs = 0
-        # Walk bottom-up so children are evaluated before parents
-        for dirpath, dirnames, filenames in os.walk(CALIBRE_LIBRARY, topdown=False):
-            rel = os.path.relpath(dirpath, CALIBRE_LIBRARY)
-            depth = 0 if rel == '.' else len(rel.split(os.sep))
-            if depth == 0 or depth > 2:
-                continue
-            if not os.listdir(dirpath):
-                try:
-                    os.rmdir(dirpath)
-                    print(f"  🗑️  Removed empty folder: {rel}")
-                    removed_dirs += 1
-                except Exception as e:
-                    print(f"  ⚠️  Could not remove {rel}: {e}")
-        print(f"  Removed {removed_dirs} empty folder(s).")
 
     print()
 
