@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 cleanup_empty_folders.py — Remove empty subdirectories under the Calibre library.
 
 Removes depth-1 and depth-2 empty folders under B:\LitServer\Ebooks.
