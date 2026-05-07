@@ -200,19 +200,32 @@ def _stem_word(w: str) -> str:
 
 
 def _segment_matches_title_partial(segment: str, title_meta: str) -> bool:
-    """Return True if all of the segment's content words appear in the title (handles truncation).
+    """Return True if the segment's content words are represented in the title.
 
-    Uses a subset check: every content word in the segment must exist in the title,
-    and the title must be at least as long (in content words) as the segment.
-    Simple 's'-stripping handles truncated plurals (e.g. 'circuit' vs 'circuits').
+    All content words except the last must appear exactly (after s-stemming).
+    The last content word may be an exact match OR a prefix (≥2 chars) of any
+    title word — this handles filenames truncated mid-word (e.g. 'Meth' for
+    'Methods', 'Wi' for 'Without', 'Sel' for 'Self').
+    The title must have at least as many content words as the segment.
     """
     seg_norm = _normalize_author_for_cmp(segment)
     title_norm = _normalize_author_for_cmp(title_meta)
-    seg_words = {_stem_word(w) for w in seg_norm.split() if w not in _TITLE_STOP_WORDS}
+    seg_content = [_stem_word(w) for w in seg_norm.split() if w not in _TITLE_STOP_WORDS]
     title_words = {_stem_word(w) for w in title_norm.split() if w not in _TITLE_STOP_WORDS}
-    if not title_words or not seg_words:
+    if not title_words or not seg_content:
         return False
-    return seg_words.issubset(title_words) and len(title_words) >= len(seg_words)
+    if len(title_words) < len(seg_content):
+        return False
+    # All words except possibly the last must match exactly
+    for w in seg_content[:-1]:
+        if w not in title_words:
+            return False
+    # Last word: exact or prefix match (minimum 2 chars to avoid noise)
+    last = seg_content[-1]
+    if last not in title_words:
+        if len(last) < 2 or not any(tw.startswith(last) for tw in title_words):
+            return False
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -292,15 +305,25 @@ def process_directory(directory: str, apply: bool) -> None:
             skipped_ok += 1
             continue
         elif seg2_is_author and not seg1_is_author:
-            # 'Title - Author' — needs swap
+            # 'Title - Author' — candidate for swap.
+            # Guard: if the *title* metadata also matches seg2, then the PDF has
+            # its book title in the author field.  We can't trust the "author" match
+            # in that case — leave it uncertain rather than making a wrong swap.
+            if title_meta and _segment_matches_title_partial(seg2, title_meta):
+                print(f"  ❓ UNCERTAIN (author metadata matches title): {filename}")
+                skipped_uncertain += 1
+                continue
             correct_filename = _swap_segments(seg2, seg1, ext)
         else:
-            # Author matching ambiguous — use title metadata to detect "already correct" only.
-            # We do NOT attempt a swap here because the false-positive rate for detecting
-            # "seg1 is the title" is too high with truncated/garbage metadata.
+            # Author matching ambiguous — use title metadata to detect "already correct".
+            # We do NOT attempt a swap here (false-positive rate is too high).
+            # "Already correct" if seg2 matches the title AND seg1 does NOT — the file
+            # is in Author-Title order even if the author segment fails _looks_like_name
+            # (e.g. all-lowercase Asian names, long "prepared by X" credits, URL paths).
             already_correct = False
             for title_text in filter(None, [title_meta, author_meta]):
-                if _segment_matches_title_partial(seg2, title_text) and _looks_like_name(seg1):
+                if (_segment_matches_title_partial(seg2, title_text)
+                        and not _segment_matches_title_partial(seg1, title_text)):
                     already_correct = True
                     break
             if already_correct:
