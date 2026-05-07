@@ -2,8 +2,9 @@
 """
 fix_filenames.py — Rename ebook files from 'Title - Author.ext' to 'Author - Title.ext'.
 
-Uses embedded metadata (epub OPF / PDF info) to determine the correct author and title,
-then renames files whose current names don't match the expected 'Author - Title' convention.
+Uses embedded metadata (epub OPF / PDF info) to identify which segment of the filename
+is the author, then swaps the segments if the file is in 'Title - Author' order.
+The actual filename text is preserved (not replaced with potentially-messy metadata text).
 
 Usage:
     python fix_filenames.py [directory] [--apply]
@@ -25,20 +26,12 @@ import fitz  # PyMuPDF
 
 SUPPORTED_EXTENSIONS = {'.epub', '.pdf', '.mobi', '.azw', '.azw3', '.djvu', '.fb2', '.lit', '.txt'}
 
-INVALID_CHARS_RE = re.compile(r'[\\/:*?"<>|]')
-WHITESPACE_RE = re.compile(r'\s+')
 MAX_STEM_BYTES = 180
 
 
 # ---------------------------------------------------------------------------
 # Metadata extraction
 # ---------------------------------------------------------------------------
-
-def _sanitize(text: str) -> str:
-    """Remove filesystem-illegal characters and collapse whitespace."""
-    text = INVALID_CHARS_RE.sub('', text)
-    return WHITESPACE_RE.sub(' ', text).strip()
-
 
 def _read_epub_metadata(filepath: str) -> tuple[str | None, str | None]:
     """Return (title, author) from an epub's OPF metadata, or (None, None) on failure."""
@@ -118,12 +111,54 @@ def get_metadata(filepath: str) -> tuple[str | None, str | None]:
 
 
 # ---------------------------------------------------------------------------
-# Filename construction (mirrors browser_scraper._clean_zlib_filename logic)
+# Author normalization (for comparison only — we keep the original filename text)
 # ---------------------------------------------------------------------------
 
-def build_filename(author: str, title: str, ext: str) -> str:
-    stem = f"{_sanitize(author)} - {_sanitize(title)}"
-    # Truncate to stay within filesystem byte limit
+def _normalize_author_for_cmp(author: str) -> str:
+    """Normalize an author string for fuzzy matching (comparison only, not for filenames)."""
+    # ALL CAPS → Title Case
+    if author == author.upper() and len(author.replace(' ', '')) > 3:
+        author = author.title()
+    # "Last, First [extra]" → "First Last"
+    if ',' in author:
+        parts = author.split(',', 1)
+        last = parts[0].strip()
+        rest = parts[1].strip()
+        # Strip year/role suffixes: "1976-", "author", "editor", etc.
+        rest = re.sub(r'\b\d{4}[-–]?\b.*', '', rest).strip()
+        rest = re.sub(r'\b(author|editor|illustrator|translator|compiler)\b', '', rest,
+                      flags=re.IGNORECASE).strip()
+        first = rest.split()[0] if rest.split() else ''
+        author = f"{first} {last}".strip() if first else last
+    # Lowercase, strip punctuation for word-set comparison
+    author = author.lower()
+    author = re.sub(r'[^\w\s]', ' ', author)
+    return ' '.join(author.split())
+
+
+def _segment_matches_author(segment: str, author_meta: str) -> bool:
+    """Return True if a filename segment (e.g. 'Alan Belkin') matches an author from metadata.
+
+    Requires:
+    - All author words appear in the segment.
+    - The segment is short enough to be a name (not a long title containing the author's name).
+    """
+    seg_words = set(_normalize_author_for_cmp(segment).split())
+    auth_words = set(_normalize_author_for_cmp(author_meta).split())
+    if not seg_words or not auth_words:
+        return False
+    overlap = len(seg_words & auth_words)
+    # All author words must appear in segment, and segment must not be much longer than the name
+    return overlap >= len(auth_words) and len(seg_words) <= len(auth_words) + 2
+
+
+# ---------------------------------------------------------------------------
+# Filename construction
+# ---------------------------------------------------------------------------
+
+def _swap_segments(seg1: str, seg2: str, ext: str) -> str:
+    """Build 'seg2 - seg1.ext', truncating to filesystem byte limit."""
+    stem = f"{seg1} - {seg2}"
     if len(stem.encode('utf-8')) > MAX_STEM_BYTES:
         stem = stem.encode('utf-8')[:MAX_STEM_BYTES].decode('utf-8', errors='ignore').strip()
     return stem + ext
@@ -157,43 +192,57 @@ def process_directory(directory: str, apply: bool) -> None:
     renamed = 0
     skipped_ok = 0
     skipped_no_meta = 0
+    skipped_uncertain = 0
     errors = 0
 
     for filename in files:
         filepath = os.path.join(directory, filename)
         stem, ext = os.path.splitext(filename)
 
-        title_meta, author_meta = get_metadata(filepath)
+        _title_meta, author_meta = get_metadata(filepath)
 
-        if not title_meta or not author_meta:
-            # Fall back to simple string swap: assume first segment is title, second is author
-            parts = stem.split(' - ', 1)
-            if len(parts) == 2:
-                title_meta = parts[0].strip()
-                author_meta = parts[1].strip()
-                source = "filename-split (no embedded metadata)"
-            else:
-                print(f"  ⚠️  SKIP (no metadata, can't split): {filename}")
-                skipped_no_meta += 1
-                continue
+        if not author_meta:
+            print(f"  ⚠️  SKIP (no metadata): {filename}")
+            skipped_no_meta += 1
+            continue
+
+        # Split on first ' - ' only
+        parts = stem.split(' - ', 1)
+        if len(parts) != 2:
+            print(f"  ⚠️  SKIP (can't parse as 'X - Y'): {filename}")
+            skipped_no_meta += 1
+            continue
+
+        seg1, seg2 = parts[0].strip(), parts[1].strip()
+        seg1_is_author = _segment_matches_author(seg1, author_meta)
+        seg2_is_author = _segment_matches_author(seg2, author_meta)
+
+        if seg1_is_author and not seg2_is_author:
+            # Already 'Author - Title' — correct
+            skipped_ok += 1
+            continue
+        elif seg2_is_author and not seg1_is_author:
+            # 'Title - Author' — needs swap
+            correct_filename = _swap_segments(seg2, seg1, ext)
         else:
-            source = "embedded metadata"
-
-        correct_filename = build_filename(author_meta, title_meta, ext)
+            # Both or neither match — can't determine safely
+            print(f"  ❓ UNCERTAIN (ambiguous author detection): {filename}")
+            print(f"     metadata author: {author_meta}")
+            skipped_uncertain += 1
+            continue
 
         if filename == correct_filename:
             skipped_ok += 1
-            continue  # Already correct
+            continue
 
         new_filepath = os.path.join(directory, correct_filename)
 
-        print(f"  📝 [{source}]")
-        print(f"     FROM: {filename}")
+        print(f"  📝 FROM: {filename}")
         print(f"     TO:   {correct_filename}")
 
         if apply:
             if os.path.exists(new_filepath) and new_filepath != filepath:
-                print(f"     ⚠️  SKIPPED — target already exists: {correct_filename}")
+                print(f"     ⚠️  SKIPPED — target already exists.")
                 errors += 1
             else:
                 try:
@@ -201,16 +250,18 @@ def process_directory(directory: str, apply: bool) -> None:
                     print(f"     ✅ Renamed.")
                     renamed += 1
                 except OSError as e:
-                    print(f"     ❌ Error renaming: {e}")
+                    print(f"     ❌ Error: {e}")
                     errors += 1
         else:
-            renamed += 1  # Count as "would rename" in dry-run
+            renamed += 1
 
     print()
     if apply:
-        print(f"✅ Done. Renamed: {renamed} | Already correct: {skipped_ok} | No usable metadata: {skipped_no_meta} | Errors: {errors}")
+        print(f"✅ Done. Renamed: {renamed} | Already correct: {skipped_ok} | "
+              f"Uncertain: {skipped_uncertain} | No metadata: {skipped_no_meta} | Errors: {errors}")
     else:
-        print(f"📋 Dry run complete. Would rename: {renamed} | Already correct: {skipped_ok} | No usable metadata: {skipped_no_meta}")
+        print(f"📋 Dry run. Would rename: {renamed} | Already correct: {skipped_ok} | "
+              f"Uncertain: {skipped_uncertain} | No metadata: {skipped_no_meta}")
         if renamed > 0:
             print("   Run with --apply to perform the renames.")
 
