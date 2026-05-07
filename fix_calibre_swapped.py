@@ -148,6 +148,26 @@ def main():
 
         ids_to_delete.append(bid)
 
+    # Remove empty subdirectories under the Calibre library root, bottom-up
+    # (depth 2 leaf folders first, then depth 1 parent folders)
+    if apply:
+        print("\n🧹 Cleaning up empty folders under library root...")
+        removed_dirs = 0
+        # Walk bottom-up so children are evaluated before parents
+        for dirpath, dirnames, filenames in os.walk(CALIBRE_LIBRARY, topdown=False):
+            rel = os.path.relpath(dirpath, CALIBRE_LIBRARY)
+            depth = 0 if rel == '.' else len(rel.split(os.sep))
+            if depth == 0 or depth > 2:
+                continue
+            if not os.listdir(dirpath):
+                try:
+                    os.rmdir(dirpath)
+                    print(f"  🗑️  Removed empty folder: {rel}")
+                    removed_dirs += 1
+                except Exception as e:
+                    print(f"  ⚠️  Could not remove {rel}: {e}")
+        print(f"  Removed {removed_dirs} empty folder(s).")
+
     print()
 
     if apply and ids_to_delete:
