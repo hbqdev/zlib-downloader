@@ -139,17 +139,17 @@ def _normalize_author_for_cmp(author: str) -> str:
 def _segment_matches_author(segment: str, author_meta: str) -> bool:
     """Return True if a filename segment (e.g. 'Alan Belkin') matches an author from metadata.
 
-    Requires:
-    - All author words appear in the segment.
-    - The segment is short enough to be a name (not a long title containing the author's name).
+    Requires bidirectional overlap:
+    - All author words must appear in the segment (author is fully represented).
+    - The segment has at most 1 word not in the author (prevents long title segments
+      from matching a short author name like a single word).
     """
     seg_words = set(_normalize_author_for_cmp(segment).split())
     auth_words = set(_normalize_author_for_cmp(author_meta).split())
     if not seg_words or not auth_words:
         return False
     overlap = len(seg_words & auth_words)
-    # All author words must appear in segment, and segment must not be much longer than the name
-    return overlap >= len(auth_words) and len(seg_words) <= len(auth_words) + 2
+    return overlap >= len(auth_words) and overlap >= len(seg_words) - 1
 
 
 # ---------------------------------------------------------------------------
