@@ -137,13 +137,16 @@ def _normalize_author_for_cmp(author: str) -> str:
 
 
 def _segment_matches_author(segment: str, author_meta: str) -> bool:
-    """Return True if a filename segment (e.g. 'Alan Belkin') matches an author from metadata.
+    """Return True if a filename segment closely matches the metadata author.
 
     Requires bidirectional overlap:
-    - All author words must appear in the segment (author is fully represented).
+    - All author words must appear in the segment.
     - The segment has at most 1 word not in the author (prevents long title segments
-      from matching a short author name like a single word).
+      from matching a short author name).
+    - The segment must look like a person's name (short, mostly capitalised words).
     """
+    if not _looks_like_name(segment):
+        return False
     seg_words = set(_normalize_author_for_cmp(segment).split())
     auth_words = set(_normalize_author_for_cmp(author_meta).split())
     if not seg_words or not auth_words:
@@ -163,15 +166,33 @@ _GARBAGE_SEGMENT_RE = re.compile(
 
 
 def _looks_like_name(segment: str) -> bool:
-    """Return True if a segment could plausibly be a person's name (not a number, hash, or title)."""
+    """Return True if a segment could plausibly be a person's name.
+
+    Rejects: empty, starts with digit, garbage file-fragments, >6 words.
+    For 3+ word segments:
+    - Most words must start with an uppercase letter (allows one lowercase particle
+      like "van", "de", but rejects all-lowercase title phrases).
+    - No word (stripped of punctuation) may be a stop word — title-case book titles
+      often contain "Of", "And", "In" etc., which real names don't.
+    """
     if not segment or _GARBAGE_SEGMENT_RE.match(segment):
         return False
     words = segment.split()
     if len(words) > 6:
         return False
-    # Reject if the majority of words are stop/title words
-    content_words = [w for w in words if w.lower() not in _TITLE_STOP_WORDS]
-    return len(content_words) >= max(1, len(words) // 2)
+    if len(words) >= 3:
+        # Allow at most one lowercase word (e.g. "van", "de")
+        capitalized = sum(1 for w in words if w and w[0].isupper())
+        if capitalized < len(words) - 1:
+            return False
+        # Reject if any word (stripped to alpha only) is a stop word — indicates title case
+        for w in words:
+            w_alpha = re.sub(r'[^a-z]', '', w.lower())
+            if w_alpha and len(w_alpha) > 1 and w_alpha in _TITLE_STOP_WORDS:
+                return False
+    # Must have at least one real content word (not all stop words or initials)
+    content_words = [w for w in words if w.lower().rstrip('.') not in _TITLE_STOP_WORDS]
+    return bool(content_words)
 
 
 def _stem_word(w: str) -> str:
@@ -256,6 +277,13 @@ def process_directory(directory: str, apply: bool) -> None:
             continue
 
         seg1, seg2 = parts[0].strip(), parts[1].strip()
+
+        # Reject filenames where the first segment is missing (e.g. starts with '- ')
+        if not seg1:
+            print(f"  ⚠️  SKIP (empty first segment): {filename}")
+            skipped_no_meta += 1
+            continue
+
         seg1_is_author = _segment_matches_author(seg1, author_meta)
         seg2_is_author = _segment_matches_author(seg2, author_meta)
 
@@ -267,29 +295,21 @@ def process_directory(directory: str, apply: bool) -> None:
             # 'Title - Author' — needs swap
             correct_filename = _swap_segments(seg2, seg1, ext)
         else:
-            # Author matching ambiguous — fallback: use title to identify which segment is the title.
-            # Many PDFs have the book title in the author field; use title_meta (or author_meta as
-            # last resort) to find the title segment, then infer the author segment.
-            title_candidates = [t for t in [title_meta, author_meta] if t]
-            resolved = False
-            for title_text in title_candidates:
-                seg1_is_title = _segment_matches_title_partial(seg1, title_text)
-                seg2_is_title = _segment_matches_title_partial(seg2, title_text)
-                if seg2_is_title and not seg1_is_title and _looks_like_name(seg1):
-                    # seg2 is the title, seg1 looks like a name → already Author-Title
-                    skipped_ok += 1
-                    resolved = True
+            # Author matching ambiguous — use title metadata to detect "already correct" only.
+            # We do NOT attempt a swap here because the false-positive rate for detecting
+            # "seg1 is the title" is too high with truncated/garbage metadata.
+            already_correct = False
+            for title_text in filter(None, [title_meta, author_meta]):
+                if _segment_matches_title_partial(seg2, title_text) and _looks_like_name(seg1):
+                    already_correct = True
                     break
-                elif seg1_is_title and not seg2_is_title and _looks_like_name(seg2):
-                    # seg1 is the title, seg2 looks like a name → needs swap
-                    correct_filename = _swap_segments(seg2, seg1, ext)
-                    resolved = True
-                    break
-            if not resolved:
-                print(f"  ❓ UNCERTAIN: {filename}")
-                print(f"     metadata author: {author_meta}")
-                skipped_uncertain += 1
+            if already_correct:
+                skipped_ok += 1
                 continue
+            print(f"  ❓ UNCERTAIN: {filename}")
+            print(f"     metadata author: {author_meta}")
+            skipped_uncertain += 1
+            continue
 
         if filename == correct_filename:
             skipped_ok += 1
