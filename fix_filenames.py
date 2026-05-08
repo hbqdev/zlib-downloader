@@ -315,24 +315,41 @@ def process_directory(directory: str, apply: bool) -> None:
                 continue
             correct_filename = _swap_segments(seg2, seg1, ext)
         else:
-            # Author matching ambiguous — use title metadata to detect "already correct".
-            # We do NOT attempt a swap here (false-positive rate is too high).
-            # "Already correct" if seg2 matches the title AND seg1 does NOT — the file
-            # is in Author-Title order even if the author segment fails _looks_like_name
-            # (e.g. all-lowercase Asian names, long "prepared by X" credits, URL paths).
+            # Author matching ambiguous — use title metadata to try to resolve.
+            # Two cases:
+            #   "Already correct": seg2 matches title AND seg1 does not
+            #   "Needs swap" (conservative): seg1 matches title_meta AND seg2 does not
+            #       AND seg2 looks like a person's name.
+            # For "already correct" we allow author_meta as a fallback title source
+            # (many PDFs have the title stored in the author field).  For swaps we
+            # only use the more reliable title_meta so we don't swap on garbage data.
             already_correct = False
             for title_text in filter(None, [title_meta, author_meta]):
-                if (_segment_matches_title_partial(seg2, title_text)
-                        and not _segment_matches_title_partial(seg1, title_text)):
+                s2t = _segment_matches_title_partial(seg2, title_text)
+                s1t = _segment_matches_title_partial(seg1, title_text)
+                if s2t and not s1t:
                     already_correct = True
                     break
-            if already_correct:
+
+            if not already_correct and title_meta:
+                s1t = _segment_matches_title_partial(seg1, title_meta)
+                s2t = _segment_matches_title_partial(seg2, title_meta)
+                if s1t and not s2t and _looks_like_name(seg2):
+                    correct_filename = _swap_segments(seg2, seg1, ext)
+                    # fall through to rename block below
+                else:
+                    print(f"  ❓ UNCERTAIN: {filename}")
+                    print(f"     metadata author: {author_meta}")
+                    skipped_uncertain += 1
+                    continue
+            elif already_correct:
                 skipped_ok += 1
                 continue
-            print(f"  ❓ UNCERTAIN: {filename}")
-            print(f"     metadata author: {author_meta}")
-            skipped_uncertain += 1
-            continue
+            else:
+                print(f"  ❓ UNCERTAIN: {filename}")
+                print(f"     metadata author: {author_meta}")
+                skipped_uncertain += 1
+                continue
 
         if filename == correct_filename:
             skipped_ok += 1
